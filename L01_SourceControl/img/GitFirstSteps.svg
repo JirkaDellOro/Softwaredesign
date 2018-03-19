@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 1361 589" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-miterlimit:10;">
+    <g transform="matrix(1,0,0,1,-442.319,-436.061)">
+        <g transform="matrix(0.187095,0,0,0.575817,1506.19,197.179)">
+            <rect x="83.573" y="414.857" width="1501.78" height="1022.39" style="fill:rgb(215,215,215);"/>
+        </g>
+        <g transform="matrix(0.445682,0,0,0.445682,1523.49,134.663)">
+            <text x="157.326px" y="767.947px" style="font-family:'ArialNarrow-Bold', 'Arial', sans-serif;font-weight:700;font-stretch:condensed;font-size:55.26px;">remote Server</text>
+        </g>
+        <g transform="matrix(0.643493,0,0,0.575817,388.54,197.179)">
+            <rect x="83.573" y="414.857" width="1501.78" height="1022.39" style="fill:rgb(215,215,215);"/>
+        </g>
+        <g transform="matrix(1.75918,0,0,1.75918,387.186,346.715)">
+            <rect x="47.28" y="89.52" width="124.56" height="279" style="fill:rgb(156,156,156);"/>
+        </g>
+        <g transform="matrix(1.75918,0,0,1.75918,387.186,342.493)">
+            <rect x="437.28" y="90.72" width="124.56" height="279" style="fill:rgb(156,156,156);"/>
+        </g>
+        <g transform="matrix(1.75918,0,0,1.75918,387.186,346.715)">
+            <rect x="240" y="89.52" width="124.56" height="279" style="fill:rgb(156,156,156);"/>
+        </g>
+        <g transform="matrix(1.75918,0,0,1.75918,387.186,342.493)">
+            <rect x="663.72" y="90.72" width="124.56" height="279" style="fill:rgb(156,156,156);"/>
+        </g>
+        <g transform="matrix(0.445682,0,0,0.445682,411.792,192.439)">
+            <text x="157.326px" y="767.947px" style="font-family:'ArialNarrow-Bold', 'Arial', sans-serif;font-weight:700;font-stretch:condensed;font-size:55.26px;">File System</text>
+            <text x="157.326px" y="823.207px" style="font-family:'ArialNarrow-Bold', 'Arial', sans-serif;font-weight:700;font-stretch:condensed;font-size:55.26px;">(lokale Dateien)</text>
+        </g>
+        <g transform="matrix(0.445682,0,0,0.445682,714.615,134.663)">
+            <text x="157.326px" y="767.947px" style="font-family:'ArialNarrow-Bold', 'Arial', sans-serif;font-weight:700;font-stretch:condensed;font-size:55.26px;">lokaler Entwickler-Rechner</text>
+        </g>
+        <g transform="matrix(1.75918,0,0,1.75918,387.186,184.8)">
+            <path d="M153.24,264.12L261.24,264.12L272.16,275.04L261.24,285.96L153.24,285.96L153.24,264.12Z" style="fill:rgb(234,234,234);stroke:black;stroke-width:1.46px;"/>
+        </g>
+        <g transform="matrix(1.75918,0,0,1.75918,387.186,184.8)">
+            <path d="M343.56,264.12L451.56,264.12L462.48,275.04L451.56,285.96L343.56,285.96L343.56,264.12Z" style="fill:rgb(234,234,234);stroke:black;stroke-width:1.46px;"/>
+        </g>
+        <g transform="matrix(1.75918,0,0,1.75918,387.186,317.161)">
+            <path d="M153.24,226.44L451.5,226.44L462.48,237.42L451.5,248.4L153.24,248.4L153.24,226.44Z" style="fill:rgb(234,234,234);stroke:black;stroke-width:1.46px;"/>
+        </g>
+        <g transform="matrix(1.75918,0,0,1.75918,387.186,180.578)">
+            <path d="M545.16,265.32L676.92,265.32L687.84,276.24L676.92,287.16L545.16,287.16L545.16,265.32Z" style="fill:rgb(234,234,234);stroke:black;stroke-width:1.46px;"/>
+        </g>
+        <g transform="matrix(1.75918,0,0,1.75918,387.186,472.109)">
+            <path d="M687.96,182.4L163.98,182.4L153,193.38L163.98,204.36L687.96,204.36L687.96,182.4Z" style="fill:rgb(234,234,234);stroke:black;stroke-width:1.46px;"/>
+        </g>
+        <g transform="matrix(0.633304,0,0,0.65042,666.895,800.372)">
+            <use xlink:href="#_Image1" x="0" y="0" width="1468px" height="37px"/>
+        </g>
+        <g transform="matrix(1.75918,0,0,1.75918,387.186,604.047)">
+            <path d="M687.96,144.96L541.92,144.96L531,155.88L541.92,166.8L687.96,166.8L687.96,144.96Z" style="fill:rgb(234,234,234);stroke:black;stroke-width:1.46px;"/>
+        </g>
+        <g transform="matrix(0.633304,0,0,0.65042,1331.86,866.235)">
+            <use xlink:href="#_Image2" x="0" y="0" width="418px" height="37px"/>
+        </g>
+        <g transform="matrix(1.75918,0,0,1.75918,387.186,604.047)">
+            <path d="M453.96,144.96L163.92,144.96L153,155.88L163.92,166.8L453.96,166.8L453.96,144.96Z" style="fill:rgb(234,234,234);stroke:black;stroke-width:1.46px;"/>
+        </g>
+        <g transform="matrix(0.634079,0,0,0.65042,666.895,866.235)">
+            <use xlink:href="#_Image3" x="0" y="0" width="817px" height="37px"/>
+        </g>
+        <g transform="matrix(1.75918,0,0,1.75918,387.186,105.215)">
+            <text x="188.78px" y="323.57px" style="font-family:'Consolas', monospace;font-size:11.04px;">git</text>
+            <text x="213.059px" y="323.57px" style="font-family:'Consolas', monospace;font-size:11.04px;">a</text>
+            <text x="218.979px" y="323.57px" style="font-family:'Consolas', monospace;font-size:11.04px;">dd</text>
+        </g>
+        <g transform="matrix(1.75918,0,0,1.75918,387.186,105.215)">
+            <text x="370.13px" y="323.57px" style="font-family:'Consolas', monospace;font-size:11.04px;">g</text>
+            <text x="376.2px" y="323.57px" style="font-family:'Consolas', monospace;font-size:11.04px;">i</text>
+            <text x="382.17px" y="323.57px" style="font-family:'Consolas', monospace;font-size:11.04px;">t</text>
+            <text x="394.309px" y="323.57px" style="font-family:'Consolas', monospace;font-size:11.04px;">c</text>
+            <text x="400.279px" y="323.57px" style="font-family:'Consolas', monospace;font-size:11.04px;">o</text>
+            <text x="406.449px" y="323.57px" style="font-family:'Consolas', monospace;font-size:11.04px;">m</text>
+            <text x="412.419px" y="323.57px" style="font-family:'Consolas', monospace;font-size:11.04px;">m</text>
+            <text x="418.489px" y="323.57px" style="font-family:'Consolas', monospace;font-size:11.04px;">i</text>
+            <text x="424.559px" y="323.57px" style="font-family:'Consolas', monospace;font-size:11.04px;">t</text>
+        </g>
+        <g transform="matrix(1.75918,0,0,1.75918,387.186,105.215)">
+            <text x="265.82px" y="361.15px" style="font-family:'Consolas', monospace;font-size:11.04px;">g</text>
+            <text x="271.89px" y="361.15px" style="font-family:'Consolas', monospace;font-size:11.04px;">i</text>
+            <text x="277.86px" y="361.15px" style="font-family:'Consolas', monospace;font-size:11.04px;">t</text>
+            <text x="290.121px" y="361.15px" style="font-family:'Consolas', monospace;font-size:11.04px;">c</text>
+            <text x="296.091px" y="361.15px" style="font-family:'Consolas', monospace;font-size:11.04px;">o</text>
+            <text x="302.16px" y="361.15px" style="font-family:'Consolas', monospace;font-size:11.04px;">m</text>
+            <text x="308.13px" y="361.15px" style="font-family:'Consolas', monospace;font-size:11.04px;">m</text>
+            <text x="314.2px" y="361.15px" style="font-family:'Consolas', monospace;font-size:11.04px;">i</text>
+            <text x="320.27px" y="361.15px" style="font-family:'Consolas', monospace;font-size:11.04px;">t</text>
+            <text x="332.431px" y="361.15px" style="font-family:'Consolas', monospace;font-size:11.04px;">-</text>
+            <text x="338.401px" y="361.15px" style="font-family:'Consolas', monospace;font-size:11.04px;">a</text>
+        </g>
+        <g transform="matrix(1.75918,0,0,1.75918,387.186,105.215)">
+            <text x="589.63px" y="322.37px" style="font-family:'Consolas', monospace;font-size:11.04px;">g</text>
+            <text x="595.7px" y="322.37px" style="font-family:'Consolas', monospace;font-size:11.04px;">i</text>
+            <text x="601.67px" y="322.37px" style="font-family:'Consolas', monospace;font-size:11.04px;">t</text>
+            <text x="613.809px" y="322.37px" style="font-family:'Consolas', monospace;font-size:11.04px;">p</text>
+            <text x="619.779px" y="322.37px" style="font-family:'Consolas', monospace;font-size:11.04px;">u</text>
+            <text x="625.949px" y="322.37px" style="font-family:'Consolas', monospace;font-size:11.04px;">s</text>
+            <text x="631.919px" y="322.37px" style="font-family:'Consolas', monospace;font-size:11.04px;">h</text>
+        </g>
+        <g transform="matrix(1.75918,0,0,1.75918,387.186,105.215)">
+            <text x="399.17px" y="405.31px" style="font-family:'Consolas', monospace;font-size:11.04px;">g</text>
+            <text x="405.24px" y="405.31px" style="font-family:'Consolas', monospace;font-size:11.04px;">i</text>
+            <text x="411.21px" y="405.31px" style="font-family:'Consolas', monospace;font-size:11.04px;">t</text>
+            <text x="423.349px" y="405.31px" style="font-family:'Consolas', monospace;font-size:11.04px;">p</text>
+            <text x="429.319px" y="405.31px" style="font-family:'Consolas', monospace;font-size:11.04px;">u</text>
+            <text x="435.489px" y="405.31px" style="font-family:'Consolas', monospace;font-size:11.04px;">l</text>
+            <text x="441.459px" y="405.31px" style="font-family:'Consolas', monospace;font-size:11.04px;">l</text>
+        </g>
+        <g transform="matrix(1.75918,0,0,1.75918,387.186,105.215)">
+            <text x="585.07px" y="442.75px" style="font-family:'Consolas', monospace;font-size:11.04px;">g</text>
+            <text x="591.14px" y="442.75px" style="font-family:'Consolas', monospace;font-size:11.04px;">i</text>
+            <text x="597.11px" y="442.75px" style="font-family:'Consolas', monospace;font-size:11.04px;">t</text>
+            <text x="609.249px" y="442.75px" style="font-family:'Consolas', monospace;font-size:11.04px;">f</text>
+            <text x="615.219px" y="442.75px" style="font-family:'Consolas', monospace;font-size:11.04px;">e</text>
+            <text x="621.389px" y="442.75px" style="font-family:'Consolas', monospace;font-size:11.04px;">t</text>
+            <text x="627.359px" y="442.75px" style="font-family:'Consolas', monospace;font-size:11.04px;">ch</text>
+        </g>
+        <g transform="matrix(1.75918,0,0,1.75918,387.186,105.215)">
+            <text x="279.05px" y="442.75px" style="font-family:'Consolas', monospace;font-size:11.04px;">g</text>
+            <text x="285.12px" y="442.75px" style="font-family:'Consolas', monospace;font-size:11.04px;">i</text>
+            <text x="291.09px" y="442.75px" style="font-family:'Consolas', monospace;font-size:11.04px;">t</text>
+            <text x="303.229px" y="442.75px" style="font-family:'Consolas', monospace;font-size:11.04px;">m</text>
+            <text x="309.199px" y="442.75px" style="font-family:'Consolas', monospace;font-size:11.04px;">e</text>
+            <text x="315.369px" y="442.75px" style="font-family:'Consolas', monospace;font-size:11.04px;">r</text>
+            <text x="321.339px" y="442.75px" style="font-family:'Consolas', monospace;font-size:11.04px;">ge</text>
+        </g>
+        <g transform="matrix(0.445682,0,0,0.445682,751.809,192.439)">
+            <text x="157.326px" y="767.947px" style="font-family:'ArialNarrow-Bold', 'Arial', sans-serif;font-weight:700;font-stretch:condensed;font-size:55.26px;">Index</text>
+            <text x="157.326px" y="823.207px" style="font-family:'ArialNarrow-Bold', 'Arial', sans-serif;font-weight:700;font-stretch:condensed;font-size:55.26px;">(Stage)</text>
+        </g>
+        <g transform="matrix(0.445682,0,0,0.445682,1098.77,192.439)">
+            <text x="157.326px" y="767.947px" style="font-family:'ArialNarrow-Bold', 'Arial', sans-serif;font-weight:700;font-stretch:condensed;font-size:55.26px;">Lokales Repository</text>
+            <text x="157.326px" y="823.207px" style="font-family:'ArialNarrow-Bold', 'Arial', sans-serif;font-weight:700;font-stretch:condensed;font-size:55.26px;">(.git Subdir)</text>
+        </g>
+        <g transform="matrix(0.445682,0,0,0.445682,1500.71,192.439)">
+            <text x="157.326px" y="767.947px" style="font-family:'ArialNarrow-Bold', 'Arial', sans-serif;font-weight:700;font-stretch:condensed;font-size:55.26px;">Remote Repository</text>
+            <text x="157.326px" y="823.207px" style="font-family:'ArialNarrow-Bold', 'Arial', sans-serif;font-weight:700;font-stretch:condensed;font-size:55.26px;">(z.B. auf GitHub)</text>
+        </g>
+    </g>
+    <defs>
+        <image id="_Image1" width="1468px" height="37px" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABbwAAAAlCAYAAACJdy9iAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAA6UlEQVR4nO3BMQEAAADCoPVPbQhfoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOA0UQIAAaOWEEcAAAAASUVORK5CYII="/>
+        <image id="_Image2" width="418px" height="37px" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAaIAAAAlCAYAAAAAye27AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAUklEQVR4nO3BAQEAAACCIP+vbkhAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAVwbxzQABxhLFOQAAAABJRU5ErkJggg=="/>
+        <image id="_Image3" width="817px" height="37px" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAzEAAAAlCAYAAAByOWeQAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAjElEQVR4nO3BAQ0AAADCoPdPbQ8HFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwJkB2IgAAY/COfMAAAAASUVORK5CYII="/>
+    </defs>
+</svg>
