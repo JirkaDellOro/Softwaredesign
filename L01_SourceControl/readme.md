@@ -167,7 +167,7 @@ und vielen anderen.
 > Registriert euch (kostenlos) bei 
 > [GitHub](https://github.io) und installiert 
 > [GitHub Desktop](https://desktop.github.com/). Dabei wird auch gleich der "git" Kommandozeilen-Befehl
-> mit installiert. 
+> mit installiert (über die App "Git Shell" oder den Menübefehl "Repository > Open in PowerShell" erreichbar). 
 
 Die folgenden Szenarien und Beispiele spiegeln den häufigen Anwendungsfall wieder, dass ein 
 zentrales Git-Repository bei einem Git-Anbieter wie GitHub angelegt ist und ein oder mehrere
@@ -220,6 +220,11 @@ besprochen werden.
 Im Folgenden sind eine Reihe von Szenarien, die das gemeinsame Arbeiten an einem Projekt simulieren.
 Dazu sollen zweiergruppen gebildet werden und die **TODO**s abgearbeitet werden. 
 
+Die meisten 
+Aktionen lassen sich in GitHub Desktop auslösen. Soll der `git`-Kommandozeilenbefehl verwendet werden, kann
+entweder die mit GitHub Desktop mitinstallierte App "Git Shell" gestartet werden, oder eine
+Kommandozeile über den Menübefehl ""Repository > Open in PowerShell" eine Kommandozeile geöffnet werden.
+
 ### Ein neues GitHub Projekt
 
 Entwickler **A** legt ein Projekt an und Entwickler **B** "holt" sich das Projekt auf seinen Rechner.
@@ -228,7 +233,7 @@ Entwickler **A** legt ein Projekt an und Entwickler **B** "holt" sich das Projek
 > 
 > - Bildet Zweiergruppen.
 > - **A**: legt ein neues Git-Projekt auf Github (z.B. mit `git init` auf der Kommandozeile oder mit 
->   GitHub Desktop (Menü File->New repository) an.
+>   GitHub Desktop (Menü "File->New repository") an.
 > - **A**: fügt dem Projekt eine simple HTML-Datei (Mit einem Titel im Header und einer Textzeile im Body) zu.
 > - **A**: überträgt die Änderung ins lokale Repository (mit `git commit -a` oder mit dem Commit Button in 
 >   GitHub Desktop).
@@ -530,7 +535,7 @@ zum Einsatz kommen, die von vielen und häufig durchgeführten Branches und Merg
 
 Es ist nicht ungewöhnlich, dass erfahrene Entwickler gleichzeitig mehrere eigene Branches betreiben.
 
-### Clones
+### Forks
 
 In Projekten, bei denen das Entwicklerteam nicht fest definiert ist, ist es oft schwierig, 
 verteiltes Arbeiten nur mit Hilfe von Branches zu ermöglichen. Jeder Entwickler, der in einem 
@@ -541,7 +546,7 @@ Aktionen verhindern kann.
 
 Bei sehr verteilten (typischerweise OpenSource) Projekten, insbesondere wenn diese auf einem
 Dienst wie GitHub gehalten werden, arbeiten weltweit Entwickler, die sich untereinander nicht 
-kennen, ad-hoc an gemeinsamen Projekten. Hier wird daher oft mit ***Clones*** gearbeitet. 
+kennen, ad-hoc an gemeinsamen Projekten. Hier wird daher oft mit ***Forks*** gearbeitet. 
 
 Dabei legt sich jeder Entwickler, der an einem Projekt mitarbeiten will, zunächst mal ein
 eigenes Repository als Kopie des ursprünglichen Projektes an. Hier kann er nach Belieben 
