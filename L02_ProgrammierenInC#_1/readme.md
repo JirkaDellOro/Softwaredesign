@@ -449,7 +449,7 @@ Logischer Operator   |  Bedeutung               | Wirkung
 ---------------------|--------------------------|---------------------
 `!`                  | Negation                 | Operand wird negiert (aus `true` wird `false` und umgekehrt)
 `&&`                 | Logisches bedingtes Und  | Ergebnis nur dann `true`, wenn beide Operanden `true`
-`||`                 | Logische bedingtes Oder  | Ergebnis ist `true`, wenn mindestens einer der beiden Operanden `true`
+&#124;&#124;         | Logische bedingtes Oder  | Ergebnis ist `true`, wenn mindestens einer der beiden Operanden `true`
 `^`                  | Exklusives Oder (XOR)    | Ergebnis ist `true`, wenn _genau_ einer der beiden Operanden `true`
 
 > #### TODO
