@@ -370,7 +370,7 @@ Objekt-Zugriffs-Operator (`.`) verwendet.
 ```
 
 In C# gibt es eine abkürzende Schreibweise für diese beiden Initialisierungsschritte. Mit einem
-so genannten _Objektinitialisierer_  können die oben stehenden drei Zeilen zu folgender Zeile
+so genannten _Objektinitialisierer_ können die oben stehenden drei Zeilen zu folgender Zeile
 zusammen gefasst werden:
 
 ```C#
@@ -380,7 +380,124 @@ zusammen gefasst werden:
 Beachtenswert bei obiger Schreibweise ist die Verwendung der geschweiften Klammern im Unterschied
 zu den runden und die Verwendung des Komma als Trennzeichen der Initialisierungsliste.
 
+Nachdem nun die wichtigsten Merkmale von C# im Umgang mit Daten und Datenstrukturen erklärt wurden, 
+sollen nun die rudimentären Kontrollstrukturen beschrieben werden
 
+## Verzweigungen
 
+Um in Abhängigkeit eines errechneten Wertes, der Eingabe eines Benutzers, einer von einem anderen
+Rechner empfangenen Nachricht oder Ähnlichem Codezweige ausführen zu können, gibt in allen 
+Programmiersprachen das Konstrukt der Verzweigung. 
+
+### `if` / `else`
+
+Wie in vielen anderen Sprachen auch, gibt es in C# die if/else Anweisung, die auf Grund eines
+Wahrheitswertes (vom Typ `bool` - kann wahr oder falsch sein), einen von zwei möglichen
+Code-Blöcken ausführt. Die allgemeine Syntax ist wie folgt:
+
+```C#
+  if (<BEDINGUNG>)
+  {
+      // Anweisungsblock, der ausgeführt, falls <BEDINGUNG> true ist
+  }
+  else
+  {
+      // Anweisungsblock, der ausgeführt, falls <BEDINGUNG> false ist
+  }
+```
+
+Dabei kann der `else`-Zweig auch komplett weggelassen werden. Dann wird im negativen Fall gar nichts 
+ausgeführt.
+
+#### Bedingungen der `if`-Anweisung
+
+Die `<BEDINGUNG>` ist dabei ein Ausdruck, der einen Wert vom Typ `bool` ergibt. Im einfachsten
+Fall kann das einfach eine `bool`'sche Variable sein. Sehr oft wird aber ein Vergleichsoperator
+verwendet. Im Folgenden eine Liste der in C# vorhandenen Vergleichsoperatoren. Für die Beispiele
+seien
+
+```C#
+ int a = 3;
+ int b = 3;
+ int c = 4;
+```
+
+Vergleichsoperator   |  Bedeutung           | Beispiel
+-----------|----------------------|--------------
+`==`       | ist gleich           | `bool erg = (a == b); // erg ist true`
+`<`        | kleiner              | `bool erg = (a < c);  // erg ist true`
+`<=`       | kleiner oder gleich  | `bool erg = (a <= b); // erg ist true`
+`>`        | größer               | `bool erg = (a < c);  // erg ist true`
+`>=`       | größer oder gleich   | `bool erg = (a <= b); // erg ist true`
+
+> #### TODO
+>
+> Mit folgendem Code lässt sich eine Integerzahl einlesen, die der Benutzer an der Konsole 
+> eingibt (wird hier in `a`gespeichert)
+> ```C#
+> int a = int.Parse(Console.ReadLine());
+> ```
+>
+> - Schreibt ein C#-Programm, das zwei Zahlen von der Konsole einliest. Diese sollen verglichen werden.
+>   Ist die erste größer als die zweite, soll der Text "a ist größer als b" ausgegeben werden, ansonsten der Text
+>   "b ist größer als a".
+
+Mit den _logischen Operatoren_ lassen sich zudem beliebige `bool`'sche Werte miteinander verknüpfen. 
+Folgende logische Operatoren existieren.
+
+Logischer Operator   |  Bedeutung               | Wirkung
+---------------------|--------------------------|---------------------
+`!`                  | Negation                 | Operand wird negiert (aus `true` wird `false` und umgekehrt)
+`&&`                 | Logisches bedingtes Und  | Ergebnis nur dann `true`, wenn beide Operanden `true`
+`||`                 | Logische bedingtes Oder  | Ergebnis ist `true`, wenn mindestens einer der beiden Operanden `true`
+`^`                  | Exklusives Oder (XOR)    | Ergebnis ist `true`, wenn _genau_ einer der beiden Operanden `true`
+
+> #### TODO
+>
+> - Ändert das Programm aus dem letzten TODO so ab, dass wenn die erste Zahl größer drei und die zweite Zahl gleich 6 sechs
+>   ist, der Text "Du hast gewonnen" ausgegeben wird. Ansonsten soll "Leider verloren" ausgegeben werden.
+
+### `switch` / `case`
+
+Statt einer aus zwei Möglichkeiten soll manchmal eine aus mehreren Möglichkeiten ausgewählt werden. Beispielsweise
+soll der Inhalt einer `int`-Variablen überprüft werden und für verschiedene mögliche Werte sollen verschiedene 
+Aktionen ausgeführt werden. Ähnliches kann für den Inhalt einer `string`-Variablen gewünscht sein. Hier hilft die
+`switch`/ `case` Anweisung, die sich leicht an einem Beispiel erklären lässt:
+
+```C#
+int i = int.Parse(Console.ReadLine());
+switch (i)
+{
+   case 1:
+      Console.WriteLine("Du hast EINS eingegeben");
+      break;
+   case 2:
+      Console.WriteLine("ZWEI war Deine Wahl");
+      break;
+   case 3:
+      Console.WriteLine("Du tipptest eine DREI");
+      break;
+   default:
+      Console.WriteLine("Die Zahl " + i + " kenne ich nicht");
+      break;
+}
+```
+
+> #### TODO
+>
+> - Verwendet o.a. Code in einem lauffähigen C#-Programm und probiert es aus.
+> - Erweitert den Code um einen weiteren Switch für eine Zahl Eurer Wahl.
+> - Ändert den Typ der Variablen `i` von `int` nach `string` und ändert die `case`-Labels, so dass
+>   diese aus Strings bestehen.
+> - Was passiert, wenn man an einer Stelle das `break` vergisst? Denkt euch Fälle aus, bei denen
+>   das sinnvoll sein kann.
+> - Versucht, die oben mit der `switch` / `case` Anweisung implementierte Funktionalität mit `if`/ `else`
+>   Anweisungen zu implementieren. 
+
+Mit Version 7 von C# (erschienen im März 2017) hat die `switch` / `case` Anweisung ein paar mächtige Neuerungen
+erfahren. Somit sind nun nicht mehr nur `int` und `string` Werte in der `switch`-Klammer evaluierbar, sondern
+beliebige Ausdrücke, die dann in den `case`-Labels auf so genannte _Patterns_ überprüft werden können.
+
+## Schleifen
 
 
