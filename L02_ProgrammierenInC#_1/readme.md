@@ -500,4 +500,57 @@ beliebige Ausdrücke, die dann in den `case`-Labels auf so genannte _Patterns_ �
 
 ## Schleifen
 
+Neben den Verzweigungen bilden die Schleifen ein weiteres wichtiges Strukturierungs-Mittel, um den 
+Programmfluss zu beeinflussen. C# kennt folgende Schleifen-Konstrukte:
+
+### `while`
+
+Schleifen mit `while` haben folgenden Aufbau
+
+```C#
+  while (<BEDINGUNG>)
+  {
+    // Schleifenrumpf
+  }
+```
+
+Zu ***Beginn*** jedes Schleifendurchlaufs wird die Bedingung evaluiert. `<Bedingung>` muss dabei ein
+Ausdruck sein, der einen `bool`'schen Wert ergibt, also wie bei `if` beispielsweise ein Vergleich
+mit einem der Vergleichsoperatoren oder eine Kombination mehrerer `bool`'schen, die mit logischen
+Operatoren miteinander verknüpft sind.
+
+Ergibt `<Bedingung>` den Wert `true`, wird der Schleifenrumpf (also alle Anweisungen, die zwischen
+`{` und `}` stehen) einmal ausgeführt und dann wird erneut zum Beginn der `while`-Schleife verzweigt
+und die Bedingung erneut überprüft. Das geschieht so lange, bis `<Bedingung>` den Wert `false`
+ergibt: Dann wird der Schleifenrumpf nicht ausgeführt und der Programmfluss fährt mit der nächsten
+Anweisung _nach_  dem Schleifenrumpf fort.
+
+Insbesondere kann es passieren, dass der Rumpf einer `while`-Schleife  _gar nicht_ ausgeführt
+wird, wenn gleich die erste Evaluierung von `<Bedingung>` den Wert `false` ergibt.
+
+Viele `while`-Schleifen sind nach folgendem Muster aufgebaut:
+
+```C#
+  <INITIALISIERUNG>;
+  while (<BEDINGUNG>)
+  {
+    // Schleifenrumpf
+    <INKREMENT>;
+  }
+```
+
+_Vor_ der eigentlichen Schleife befindet sich eine Anweisung (hier `<INITIALISIERUNG>`) genannt, in 
+der die Voraussetzung für die allererste Überprüfung der `<BEDINGUNG>` geschaffen wird.
+
+Als letzter Schritt im Schleifenrumpf befindet sich eine Anweisung, die einen Teil der zu überprüfenden
+Bedingung verändert, dieser Schritt wird `<INKREMENT>` genannt.
+
+> #### TODO
+>
+> - Erzeugt ein C# Programm, das in einer `while`-Schleife die Zahlen von 1 bis 10 auf der Konsole
+>   ausgibt. 
+> - Wie lauten hier die Teile `<INITIALISIERUNG>`, `<BEDINGUNG>` und `<INKREMENT>`?
+
+
+### `for` 
 
