@@ -513,7 +513,7 @@ beliebige Ausdrücke, die dann in den `case`-Labels auf so genannte _Patterns_ �
 ## Schleifen
 
 Neben den Verzweigungen bilden die Schleifen ein weiteres wichtiges Konstrukt, um den 
-Programmfluss zu beeinflussen. C# kennt folgende Schleifen-Konstrukte:
+Programmfluss zu beeinflussen. C# kennt eine Reihe unterschiedlicher  Schleifen-Konstrukte
 
 ### `while`
 
@@ -528,7 +528,7 @@ Schleifen mit `while` haben folgenden Aufbau
 
 Zu ***Beginn*** jedes Schleifendurchlaufs wird die Bedingung evaluiert. `<Bedingung>` muss dabei ein
 Ausdruck sein, der einen `bool`'schen Wert ergibt, also wie bei `if` beispielsweise ein Vergleich
-mit einem der Vergleichsoperatoren oder eine Kombination mehrerer `bool`'schen, die mit logischen
+mit einem der Vergleichsoperatoren oder eine Kombination mehrerer `bool`'scher Werte, die mit logischen
 Operatoren miteinander verknüpft sind.
 
 Ergibt `<Bedingung>` den Wert `true`, wird der Schleifenrumpf (also alle Anweisungen, die zwischen
@@ -578,7 +578,9 @@ Schleifenrumpfes bietet das Schleifenkonstrukt mit `for`, das folgendermaßen au
 
 Wie man sieht, sind hier die drei häufig in `while`-Schleifen vorkommenden Bestandteile in 
 den Schleifenkopf gerückt. Somit wird optisch die eigentliche "Schleifenmechanik" vom
-inhaltlichen Schleifenrumpf getrennt. 
+inhaltlichen Schleifenrumpf getrennt. Die Ausführung der gesamten Schleife mit
+allen Bestandteilen unterscheidet sich aber in nichts von der
+äquivalenten Konstruktion weiter oben mit `while`.
 
 Ein häufig vorkommender Anwendungsfall für Schleifen ist das Durchlaufen eines Arrays:
 
@@ -618,7 +620,7 @@ sich alle Schleifen-Anwendungen so konstruieren, dass die Bedingung zu Beginn
 
 Es gibt aber Fälle, in denen ein Überprüfen der Schleifenbedingung und 
 ein möglicher nachfolgender Abbruch zu schlankerem oder eleganterem Code führt.
-In C# gibt es für diese Fälle zum einen das `do while`-Konstrukt und zum Anderen
+In C# gibt es für diese Fälle zum einen das `do while`-Konstrukt und zum anderen
 die Möglichkeit, mit einer `if`-Anweisung an einem beliebigen Punkt innerhalb
 des Schleifenrumpfes eine Abbruchbedingung abzufragen und, wenn diese gegeben ist, 
 mit `break` die Schleife zu verlassen.
@@ -666,7 +668,7 @@ in _Kollektionen_ von Daten, wie z.B. Arrays, einen Eintrag nach dem anderen abz
 In Arrays kann das, wie im Beispiel oben, über einen Index (meistens `i` genannt) passieren, mit
 dem dann innerhalb des Schleifenrumpfes auf den jeweiligen Array-Eintrag zugegriffen wird. Die
 hierzu notwendige _Index-Arithmetik_ (Initialisieren mit 0, Inkrementieren am Ende) ist zwar nicht
-sehr aufwändig, bedeutet aber dennoch einen gewissen Aufwand. Eine abkürzende Schreibweise für
+sehr aufwändig, bedeutet aber dennoch einerseits einen gewissen Aufwand und andererseits Kenntnisse über den internen Aufbau eines Arrays (Zugriff auf einzelne Elemente über `[]`). Eine abkürzende Schreibweise für
 das Iterieren über die Inhalte von _Kollektionen_ wie Arrays kann mit der `foreach`-Anweisung
 implementiert werden:
 
