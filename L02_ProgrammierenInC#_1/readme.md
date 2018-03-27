@@ -43,7 +43,7 @@ Die in C# fest eingebauten primitiven Datentypen sind:
   - `long` und `ulong`, signed und **u**nsigned - benötigt 64 bit Speicherplatz
 
 - `double` und alle anderen Datentypen, die Zahlen mit Nachkommastellen speichern können.
-  `double ist ein Fließkomma-Datenyp. Ein Double-Wert benötigt 64 bit. Weitere Nachkommastellen
+  `double ist ein Fließkomma-Datentyp. Ein Double-Wert benötigt 64 bit. Weitere Nachkommastellen
   behaftete Datentypen sind
   - `float` Fließkommazahl "einfacher" Genauigkeit - benötigt 32 bit Speicherplatz
   - `decimal` Festkommazahl mit hoher Genauigkeit - benötigt 128 bit Speicherplatz
@@ -90,7 +90,7 @@ Diese Regeln machen C# zu einer so genannten _stark typisierten_ Sprache. Es gib
 eine solche starke Typisierung nicht fordern (z.B. JavaScript, eine schwach typisierte Sprache). Für beide
 Varianten gibt es Vor- und Nachteile.
 
-### Regeln für die Wahl von Identifizierern
+### Regeln für Identifizierer
 
 Für die Wahl von Variablennamen und anderen Identifizierern gibt es folgende Regeln:
 
@@ -259,6 +259,18 @@ _konstante_ Indizes wie in obigen Beispielen zugegriffen werden kann. Da Indizes
 können auch Variableninhalte (z.B. vom Typ int) oder auch Rechenergebnisse, die erst zur Laufzeit
 des Programms feststehen, als Indizes verwendet werden. Von dieser Eigenschaft werden wir bei den 
 Schleifen Gebrauch machen.
+
+#### Länge eines Arrays
+
+Jede Array-Variable kann über die Eigenschaft `Length` abgefragt werden, 
+wieviel Einträge der Array enthält.
+
+> #### TODO
+>
+> - Gebt nach der Initialisierung des o.A. Arrays mit
+>   `Console.WriteLine(ia.Length);`
+>   die Anzahl der Einträge aus.
+> - Ändert die Anzahl der Einträge und überprüft die Ausgabe.
 
 ## Strings
 
@@ -500,7 +512,7 @@ beliebige Ausdrücke, die dann in den `case`-Labels auf so genannte _Patterns_ �
 
 ## Schleifen
 
-Neben den Verzweigungen bilden die Schleifen ein weiteres wichtiges Strukturierungs-Mittel, um den 
+Neben den Verzweigungen bilden die Schleifen ein weiteres wichtiges Konstrukt, um den 
 Programmfluss zu beeinflussen. C# kennt folgende Schleifen-Konstrukte:
 
 ### `while`
@@ -539,7 +551,7 @@ Viele `while`-Schleifen sind nach folgendem Muster aufgebaut:
   }
 ```
 
-_Vor_ der eigentlichen Schleife befindet sich eine Anweisung (hier `<INITIALISIERUNG>`) genannt, in 
+_Vor_ der eigentlichen Schleife befindet sich eine Anweisung (hier `<INITIALISIERUNG>` genannt), in 
 der die Voraussetzung für die allererste Überprüfung der `<BEDINGUNG>` geschaffen wird.
 
 Als letzter Schritt im Schleifenrumpf befindet sich eine Anweisung, die einen Teil der zu überprüfenden
@@ -551,6 +563,143 @@ Bedingung verändert, dieser Schritt wird `<INKREMENT>` genannt.
 >   ausgibt. 
 > - Wie lauten hier die Teile `<INITIALISIERUNG>`, `<BEDINGUNG>` und `<INKREMENT>`?
 
-
 ### `for` 
+
+Eine abkürzende bzw. übersichtlichere Schreibweise für die oben angegebene typische Aufteilung 
+einer `while`-Schleife mit vorangehendem Initialsierungsteil und Inkrement-Teil am Ende des
+Schleifenrumpfes bietet das Schleifenkonstrukt mit `for`, das folgendermaßen aussieht:
+
+```C#
+  for (<INITIALISIERUNG>; <BEDINGUNG>; <INKREMENT>)
+  {
+    // Schleifenrumpf
+  }
+```
+
+Wie man sieht, sind hier die drei häufig in `while`-Schleifen vorkommenden Bestandteile in 
+den Schleifenkopf gerückt. Somit wird optisch die eigentliche "Schleifenmechanik" vom
+inhaltlichen Schleifenrumpf getrennt. 
+
+Ein häufig vorkommender Anwendungsfall für Schleifen ist das Durchlaufen eines Arrays:
+
+```C#
+  string[] someStrings = 
+  {
+    "Hier",
+    "sehen",
+    "wir",
+    "einen",
+    "Array",
+    "von",
+    "Strings
+  };
+  
+  for (int i = 0; i < 5; i++)
+  {
+    Console.WriteLine(someStrings[i]);
+  }
+```
+
+> #### TODO
+>
+> - Lasst o.a. Code laufen. Was tut er?
+> - Wandelt die `for`-Schleife in eine `while`-Schleife um
+> - Lasst statt der erste 5 _alle_ in `someStrings` gespeicherten Werte ausgeben, indem
+>   die Bedingung statt eines konstanten Wertes die jeweilige Anzahl der Inhalte von 
+>   `someStrings` ausgibt (geht mit `someStrings.Length`).
+
+### Schleifenausstieg / Zeitpunkt der Bedingungsprüfung
+
+Beide Konstrukte, `while`- und `for`-Schleifen treffen die Entscheidung, ob mit
+der Schleifenbearbeitung fortgefahren (bzw. begonnen) wird, _vor_ der ersten
+Anweisung im Schleifenrumpf. Dies ist der häufigste Anwendungsfall. Prinzipiell lassen
+sich alle Schleifen-Anwendungen so konstruieren, dass die Bedingung zu Beginn
+überprüft wird
+
+Es gibt aber Fälle, in denen ein Überprüfen der Schleifenbedingung und 
+ein möglicher nachfolgender Abbruch zu schlankerem oder eleganterem Code führt.
+In C# gibt es für diese Fälle zum einen das `do while`-Konstrukt und zum Anderen
+die Möglichkeit, mit einer `if`-Anweisung an einem beliebigen Punkt innerhalb
+des Schleifenrumpfes eine Abbruchbedingung abzufragen und, wenn diese gegeben ist, 
+mit `break` die Schleife zu verlassen.
+
+#### Schleife mit `do while`
+
+```C#
+  int i = 0;
+  do ( )
+  {
+    Console.WriteLine(someStrings[i]);
+    i++;
+  }
+  while (i < 5);
+```
+
+#### Schleife mit `break`
+
+```C#
+  int i = 0;
+  while (true)
+  {
+    Console.WriteLine(someStrings[i]);
+    if (i >= 4)
+      break;
+    i++;
+  }
+```
+
+> #### TODO
+>
+> - Lasst die obigen Beispiele für `do while` und `break` mit dem Array aus dem `for`-Beispiel laufen
+>   und überzeugt Euch, dass die gleiche Ausgabe erzeugt wird.
+> - Sind die beiden Beispiele wirklich äquivalent zur `for`-Schleife? 
+>   - Verändert in allen drei Fällen die Abbruchbedingung so, dass _alle_ Array-Einträge ausgegeben
+>     werden und zwar in Abhängigkeit von der Anzahl der Array-Einträge (`someStrings.Length`).
+>   - Was passiert in den drei Fällen, wenn `someStrings` _keine_ Einträge enthält?
+
+
+### `foreach`
+
+Wie in oben angegebenen Beispielen auch, ist einer der häufigsten Anwendungsfälle für Schleifen, 
+in _Kollektionen_ von Daten, wie z.B. Arrays, einen Eintrag nach dem anderen abzuarbeiten.
+
+In Arrays kann das, wie im Beispiel oben, über einen Index (meistens `i` genannt) passieren, mit
+dem dann innerhalb des Schleifenrumpfes auf den jeweiligen Array-Eintrag zugegriffen wird. Die
+hierzu notwendige _Index-Arithmetik_ (Initialisieren mit 0, Inkrementieren am Ende) ist zwar nicht
+sehr aufwändig, bedeutet aber dennoch einen gewissen Aufwand. Eine abkürzende Schreibweise für
+das Iterieren über die Inhalte von _Kollektionen_ wie Arrays kann mit der `foreach`-Anweisung
+implementiert werden:
+
+```C#
+  foreach (string s in someStrings)
+  {
+    Console.WriteLine(s);
+  }
+```
+
+> #### TODO
+>
+> - Diskutiert Vor- und Nachteile der Schleifenkonstruktion mit `for` aus dem Beispiel oben
+>   gegenüber dem Beispiel mit `foreach` hinsichtlich 
+>   - Klarheit
+>   - Schreibaufwand
+>   - Flexibilität (was ist mit Zugriffen in umgekehrter Reihenfolge, Zugriff nur auf die ersten
+>     paar Einträge, ...)
+
+### Ausblick
+
+Neben Arrays werden wir bald noch weitere Datentypen kennen lernen, die es erlauben, eine Menge von 
+Werten gleichen Typs abzuspeichern. Bei manchen dieser so genannten _Kollektionen_ kann nicht über
+einen Index auf die Inhalte zugegriffen werden - daher funktioniert dort _ausschließlich_ der Zugriff
+über `foreach`. Es gibt sogar die Möglichkeit, eigene Datentypen zu definieren, auf deren Inhalte dann
+mit `foreach` zugegriffen wird - Stichwort ***Enumeratoren***.
+
+
+
+
+
+
+
+
+
 
