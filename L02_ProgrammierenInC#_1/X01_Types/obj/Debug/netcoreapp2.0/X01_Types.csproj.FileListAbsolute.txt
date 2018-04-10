@@ -1,0 +1,11 @@
+C:\Users\mch\Documents\_DEV\CourseContents\Softwaredesign\L02_ProgrammierenInC#_1\X01_Types\bin\Debug\netcoreapp2.0\X01_Types.deps.json
+C:\Users\mch\Documents\_DEV\CourseContents\Softwaredesign\L02_ProgrammierenInC#_1\X01_Types\bin\Debug\netcoreapp2.0\X01_Types.runtimeconfig.json
+C:\Users\mch\Documents\_DEV\CourseContents\Softwaredesign\L02_ProgrammierenInC#_1\X01_Types\bin\Debug\netcoreapp2.0\X01_Types.runtimeconfig.dev.json
+C:\Users\mch\Documents\_DEV\CourseContents\Softwaredesign\L02_ProgrammierenInC#_1\X01_Types\bin\Debug\netcoreapp2.0\X01_Types.dll
+C:\Users\mch\Documents\_DEV\CourseContents\Softwaredesign\L02_ProgrammierenInC#_1\X01_Types\bin\Debug\netcoreapp2.0\X01_Types.pdb
+C:\Users\mch\Documents\_DEV\CourseContents\Softwaredesign\L02_ProgrammierenInC#_1\X01_Types\obj\Debug\netcoreapp2.0\X01_Types.csprojResolveAssemblyReference.cache
+C:\Users\mch\Documents\_DEV\CourseContents\Softwaredesign\L02_ProgrammierenInC#_1\X01_Types\obj\Debug\netcoreapp2.0\X01_Types.csproj.CoreCompileInputs.cache
+C:\Users\mch\Documents\_DEV\CourseContents\Softwaredesign\L02_ProgrammierenInC#_1\X01_Types\obj\Debug\netcoreapp2.0\X01_Types.AssemblyInfoInputs.cache
+C:\Users\mch\Documents\_DEV\CourseContents\Softwaredesign\L02_ProgrammierenInC#_1\X01_Types\obj\Debug\netcoreapp2.0\X01_Types.AssemblyInfo.cs
+C:\Users\mch\Documents\_DEV\CourseContents\Softwaredesign\L02_ProgrammierenInC#_1\X01_Types\obj\Debug\netcoreapp2.0\X01_Types.dll
+C:\Users\mch\Documents\_DEV\CourseContents\Softwaredesign\L02_ProgrammierenInC#_1\X01_Types\obj\Debug\netcoreapp2.0\X01_Types.pdb

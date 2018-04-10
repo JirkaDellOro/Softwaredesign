@@ -1,0 +1,10 @@
+C:\Users\mch\Documents\_DEV\CourseContents\SoftwareDesign\LessonScribbles\Debugging\bin\Debug\netcoreapp2.0\Debugging.deps.json
+C:\Users\mch\Documents\_DEV\CourseContents\SoftwareDesign\LessonScribbles\Debugging\bin\Debug\netcoreapp2.0\Debugging.runtimeconfig.json
+C:\Users\mch\Documents\_DEV\CourseContents\SoftwareDesign\LessonScribbles\Debugging\bin\Debug\netcoreapp2.0\Debugging.runtimeconfig.dev.json
+C:\Users\mch\Documents\_DEV\CourseContents\SoftwareDesign\LessonScribbles\Debugging\bin\Debug\netcoreapp2.0\Debugging.dll
+C:\Users\mch\Documents\_DEV\CourseContents\SoftwareDesign\LessonScribbles\Debugging\bin\Debug\netcoreapp2.0\Debugging.pdb
+C:\Users\mch\Documents\_DEV\CourseContents\SoftwareDesign\LessonScribbles\Debugging\obj\Debug\netcoreapp2.0\Debugging.csproj.CoreCompileInputs.cache
+C:\Users\mch\Documents\_DEV\CourseContents\SoftwareDesign\LessonScribbles\Debugging\obj\Debug\netcoreapp2.0\Debugging.AssemblyInfoInputs.cache
+C:\Users\mch\Documents\_DEV\CourseContents\SoftwareDesign\LessonScribbles\Debugging\obj\Debug\netcoreapp2.0\Debugging.AssemblyInfo.cs
+C:\Users\mch\Documents\_DEV\CourseContents\SoftwareDesign\LessonScribbles\Debugging\obj\Debug\netcoreapp2.0\Debugging.dll
+C:\Users\mch\Documents\_DEV\CourseContents\SoftwareDesign\LessonScribbles\Debugging\obj\Debug\netcoreapp2.0\Debugging.pdb
