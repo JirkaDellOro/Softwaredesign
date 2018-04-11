@@ -332,7 +332,7 @@ Die Methode `Find()` durchläuft rekursiv den Baum und prüft alle `Person`-Obje
 Ändert die Bedingung so, dass nicht gleich die erste Person ("Willi") zurückgegeben wird. Eventuell gibt es Abstürze.
 Analysiert die Abstürze mit dem Debugger, überprüft Variableninhalte und den Call-Stack.
 
-Schreibt komplexere Bedingungen, findet z.B. die erste Person, die in einer Altersspanne liegt, verleicht dazu, person.DateOfBirth.Year
+Schreibt komplexere Bedingungen, findet z.B. die erste Person, die in einer Altersspanne liegt, vergleicht dazu person.DateOfBirth.Year
 mit DateTime.Now.Year. Analysiert mit dem Debugger, ob Eure Bedingung richtig ist. 
 
 
