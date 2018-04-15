@@ -335,6 +335,6 @@ Analysiert die Abstürze mit dem Debugger, überprüft Variableninhalte und den 
 Schreibt komplexere Bedingungen, findet z.B. die erste Person, die in einer Altersspanne liegt, vergleicht dazu person.DateOfBirth.Year
 mit DateTime.Now.Year. Analysiert mit dem Debugger, ob Eure Bedingung richtig ist. 
 
-
+Leistungsnachweis ist ein Protokoll zu den Experimenten mit Beschreibung der Erkenntnisse.
 
 
