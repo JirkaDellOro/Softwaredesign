@@ -40,9 +40,9 @@ public class DiscountManager
 
     public const int MaximumDiscountForLoyality = 5;
 
-    public static decimal ApplyDiscountForAccountStatus(decimal price, decimal discountSize)
+    public static decimal ApplyDiscountForAccountStatus(decimal price, decimal discountRatio)
     {
-        return price - (discountSize * price);
+        return price - (discountRatio * price);
     }
     
     public static decimal ApplyDiscountForTimeOfHavingAccount(decimal price, int timeOfHavingAccountInYears)
