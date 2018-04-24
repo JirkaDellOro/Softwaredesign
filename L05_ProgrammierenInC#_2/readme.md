@@ -389,9 +389,84 @@ In C# passiert unter der Haube mehr: Der generische Typ `MyContainer<T>` ist als
 im compilierten .NET-Code abgebildet. Zur Laufzeit wird dann durch die Spezialisierung auf `int` bei
 der Verwendung der konkrete Typ `MyContainer<int>` erzeugt.
 
+## Structs vs. Klassen
 
+In C# gibt es neben den Klassen noch eine weitere Möglichkeit, neue Datentypen aus bestehenden
+Datentypen aufzubauen, und zwar mit dem Schlüsselwort `struct`. Der Hauptunterschied zwischen mit `class`
+und `struct` aufgebauten Typen ist, dass Klassen immer _Referenz-Typen_ und Structs immer 
+_Value-Typen_ sind. Das bedeutet eine Variable vom Typ einer Klasse kann ein Objekt dieses Typs, das 
+irgendwo im Speicher liegt,  _referenzieren_ - oder auch nicht, dann ist der Inhalt `null`.
+Variablen von Structs sind immer untrennbar mit dem Objekt verbunden - sie können auch nicht `null` 
+sein. Der für Anwender größte Unterschied liegt in der Bedeutung von Zuweisungen `=` und Vergleichen 
+`==`: Bei Structs wird mit `=` der Objekt-Inhalt kopiert und mit `==` die Objektinhalte verglichen.
+Bei Klassen hingegen wird mit `=` nur die Referenz kopiert und mit `==` festgestellt, ob beide Variablen
+das _selbe_  Objekt referenzieren.
 
+> #### TODO
+> - Lest den Artikel 
+>   [Choosing between Class and Struct](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/choosing-between-class-and-struct)
+>   (angegebene Lesedauer: 2 Minuten).
+> - Findet weitere Unterschiede zwischen `class` und `struct` heraus im Bezug auf Vererbung, virtuelle Methoden, ggf. Interfaces
+> - Erzeugt jeweils eine Zuweisung und einen Vergleich zwischen Instanzen eines mit
+>   `class` und eines mit `struct` erzugten eigenen Datentyp heraus.
 
+## Weitere mögliche Bestandteile von Klassen und Structs
+
+Wie wir bereits gesehen haben, können Klassen (und auch Structs) Methoden und Felder enthalten.
+Zusätzlich gibt es in C# mit _Properties_ und _Events_ zwei weitere Kategorien von Bestandteilen, die 
+hier nur kurz erwähnt werden sollen.
+
+### Properties (Eigenschaften)
+
+Oft möchte man in Instanzen von Klassen Werte speichern, wie z.B. `Name` und `Alter` in unserem
+Beispiel. Beim Setzen von Werten und beim Auslesen von Werten soll aber oft weitere Funktionalität
+(so genannte Seiteneffekte) ausgelöst werden. Z.B. kann es beim Auslesen eines Wertes sein, dass
+der Wert erst noch aktualisiert werden muss. Oder beim Schreiben eines Wertes sollen andere Werte
+ebenfalls neu berechnet werden. Klassischerweise würde man in diesem Fall der Klasse Methdoen wie
+`SetWert(<TYP> wert)` und `<TYP> GetWert()` hinzufügen. In C# wurden für diesen Fall _Properties_ 
+hinzugefügt. Hier ein Beispiel:
+
+```C#
+  class Person
+  {
+    public string Name 
+    {
+      get
+      {
+         return _name;
+      }
+      set
+      {
+         _name = value;
+      }
+    }
+    private _name;
+
+    public int Alter;
+  }
+```
+
+In unserer Klasse `Person` ist `Name` nun ein Propertie mit einer `set` und einer `get` Methode.
+Hier passiert in den Methoden nichts anderes, als das zu setzender oder auszulesender Wert in einem 
+privaten Feld (dem _backing field_) gespeichert werden. Man kann sich aber leicht vorstellen, dass in
+den Methodenrümpfen von `set` und `get` weitere Anweisungen stehen können, die beliebige Seiteneffekte
+auslösen.
+
+### Events
+
+Zu bestimmten Zeitpunkten in der Lebenszeit einer Instanz einer Klasse oder eines Structs kann 
+es notwendig werden, dass andere Code-Stücke aufgerufen werden sollen. Zum Zeitpunkt der Erstellung
+der Klasse, also als ein Programmierer den Code für die Klasse hingeschrieben hat, ist aber vielleicht
+noch nicht klar, welcher Code aufgerufen werden soll.
+
+Beispiel: Ein Programmierer programmiert für eine grafische Benutzerschnittstelle eine "Button" Klasse, der
+von Benutzern geklickt werden kann. Dazu programmiert er Code, der erkennt, wenn ein Benutzer mit der Maus
+den vom Button eingenommenen Bildschirmbereich überdeckt und gleichzeitig die Maustaste drückt. Damit
+die "Button" Klasse wiederverwendbar ist, kann er noch nicht festlegen, was genau beim Eintreten des 
+Ereignis "Benutzer hat Maus über dem Button geklickt" passieren soll. 
+
+Die Lösung hierfür sind so genannte _Events_. Mit deren Hilfe kann ein Anwender der Klasse eigenen Code
+hinterlegen, der ausgeführt werden soll, sobald ein _Event_, ein Ereignis, eintritt. 
 
 
 
