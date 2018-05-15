@@ -295,9 +295,10 @@ genau eines Ganzen sein und werden vernichtet, wenn das Ganze vernichtet wird.
 >     - Zusätzlich _hat_ jeder Teilnehmer eine Matrikelnummer
 >     - Jeder Teilnehmer _kennt_ die Kurse, die er besucht
 >   - Ein `Dozent` _ist_ eine Person
->     - Zusätzlich _hat_ jeder Dozent eine Büro-Nummer und eine Sprechstunde (Wochentag und Uhrzeit)
+>     - Zusätzlich _hat_ jeder Dozent eine Raum-Angabe seines Büros und 
+>       eine Sprechstunde (Wochentag und Uhrzeit)
 >     - Jeder Dozent _kennt_ die Kurse, die er hält
->   - Ein `Kurs` _hat_ einen Titel, einen Wochentag und und eine Uhrzeit
+>   - Ein `Kurs` _hat_ einen Titel, einen Wochentag und und eine Uhrzeit und eine Raumangabe
 >     - jeder Kurs _kennt_ den Dozenten, der den Kurs hält
 >     - jeder Kurs _kennt_ die Teilnehmer, die am Kurs teilnehmen
 > 
@@ -306,7 +307,7 @@ genau eines Ganzen sein und werden vernichtet, wenn das Ganze vernichtet wird.
 >     sind geeignet?
 >
 > - Erweitert das Klassendiagramm um folgende Sachverhalte
->   - Jeder Kurs _kann_ eine Teilnehmerliste ausgeben
+>   - Jeder Kurs _kann_ einen Infotext (was, wer, wann, wo) ausgeben
 >   - Jeder Dozent _kann_ eine Liste der von ihm gehaltenen Kurse ausgeben 
 >   - Jeder Dozent _kann_ eine Gesamtliste der aktuell bei ihm eingeschriebenen _Teilnehmer_ generieren
 >  
