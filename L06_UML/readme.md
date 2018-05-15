@@ -3,15 +3,54 @@
 
 ## Über UML
 
-Die Entwicklung der Unified Modelling Language (UML) begann Mitte der 1990er Jahre, vorangetrieben vor allem
+Source-Code ist nur bedingt geeignet, um Software zu entwerfen:
+
+- Source-Code ist von Menschen nicht intuitiv lesbar. Um z.B. in einem Team die Idee eines 
+  Software-Entwurfs vorzustellen, ist Source-Code oft zu unhandlich. 
+
+- Source-Code ist aufwändig zu schreiben. Es ist wünschenswert, eine Idee für einen 
+  Entwurf _mal kurz_ hinschreiben oder hinmalen zu können.
+
+- Source-Code ist zu komplex, um -ggf. noch unvollständige- Ideen festzuhalten, um 
+  in diesem Entwurf z.B. Fehler erkennen zu können, Alternativen aufzuzeigen, etc.
+
+- Source-Code ist zu unübersichtlich, um in einem Entwurf den Fokus auf einen bestimmten
+  Sachverhalt zu lenken, und andere, für diesen Sachverhalt unwichtige, Bestandteile
+  wegzulassen.
+
+Ähnlich wie ein Architekt oder ein Produkt-Designer zunächst mal grobe Skizzen anfertigt, 
+um damit den Design-Prozess zu unterstützen, ist eine einfache Notation wünschenswert, 
+die es erlaubt, Software-Entwürfe skizzenhaft festzuhalten, dabei nach Belieben Details
+herauszuarbeiten oder wegzulassen oder auch iterativ einen Entwurf zu verfeinern, bevor
+dieser _ins Reine gezeichnet_ - also in lauffähigen Code umgewandelt - wird.
+
+Jeder Software-Entwickler, der schon mal an einer komplexeren Aufgabe saß, hat höchstwahrscheinlich
+auch schon mal Ideen, Konzepte, Entwürfe in einer intuitiven, selbst ausgedachten Notation
+auf Papier gescribbelt. Spätestens, wenn der Software-Entwurfsprozess arbeitsteilig gestaltet
+werden soll, ist es sinnvoll, sich auf eine eine einheitliche Notation zu einigen, um 
+Entwürfe untereinander im Team austauschen zu können. Hier setzt die 
+**Unified Modeling Language (UML)** an.
+
+Die Entwicklung der UML begann Mitte der 1990er Jahre, vorangetrieben vor allem
 von den "drei Amigos": Grady Booch, James Rumbaugh und Ivar Jacobson. Alle drei arbeiteten bereits zuvor an
 Schemata zur Planung von Software mit grafischen Hilfsmitteln und begannen schließlich bei der 
 Firma Rational Software mit der Entwicklung einer gemeinsamen grafischen Sprache.
 Die Version 2.5 der UML wurde im Mai 2015 veröffentlicht 
 ([siehe Website der Object Management Group](http://www.omg.org/spec/UML/2.5)).
 Dort ist auch die umfangreiche [Spezifikation](http://www.omg.org/spec/UML/2.5/PDF) zur finden. Es sind
-einige Arten von Diagrammen für unterschiedliche Zwecke definiert. In der Folge sollen nur Aktivitäts-
-und Klassendiagramme betrachtet werden.
+einige Arten von Diagrammen für unterschiedliche Zwecke definiert. In der Folge sollen nur ***Aktivitäts-
+und Klassendiagramme*** betrachtet werden.
+
+> #### TODO
+> - Schaut Euch die Übersicht über die 14 Diagrammtypen auf folgender Web-Seite an:
+>   https://creately.com/blog/diagrams/uml-diagram-types-examples/
+>
+> - Identifiziert die hier besprochenen Diagrammtypen (Aktivität und Klassen). Zu 
+>   welchen Haupt-Kategorien zählen diese jeweils?
+>
+> - Schaut Euch die Beschreibung weiterer, hier nicht besprochener Diagrammtypen
+>   an.  Diskutiert untereinder, unter welchen Typen könnt ihr euch eine Anwendung
+>   vorstellen könnt. Welche Diagrammtypen sagen euch überhaupt nichts?
 
 
 ## Aktivitätsdiagramme
@@ -21,7 +60,6 @@ beschreiben. Von generellen Prozessen, bei denen keine Maschinen beteiligt sind,
 Computerprogramme. Dabei ist es möglich auch komplexe Abläufe mit Ausnahmen, Verzweigungen, Sprüngen und
 Wiederholungen noch übersichtlich darzustellen, was in natürlicher Sprache nicht gelingen würde. Die
 wesentlichsten Elemente sind dabei recht einfach zu erlernen.
-
 
 ### Einfachste Elemente
 
@@ -100,6 +138,21 @@ Im Detail gibt es noch sehr viel weiter greifende Spezifikationen für Aktivitä
 entsprechenden Literatur zu entnehmen sind. Für einen ersten groben Entwurf von Software sollten die
 hier angeführten allerdings weitestgehend genügen.  
 
+> #### TODO
+>
+> - Zeichnet für einen Alltagsvorgang (Spülen, Wäsche waschen, Koch-Rezept umsetzen)
+>   ein Aktivitätsdiagramm, bei dem mindestens eine Entscheidung getroffen werden 
+>   muss und in der eine sich wiederholende Teilaktivität vorkommt.
+>
+> - Übersetzt das Diagramm in C#-Pseudo-Source-Code (der nicht lauffähig sein muss),
+>   in dem ihr die Ablaufstrukturen (Verzweigung, Wiederholung) in geeignete C#-Anweisungen 
+>   umwandelt und jeden Aktivitätsknoten (abgerundetes Rechteck) in einen Methodenaufruf
+>   einer imaginären Methode (z.B. `SalzHinzufügen()`) umwandelt.
+>
+> - Sucht euch eine bereits implementierte Methode aus einer der vorangegangenen 
+>   Programmierbeispiele und zeichnet zu der Methode ein passendes Aktivitätsdiagramm.
+
+
 ## Klassendiagramme
 
 Klassendiagramme stellen den Aufbau von Klassen und Zusammenhänge zwischen ihnen bzw. deren Objekte dar.
@@ -140,13 +193,15 @@ In der Regel werden für ein Softwareprojekt viele verschiedene Klassen genutzt 
 denen oder deren Objekten bestimmte Beziehungen existieren. 
 
 
-#### Spezialisierung
+#### Spezialisierung (Vererbung)
 
 Eine Linie mit einer nicht ausgefüllten Pfeilspitze an einem Ende zeigt die Spezialisierung einer Subklasse 
 in Bezug auf die Superklasse und damit eine Vererbungsbeziehung an.
 
 ![Spezialisierung](img/Spezialisierung.png)
 
+In Klassendiagrammen wird bei Vererbungsbeziehungen die Elternklasse oft _oberhalb_ der Kindklasse
+gezeichnet, so dass die _erbt-von_-Pfeile nach oben zeigen.
 
 #### Implementierung
 
@@ -157,6 +212,9 @@ versehen ist. Dies soll wie ein Stecker wirken.
 
 ![InterfaceImplementierung](img/InterfaceImplementierung.png)
 
+Da in vielen Programmierumgebungen eine Klasse zwar nur von _einer_ anderen Klasse erben kann, aber 
+viele Interfaces implementieren kann, bietet diese Lolly-Darstellung eine kompaktere Darstellung für
+Klassen, die mehrere Interfaces implementieren. 
 
 #### Verwendung
 
@@ -183,7 +241,7 @@ Betreute sind.
 Die Pluszeichen geben die Sichtbarkeit an, die Information soll also public sein. Die Pfeilspitzen geben an, 
 in welche Richtung "navigiert" werden kann. Im Beispiel kann von dem Objekt Studi leicht auf den 
 assoziierten Prof zugegriffen werden. Bei der Implementation könnte Studi also möglicherweise ein Attribut 
-vom Typ Prof mit der entsprechenen Referenz erhalten. Die Assoziation ist hier bidirektional, vom Objekt 
+vom Typ Prof mit der entsprechenden Referenz erhalten. Die Assoziation ist hier bidirektional, vom Objekt 
 Prof kann also auch leicht zu den betreuten Studis navigiert werden. Hier bietet sich ggf. ein Array vom Typ 
 Studi als Attribut der Prof-Klasse an.
 
@@ -228,3 +286,27 @@ genau eines Ganzen sein und werden vernichtet, wenn das Ganze vernichtet wird.
   Wo und von wem wird das Objekt erzeugt? Wird es von einer zentralen Struktur dauerhaft referenziert? 
   Werden an anderer Stelle dauerhafte Referenzen gespeichert?  
   Die Beantwortung dieser Fragen hilft beim Entwurf der Assoziationen zwischen Objekten, insbesondere von Aggregationen und Kompositionen.
+
+> #### TODO
+>
+> - Zeichnet ein Klassendiagramm folgender Sachverhalte (_kennt_ = "Was weiß es"):
+>   - Eine `Person` _hat_ einen Namen und ein Alter
+>   - Ein `Teilnehmer` _ist_ eine Person
+>     - Zusätzlich _hat_ jeder Teilnehmer eine Matrikelnummer
+>     - Jeder Teilnehmer _kennt_ die Kurse, die er besucht
+>   - Ein `Dozent` _ist_ eine Person
+>     - Zusätzlich _hat_ jeder Dozent eine Büro-Nummer und eine Sprechstunde (Wochentag und Uhrzeit)
+>     - Jeder Dozent _kennt_ die Kurse, die er hält
+>   - Ein `Kurs` _hat_ einen Titel, einen Wochentag und und eine Uhrzeit
+>     - jeder Kurs _kennt_ den Dozenten, der den Kurs hält
+>     - jeder Kurs _kennt_ die Teilnehmer, die am Kurs teilnehmen
+> 
+> - Implementiert das Klassendiagram in C#
+>   - Es gibt mehrere Möglichkeiten, die _kennt_ Beziehungen zu implementieren. Welche
+>     sind geeignet?
+>
+> - Erweitert das Klassendiagramm um folgende Sachverhalte
+>   - Jeder Kurs _kann_ eine Teilnehmerliste ausgeben
+>   - Jeder Dozent _kann_ eine Liste der von ihm gehaltenen Kurse ausgeben 
+>   - Jeder Dozent _kann_ eine Gesamtliste der aktuell bei ihm eingeschriebenen _Teilnehmer_ generieren
+>  
