@@ -27,7 +27,7 @@ dieser _ins Reine gezeichnet_ - also in lauffähigen Code umgewandelt - wird.
 Jeder Software-Entwickler, der schon mal an einer komplexeren Aufgabe saß, hat höchstwahrscheinlich
 auch schon mal Ideen, Konzepte, Entwürfe in einer intuitiven, selbst ausgedachten Notation
 auf Papier gescribbelt. Spätestens, wenn der Software-Entwurfsprozess arbeitsteilig gestaltet
-werden soll, ist es sinnvoll, sich auf eine eine einheitliche Notation zu einigen, um 
+werden soll, ist es sinnvoll, sich auf eine einheitliche Notation zu einigen, um 
 Entwürfe untereinander im Team austauschen zu können. Hier setzt die 
 **Unified Modeling Language (UML)** an.
 
@@ -298,11 +298,11 @@ genau eines Ganzen sein und werden vernichtet, wenn das Ganze vernichtet wird.
 >     - Zusätzlich _hat_ jeder Dozent eine Raum-Angabe seines Büros und 
 >       eine Sprechstunde (Wochentag und Uhrzeit)
 >     - Jeder Dozent _kennt_ die Kurse, die er hält
->   - Ein `Kurs` _hat_ einen Titel, einen Wochentag und und eine Uhrzeit und eine Raumangabe
+>   - Ein `Kurs` _hat_ einen Titel, einen Wochentag und und eine Uhrzeit und eine Raum-Angabe
 >     - jeder Kurs _kennt_ den Dozenten, der den Kurs hält
 >     - jeder Kurs _kennt_ die Teilnehmer, die am Kurs teilnehmen
 > 
-> - Implementiert das Klassendiagram in C#
+> - Implementiert das Klassendiagramm in C#
 >   - Es gibt mehrere Möglichkeiten, die _kennt_ Beziehungen zu implementieren. Welche
 >     sind geeignet?
 >
