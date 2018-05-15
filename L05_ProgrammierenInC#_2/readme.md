@@ -84,7 +84,7 @@ Struktur aufgebaut:
 ```
 
 Der `<RÜCKGABEWERT>` bezeichnet dabei den Datentyp des Rückgabewertes. Die 
-<PARAMETERLISTE> enhält eine mit Komma getrennte Liste von Parameterdeklarationen, die, 
+`<PARAMETERLISTE>` enthält eine mit Komma getrennte Liste von Parameterdeklarationen, die, 
 wie Variablendeklarationen, nach dem Schema `<TYP> identifizierer` aufgebaut sind.
 
 Der `<METHDODENRUMPF>` enthält Code, der ausgeführt wird, sobald die Methode aufgerufen 
