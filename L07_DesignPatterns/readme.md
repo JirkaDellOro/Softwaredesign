@@ -82,7 +82,7 @@ Stelle aus aufgerufen wird, oder ob er überhaupt jemals benötigt wird.
 
 > #### TODO
 > 
-> - Lest Euch den Wikipedia-Arteikel zum Singleton Pattern durch
+> - Lest Euch den Wikipedia-Artikel zum Singleton Pattern durch
 > - Versucht, mit Hilfe des UML-Diagramms eine Beispielimplementierung für o.g. `IdGenerator` zu erzeugen:
 >   - Nennt die Klasse, die UML-Diagramm `Singleton` heißt, `IdGenerator`
 >   - Verwendet statt der im UML-Diagramm vorgeschlagenen _Methode_ `getInstance()` ein
@@ -234,3 +234,13 @@ einer Schleife, die auf alle enthaltenen Objekte zugreift, die `foreach`-Anweisu
 werden, die vom Compiler in die Implementierung mit `Current` und `MoveNext()` aus obigem 
 Beispiel übersetzt wird.
 
+## Aufgabe
+
+- Erweitert das Decorator-Beispiel mit den Spielfiguren
+  im Ordner [DesPatternDecorator](DesPatternDecorator/) so, dass es eine gemeinsame 
+  Basisklasse für alle Decorator gibt. In dieser Basisklasse sollte auch die von 
+  allen Decorator gleich zu implementierende Funktionalität hinein.
+
+- Wandelt die Methode `GetInstance` im Singleton-Pattern in ein C#-Property um.
+  Nennt das Property `Instance` und implementiert _nur_ die `get` Methode des
+  Property (kein `set`).  
