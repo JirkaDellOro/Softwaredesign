@@ -67,12 +67,12 @@ UML-Diagramm als auch in Form von Code mit jeweils einer Beispiel-Anwendung vorg
 ### Singleton
 
 Der Singleton ist das einfachste Design Pattern. Es kommt immer dann zum Einsatz, 
-wenn in einem Programm zur Laufzeit maximal nur eine einzige Klasse einer Instanz
+wenn in einem Programm zur Laufzeit maximal nur eine einzige Instanz einer Klasse
 erzeugt werden soll. 
 
 #### Beispiel 
-Ein Beispiel ist ein ID-Generator, der von allen Möglichen Stellen
-in der Software angefragt werden kann, um eine Systemweit-eindeutige ID zu erzeugen. Dazu
+Ein Beispiel ist ein ID-Generator, der von allen möglichen Stellen
+in der Software angefragt werden kann, um eine systemweit eindeutige ID zu erzeugen. Dazu
 muss eine Zustandsinformation hinterlegt werden, die zur Generierung einer neuen ID
 benötigt wird (z.B. ein Zähler). Das könnte auch mit globalen Variablen implementiert werden.
 Allerdings ist möglicherweise nicht klar, wann der ID-Generator zum ersten Mal von welcher
