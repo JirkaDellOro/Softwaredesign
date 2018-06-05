@@ -18,7 +18,7 @@ Viele Definitionen lassen sich einer von zwei Kategorien zuordnen.
 1. Module aus technischer Sicht
 2. Module aus konzeptioneller Sicht
 
-### Technische Aspekt von _Modulen_
+### Technische Aspekte von _Modulen_
 
 Jede Kombination aus Programmiersprache und Entwicklungsumgebung bietet die technischen Grundlagen, 
 Programmcode in modulare Einheiten aufzuteilen. Begriffe, die hier oft synonym mit
