@@ -202,6 +202,23 @@ In diesem Beispiel hätte man natürlich auch die Berechnung vor der if-Abfrage 
 ### Vorgehensweise
 Es ist gar nicht leicht, Funktionen nach diesen Regeln zu gestalten. Es ist ein iterativer Prozess. Zunächst muss man die Gedanken zur Problemlösung notieren und dann einen ersten Entwurf machen. Dieser wird dann solange umstrukturiert und refaktoriert, bis der entstandene Code den Regeln guten Designs entspricht.
 
+## Konventionen (von Prof. Müller)
+- Klammern/Einrückung
+-- im Allman/East-Coast-Stil (öffnende Klammer in eigene neue Zeile), 
+--	4 Leerzeichen
+- Identifizierer
+-- Bei mehreren Worten camelCase bzw. PascalCase
+-- Struct-, Klassen-, Delegate-, enum- und Interface-Namen: erster Buchstabe groß
+-- Interface-Namen beginnen mit großem "I", danach erster Buchstabe groß
+-- Öffentliche Klassenbestandteile (Properties und Fields) am Anfang groß
+-- Nicht-öffentliche Klassenbestandteile (Properties und Fields): 
+--- erstes Zeichen underscore '_'
+--- dann klein weiter, ggf. camelCase
+-- Methodennamen immer erster Buchstabe groß (public und non-public)
+-- Methodenparameter & lokale Variablen: erster Buchstabe klein.
+-- enum-Konstanten: erster Buchstabe groß
+-- NIEMALS all-uppercase
+
 > #### TODO
 >
 > - Das in dieser Lektion verwendete Code-Beispiel stammt 
