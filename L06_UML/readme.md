@@ -280,12 +280,11 @@ genau eines Ganzen sein und werden vernichtet, wenn das Ganze vernichtet wird.
   Die Beantwortung dieser Fragen hilft beim Entwurf der Methoden.
 * Was weiß es?		-> Verweise zu anderen Objekten  
   Welche Informationen benötigt das Objekt aus seiner "Umwelt" um funktionsfähig zu sein? Welche Referenzen 
-  auf andere Objekte welcher Klassen werden von dem Objekt gehalten?  
-  Die Beantwortung dieser Fragen hilft beim Entwurf der Assoziationen zwischen Objekten.
+  auf andere Objekte welcher Klassen werden dem Objekt zur Verfügung gestellt?  
+  Die Beantwortung dieser Fragen hilft beim Entwurf der Assoziationen zwischen Objekten und der Parameterübergaben bei Methoden.
 * Wer verwaltet es?	-> Erzeuger, Referenzierung 
-  Wo und von wem wird das Objekt erzeugt? Wird es von einer zentralen Struktur dauerhaft referenziert? 
-  Werden an anderer Stelle dauerhafte Referenzen gespeichert?  
-  Die Beantwortung dieser Fragen hilft beim Entwurf der Assoziationen zwischen Objekten, insbesondere von Aggregationen und Kompositionen.
+  Wo und von wem wird das Objekt erzeugt? Wird es von einer zentralen Struktur dauerhaft referenziert? Werden an anderer Stelle dauerhafte Referenzen gespeichert?  
+  Die Beantwortung dieser Fragen hilft beim Entwurf der Assoziationen zwischen Objekten, insbesondere von Aggregationen und Kompositionen, sowie eines stabilen Gesamtsystems. Die Darstellung wird auch im Aktivitätsdiagramm reflektiert.
 
 > #### TODO
 >
