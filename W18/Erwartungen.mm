@@ -1,17 +1,6 @@
 <map version="1.0.1">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
-<node CREATED="1538466387213" ID="ID_1186405089" MODIFIED="1538467194731">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      Softwaredesign<br />Erwartungen/Ideen
-    </p>
-  </body>
-</html>
-</richcontent>
+<node CREATED="1538466387213" ID="ID_1186405089" MODIFIED="1539175644432" TEXT="Softwaredesign Erwartungen/Ideen">
 <node CREATED="1538467206234" FOLDED="true" ID="ID_1417254647" MODIFIED="1538468757243" POSITION="right" TEXT="Warum studieren, Medieninformatik">
 <node CREATED="1538467314257" FOLDED="true" ID="ID_1678636159" MODIFIED="1538467382929" TEXT="Programmieren macht Spa&#xdf;">
 <node CREATED="1538467332545" ID="ID_1996146483" MODIFIED="1538467339101" TEXT="Besser programmieren lernen"/>
