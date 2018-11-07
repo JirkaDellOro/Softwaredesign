@@ -314,6 +314,7 @@ Werkzeugen die Absturzursache analysiert werden. In VS Code mit C# derzeit nicht
 
 
 ## Übungsaufgabe
+Leistungsnachweis ist ein Protokoll zu den Experimenten mit Beschreibung der Erkenntnisse.
 
 Betrachtet die Source-Code-Dateien 
 [FamilyTree.cs](FamilyTree.cs) und 
@@ -334,7 +335,5 @@ Analysiert die Abstürze mit dem Debugger, überprüft Variableninhalte und den 
 
 Schreibt komplexere Bedingungen, findet z.B. die erste Person, die in einer Altersspanne liegt, vergleicht dazu person.DateOfBirth.Year
 mit DateTime.Now.Year. Analysiert mit dem Debugger, ob Eure Bedingung richtig ist. 
-
-Leistungsnachweis ist ein Protokoll zu den Experimenten mit Beschreibung der Erkenntnisse.
 
 
