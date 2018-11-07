@@ -314,7 +314,7 @@ Werkzeugen die Absturzursache analysiert werden. In VS Code mit C# derzeit nicht
 
 
 ## Übungsaufgabe
-Leistungsnachweis ist ein Protokoll zu den Experimenten mit Beschreibung der Erkenntnisse.
+(Leistungsnachweis ist ein Protokoll zu den Experimenten mit Beschreibung der Erkenntnisse.)
 
 Betrachtet die Source-Code-Dateien 
 [FamilyTree.cs](FamilyTree.cs) und 
