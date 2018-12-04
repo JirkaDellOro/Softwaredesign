@@ -200,7 +200,7 @@ in Bezug auf die Superklasse und damit eine Vererbungsbeziehung an.
 
 ![Spezialisierung](img/Spezialisierung.png)
 
-In Klassendiagrammen wird bei Vererbungsbeziehungen die Elternklasse oft _oberhalb_ der Kindklasse
+In Klassendiagrammen wird bei Vererbungsbeziehungen die Superklasse oft _oberhalb_ der Subklasse
 gezeichnet, so dass die _erbt-von_-Pfeile nach oben zeigen.
 
 #### Implementierung
