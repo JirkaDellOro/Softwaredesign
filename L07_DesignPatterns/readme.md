@@ -144,7 +144,7 @@ sich für Ereignisse zu registrieren.
 
 > #### TODO
 >
-> - Erzeugt eine Klasse `Calculator` mit einer `static` Methode `CalculateSomething`, die eine längere
+> - Erzeugt eine Klasse `Calculator` mit einer Methode `CalculateSomething`, die eine längere
 >   Kalkulation durchführt. Simuliert die Kalkulation durch häufig durchlaufene Schleifen.
 >
 > - Aufrufer der Methode sollen über den Fortschritt der Berechnung informiert werden. In
@@ -153,7 +153,7 @@ sich für Ereignisse zu registrieren.
 > - Erzeugt einen `delegate` Datentyp, der eine Methode beschreibt, die von CalculateSomething
 >   aufgerufen werden kann und fügt der Klasse `Calculator` einen `event` dieses Typs hinzu:
 >  ```C#
->  delegate void ReportProgressMethod(int progress);
+>  oublic delegate void ReportProgressMethod(int progress);
 >
 >  public class Calculator 
 >  {
