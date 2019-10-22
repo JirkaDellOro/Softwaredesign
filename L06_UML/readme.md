@@ -9,7 +9,7 @@ Source-Code ist nur bedingt geeignet, um Software zu entwerfen:
   Software-Entwurfs vorzustellen, ist Source-Code oft zu unhandlich. 
 
 - Source-Code ist aufwändig zu schreiben. Es ist wünschenswert, eine Idee für einen 
-  Entwurf _mal kurz_ hinschreiben oder hinmalen zu können.
+  Entwurf _einmal kurz_ hinschreiben oder hinmalen zu können.
 
 - Source-Code ist zu komplex, um -ggf. noch unvollständige- Ideen festzuhalten, um 
   in diesem Entwurf z.B. Fehler erkennen zu können, Alternativen aufzuzeigen, etc.
@@ -18,7 +18,7 @@ Source-Code ist nur bedingt geeignet, um Software zu entwerfen:
   Sachverhalt zu lenken, und andere, für diesen Sachverhalt unwichtige, Bestandteile
   wegzulassen.
 
-Ähnlich wie ein Architekt oder ein Produkt-Designer zunächst mal grobe Skizzen anfertigt, 
+Ähnlich wie ein Architekt oder ein Produkt-Designer zunächst eine grobe Skizzen anfertigt, 
 um damit den Design-Prozess zu unterstützen, ist eine einfache Notation wünschenswert, 
 die es erlaubt, Software-Entwürfe skizzenhaft festzuhalten, dabei nach Belieben Details
 herauszuarbeiten oder wegzulassen oder auch iterativ einen Entwurf zu verfeinern, bevor
@@ -54,7 +54,6 @@ und Klassendiagramme*** betrachtet werden.
 
 
 ## Aktivitätsdiagramme
-
 Mit Aktivitätsdiagrammen lassen sich ganz unterschiedliche Abläufe auf verschiedenen Abstraktionsebenen
 beschreiben. Von generellen Prozessen, bei denen keine Maschinen beteiligt sind, bis zu Algorithmen für 
 Computerprogramme. Dabei ist es möglich auch komplexe Abläufe mit Ausnahmen, Verzweigungen, Sprüngen und
@@ -62,12 +61,9 @@ Wiederholungen noch übersichtlich darzustellen, was in natürlicher Sprache nic
 wesentlichsten Elemente sind dabei recht einfach zu erlernen.
 
 ### Einfachste Elemente
-
 ![Elemente 1](img/Elements1.png)
 
-
 ### Beispiel
-
 Grundsätzlich wird der Ablauf durch Pfeile dargestellt, welche als Kontroll- bzw. Objektfluss bezeichnet 
 werden. Es kann einen oder mehrere Start- und Endknoten geben. Im einfachsten Fall erfolgt der Fluss von
 einem Startknoten über Aktivitätsknoten zu einem Endknoten. 
@@ -93,7 +89,6 @@ Abläufe, die mit dem Gabel-Symbol versehen sind und an anderer Stelle ausgefüh
 
 
 ### Parameter
-
 Die Aktivität "Wahl äußern und Teller erhalten" im Beispiel nimmt also ein Objekt aus dem Objektfluss
 entgegen. Wird eine Aktivität im Detail dargestellt, werden ein- und ausgehende Objekte als Rechtecke 
 auf den Rahmen gezeichnet.
@@ -111,7 +106,6 @@ bei der Softwareentwicklung die Aktivität in eine Funktion zu übersetzen.
 
 
 #### Synchronisation
-
 Anders als bei der Raute, welche eine Verzweigung und/oder einen Zusammenfluss darstellt, bei dem jeweils
 nur ein einziger Kontroll- bzw. Objektfluss aktiv ist, werden bei der Synchronisation mehrere Flüsse
 gleichzeitig aktiv. Das bedeutet, dass diese Flüsse dann parallel abgearbeitet werden. Die abgehenden 
@@ -120,7 +114,6 @@ Synchronisation kommt vordringlich beim Entwurf von Nebenläufigkeiten zum Einsa
 
 
 #### Ereignisse
-
 Als Startknoten kann auch ein Signalempfang dienen. Das kann beispielsweise eine Nutzerinteraktion sein, 
 ein Tastendruck, ein Mausklick oder Touch. Ebenso können Signale gesendet werden, zum Beispiel ein 
 Request an einen Server. Die Response kann dann als Signalempfang den Start einer Aktivität auslösen. 
@@ -133,7 +126,6 @@ Für den Empfang zeitgesteuerter Ereignisse existiert zudem ein spezielles Symbo
 
 
 ### Weitere Spezifikationen
-
 Im Detail gibt es noch sehr viel weiter greifende Spezifikationen für Aktivitätsprogramme, welche der 
 entsprechenden Literatur zu entnehmen sind. Für einen ersten groben Entwurf von Software sollten die
 hier angeführten allerdings weitestgehend genügen.  
@@ -154,7 +146,6 @@ hier angeführten allerdings weitestgehend genügen.
 
 
 ## Klassendiagramme
-
 Klassendiagramme stellen den Aufbau von Klassen und Zusammenhänge zwischen ihnen bzw. deren Objekte dar.
 Das Klassendiagramm ist die wohl bekannteste und wichtigste Diagrammform der UML mit vielen Details. 
 Es soll hier nur auf eine Auswahl der Notationen eingegangen werden, die es schon ermöglicht, 
@@ -162,7 +153,6 @@ komplexere objektorientierte Softwareprojekt relativ einfach und schnell zu plan
 
 
 ### Klasse
-
 Eine Klasse wird dargestellt als einfaches Rechteck, welches horizontal in drei Teile geteilt wird.
 Im oberen Teil ist der Klassenname angegeben, im mittleren Teil die Eigenschaften (Eigenschaften,
 Properties) und im unteren Teil die Methoden, welche die Klasse zur Verfügung stellt. Wenigstens 
@@ -182,19 +172,14 @@ Weiterhin können bei Bedarf Parameterlisten, Standardwerte oder Zusicherungen u
 
 
 ### Interface
-
 Ein Interface wird genauso notiert wie eine Klasse, lediglich über dem Klassennamen wird in doppelten 
 spitzen Klammern ``<<interface>>`` dazu geschrieben.
 
-
 ### Beziehungen zwischen Klassen
-
 In der Regel werden für ein Softwareprojekt viele verschiedene Klassen genutzt und implementiert, zwischen 
 denen oder deren Objekten bestimmte Beziehungen existieren. 
 
-
 #### Spezialisierung (Vererbung)
-
 Eine Linie mit einer nicht ausgefüllten Pfeilspitze an einem Ende zeigt die Spezialisierung einer Subklasse 
 in Bezug auf die Superklasse und damit eine Vererbungsbeziehung an.
 
@@ -204,7 +189,6 @@ In Klassendiagrammen wird bei Vererbungsbeziehungen die Superklasse oft _oberhal
 gezeichnet, so dass die _erbt-von_-Pfeile nach oben zeigen.
 
 #### Implementierung
-
 Implementiert eine Klasse ein Interface, so wird dies durch wie bei der Spezialisierung mit einem Pfeil mit 
 leerer Spitze angezeigt. Dieser ist auf das Interface gerichtet. Allerdings ist die Linie gestrichelt. 
 Alternativ wird ein "Lolly" an die Klasse gezeichnet, der mit dem Namen des entsprechenden Interfaces 
@@ -217,14 +201,12 @@ viele Interfaces implementieren kann, bietet diese Lolly-Darstellung eine kompak
 Klassen, die mehrere Interfaces implementieren. 
 
 #### Verwendung
-
 Einer Klasse, die ein Interface verwendet, wird eine entsprechende Buchse angefügt.
 
 ![InterfaceNutzung](img/InterfaceNutzung.png)
 
 
 #### Allgemeine Assoziation
-
 Eine allgemeine Beziehung zwischen Instanzen von Klassen wird mit einer simplen Verbindungslinie dargestellt. 
 Allerdings können daran weitere Informationen notiert sein wie der Name der Assoziation, die Multiplizität 
 (also ob es sich um eine 1:1-Beziehung, 1:n- oder n:m-Beziehung handelt), die Rollen usw.  
@@ -246,7 +228,6 @@ Prof kann also auch leicht zu den betreuten Studis navigiert werden. Hier bietet
 Studi als Attribut der Prof-Klasse an.
 
 #### Aggregation
-
 Die Aggregation stellt eine "Teil-von" Beziehung dar. Sie wird durch eine leere Raute auf der Seite des 
 Aggregators, also des Ganzen, dargestellt. Dieser setzt sich logisch zumindest zu einem gewissen Grade aus 
 den Teilen auf der anderen Seite zusammen.  
@@ -254,7 +235,6 @@ den Teilen auf der anderen Seite zusammen.
 ![Assoziation](img/Aggregation.png)  
 
 #### Komposition
-
 Während die Aggregation lediglich eine schwache Spezialisierung der allgemeinen Assoziation darstellt, ist 
 die Komposition deutlich strenger. Die Raute wird hierbei ausgefüllt. Die assoziierten Teile können nur Teil 
 genau eines Ganzen sein und werden vernichtet, wenn das Ganze vernichtet wird.  
@@ -262,7 +242,6 @@ genau eines Ganzen sein und werden vernichtet, wenn das Ganze vernichtet wird.
 ![Komposition](img/Komposition.png)  
 
 ## Klassen definieren und optimieren mit Hilfe folgender Fragen
-
 * Was ist es? 		-> Ableitung, Superklasse, implementierte Interface  
   Ist es eine Spezialisierung einer bereits vorhandenen Klasse? Gibt es Gemeinsamkeiten verschiedener 
   Klassen, in Eigenschaft oder Verhalten, die man in einer Superklasse definieren kann? Soll das 
@@ -309,4 +288,3 @@ genau eines Ganzen sein und werden vernichtet, wenn das Ganze vernichtet wird.
 >   - Jeder Kurs _kann_ einen Infotext (was, wer, wann, wo) ausgeben
 >   - Jeder Dozent _kann_ eine Liste der von ihm gehaltenen Kurse ausgeben 
 >   - Jeder Dozent _kann_ eine Gesamtliste der aktuell bei ihm eingeschriebenen _Teilnehmer_ generieren
->  
