@@ -11,39 +11,39 @@ Datentypen, erzeugt werden. In Java und C/C++ gibt es hierzu das Schlüsselwort
   class Person
   {
     public string Name;
-    public int Alter;
+    public int Age;
   }
 ```
 
 In diesem Beispiel wird ein Neuer Datentyp namens `Person` erzeugt und festgelegt,
 dass jedes Objekt/jede Instanz vom Typ Person ein Feld vom Typ `string` namens _Name_
-und ein Feld vom Typ `int` mit dem Namen _Alter_ besitzt.
+und ein Feld vom Typ `int` mit dem Namen _Age_ besitzt.
 
 Mit diesem neuen Datentyp kann nun alles angestellt werden, was mit bereits existierenden
 Datentypen geht. Z.B. können Variablen, und Methodenparameter von diesem Typ angelegt werden.
 
 ```C#
-  Person einePerson;
+  Person myself;
 ```
 
 Bei der Deklaration von Variablen derart selbst definierter Datentypen wird noch _keine_
 Instanz erzeugt. Dies muss explizit mit dem `new`-Operator erfolgen:
 
 ```C#
-  Person einePerson = new Person();
+  Person myself = new Person();
 ```
 
-Damit wird eine Variable `einePerson` vom Typ `Person` erzeugt, die eine Instanz vom Typ
+Damit wird eine Variable `myself` vom Typ `Person` erzeugt, die eine Instanz vom Typ
 `Person` referenziert, d.h. nun existiert auch im Speicher des Rechners irgendwo Platz
 für alles, woraus eine Person besteht, nämlich dem Namen und das Alter.
 
-Somit kann dann auch über den Variablennamen `einePerson` auf die Felder dieser Instanz
+Somit kann dann auch über den Variablennamen `myself` auf die Felder dieser Instanz
 zugegriffen werden.
 
 ```C#
-  Person einePerson = new Person();
-  einePerson.Name = "Müller";
-  einePerson.Alter = 50;
+  Person myself = new Person();
+  myself.Name = "Müller";
+  myself.Age = 50;
 ```
 
 Eine solche Folge von Anweisungen, also 
@@ -56,18 +56,18 @@ Eine solche Folge von Anweisungen, also
 kann in C# auch verkürzt geschrieben werden:
 
 ```C#
-  Person einePerson = new Person {Name = "Müller", Alter = 50};
+  Person myself = new Person {Name = "Müller", Age = 50};
 ```
 
 Darüberhinaus gibt es, wie in anderen Programmiersprachen auch, die Möglichkeit, 
 einen Initalisierungskonstruktor zu implementieren, der initiale Werte für `Name` und 
-`Alter` entgegen nimmt.
+`Age` entgegen nimmt.
 
 Über den _Objektzugriffsoperator_ (`.`) kann nicht nur schreibend sondern auch lesend
-auf Inhalte von `einePerson` zugegriffen werden:
+auf Inhalte von `myself` zugegriffen werden:
 
 ```C# 
-  Console.WriteLine(einePerson.Name + " ist " + einePerson.Alter + " Jahre alt!");
+  Console.WriteLine(myself.Name + " ist " + myself.Age + " Jahre alt!");
 ```
 
 ## Methoden
@@ -99,11 +99,11 @@ Beispiel
   class Person
   {
     public string Name;
-    public int Alter;
+    public int Age;
 
-    public string GetAnrede()
+    public string GetTitleAdress()
     {
-      if (Alter < 18)
+      if (Age < 18)
         return "Hey " + Name;
       else
         return "Sehr geehrte(r) " + Name;
@@ -122,7 +122,7 @@ sind, kann mit dem Objektzugriffsoperator (`.`) zugegriffen werden.
 
 > #### TODO
 > - Legt wie oben eine Variable vom Typ Person an und instanziiert ein Objekt vom Typ Person
->   mit new. Greift dann auf `Name` und `Alter` zu.
+>   mit new. Greift dann auf `Name` und `Age` zu.
 > - Entfernt die `public` Kennzeichnung bei einem oder beiden Klassenbestandteilen und versucht,
 >   den Code zu kompilieren. Was passiert?
 
@@ -147,21 +147,21 @@ alle bereits in einer anderen Klasse definierten Eigenschaften und Methoden übe
 ein Beispiel:
 
 ```C#
-  class Mitarbeiter : Person
+  class Employee : Person
   {
-    public int Personalnummer;
+    public int idNumber;
   }
 ```
 
-Hier ist ein `Mitarbeiter` ein Spezialfall von `Person`. Zusätzlich zu den von `Person` geerbten 
-Eigenschaften (`Name` und `Alter`), hat ein `Mitarbeiter` nun auch noch eine `Personalnummer`.
-Instanzen von `Mitarbeiter` können überall dort verwendet werden, wo  Instanzen von `Person` 
-erwartet werden. **Jeder `Mitarbeiter` ist auch eine `Person`**. 
+Hier ist ein `Employee` ein Spezialfall von `Person`. Zusätzlich zu den von `Person` geerbten 
+Eigenschaften (`Name` und `Age`), hat ein `Employee` nun auch noch eine `idNumber`.
+Instanzen von `Employee` können überall dort verwendet werden, wo  Instanzen von `Person` 
+erwartet werden. **Jeder `Employee` ist auch eine `Person`**. 
 
 > #### TODO
 > - Legt einen Array von `Person` mit fünf Einträgen an und initialisiert diese Array-Einträge
 >   jeweils mit Instanzen von `Person` (mittels `new Person...`).
-> - Ersetzt einige der `Person` Instanzen durch `Mitarbeiter` Instanzen.
+> - Ersetzt einige der `Person` Instanzen durch `Employee` Instanzen.
 
 In C# erben alle Klassen automatisch vom eingebauten Datentyp `object`. Somit können Variablen 
 vom Typ `object` beliebige Instanzen, sogar von eingebauten Typen wie `int` oder `string`
@@ -173,45 +173,45 @@ Vererbung kann auch dazu verwendet werden, um in unterschiedliche Ausprägungen 
 Basisfunktionalität in verschiedenen vererbten Klassen auf unterschiedliche Art implementieren
 zu können. Man spricht hier von _Polymorphie_  (Vielgestaltigkeit).
 
-Beispiel: Die traditionellen Betrachtungsweise erkennt zwei Geschlechter beim Menschen, Männer und Frauen. Beides sind Personen. Allerdings soll die Anrede einer Frau anders aussehen als die Anrede eines Mannes. Daher wird die Methode `GetAnrede()` aus dem Beispiel
+Beispiel: Die traditionellen Betrachtungsweise erkennt zwei Geschlechter beim Menschen, Männer und Frauen. Beides sind Personen. Allerdings soll die Anrede einer Frau anders aussehen als die Anrede eines Mannes. Daher wird die Methode `GetTitleAdress()` aus dem Beispiel
 oben _polymorph_ implemetiert:
 
 ```C#
   class Person
   {
     public string Name;
-    public int Alter;
+    public int Age;
 
-    public virtual string GetAnrede()
+    public virtual string GetTitleAdress()
     {
-      if (Alter < 18)
+      if (Age < 18)
         return "Hey " + Name;
       else
         return "Sehr geehrte(r) " + Name;
     }
   }
   
-  class Frau : Person
+  class Female : Person
   {
-    public override string GetAnrede()
+    public override string GetTitleAdress()
     {
         return "Sehr geehrte Frau " + Name;
     }
 
-  class Mann : Person
+  class Male : Person
   {
-    public override string GetAnrede()
+    public override string GetTitleAdress()
     {
         return "Sehr geehrter Herr " + Name;
     }
   }
 ```
 
-Die Polymorphie der Methode `GetAnrede()` in den unterschiedlichen Klassen wird über die Modifizierer
+Die Polymorphie der Methode `GetTitleAdress()` in den unterschiedlichen Klassen wird über die Modifizierer
 `virtual` und `override` gesteuert. 
 
 > #### TODO
-> - Initialisiert einen Array von `Person` mit Instanzen von `Person`, `Frau` und `Mann`.
+> - Initialisiert einen Array von `Person` mit Instanzen von `Person`, `Female` und `Male`.
 > - Erzeugt eine Schleife über den Array und lasst von jedem Array-Eintrag die Anrede 
 >   auf der Konsole ausgeben.
 > - Überzeugt euch davon, dass in Abhängigkeit vom Typ der konkreten Instanz unterschiedliche
@@ -327,7 +327,7 @@ Container-Implementierung ist nicht typsicher.
 
 Daher wurde bereits früh (jeweils mit Version 2 der Sprachen) in C# und Java die Möglichkeit von 
 Generics eingeführt, mit deren Hilfe Datentypen deklariert werden können, die mit anderen Datentypen
-parametrisiert werden können.
+parametriert werden können.
 
 ### Beispiel
 
@@ -417,7 +417,7 @@ hier nur kurz erwähnt werden sollen.
 
 ### Properties (Eigenschaften)
 
-Oft möchte man in Instanzen von Klassen Werte speichern, wie z.B. `Name` und `Alter` in unserem
+Oft möchte man in Instanzen von Klassen Werte speichern, wie z.B. `Name` und `Age` in unserem
 Beispiel. Beim Setzen von Werten und beim Auslesen von Werten soll aber oft weitere Funktionalität
 (so genannte Seiteneffekte) ausgelöst werden. Z.B. kann es beim Auslesen eines Wertes sein, dass
 der Wert erst noch aktualisiert werden muss. Oder beim Schreiben eines Wertes sollen andere Werte
@@ -441,11 +441,11 @@ hinzugefügt. Hier ein Beispiel:
     }
     private _name;
 
-    public int Alter;
+    public int Age;
   }
 ```
 
-In unserer Klasse `Person` ist `Name` nun ein Propertie mit einer `set` und einer `get` Methode.
+In unserer Klasse `Person` ist `Name` nun ein Property mit einer `set` und einer `get` Methode.
 Hier passiert in den Methoden nichts anderes, als das zu setzender oder auszulesender Wert in einem 
 privaten Feld (dem _backing field_) gespeichert werden. Man kann sich aber leicht vorstellen, dass in
 den Methodenrümpfen von `set` und `get` weitere Anweisungen stehen können, die beliebige Seiteneffekte
