@@ -126,7 +126,7 @@ sind, kann mit dem Objektzugriffsoperator (`.`) zugegriffen werden.
 > - Entfernt die `public` Kennzeichnung bei einem oder beiden Klassenbestandteilen und versucht,
 >   den Code zu kompilieren. Was passiert?
 
-Die Sichtbarkeit wird u.A. mit dem Schlüsselwort `public` gesteutert. Steht vor einem Feld oder
+Die Sichtbarkeit wird u.A. mit dem Schlüsselwort `public` gesteuert. Steht vor einem Feld oder
 einer Methode `public`, dann ist diese(s) öffentlich. Fehlt vor einer Methoden oder Feld-Deklaration
 innerhalb einer Klasse das Wort `public`, so ist diese(s) privat. Private Klassenbestandteile können
 auch explizit mit dem Schlüsselwort `private` gekennzeichnet werden. Weitere _Zugriffsmodifizierer_
@@ -153,7 +153,7 @@ ein Beispiel:
   }
 ```
 
-Hier ist ein `Mitarbeiter` ein Spezialfall von `Person`. Zusätzlich zu den  von  `Person` geerbten 
+Hier ist ein `Mitarbeiter` ein Spezialfall von `Person`. Zusätzlich zu den von `Person` geerbten 
 Eigenschaften (`Name` und `Alter`), hat ein `Mitarbeiter` nun auch noch eine `Personalnummer`.
 Instanzen von `Mitarbeiter` können überall dort verwendet werden, wo  Instanzen von `Person` 
 erwartet werden. **Jeder `Mitarbeiter` ist auch eine `Person`**. 
@@ -173,8 +173,7 @@ Vererbung kann auch dazu verwendet werden, um in unterschiedliche Ausprägungen 
 Basisfunktionalität in verschiedenen vererbten Klassen auf unterschiedliche Art implementieren
 zu können. Man spricht hier von _Polymorphie_  (Vielgestaltigkeit).
 
-Beispiel: Es gibt Männer und Frauen. Beides sind Personen. Allerdings soll die Anrede einer Frau
-anders aussehen als die Anrede eines Mannes. Daher wird die Methode `GetAnrede()` aus dem Beispiel
+Beispiel: Die traditionellen Betrachtungsweise erkennt zwei Geschlechter beim Menschen, Männer und Frauen. Beides sind Personen. Allerdings soll die Anrede einer Frau anders aussehen als die Anrede eines Mannes. Daher wird die Methode `GetAnrede()` aus dem Beispiel
 oben _polymorph_ implemetiert:
 
 ```C#
