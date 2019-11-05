@@ -17,7 +17,7 @@ Datentypen, erzeugt werden. In Java und C/C++ gibt es hierzu das Schlüsselwort
 
 In diesem Beispiel wird ein Neuer Datentyp namens `Person` erzeugt und festgelegt,
 dass jedes Objekt/jede Instanz vom Typ Person ein Feld vom Typ `string` namens _Name_
-und ein Feld vom Typ `int` mit dem Namen _Alter_.
+und ein Feld vom Typ `int` mit dem Namen _Alter_ besitzt.
 
 Mit diesem neuen Datentyp kann nun alles angestellt werden, was mit bereits existierenden
 Datentypen geht. Z.B. können Variablen, und Methodenparameter von diesem Typ angelegt werden.
