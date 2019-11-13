@@ -242,26 +242,26 @@ genau eines Ganzen sein und werden vernichtet, wenn das Ganze vernichtet wird.
 ![Komposition](img/Komposition.png)  
 
 ## Klassen definieren und optimieren mit Hilfe folgender Fragen
-* Was ist es? 		-> Ableitung, Superklasse, implementierte Interface  
+* **Was ist es?** 		-> Ableitung, Superklasse, implementierte Interface  
   Ist es eine Spezialisierung einer bereits vorhandenen Klasse? Gibt es Gemeinsamkeiten verschiedener 
   Klassen, in Eigenschaft oder Verhalten, die man in einer Superklasse definieren kann? Soll das 
   Gesamtsystem durch Spezialisierungen erweiterbar sein, ohne dass eine solche Erweiterung die Änderung 
   bereits bestehenden Codes erforderlich macht?  
   Die Beantwortung dieser Fragen hilft beim Entwurf einer Klassenhierarchie.
-* Was hat es? 		-> Eigenschaften, Membervariablen  
+* **Was hat es?** 		-> Eigenschaften, Membervariablen  
   Welche Eigenschaften hat ein Objekt der Klasse? Was zeichnet es aus? Welche davon sind nur für das Objekt 
   selbst wichtig, auf welche müssen andere zugreifen können. Von welchem Typ sind die Eigenschaften, welche 
   Werte können sie annehmen und unter welchen Umständen werden die Werte geändert?  
-  Die Beantwortung dieser Fragen hilft beim Entwurf der Attribute und deren Sichtbarkeitmodifikation.
-* Was kann es? 		-> Methoden  
+  Die Beantwortung dieser Fragen hilft beim Entwurf der Attribute und deren Sichtbarkeitsmodifikation.
+* **Was kann es?** 		-> Methoden  
   Welche Verhaltensweisen weist ein Objekt der Klasse auf? Wie kann es sich oder seine "Umwelt" verändern? 
   Welchen Algorithmen folgt es?  
   Die Beantwortung dieser Fragen hilft beim Entwurf der Methoden.
-* Was weiß es?		-> Verweise zu anderen Objekten  
+* **Was weiß es?**		-> Verweise zu anderen Objekten  
   Welche Informationen benötigt das Objekt aus seiner "Umwelt" um funktionsfähig zu sein? Welche Referenzen 
   auf andere Objekte welcher Klassen werden dem Objekt zur Verfügung gestellt?  
   Die Beantwortung dieser Fragen hilft beim Entwurf der Assoziationen zwischen Objekten und der Parameterübergaben bei Methoden.
-* Wer verwaltet es?	-> Erzeuger, Referenzierung 
+* **Wer verwaltet es?**	-> Erzeuger, Referenzierung  
   Wo und von wem wird das Objekt erzeugt? Wird es von einer zentralen Struktur dauerhaft referenziert? Werden an anderer Stelle dauerhafte Referenzen gespeichert?  
   Die Beantwortung dieser Fragen hilft beim Entwurf der Assoziationen zwischen Objekten, insbesondere von Aggregationen und Kompositionen, sowie eines stabilen Gesamtsystems. Die Darstellung wird auch im Aktivitätsdiagramm reflektiert.
 
