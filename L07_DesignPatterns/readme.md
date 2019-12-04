@@ -153,7 +153,7 @@ sich für Ereignisse zu registrieren.
 > - Erzeugt einen `delegate` Datentyp, der eine Methode beschreibt, die von CalculateSomething
 >   aufgerufen werden kann und fügt der Klasse `Calculator` einen `event` dieses Typs hinzu:
 >  ```C#
->  oublic delegate void ReportProgressMethod(int progress);
+>  public delegate void ReportProgressMethod(int progress);
 >
 >  public class Calculator 
 >  {
