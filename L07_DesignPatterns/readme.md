@@ -128,7 +128,7 @@ und das Observer-Pattern durch spezielle Sprachkonstrukte unterstützt.
 
 Das Observer-Pattern kommt zum Einsatz, wenn beim Eintreten eines bestimmten Ereignisses in einem
 Teil (einer Methode) der Software, beliebige andere Teile der Software "informiert" werden sollen.
-Informiert heißt dabei, dass diese anderen Teile (die _Observer_ oder auch die _Event LOistener_)
+Informiert heißt dabei, dass diese anderen Teile (die _Observer_ oder auch die _Event Listener_)
 ausführbare Code-Fragmente hinterlegen können, 
 die beim Eintreten des Ereignisses ausgeführt werden sollen. Dabei soll der Code-Teil, in dem 
 das Ereignis ausgelöst werden soll, so entwickelt werden können, dass zum Zeitpunkt der Entwicklung
