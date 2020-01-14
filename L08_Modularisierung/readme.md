@@ -269,14 +269,14 @@ Nun wollen wir aus dem Rechner auf die Operationen zugreifen. Dazu müssen wir a
 >   ```XML
 >     <ItemGroup>
 >       <Reference Include="..\Operations\bin\Debug\netstandard2.0\Operations.dll"/>
->     </ItemGroup>>      
+>     </ItemGroup>  
 >   ```
 >
 >   - Für einen Verweis auf das Projekt ein `ProjectReference`-Eintrag:
 >   ```XML
 >     <ItemGroup>
 >       <ProjectReference Include="..\Operations\Operations.csproj"/>
->     </ItemGroup>>      
+>     </ItemGroup> 
 >   ```
 
 Mit beiden Arten der Referenzierung sollte es dann möglich sein, aus dem `Calculator`-Hauptprogramm
