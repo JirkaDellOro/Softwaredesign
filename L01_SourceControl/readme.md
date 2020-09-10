@@ -232,12 +232,15 @@ Entwickler **A** legt ein Projekt an und Entwickler **B** "holt" sich das Projek
 > #### TODO
 > 
 > - Bildet Zweiergruppen.
-> - **A**: legt ein neues Git-Projekt auf Github (z.B. mit `git init` auf der Kommandozeile oder mit 
->   GitHub Desktop (Menü "File->New repository") an.
+> - **A**: legt ein neues Git-Projekt auf Github (Navbar der Website -> new repository, ohne readme.md und .gitignore)
+>     GitHub Desktop (Menü "File->New repository") an.
+> - **A**: legt auf eurem Rechner einen neuen Ordner an und gebt in der Directory `git init` ein
 > - **A**: fügt dem Projekt eine simple HTML-Datei (Mit einem Titel im Header und einer Textzeile im Body) zu.
-> - **A**: überträgt die Änderung ins lokale Repository (mit `git commit -a` oder mit dem Commit Button in 
+> - **A**: speichert die Änderung (mit `git add .`).
+> - **A**: überträgt die Änderung ins lokale Repository (mit `git commit -m 'NameDesCommits'` oder mit dem Commit Button in 
 >   GitHub Desktop).
-> - **A**: Lädt die Änderung ins Repository auf dem GitHub-Server (mit `push`).
+> - **A**: sucht die URL für das repository (grüner clone-button -> HTTPS Link kopieren).
+> - **A**: gebt euer GitHub Repo als Ziel an und ladet die Änderungen hoch (`git push –set-upstream kopierterLink`).
 > - **A**: Macht Person B zum Contributor des Projektes (in den Projekt-Eigenschaften der GitHub-Web-Seite des
 >   Projektes).
 > - **B**: Holt sich erstmalig eine lokale Version des Remote-Repository mit `clone`.
