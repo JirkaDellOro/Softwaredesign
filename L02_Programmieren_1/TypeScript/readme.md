@@ -1,24 +1,13 @@
-# Programmieren in C#
+# Programmieren in TypeScript
 
 ## Einführung
 
 ### Ein wenig Geschichte
 
-**C#** (gesprochen "C Sharp") wurde im Jahre 2000 unter der Leitung von Anders Hejlsberg als
-Bestandteil von Microsoft's .NET Initiative ins Leben gerufen. Hintergrund war der große
-Erfolg rund um die 1995 von SUN veröffentlichte Programmiersprache **Java**, dem Microsoft 
-eine eigene Entwicklung entgegen setzen wollte.
+**TypeScript** wurde von Microsoft entwickelt und 2012 veröffentlicht. Es basiert auf dem ECMAScript-6 Standard und erweitert die JavaScript-Syntax um viele Funktionen wie z.B spezifischere Typisierung und erweiterte Funktionsimplementierung, die sich mehr an gängigen Programmiersprachen orientiert. Der TypeScript-Compiler kompiliert den TS-Code in JavaScript-Code, da Browser lediglich JS interpretieren und ausführen können.
 
-Inzwischen ist die Sprache durch die ECMA standardisiert. Zudem gibt es eine Reihe von
-OpenSource Implementierungen sowohl von C# Compilern, die in C# geschriebenen Quelltext 
-in ausführbaren Code übersetzen als auch der .NET-Plattform, die in einer umfangreiche
-Klassen- und Funktionsbibliothek für eine Vielzahl von typischen Alltags-Aufgaben 
-in der Software-Entwicklung vorgefertigte Implementierungen enthält.
+Anfangs war ein Entwickeln mit dieser Programmiersprache nur mit der Microsoft Entwicklungsumgebung Visual Studio möglich und somit exklusiv für Windows. Dies ist mittlerweile nicht mehr so. Alle gängigen Entwicklungsumgebungen (In dieser Veranstaltung VS Code) bieten Support für TS.
 
-Zudem gibt es mit Microsoft Visual Studio Community, Microsoft Visual Studio Code,
-Jetbrains Rider und MonoDevelop eine Reihe von kostenpflichtigen, kostenlosen oder
-sogar OpenSource Entwicklungsumgebungen, die die Erstellung von Software mit C#
-unterstützen.
 
 ### Werkzeuge
 
@@ -26,67 +15,47 @@ In dieser Veranstaltungverwenden wir folgende setzen wir folgende Werkzeuge ein,
 kostenlos, OpenSource und plattformübergreifend (Windows, MacOS, Linux) sind.
 
 - Visual Studio Code (Integrierte Entwicklungsumgebung / Editor)
-- C# for Visual Studio Code (Extension für Visual Studio Code zur C# Entwicklung)
-- .NET Core (Plattform und Compiler)
 
-## Eingebaute Datentypen
+## Eingebaute Datentypen von JavaScript
 
-Wie viele andere Sprachen auch, enthält C# eine reihe von einfachen Datentypen, 
-die häufig verwendet werden. Diese werden oft auch _primitive Datentypen_ genannt.
-Die in C# fest eingebauten primitiven Datentypen sind:
+TypeScript erweitert JavaScript um eine spezifischere Typisierung. Allerdings müssen immer noch die gängigen Variablendeklarationen von JS benutzt werden. Diese lauten wie folgt:
 
-- `int` und alle anderen integralen Datentypen zum Speichern von ganzen Zahlen (ohne
-  Nachkommastellen). Weitere integrale Typen sind 
-  - `uint` (_**u**nsigned_: Werte >= 0) - benötigt wie `int` in 32 bit Speicherplatz
-  - `short` und `ushort`, signed und **u**nsigned - benötigt 16 bit Speicherplatz
-  - `byte` und `sbyte`, unsigned und _**s**igned_ - benötigt 8 bit Speicherplatz
-  - `long` und `ulong`, signed und **u**nsigned - benötigt 64 bit Speicherplatz
+- `let` der Gültigkeitsbereich erstreckt sich lediglich über den lokalen Block. Der Begriff leitet sich von dem englischen Verb 'to let' ab. Beispiel (let x = 5, etwa: 'lassen wir x 5 sein'). Die Werte der Variable lassen sich nach der Initialisierung noch ändern.
+- `const` der Gültigkeitsbereich erstreckt sich lediglich über den lokalen Block. Der Wert einer solchen Variablen kann nicht mehr geändert werden. Attributwerte eines Objekts, das mit const deklariert wurde lassen sich jedoch ändern.
+- `var` der Gültigkeitsbereich erstreckt sich über die jeweilige Funktion. Das heißt eine Variable die mit var in einer Schleife deklariert wurde, ist auch außerhalb der Schleife bekannt. solange man sich in der selben Funktion befindet.
 
-- `double` und alle anderen Datentypen, die Zahlen mit Nachkommastellen speichern können.
-  `double ist ein Fließkomma-Datentyp. Ein Double-Wert benötigt 64 bit. Weitere Nachkommastellen
-  behaftete Datentypen sind
-  - `float` Fließkommazahl "einfacher" Genauigkeit - benötigt 32 bit Speicherplatz
-  - `decimal` Festkommazahl mit hoher Genauigkeit - benötigt 128 bit Speicherplatz
+## Eingebaute Datentypen von TypeScript
 
-- `bool` zum Speichern von Wahrheitswerten. Eine Variable vom Typ `bool` kann nur
+- `boolean` zum Speichern von Wahrheitswerten. Eine Variable vom Typ `boolean` kann nur
   einen von zwei möglichen Werten annehmen, nämlich `true` (wahr) oder `false` (falsch).
 
-- `char` zum Speichern eines einzelnen Zeichen (z.B. `'a'`, `'b'`, `'c'`, ...) im 
-   Unicode-Standard - benötigt 16 bit Speicherplatz.
+- `number` zum Speichern von Zahlenwerten. Sowohl integrale Zahlen als auch Fließkommazahlen können in diesem Typen gespeichert werden (Bis 9007199254740991).
 
-- `string` zum Speichern beliebig langer (0 oder mehr `char` enthaltenden) Zeichenketten.
+- `bigInt` zum Speichern von Zahlenwerten, die über den Maximalwert von `number` gehen
 
-> #### TODO
-> 
-> Betrachtet die 
-> [Referenzdokumentation](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/built-in-types-table)
-> zu den eingebauten Datentypen und die von dort aus in die einzelnen Typen verzweigenden Links.
->
-> - Wieviel _bytes_ Speicherplatz benötigen die o.a. numerischen Datentypen jeweils?
-> - Wieviel Speicherplatz in bytes benötigt die Zeichenkette `"Hello, World"` ? 
-> - Vergleicht den Umfang der darstellbaren Zahlen zwischen `int` und `short`, sowie zwischen `float` und `double`.
->   Wie groß ist jeweils der größte und der kleinste Wert? Wie groß ist der kleinste _positive_ mit `float`
->   darstellbare Wert?
-> - Was heißt Fließkommazahl und was heißt Festkommazahl? Für welchen Anwendungsbereich ist `decimal` besonders
->   geeignet? Warum? 
+- `string` zum Speichern beliebig langer Zeichenketten.
+
+Anmerkung: `char` gibt es in TypeScript nicht
+
+[Referenzdokumentation](https://www.typescriptlang.org/docs/handbook/basic-types.html)
 
 ## Variablendeklarationen
 
-In C# können Variablen im Programmcode mit folgender Syntax deklariert werden:
+In TypeScript können Variablen im Programmcode mit folgender Syntax deklariert werden:
 
-```C#
-typ identifizierer;
+```TypeScript
+jsTyp identifizierer: tsTyp;
 ```
 
-Dabei gibt `typ` den Datentyp an, also z.B. einen der o.g. eingebauten Datentypen. `identifizierer` ist dabei der
-frei wählbare Variablenname. In C# gilt:
+Dabei gibt `jsTyp` den Datentyp an, also z.B. einen der o.g. eingebauten Datentypen. `identifizierer` ist dabei der
+frei wählbare Variablenname. In TypeScript gilt:
 
 - Jede verwendete Variable ***muss*** zuvor deklariert worden sein.
 - Jede Variable ist von einem fest zugeordneten Datentyp, der zur Compile-Zeit fest steht
   und sich während des Programmlaufs nicht ändern kann. Üblicherweise wird der Typ
   in der Deklaration angegeben.
   
-Diese Regeln machen C# zu einer so genannten _stark typisierten_ Sprache. Es gibt Programmiersprachen, die 
+Diese Regeln machen TypeSccript, im Gegensatz zu einer so genannten _stark typisierten_ Sprache. Es gibt Programmiersprachen, die 
 eine solche starke Typisierung nicht fordern (z.B. JavaScript, eine schwach typisierte Sprache). Für beide
 Varianten gibt es Vor- und Nachteile.
 
@@ -98,8 +67,8 @@ Für die Wahl von Variablennamen und anderen Identifizierern gibt es folgende Re
   das erste Zeichen eines Identifizierers _keine_ Ziffer (`'0'`...`'9'`) sein.
 - Alle weiteren Zeichen dürfen Buchstaben, Ziffern oder  der Unterstrich (`'_'`) sein.
 - Als Identifizierer darf ***kein*** 
-  [C#-Schlüsselwort](https://docs.microsoft.com/de-de/dotnet/csharp/language-reference/keywords/)
-  verwendet werden.
+  [JS-Schlüsselwort](https://www.w3schools.com/js/js_reserved.asp)
+  verwendet werden, da JS von Haus aus kein Namespacing hat.
 
 > #### TODO
 >
@@ -117,26 +86,22 @@ Eine Variablendeklaration nach o.a. Muster kann in der selben Code-Zeile gleich 
 (_initiale_) Zuweisung eines Wertes enthalten, indem hinter die Deklaration (aber _vor_ das Semikolon)
 der zu _initialisierende_ Wert mit dem _Zuweisungsoperator_ (`=`) angegeben wird. Hier ein paar Beispiele
 
-```C#
-int i = 42;
-double pi = 3.1415;
-string salute = "Hello, World";
+```TypeScript
+let i: number = 42;
+let pi: number = 3.1415;
+let salute: string = "Hello, World";
 ```
 
-In allen obigen Fällen werden die Variablen mit Konstanten initialisiert. C# schreibt vor, welches Format
+In allen obigen Fällen werden die Variablen mit Konstanten initialisiert. TypeScript schreibt vor, welches Format
 Konstanten haben müssen, um einem der eingebauten Typen zu genügen.
 
 ### Typ Inferenz
 
-Wenn zur ***Compile***-Zeit der Typ automatisch erkannt werden kann (per sogenannter Typ-Inferenz), kann die
-Deklaration statt eines Typ-Namens das Schlüsselwort `var` verwenden. Das ist aber nur "syntaktischer Zucker"
-und ändert nichts an der Funktionsweise des Programms. Der einzige Unterschied ist, dass der Compiler (zur 
-Compile-Zeit) anhand des zugewiesenen Typs herausfindet, von welchem Typ die Variable sein muss und diesen
-Typ dann verwendet, ohne dass ein Programmierer diesen Typ explizit hinschreiben muss.
+Da sämtlicher TypeScript-Code zu JS-Code kompiliert wird, ist die spezifischere Typisierung nur als Hilfe für den jeweiligen Programmierer gedacht. Im resultierenden JS-File fehlen sämtliche Typisierungen. Daher wird zur Laufzeit ermittelt, wie die entsprechende Variable zu behandeln ist.
 
 > #### TODO
 >
-> - Erzeugt in Visual Studio Code ein neues C#-Projekt und fügt oben stehende Deklarationen und
+> - Erzeugt in Visual Studio Code ein neues TS-Projekt und fügt oben stehende Deklarationen und
 >   Initialisierungen der Variablen `i`, `pi`, und `salute` ein.
 > - Verändert die Deklarationen so, dass `var` statt der Typen verwendet wird und überzeugt Euch, 
 >   dass der Compiler den Code korrekt übersetzt.
@@ -150,7 +115,7 @@ Typ dann verwendet, ohne dass ein Programmierer diesen Typ explizit hinschreiben
 
 ## Arrays
 
-Wie in anderen Programmiersprachen auch, gibt es auch in C# die Möglichkeit, über nur _einen_ Variablennamen
+Wie in anderen Programmiersprachen auch, gibt es auch in TypeScript die Möglichkeit, über nur _einen_ Variablennamen
 auf _viele_ Werte gleichen Typs zuzugreifen, indem mit Hilfe eines _index_, also einer Zahl, bestimmt wird,
 auf welchen der vielen möglichen Speicherplätze, die sich hinter dem einen Variablennamen verstecken,
 zugegriffen wird. Wie in anderen Programmiersprachen auch, heißen solche Konstrukte ***Arrays***.
@@ -159,12 +124,14 @@ Jeder beliebige Datentyp kann zu einem Array-Datentyp gemacht werden, indem dies
 hintenangestellt werden. Der Grund-Datentyp gibt dann an, von welchem Typ _ein_ Array-Eintrag ist.
 Hier ein paar Beispiele:
 
-Grund-Typ   | Array-Typ
-------------|--------------
-`int`       | `int[]`
-`char`      | `char[]`
-`double`    | `double[]`
-...         | ...
+Grund-Typ      | Array-Typ
+---------------|-----------------
+`number`       | `number[]`
+`string`       | `string[]`
+`double`       | `boolean[]`
+...            | ...
+
+Anmerkung: Wie in JS sind TS-Arrays dynamisch. Das heißt sie sind komplexe Objekte, über die sich Methoden ausführen lassen, die sie manipulieren. Z.B kann man einen Wert entfernen, was den Array um diesen Wert schrumpfen lässt. Das ist vergleichbar mit Vektoren und ArrayLists.
 
 ### Deklaration von Array-Variablen
 
@@ -173,15 +140,14 @@ angegeben werden, wieviel Speicherplätze des Grund-Typs durch den Variablenname
 verwendbar sein sollen. Dies geschieht durch eine Initialisierung, bei der der die gewünschte Anzahl angegeben
 wird. Betrachtet folgenden Code:
 
-```c#
-    int[] ia = new int[10];
-    char[] ca = new char[30];
-    double[] da = new double[12];
+```TypeScript
+    let ia: number[] = new Array(10);
+    let da: string[] = new Array(12);
 ```
 
 > #### TODO
 >
-> - Im o.a. Code-Schnipsel werden drei Array-Variablen deklariert und initialisiert. Wie heißen die Variablen, 
+> - Im o.a. Code-Schnipsel werden zwei Array-Variablen deklariert und initialisiert. Wie heißen die Variablen, 
 >   was ist der jeweilige Grund-Typ und wieviel Speicherplätze sind jeweils reserviert worden?
 
 **Achtung**: _Initialisierung_ bedeutet in oben stehendem Abschnitt zunächst mal nur, dass die gewünschte
@@ -191,19 +157,19 @@ Speicherplätze mit Werten, eine spezielle Schreibweise:
 
 ### Initialisierung von Arrays mit Werten
 
-Folgende Syntax ist zulässiger C# Code:
+Folgende Syntax ist zulässiger TypeScript Code:
 
-```c#
-    int[] ia = {1, 0, 2, 9, 3, 8, 4, 7, 5, 6};
+```TypeScript
+    let ia: number[] = [1, 0, 2, 9, 3, 8, 4, 7, 5, 6];
 ```
 
-Es ist eine abkürzende Schreibweise dafür, dass die Variable `ia` als Array für `int`-Werte deklariert wird, 
-unter diesem Variablennamen Platz für zehn `int`-Werte reserviert wird und in die zehn Speicherplätze die
+Es ist eine abkürzende Schreibweise dafür, dass die Variable `ia` als Array für `number`-Werte deklariert wird, 
+unter diesem Variablennamen Platz für zehn `number`-Werte reserviert wird und in die zehn Speicherplätze die
 Zahlen in der angegebenen Reihenfolge gespeichert werden. Ohne Abkürzung hätte Folgendes codiert werden 
 müssen:
 
-```c#
-    int[] ia = new in[10];
+```TypeScript
+    let ia: number[] = new Array(10);
     ia[0] = 1;
     ia[1] = 0;
     ia[2] = 2;
@@ -231,19 +197,19 @@ werden.
 >
 > Oben stehende Array-Deklaration und Initialisierung ist vorausgesetzt. Betrachtet folgenden Code
 >
-> ```C#
->   int ergebnis = ia[2] * ia[8] + ia[4];
+> ```TypeScript
+>   let ergebnis: int = ia[2] * ia[8] + ia[4];
 > ```
 > - Was steht in der Variablen `ergebnis`? 
 >
 > Überprüft eure Annahme, indem ihr den Code (mit der vorangegangenen Initialisierung) in einem
->  C#-Projekt laufen lasst. Den Inhalt der Variablen `ergebnis` könnt ihr mit
->  ```C#
->   Console.WriteLine(ergebnis);
+>  TypeScript-Projekt laufen lasst. Den Inhalt der Variablen `ergebnis` könnt ihr mit
+>  ```TypeScript
+>   Console.log(ergebnis);
 >  ```
 > auf der Konsole ausgeben oder bei angehaltenem Programm mit dem Debugger ansehen.
 >
-> - Erzeugt einen Array vom Grund-Typ `double`, der drei Speicherplätze enthält in denen in der 
+> - Erzeugt einen Array vom Grund-Typ `number`, der drei Speicherplätze enthält in denen in der 
 >   angegebenen Reihenfolge 
 >
 >   1. die Zahl PI,
@@ -262,13 +228,13 @@ Schleifen Gebrauch machen.
 
 #### Länge eines Arrays
 
-Jede Array-Variable kann über die Eigenschaft `Length` abgefragt werden, 
+Jede Array-Variable kann über die Eigenschaft (statische Variable) `length` abgefragt werden, 
 wieviel Einträge der Array enthält.
 
 > #### TODO
 >
 > - Gebt nach der Initialisierung des o.A. Arrays mit
->   `Console.WriteLine(ia.Length);`
+>   `Console.log(ia.length);`
 >   die Anzahl der Einträge aus.
 > - Ändert die Anzahl der Einträge und überprüft die Ausgabe.
 
@@ -283,42 +249,42 @@ Zeichenvorrats. Software muss an vielen Stellen mit Zeichenketten umgehen, beisp
 - Kommunikation mit anderen Prozessen, Rechnern, Cloud-Diensten
 - ...
 
-In C# heißt der dazu verwendete Datentyp `string`.  Zunächst mal kann man sich einen
-String als einen Array des Grund-Typ `char` vorstellen: Unter einem Variablennamen
+In TypeScript heißt der dazu verwendete Datentyp `string`.  Zunächst mal kann man sich einen
+String als einen Array des Grund-Typ `char`(vgl. andere Programmiersprachen) vorstellen: Unter einem Variablennamen
 ist eine geordnete Folge von `char`-Werten hinterlegt. Zusätzlich dazu bietet der 
 Datentyp `string` noch eine ganze Reihe an Funktionalität, z.B.
 
 - Leichte Initialisierung von String-Inhalten durch einfache Konstanten-Syntax 
-  ```C#
-  string meinString = "Dies ist ein String";
+  ```TypeScript
+  let meinString: string = "Dies ist ein String";
   ```
 - Aneinanderhängen (_concatenation_) von Strings durch den `+` Operator
-  ```C#
-  string a = "Dies ist ";
-  string b = "ein String";
-  string c = a + b;
+  ```TypeScript
+  let a: string = "Dies ist ";
+  let b: string = "ein String";
+  let c: string = a + b;
   ```
-- Vergleich von String-Inhalten mit dem `==` Operator
-  ```C#
-  string a = "eins";
-  string b = "zwei";
-  string c = "eins";
-  bool a_eq_b = (a == b);
-  bool a_eq_c = (a == c);
+- Vergleich von String-Inhalten mit dem `===` Operator (Sowohl Typ als auch Inhalt werden verglichen, also strikte Gleichheit)
+  ```TypeScript
+  let a: string = "eins";
+  let b: string = "zwei";
+  let c: string = "eins";
+  let a_eq_b: boolean = (a === b);
+  let a_eq_c: boolean = (a === c);
   ```
 Und tatsächlich funktioniert aber auch der Zugriff auf einzelne Zeichen wie auf
 einzelne Einträge eines Arrays
 
-  ```C#
-  string meinString = "Dies ist ein String";
-  char zeichen = meinString[5];
+  ```TypeScript
+  let meinString: string = "Dies ist ein String";
+  let zeichen: string = meinString[5];
   ```
 
 > #### TODO
 >
-> - Fügt den o.a. Beispielcode zu Strings einem C#-Projekt zu und überprüft jeweils
+> - Fügt den o.a. Beispielcode zu Strings einem TypeScript-Projekt zu und überprüft jeweils
 >   die Variableninhalte von `meinString`, `c`, `a_eq_b`, `a_eq_c` und `zeichen`
->   mit `Console.WriteLine` oder mit dem Debugger.
+>   mit `console.log` oder mit dem Debugger.
 
 ## Eigene Datentypen
 
@@ -329,23 +295,23 @@ komplexeren Datentypen zusammen gesetzt werden, die dann direkt verwendet werden
 (indem Variablen von diesen Typen erzeugt werden) oder diese wiederum als Bausteine für
 das Aggregieren noch komplexerer Typen verwendet werden. 
 
-In C# können, wie in vielen anderen Programmiersprachen auch, mit dem Schlüsselwort
+In TypeScript können, wie in vielen anderen Programmiersprachen auch, mit dem Schlüsselwort
 `class` neue Datentypen erzeugt werden. Hier ein Beispiel
 
 ### Einen neuen Typen deklarieren
 
-```C#
+```TypeScript
   public class Person
   {
-      public string Name;
-      public int Personalnummer;  
+      public Name: string;
+      public Personalnummer: number;  
   }
 ```
 
 Oben stehender Code erzeugt einen neuen Datentyp namens `Person`, indem dieser aus den 
-bestehenden Datentypen `string` und `int` zusammen gesetzt wird. Jeder Wert vom Typ
+bestehenden Datentypen `string` und `number` zusammen gesetzt wird. Jeder Wert vom Typ
 `Person` besteht demnach aus einer Komponente `Name` vom Typ `string` und einer
-Komponente `Personalnummer` vom Typ `int`. Derart selbst definierte Datentypen
+Komponente `Personalnummer` vom Typ `number`. Derart selbst definierte Datentypen
 heißen auch ***zusammengesetzte Datentypen***.
 
 Dieser Typ kann nun überall dort verwendet
@@ -357,7 +323,7 @@ Variablen.
 Nach dem bekannten Schema zur Variablendeklaration (`typ identifizierer`) können
 wir nun eine Variable vom Typ `Person` anlegen. Der Variablenname ist hier `jemand`:
 
-```C#
+```TypeScript
   Person jemand;
 ```
 
@@ -367,7 +333,7 @@ Wie schon bei Arrays muss bei zusammengesetzten Typen die Initialisierung in zwe
 unterschieden werden:
 
 1. Initialisierung der eigentlichen Variablen, damit Speicherplatz dafür angelegt wird.
-   In C# genügt die o.a. Deklaration von `jemand` nicht, damit ich unter diesem Variablennamen
+   In TypeScript genügt die o.a. Deklaration von `jemand` nicht, damit ich unter diesem Variablennamen
    den Namen und die Personalnummer einer Person speichern kann.
 2. Initialisierung der Bestandteile der Zusammensetzung. Der Variablen `jemand` soll ein konkreter
    Name und eine konkrete Personalnummer zugewiesen werden.
@@ -375,24 +341,24 @@ unterschieden werden:
 Folgender Code führt die beiden Schritte hintereinander durch. Für Schritt 2 wird der 
 Objekt-Zugriffs-Operator (`.`) verwendet.
 
-```C#
-  Person jemand = new Person();
+```TypeScript
+  let jemand: Person = new Person();
   jemand.Name = "Horst";
   jemand.Personalnummer = 42;
 ```
 
-In C# gibt es eine abkürzende Schreibweise für diese beiden Initialisierungsschritte. Mit einem
+In TypeScript gibt es eine abkürzende Schreibweise für diese beiden Initialisierungsschritte. Mit einem
 so genannten _Objektinitialisierer_ können die oben stehenden drei Zeilen zu folgender Zeile
 zusammen gefasst werden:
 
-```C#
-  Person jemand = new Person {Name="Horst", Personalnummer=42};
+```TypeScript
+  let jemand: Person = new Person {Name="Horst", Personalnummer=42};
 ```
 
 Beachtenswert bei obiger Schreibweise ist die Verwendung der geschweiften Klammern im Unterschied
 zu den runden und die Verwendung des Komma als Trennzeichen der Initialisierungsliste.
 
-Nachdem nun die wichtigsten Merkmale von C# im Umgang mit Daten und Datenstrukturen erklärt wurden, 
+Nachdem nun die wichtigsten Merkmale von TypeScript im Umgang mit Daten und Datenstrukturen erklärt wurden, 
 sollen nun die rudimentären Kontrollstrukturen beschrieben werden
 
 ## Verzweigungen
@@ -403,11 +369,11 @@ Programmiersprachen das Konstrukt der Verzweigung.
 
 ### `if` / `else`
 
-Wie in vielen anderen Sprachen auch, gibt es in C# die if/else Anweisung, die auf Grund eines
-Wahrheitswertes (vom Typ `bool` - kann wahr oder falsch sein), einen von zwei möglichen
+Wie in vielen anderen Sprachen auch, gibt es in TypeScript die if/else Anweisung, die auf Grund eines
+Wahrheitswertes (vom Typ `boolean` - kann wahr oder falsch sein), einen von zwei möglichen
 Code-Blöcken ausführt. Die allgemeine Syntax ist wie folgt:
 
-```C#
+```TypeScript
   if (<BEDINGUNG>)
   {
       // Anweisungsblock, der ausgeführt, falls <BEDINGUNG> true ist
@@ -423,35 +389,36 @@ ausgeführt.
 
 #### Bedingungen der `if`-Anweisung
 
-Die `<BEDINGUNG>` ist dabei ein Ausdruck, der einen Wert vom Typ `bool` ergibt. Im einfachsten
-Fall kann das einfach eine `bool`'sche Variable sein. Sehr oft wird aber ein Vergleichsoperator
-verwendet. Im Folgenden eine Liste der in C# vorhandenen Vergleichsoperatoren. Für die Beispiele
+Die `<BEDINGUNG>` ist dabei ein Ausdruck, der einen Wert vom Typ `boolean` ergibt. Im einfachsten
+Fall kann das einfach eine `boolean`'sche Variable sein. Sehr oft wird aber ein Vergleichsoperator
+verwendet. Im Folgenden eine Liste der in TypeScript vorhandenen Vergleichsoperatoren. Für die Beispiele
 seien
 
-```C#
- int a = 3;
- int b = 3;
- int c = 4;
+```TypeScript
+ let a: int = 3;
+ let b: int = 3;
+ let c: int = 4;
 ```
 
-Vergleichsoperator   |  Bedeutung           | Beispiel
------------|----------------------|--------------
-`==`       | ist gleich           | `bool erg = (a == b); // erg ist true`
-`<`        | kleiner              | `bool erg = (a < c);  // erg ist true`
-`<=`       | kleiner oder gleich  | `bool erg = (a <= b); // erg ist true`
-`>`        | größer               | `bool erg = (a < c);  // erg ist true`
-`>=`       | größer oder gleich   | `bool erg = (a <= b); // erg ist true`
+Vergleichsoperator   |  Bedeutung                    | Beispiel
+---------------------|-------------------------------|--------------
+`===`                | ist gleich (Typkonvertierung) | `boolean erg = (a === b); // erg ist true`
+`==`                 | ist gleich                    | `boolean erg = (a == b); // erg ist true`
+`<`                  | kleiner                       | `boolean erg = (a < c);  // erg ist true`
+`<=`                 | kleiner oder gleich           | `boolean erg = (a <= b); // erg ist true`
+`>`                  | größer                        | `boolean erg = (a < c);  // erg ist true`
+`>=`                 | größer oder gleich            | `boolean erg = (a <= b); // erg ist true`
 
 > #### TODO
 >
-> Mit folgendem Code lässt sich eine Integerzahl einlesen, die der Benutzer an der Konsole 
-> eingibt (wird hier in `a`gespeichert)
-> ```C#
-> int a = int.Parse(Console.ReadLine());
+> Mit folgendem Code lässt sich eine Zahl einlesen, die der Benutzer in einem Textfeld
+> eingibt (wird hier in `a`gespeichert). Der Standardwert bei Nichteingabe ist hier 4
+> ```TypeScript
+> let a: number = parseInt(prompt("Geben sie eine Zahl ein", "4"));
 > ```
 >
-> - Schreibt ein C#-Programm, das zwei Zahlen von der Konsole einliest. Diese sollen verglichen werden.
->   Ist die erste größer als die zweite, soll der Text "a ist größer als b" ausgegeben werden, ansonsten der Text
+> - Schreibt ein TypeScript-Programm, das zwei Zahlen von der Konsole einliest. Diese sollen verglichen werden.
+>   Ist die erste größer als die zweite, soll der Text "a ist größer als b" in der Konsole ausgegeben werden, ansonsten der Text
 >   "b ist größer als a".
 
 Mit den _logischen Operatoren_ lassen sich zudem beliebige `bool`'sche Werte miteinander verknüpfen. 
@@ -472,54 +439,50 @@ Logischer Operator   |  Bedeutung               | Wirkung
 ### `switch` / `case`
 
 Statt einer aus zwei Möglichkeiten soll manchmal eine aus mehreren Möglichkeiten ausgewählt werden. Beispielsweise
-soll der Inhalt einer `int`-Variablen überprüft werden und für verschiedene mögliche Werte sollen verschiedene 
+soll der Inhalt einer `number`-Variablen überprüft werden und für verschiedene mögliche Werte sollen verschiedene 
 Aktionen ausgeführt werden. Ähnliches kann für den Inhalt einer `string`-Variablen gewünscht sein. Hier hilft die
 `switch`/ `case` Anweisung, die sich leicht an einem Beispiel erklären lässt:
 
-```C#
-int i = int.Parse(Console.ReadLine());
+```TypeScript
+let i: number = parseInt(prompt("Geben sie eine Zahl ein", "3"));
 switch (i)
 {
    case 1:
-      Console.WriteLine("Du hast EINS eingegeben");
+      console.log("Du hast EINS eingegeben");
       break;
    case 2:
-      Console.WriteLine("ZWEI war Deine Wahl");
+      console.log("ZWEI war Deine Wahl");
       break;
    case 3:
-      Console.WriteLine("Du tipptest eine DREI");
+      console.log("Du tipptest eine DREI");
       break;
    default:
-      Console.WriteLine("Die Zahl " + i + " kenne ich nicht");
+      console.log("Die Zahl " + i + " kenne ich nicht");
       break;
 }
 ```
 
 > #### TODO
 >
-> - Verwendet o.a. Code in einem lauffähigen C#-Programm und probiert es aus.
+> - Verwendet o.a. Code in einem lauffähigen TypeScript-Programm und probiert es aus.
 > - Erweitert den Code um einen weiteren Switch für eine Zahl Eurer Wahl.
-> - Ändert den Typ der Variablen `i` von `int` nach `string` und ändert die `case`-Labels, so dass
+> - Ändert den Typ der Variablen `i` von `number` nach `string` und ändert die `case`-Labels, so dass
 >   diese aus Strings bestehen.
 > - Was passiert, wenn man an einer Stelle das `break` vergisst? Denkt euch Fälle aus, bei denen
 >   das sinnvoll sein kann.
 > - Versucht, die oben mit der `switch` / `case` Anweisung implementierte Funktionalität mit `if`/ `else`
 >   Anweisungen zu implementieren. 
 
-Mit Version 7 von C# (erschienen im März 2017) hat die `switch` / `case` Anweisung ein paar mächtige Neuerungen
-erfahren. Somit sind nun nicht mehr nur `int` und `string` Werte in der `switch`-Klammer evaluierbar, sondern
-beliebige Ausdrücke, die dann in den `case`-Labels auf so genannte _Patterns_ überprüft werden können.
-
 ## Schleifen
 
 Neben den Verzweigungen bilden die Schleifen ein weiteres wichtiges Konstrukt, um den 
-Programmfluss zu beeinflussen. C# kennt eine Reihe unterschiedlicher  Schleifen-Konstrukte
+Programmfluss zu beeinflussen. TypeScript kennt eine Reihe unterschiedlicher  Schleifen-Konstrukte
 
 ### `while`
 
 Schleifen mit `while` haben folgenden Aufbau
 
-```C#
+```TypeScript
   while (<BEDINGUNG>)
   {
     // Schleifenrumpf
@@ -542,7 +505,7 @@ wird, wenn gleich die erste Evaluierung von `<Bedingung>` den Wert `false` ergib
 
 Viele `while`-Schleifen sind nach folgendem Muster aufgebaut:
 
-```C#
+```TypeScript
   <INITIALISIERUNG>;
   while (<BEDINGUNG>)
   {
@@ -559,7 +522,7 @@ Bedingung verändert, dieser Schritt wird `<INKREMENT>` genannt.
 
 > #### TODO
 >
-> - Erzeugt ein C# Programm, das in einer `while`-Schleife die Zahlen von 1 bis 10 auf der Konsole
+> - Erzeugt ein TypeScript Programm, das in einer `while`-Schleife die Zahlen von 1 bis 10 auf der Konsole
 >   ausgibt. 
 > - Wie lauten hier die Teile `<INITIALISIERUNG>`, `<BEDINGUNG>` und `<INKREMENT>`?
 
@@ -569,7 +532,7 @@ Eine abkürzende bzw. übersichtlichere Schreibweise für die oben angegebene ty
 einer `while`-Schleife mit vorangehendem Initialsierungsteil und Inkrement-Teil am Ende des
 Schleifenrumpfes bietet das Schleifenkonstrukt mit `for`, das folgendermaßen aussieht:
 
-```C#
+```TypeScript
   for (<INITIALISIERUNG>; <BEDINGUNG>; <INKREMENT>)
   {
     // Schleifenrumpf
@@ -584,8 +547,8 @@ allen Bestandteilen unterscheidet sich aber in nichts von der
 
 Ein häufig vorkommender Anwendungsfall für Schleifen ist das Durchlaufen eines Arrays:
 
-```C#
-  string[] someStrings = 
+```TypeScript
+  let someStrings: string[] = 
   {
     "Hier",
     "sehen",
@@ -593,12 +556,12 @@ Ein häufig vorkommender Anwendungsfall für Schleifen ist das Durchlaufen eines
     "einen",
     "Array",
     "von",
-    "Strings
+    "Strings"
   };
   
-  for (int i = 0; i < 5; i++)
+  for (let i: number = 0; i < 5; i++)
   {
-    Console.WriteLine(someStrings[i]);
+    console.log(someStrings[i]);
   }
 ```
 
@@ -620,18 +583,18 @@ sich alle Schleifen-Anwendungen so konstruieren, dass die Bedingung zu Beginn
 
 Es gibt aber Fälle, in denen ein Überprüfen der Schleifenbedingung und 
 ein möglicher nachfolgender Abbruch zu schlankerem oder eleganterem Code führt.
-In C# gibt es für diese Fälle zum einen das `do while`-Konstrukt und zum anderen
+In TypeScript gibt es für diese Fälle zum einen das `do while`-Konstrukt und zum anderen
 die Möglichkeit, mit einer `if`-Anweisung an einem beliebigen Punkt innerhalb
 des Schleifenrumpfes eine Abbruchbedingung abzufragen und, wenn diese gegeben ist, 
 mit `break` die Schleife zu verlassen.
 
 #### Schleife mit `do while`
 
-```C#
-  int i = 0;
-  do ( )
+```TypeScript
+  let i: number  = 0;
+  do
   {
-    Console.WriteLine(someStrings[i]);
+    console.log(someStrings[i]);
     i++;
   }
   while (i < 5);
@@ -639,11 +602,11 @@ mit `break` die Schleife zu verlassen.
 
 #### Schleife mit `break`
 
-```C#
-  int i = 0;
+```TypeScript
+  let i: number = 0;
   while (true)
   {
-    Console.WriteLine(someStrings[i]);
+    console.log(someStrings[i]);
     if (i >= 4)
       break;
     i++;
@@ -672,10 +635,10 @@ sehr aufwändig, bedeutet aber dennoch einerseits einen gewissen Aufwand und and
 das Iterieren über die Inhalte von _Kollektionen_ wie Arrays kann mit der `foreach`-Anweisung
 implementiert werden:
 
-```C#
-  foreach (string s in someStrings)
+```TypeScript
+  for (let s: string of someStrings)
   {
-    Console.WriteLine(s);
+    console.log(s);
   }
 ```
 
