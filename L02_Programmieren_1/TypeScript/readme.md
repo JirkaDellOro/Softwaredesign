@@ -352,7 +352,7 @@ so genannten _Objektinitialisierer_ können die oben stehenden drei Zeilen zu fo
 zusammen gefasst werden:
 
 ```TypeScript
-  let jemand: Person = new Person {Name="Horst", Personalnummer=42};
+  let jemand: Person = new Person (Name="Horst", Personalnummer=42);
 ```
 
 Beachtenswert bei obiger Schreibweise ist die Verwendung der geschweiften Klammern im Unterschied
