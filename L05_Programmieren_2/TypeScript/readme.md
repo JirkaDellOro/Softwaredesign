@@ -10,27 +10,27 @@ Datentypen, erzeugt werden. In Java und C/C++ gibt es hierzu das Schlüsselwort
 ```TypeScript
   class Person
   {
-    public string Name;
-    public int Age;
+    public Name: string;
+    public Age: number;
   }
 ```
 
 In diesem Beispiel wird ein Neuer Datentyp namens `Person` erzeugt und festgelegt,
 dass jedes Objekt/jede Instanz vom Typ Person ein Feld vom Typ `string` namens _Name_
-und ein Feld vom Typ `int` mit dem Namen _Age_ besitzt.
+und ein Feld vom Typ `number` mit dem Namen _Age_ besitzt.
 
 Mit diesem neuen Datentyp kann nun alles angestellt werden, was mit bereits existierenden
 Datentypen geht. Z.B. können Variablen, und Methodenparameter von diesem Typ angelegt werden.
 
 ```TypeScript
-  Person myself;
+  let myself: Person;
 ```
 
 Bei der Deklaration von Variablen derart selbst definierter Datentypen wird noch _keine_
 Instanz erzeugt. Dies muss explizit mit dem `new`-Operator erfolgen:
 
 ```TypeScript
-  Person myself = new Person();
+  let myself: Person = new Person();
 ```
 
 Damit wird eine Variable `myself` vom Typ `Person` erzeugt, die eine Instanz vom Typ
@@ -41,7 +41,7 @@ Somit kann dann auch über den Variablennamen `myself` auf die Felder dieser Ins
 zugegriffen werden.
 
 ```TypeScript
-  Person myself = new Person();
+  let myself: Person = new Person();
   myself.Name = "Müller";
   myself.Age = 50;
 ```
@@ -56,7 +56,7 @@ Eine solche Folge von Anweisungen, also
 kann in TypeScript auch verkürzt geschrieben werden:
 
 ```TypeScript
-  Person myself = new Person {Name = "Müller", Age = 50};
+  let myself: Person = new Person ("Müller", 50);
 ```
 
 Darüberhinaus gibt es, wie in anderen Programmiersprachen auch, die Möglichkeit, 
@@ -67,7 +67,7 @@ einen Initalisierungskonstruktor zu implementieren, der initiale Werte für `Nam
 auf Inhalte von `myself` zugegriffen werden:
 
 ```TypeScript 
-  Console.WriteLine(myself.Name + " ist " + myself.Age + " Jahre alt!");
+  console.log(myself.Name + " ist " + myself.Age + " Jahre alt!");
 ```
 
 ## Methoden
@@ -77,7 +77,7 @@ also das, was passiert, wenn ein Programm zur Ausführung kommt. Methoden sind n
 Struktur aufgebaut:
 
 ```TypeScript
-  <RÜCKGABEWERT> MethodenName(<PARAMETERLISTE>)
+  MethodenName(<PARAMETERLISTE>): <RÜCKGABEWERT> 
   {
     <METHODENRUMPF>
   }
@@ -85,7 +85,7 @@ Struktur aufgebaut:
 
 Der `<RÜCKGABEWERT>` bezeichnet dabei den Datentyp des Rückgabewertes. Die 
 `<PARAMETERLISTE>` enthält eine mit Komma getrennte Liste von Parameterdeklarationen, die, 
-wie Variablendeklarationen, nach dem Schema `<TYP> identifizierer` aufgebaut sind.
+wie Variablendeklarationen, nach dem Schema `identifizierer: <TYP>` aufgebaut sind.
 
 Der `<METHDODENRUMPF>` enthält Code, der ausgeführt wird, sobald die Methode aufgerufen 
 wird. Dieser Code kann auf Parameter aus der Parameterliste, sowie auf innerhalb der Klasse
@@ -98,10 +98,10 @@ Beispiel
 ```TypeScript
   class Person
   {
-    public string Name;
-    public int Age;
+    public Name: string;
+    public Age: number;
 
-    public string GetTitleAdress()
+    public GetTitleAdress(): string
     {
       if (Age < 18)
         return "Hey " + Name;
@@ -134,8 +134,8 @@ neben `public` und `private` sind `protected` und `internal`.
 
 > #### TODO
 > - Lest in der 
->   [TypeScript-Dokumentation](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/access-modifiers)
->   nach, was die Zugriffsmodifizierer `protected` und `internal` bedeuten.
+>   [TypeScript-Dokumentation](https://www.typescriptlang.org/docs/handbook/classes.html)
+>   nach, was der Zugriffsmodifizierer `protected` bedeutet.
 > - Auch eine Klasse selbst kann `public` sein. Was bedeutet das?
 
 ## Vererbung
@@ -147,9 +147,9 @@ alle bereits in einer anderen Klasse definierten Eigenschaften und Methoden übe
 ein Beispiel:
 
 ```TypeScript
-  class Employee : Person
+  class Employee extends Person
   {
-    public int idNumber;
+    public idNumber: number;
   }
 ```
 
@@ -179,10 +179,10 @@ oben _polymorph_ implemetiert:
 ```TypeScript
   class Person
   {
-    public string Name;
-    public int Age;
+    public Name: string;
+    public Age: string;
 
-    public virtual string GetTitleAdress()
+    public  GetTitleAdress(): string
     {
       if (Age < 18)
         return "Hey " + Name;
@@ -191,24 +191,21 @@ oben _polymorph_ implemetiert:
     }
   }
   
-  class Female : Person
+  class Female extends Person
   {
-    public override string GetTitleAdress()
+    public GetTitleAdress(): string
     {
         return "Sehr geehrte Frau " + Name;
     }
 
-  class Male : Person
+  class Male extends Person
   {
-    public override string GetTitleAdress()
+    public GetTitleAdress(): string
     {
         return "Sehr geehrter Herr " + Name;
     }
   }
 ```
-
-Die Polymorphie der Methode `GetTitleAdress()` in den unterschiedlichen Klassen wird über die Modifizierer
-`virtual` und `override` gesteuert. 
 
 > #### TODO
 > - Initialisiert einen Array von `Person` mit Instanzen von `Person`, `Female` und `Male`.
@@ -417,35 +414,36 @@ hier nur kurz erwähnt werden sollen.
 
 ### Properties (Eigenschaften)
 
-Oft möchte man in Instanzen von Klassen Werte speichern, wie z.B. `Name` und `Age` in unserem
+Oft möchte man in Instanzen von Klassen Werte speichern, wie z.B. `_fullname` in unserem
 Beispiel. Beim Setzen von Werten und beim Auslesen von Werten soll aber oft weitere Funktionalität
 (so genannte Seiteneffekte) ausgelöst werden. Z.B. kann es beim Auslesen eines Wertes sein, dass
 der Wert erst noch aktualisiert werden muss. Oder beim Schreiben eines Wertes sollen andere Werte
-ebenfalls neu berechnet werden. Klassischerweise würde man in diesem Fall der Klasse Methdoen wie
-`SetWert(<TYP> wert)` und `<TYP> GetWert()` hinzufügen. In TypeScript wurden für diesen Fall _Properties_ 
+ebenfalls neu berechnet werden. Klassischerweise würde man in diesem Fall der Klasse Methoden wie
+`get <METHODENNAME>(): <RÜCKGABEWERT> ` und `set <METHODENNAME>(wert: <TYP>)` hinzufügen. In TypeScript wurden für diesen Fall _accessors_ 
 hinzugefügt. Hier ein Beispiel:
 
 ```TypeScript
-  class Person
-  {
-    public string Name 
+    class Person
     {
-      get
-      {
-         return _name;
-      }
-      set
-      {
-         _name = value;
-      }
-    }
-    private _name;
+        private _fullname: string = "Freddi Krueger";
 
-    public int Age;
-  }
+        get fullName(): string
+        {
+          return this._fullname;
+        }
+        set fullName(value: string)
+        {
+          this._fullname = value;
+        }
+    }
+
+    let person: Person = new Person();
+    console.log(person.fullName);
+    person.fullName = "Jason Vorhees";
+    console.log(person.fullName);
 ```
 
-In unserer Klasse `Person` ist `Name` nun ein Property mit einer `set` und einer `get` Methode.
+Über den Ausdruck `get` bzw. `set` vor dem Methodenname, können wir die Methode wie wie ein Attribut aufrufen:
 Hier passiert in den Methoden nichts anderes, als das zu setzender oder auszulesender Wert in einem 
 privaten Feld (dem _backing field_) gespeichert werden. Man kann sich aber leicht vorstellen, dass in
 den Methodenrümpfen von `set` und `get` weitere Anweisungen stehen können, die beliebige Seiteneffekte

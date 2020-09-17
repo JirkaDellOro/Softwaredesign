@@ -421,7 +421,7 @@ Oft möchte man in Instanzen von Klassen Werte speichern, wie z.B. `Name` und `A
 Beispiel. Beim Setzen von Werten und beim Auslesen von Werten soll aber oft weitere Funktionalität
 (so genannte Seiteneffekte) ausgelöst werden. Z.B. kann es beim Auslesen eines Wertes sein, dass
 der Wert erst noch aktualisiert werden muss. Oder beim Schreiben eines Wertes sollen andere Werte
-ebenfalls neu berechnet werden. Klassischerweise würde man in diesem Fall der Klasse Methdoen wie
+ebenfalls neu berechnet werden. Klassischerweise würde man in diesem Fall der Klasse Methoden wie
 `SetWert(<TYP> wert)` und `<TYP> GetWert()` hinzufügen. In C# wurden für diesen Fall _Properties_ 
 hinzugefügt. Hier ein Beispiel:
 
