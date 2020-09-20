@@ -316,19 +316,18 @@ mit einer `using`-Anweisung bekannt gemacht werden:
       case '^': result = Ops.Power(left, right); break;
       case '#': result = Ops.GreatestCommonDenominator(left, right); break;
 ```
+-->
+Da wir auf statische Methoden zugreifen, müssen wir diese über den entsprechenden Klassennamen aufrufen
 
-Wenn, wie in unserem Fall, statische Methoden über einen Klassennamen aufgerufen werden,
-kann auch auf den vorangestellten Klassennamen verzichtet werden, in dem der Klassenname
-als statischer Name mit einer `using static`-Anweisung bekannt gemacht wird:
-
-```C#
-   using static Operations.Ops;
- 
+```TypeScript
    // ....
-
-      case '^': result = Power(left, right); break;
-      case '#': result = GreatestCommonDenominator(left, right); break;
-``` -->
+  case "^":
+      console.log(Ops.power(left, right)); 
+      break;
+  case "#":
+      console.log(Ops.greatestCommonDenominator(left, right));   
+      break;
+```
 
 ## Module mit UML beschreiben
 
