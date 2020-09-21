@@ -93,6 +93,55 @@ können folgende Ziele verfolgt werden:
 
 ## Techniken der Modularisierung in TypeScript
 
+## ES6 Standard
+
+Wie auch JavaScript ermöglicht TypeScript die Modularisierung des Codes. 
+
+Folgende Orderstruktur bietet sich an:
+
+  rootDirectory
+  |
+  |--/public
+  |
+  |--/src
+  |  |
+  |  |--/modules
+  |  |  |
+  |  |  |--Person.ts
+  |  |
+  |  |--app.ts
+  |
+  |--index.html
+  |
+  |--tsconfig.json
+
+Zusätzlich sind ein paar Anpassungen in der `tsconfig.json` nötig:
+
+In der `tsconfig.json` müssen folgende Attribute geändert werden: 
+> ```Json
+> - "target": "es6"
+> - "module": "es2015"
+> - "outDir": "./public"
+> - "rootDir": "./src"
+> ```
+
+Person.ts:
+> ```TypeScript
+> export class Person {
+>     public static fullName: string =  "Hans Peter";
+> }
+> ``` 
+
+app.ts:
+> ```TypeScript
+> import { Person } from "./modules/Person.js";
+>	console.log(Person.fullName);
+> ``` 
+
+Wichtig!!! es muss die nach der Kompilierung entstandene `Person.js` aus der `public/modules` importiert werden, da bei der Kompilierung das import-statement genau so in dem JS-File steht und dieses mit einem TS-File nichts anfangen könnte
+
+
+
 ### System.js
 
 System JS ist ein universeller, dynamischer Modul Loader für Javascript.
@@ -139,7 +188,8 @@ In diesem Modul müssen alle Klassen, Funktionen und Variablen, die später verf
 > import { Calculator } from "./modules/calculator.js"; // Important: Use .js as file ending
 > ``` 
 
-### Reuirejs
+### Reuquirejs
+
 Ähnlich wie bei System.js benötigt man hier eine Konfigurationsdatei (require.js) welche im Hintergrund die Modularisierung übernimmt. Diese kann man manuell herunterladen, oder über npm installieren.
 
 > - Einbinden der Datei in die HTML-Datei
