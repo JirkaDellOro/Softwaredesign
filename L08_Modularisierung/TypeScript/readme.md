@@ -138,7 +138,7 @@ app.ts:
 >	console.log(Person.fullName);
 > ``` 
 
-Wichtig!!! es muss die nach der Kompilierung entstandene `Person.js` aus der `public/modules` importiert werden, da bei der Kompilierung das import-statement genau so in dem JS-File steht und dieses mit einem TS-File nichts anfangen könnte
+Wichtig!!! es muss die nach der Kompilierung entstandene `Person.js` aus der `public/modules` importiert werden, da bei der Kompilierung das import-statement genau so in dem JS-File steht und dieses mit einem TS-File nichts anfangen kann.
 
 
 

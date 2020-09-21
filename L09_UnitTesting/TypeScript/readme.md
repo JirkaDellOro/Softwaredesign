@@ -56,8 +56,8 @@ Jest ist ein Testing Framework für JavaScript, dass aber auch TypeScript-Unters
 > ```TypeScript
 >  export function IsEmailAddress(emailAddress: string ): boolean
 >  {
->      let iAt: number = emailAddress.IndexOf("@");
->      let iDot: number = emailAddress.LastIndexOf(".");
+>      let iAt: number = emailAddress.indexOf("@");
+>      let iDot: number = emailAddress.lastIndexOf(".");
 >      return (iAt > 0 && iDot > iAt);
 >  }
 > ```
@@ -73,6 +73,65 @@ Jest ist ein Testing Framework für JavaScript, dass aber auch TypeScript-Unters
 >      });
 >  });
 > ```
+> - Besteht der übergebene String den Test?
+
+### Jasmine
+
+> #### TODO
+>
+> - Legt einen neuen Unterordner mit dem Namen `L09_UnitTesting` an 
+> - Wechselt per cd auf der Konsole in diesen Ordner und initalisiert npm `npm init`
+> - Installiert folgende Module `npm install -D jasmine @types/jasmine @types/node --save-dev`
+> - Installiert das`jasmine`-modul nochmals global `npm install jasmine -g`
+> - Installiert das`jasmine-ts-console-reporter`-modul `npm install -D jasmine-ts-console-reporter`
+> - Initialisiert das Jasmine-Projekt: `npx jasmine init`
+> - Ändert im entstandenen `spec`-Ordner in der `jasmine.json` folgendes Attribut:
+
+> ```JSON
+>  "spec_dir": "public/spec";
+> ```
+
+> - Legt im `spec`-Ordner einen neuen Unterordner `helpers` an
+> - Legt im `helpers`-Ordner ein `ts-console.ts`-File mit folgendem Code an:
+
+> ```TypeScript
+>  const TSConsoleReporter = require("jasmine-ts-console-reporter");
+>
+>  jasmine.getEnv().clearReporters();
+>  jasmine.getEnv().addReporter(new TSConsoleReporter());
+> ```
+
+> - Legt im `root`-Ordner ein `isEmailAddress.ts`-File mit folgendem Code an:
+
+> ```TypeScript
+>  export function IsEmailAddress(emailAddress: string ): boolean {
+>      let iAt: number = emailAddress.indexOf("@");
+>      let iDot: number = emailAddress.lastIndexOf(".");
+>      return (iAt > 0 && iDot > iAt);
+>  }
+> ```
+
+> - Legt im `spec`-Ordner ein `isEmailAddress.spec.ts`-File mit folgendem Code an:
+
+> ```TypeScript
+>  import { IsEmailAddress } from "../isEmailAdress";
+>
+>  describe("A suite", function(): void {
+>    it("Should return 'MyName'", function(): void {
+>        expect(IsEmailAddress("ich@provider.com")).toBe(true);
+>    });
+>  });
+> ```
+
+> - Ändert in der `tsconfig.json`-Ordner folgendes Attribut:
+
+> ```JSON
+>  "outDir": "public";
+> ```
+
+> - Nun kompliert den TS-Code `tsc` (Das müsst ihr nun vor jedem Testlauf machen, wenn ihr etwas geändert habt)
+> - Alternativ `tsc -w`
+> - Um den Test laufen zu lassen gebt `jasmine` in die Kommandozeile ein
 > - Besteht der übergebene String den Test?
 
 Die Aufgabe der Methode ist es, zu überprüfen, ob eine Zeichenkette
