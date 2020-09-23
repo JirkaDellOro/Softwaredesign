@@ -1,6 +1,8 @@
 # Clean Code
 Im Jahr 2008 verfasst Robert C. Martin, auch bekannt als "Uncle Bob", zusammen mit anderen Autoren das viel beachtete Buch "Clean Code". Im Text geht es vordringlich darum, wie Code gestaltet werden sollte, damit er für Menschen verständlich und wartbar ist. Es steht weniger im Vordergrund, dass der Code funktioniert, das ist ohnehin eine Voraussetzung. Stattdessen sollte sich der Code lesen lassen wie eine Geschichte. Begriffe wie "Eleganz" und "Schönheit" fallen, Programmieren wird als Kunst im wahrsten Sinne, wie Malerei oder Lyrik, dargestellt.
 
+Desweiteren prägte "Uncle Bob" die 5 Prinzipien des objektorientierten Designs (SOLID-Principles).
+
 Guter Code lässt sich leicht verstehen und bietet wenig Schlupfwinkel für Bugs. Er erklärt sich selbst und funktioniert entsprechend. Wenn Änderungen erforderlich werden, sind sie mit wenig Aufwand und kognitiver Last durchführbar. Es ist nicht erforderlich, dass der ursprüngliche Autor diese vollzieht.
 
 ## Namen
@@ -184,6 +186,40 @@ In diesem Beispiel hätte man natürlich auch die Berechnung vor der if-Abfrage 
 
 ### Vorgehensweise
 Es ist gar nicht leicht, Funktionen nach diesen Regeln zu gestalten. Es ist ein iterativer Prozess. Zunächst muss man die Gedanken zur Problemlösung notieren und dann einen ersten Entwurf machen. Dieser wird dann solange umstrukturiert und refaktoriert, bis der entstandene Code den Regeln guten Designs entspricht.
+
+### SOLID-Prinzipien
+
+Dieses Akronym steht für:
+
+**S**ingle-responsibility-principle
+**O**pen-closed-principle
+**L**iskov substitution principle
+**I**nterface segregation principle
+**D**ependency inversion principle
+
+#### Single-responsibility-principle
+
+Eine Klasse sollte nur eine Verantwortlichkeit haben. Das eine Änderung in dieser Klasse soll keine andere Klasse betreffen. Maximale Kohäsion und minimale Kopplung sind hier die Stichwörter. Ein Nichteinhalten dieses Prinzips führt zu vielen Abhängigkeiten und einer hohen Vernetzung. Dies führt zwangsläufig zu einer hohen Anzahl verschiedener Klassen. Dies bedeutet jedoch keineswegs, dass der Code umfangreicher ist. Lediglich die Organisation ist anders.
+
+#### Open-closed-principle
+
+Klassen sollen offen für Ertweiterungen, aber geschlossen gegenüber Modifikationen sein. Das heißt die Funktionaltität einer Klasse darf erweitert, aber nicht verändert werden. Schon fertig implementierte Funktionen können neue Fehler bekommen, wenn die Erweiterung der Klasse nur durch Änderungen innerhalb dieser möglich ist. 
+
+Programmiersprachen bringen zwei Techniken mit, mit denen sich dieses Prinzip erfüllen lässt:
+> - Vererbung (Superklassen)
+> - Implementierung (Interfaces)
+
+#### Liskov substitution principle
+
+Instanzen von Subklassen sollen sich so verhalten wie Instanzen der Superklasse. Dies wird grundsätzlich schon durch den Compiler sichergestellt (Polymorphie und Type-Casting). Eine Subklasse darf ein Superklasse nur erweitern, nicht verändern.
+
+#### Interface segregation principle
+
+Interfaces sollen nur Funktionen enthalten, die eng zusammen gehören (Kohäsion). Klassen die dieses Interface implementieren, müssen auch alle dessen Funktionen ausdefinieren. Auch wenn eine Methode unnötig für die Klasse ist. Darum sollten alle Funktionen der implementierenden Klasse nutzen.
+
+#### Dependency inversion principle
+
+Abhängigkeiten von Klassen sollen grundsätzlich vermieden werden. Das heißt zum Beispiel auch, dass Aggregationen und Kompositionen beispielsweise mithilfe von Interfaces umgangen werden sollen.
 
 ## Konventionen (von Prof. Müller)
 - Klammern/Einrückung
