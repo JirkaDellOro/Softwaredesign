@@ -465,6 +465,12 @@ Ereignis "Benutzer hat Maus über dem Button geklickt" passieren soll.
 Die Lösung hierfür sind so genannte _Events_. Mit deren Hilfe kann ein Anwender der Klasse eigenen Code
 hinterlegen, der ausgeführt werden soll, sobald ein _Event_, ein Ereignis, eintritt. 
 
+### Regular Expressions
+
+Es handelt sich um Zeichenketten, mit denen nach bestimmten syntaktischen Regeln Mengen definieren lassen. Somit kann man Texte nach bestimmte Kriterien durchsuchen und sich zum Beispiel die Menge an Wörtern zurückgeben lassen, die die gesetzten Kriterien erfüllen.
+
+Im Kapitel L11_RegularExpressions gehen wir noch einmal genauer darauf ein.
+
 
 
 

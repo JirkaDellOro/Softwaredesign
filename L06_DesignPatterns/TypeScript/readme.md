@@ -93,6 +93,14 @@ Stelle aus aufgerufen wird, oder ob er überhaupt jemals benötigt wird.
 >     Singleton-Instanz mit einem Startwert initialisiert wird und bei jedem Aufruf
 >     von `GenerateNewID` um eins erhöht wird.
 
+
+### Data Access
+
+#### Beispiel 
+
+#### Das Pattern
+
+
 ### Decorator
 
 Das Decorator Pattern kommt in folgenden Situationen zum Einsatz: Angenommen, es gibt konkrete bestehende Klassen, deren Funktionalität über ein Interface festgeschrieben ist. Verwender von Instanzen dieser Klassen
