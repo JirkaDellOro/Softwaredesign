@@ -140,6 +140,10 @@ app.ts:
 
 Wichtig!!! es muss die nach der Kompilierung entstandene `Person.js` aus der `public/modules` importiert werden, da bei der Kompilierung das import-statement genau so in dem JS-File steht und dieses mit einem TS-File nichts anfangen kann.
 
+> - Einbinden in die HTML-Datei:
+
+<script type="module" src="public/app.js"></script>
+
 
 
 ### System.js
@@ -208,6 +212,7 @@ importiert werden
 ### Webpack
 
 Webpack ist ein Bündelungstool, dass es über ein config-file erlaubt einen Workflow für die Erstellung von Webprojekten aufzusetzen. Die Möglichkeiten sind groß: SCSS-Compilierung, Bildkomprimierung, Codeminifizierung, Kopieren von Ordnern, erstellen von Source-Maps etc. Unter anderem ist es auch möglich seinen TS-Code modular aufzubauen. Wie bei System.js lassen sich Module über den ES6-Standard exportieren und importieren.
+Doku: https://webpack.js.org/concepts/
 
 > #### TODO
 >
@@ -302,29 +307,6 @@ auch noch von anderen Modulen.
 
 Wir haben nun ein Modul: Die Berechnungs-Bibliothek `Operations`.
 Nun wollen wir aus dem Rechner auf die Operationen zugreifen. Je nach verwendeter Möglichkeit läuft dies nun über export/import oder define/require
-
-
-> #### TODO
->
-> - Versucht beide o.g. Arten der Projektreferenzen aus. Es muss jeweils ein Eintrag in die
->   Datei `Calculator.csproj` hinzugefügt werden:
-> 
->   - Für einen Verweis auf die Dll ein `Reference`-Eintrag:
->   ```XML
->     <ItemGroup>
->       <Reference Include="..\Operations\bin\Debug\netstandard2.0\Operations.dll"/>
->     </ItemGroup>  
->   ```
->
->   - Für einen Verweis auf das Projekt ein `ProjectReference`-Eintrag:
->   ```XML
->     <ItemGroup>
->       <ProjectReference Include="..\Operations\Operations.csproj"/>
->     </ItemGroup> 
->   ```
-
-Mit beiden Arten der Referenzierung sollte es dann möglich sein, aus dem `Calculator`-Hauptprogramm
-auf die Klasse `Ops` und deren Methoden zuzugreifen.
 
 > #### TODO
 >

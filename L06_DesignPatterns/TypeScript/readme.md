@@ -204,14 +204,31 @@ Die beiden gängigsten Iterator sind `for in` und `for of`
 > - `for in`: Liefert die einzelnen Property Names des Array (Indizes).
 >
 > - `for of`: Liefert die einzelnen Object Values des Arrays (Genauer gesagt den Iterator, des Iterator-Attributs, den jede iterierbare Collection hat).
->
-<!-- > - Set:
->
-> - `for in`: Liefert die einzelen Enumarable Properties des Sets.
->
-> - `for of`: Liefert die einzelnen Object Values des Sets. -->
 
-Damit eine eigene Collection iterierbar ist, benötigt sie ein Attribut `Symbol.iterator`. Dieses Attribut erhält seinen Wert von einer Generator-Function, die ein Iterator-Objekt zurückgibt.
+Damit eine eigene Collection iterierbar ist, benötigt sie ein Attribut `Symbol.iterator`. Dieses Attribut erhält seinen Wert von einer Iterator-Function, die ein Generator-Objekt zurückgibt.
+
+Beispiel:
+
+```TypeScript
+  let obj: any = {
+    x: 1,
+    y: "Hans Peter",
+    [Symbol.iterator]: function* (): Generator {
+        let properties: string[] = Object.keys(this);
+        for (let i of properties) {
+            yield this[i];
+        }
+    }  
+};
+
+for (let o in obj) {
+    console.log(o); //Liefert die Indizes: x, y
+}
+
+for (let o of obj) {
+    console.log(o); //Liefert die Werte: 1, Hans Peter
+}
+```
 
 <!-- > #### TODO
 >

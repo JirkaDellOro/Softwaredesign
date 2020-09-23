@@ -4,14 +4,14 @@
 
 ### Ein wenig Geschichte
 
-**TypeScript** wurde von Microsoft entwickelt und 2012 veröffentlicht. Es basiert auf dem ECMAScript-6 Standard und erweitert die JavaScript-Syntax um viele Funktionen wie z.B spezifischere Typisierung und erweiterte Funktionsimplementierung, die sich mehr an gängigen Programmiersprachen orientiert. Der TypeScript-Compiler kompiliert den TS-Code in JavaScript-Code, da Browser lediglich JS interpretieren und ausführen können.
+**TypeScript** wurde von Microsoft entwickelt und 2012 veröffentlicht. Es basiert auf dem ECMAScript-6 Standard und erweitert die JavaScript-Syntax um viele Funktionen wie z.B spezifischere Typisierung und erweiterte Funktionsimplementierung, die sich mehr an gängigen Programmiersprachen orientiert. Der TypeScript-Compiler kompiliert den TS-Code in JavaScript-Code, da Browser lediglich JS interpretieren und ausführen kann.
 
-Anfangs war ein Entwickeln mit dieser Programmiersprache nur mit der Microsoft Entwicklungsumgebung Visual Studio möglich und somit exklusiv für Windows. Dies ist mittlerweile nicht mehr so. Alle gängigen Entwicklungsumgebungen (In dieser Veranstaltung VS Code) bieten Support für TS.
+Anfangs war die Softwareentwicklung mit dieser Programmiersprache nur mit der Microsoft Entwicklungsumgebung Visual Studio möglich und somit exklusiv für Windows. Dies ist mittlerweile nicht mehr so. Alle gängigen Entwicklungsumgebungen (In dieser Veranstaltung VS Code) bieten Support für TS.
 
 
 ### Werkzeuge
 
-In dieser Veranstaltungverwenden wir folgende setzen wir folgende Werkzeuge ein, die allesamt
+In dieser Veranstaltung verwenden wir folgende setzen wir folgende Werkzeuge ein, die allesamt
 kostenlos, OpenSource und plattformübergreifend (Windows, MacOS, Linux) sind.
 
 - Visual Studio Code (Integrierte Entwicklungsumgebung / Editor)
@@ -55,7 +55,7 @@ frei wählbare Variablenname. In TypeScript gilt:
   und sich während des Programmlaufs nicht ändern kann. Üblicherweise wird der Typ
   in der Deklaration angegeben.
   
-Diese Regeln machen TypeSccript, im Gegensatz zu einer so genannten _stark typisierten_ Sprache. Es gibt Programmiersprachen, die 
+Diese Regeln machen TypeSccript zu einer so genannten _stark typisierten_ Sprache. Es gibt Programmiersprachen, die 
 eine solche starke Typisierung nicht fordern (z.B. JavaScript, eine schwach typisierte Sprache). Für beide
 Varianten gibt es Vor- und Nachteile.
 
@@ -63,9 +63,8 @@ Varianten gibt es Vor- und Nachteile.
 
 Für die Wahl von Variablennamen und anderen Identifizierern gibt es folgende Regeln:
 
-- Das erste Zeichen muss ein Buchstabe oder der Unterstrich (`'_'`) sein. Insbesondere darf
-  das erste Zeichen eines Identifizierers _keine_ Ziffer (`'0'`...`'9'`) sein.
-- Alle weiteren Zeichen dürfen Buchstaben, Ziffern oder  der Unterstrich (`'_'`) sein.
+- Das erste Zeichen eines Identifizierers _keine_ Ziffer (`'0'`...`'9'`) sein.
+- Alle weiteren Zeichen dürfen Buchstaben, Ziffern oder der Unterstrich (`'_'`) sein.
 - Als Identifizierer darf ***kein*** 
   [JS-Schlüsselwort](https://www.w3schools.com/js/js_reserved.asp)
   verwendet werden, da JS von Haus aus kein Namespacing hat.
@@ -103,15 +102,6 @@ Da sämtlicher TypeScript-Code zu JS-Code kompiliert wird, ist die spezifischere
 >
 > - Erzeugt in Visual Studio Code ein neues TS-Projekt und fügt oben stehende Deklarationen und
 >   Initialisierungen der Variablen `i`, `pi`, und `salute` ein.
-> - Verändert die Deklarationen so, dass `var` statt der Typen verwendet wird und überzeugt Euch, 
->   dass der Compiler den Code korrekt übersetzt.
-> - Mit der Deklaration/Initialisierung `var variable = 0;` wird `variable` durch Typ Inferenz zu einer `int`-Variablen.
->   Wie muss die Initialisierung lauten, um den Typ der Variablen zu `double`, `float` oder `short` zu ändern, ohne
->   dass der konkrete Typ statt `var` hingeschrieben wird (`var` soll stehen bleiben)?
->   **TIPP**: Seht Euch o.A. 
->   [Referenzdokumentation](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/built-in-types-table)
->   zu den eingebauten Datentypen an und lest Euch durch, wie zu den jeweiligen Typen die Konstanten (englisch _Literals_)
->   gebildet werden: Was unterscheidet eine `int`-Konstante von einer `double`-Konstanten?
 
 ## Arrays
 
@@ -128,10 +118,10 @@ Grund-Typ      | Array-Typ
 ---------------|-----------------
 `number`       | `number[]`
 `string`       | `string[]`
-`double`       | `boolean[]`
+`boolean`      | `boolean[]`
 ...            | ...
 
-Anmerkung: Wie in JS sind TS-Arrays dynamisch. Das heißt sie sind komplexe Objekte, über die sich Methoden ausführen lassen, die sie manipulieren. Z.B kann man einen Wert entfernen, was den Array um diesen Wert schrumpfen lässt. Das ist vergleichbar mit Vektoren und ArrayLists.
+Anmerkung: Wie in JS sind TS-Arrays dynamisch. Das heißt sie sind komplexe Objekte, über die sich Methoden ausführen lassen, die sie manipulieren. Z.B kann man einen Wert entfernen, was den Array um einen Index schrumpfen lässt. Das ist vergleichbar mit Vektoren und ArrayLists.
 
 ### Deklaration von Array-Variablen
 
@@ -205,7 +195,7 @@ werden.
 > Überprüft eure Annahme, indem ihr den Code (mit der vorangegangenen Initialisierung) in einem
 >  TypeScript-Projekt laufen lasst. Den Inhalt der Variablen `ergebnis` könnt ihr mit
 >  ```TypeScript
->   Console.log(ergebnis);
+>   console.log(ergebnis);
 >  ```
 > auf der Konsole ausgeben oder bei angehaltenem Programm mit dem Debugger ansehen.
 >
@@ -234,7 +224,7 @@ wieviel Einträge der Array enthält.
 > #### TODO
 >
 > - Gebt nach der Initialisierung des o.A. Arrays mit
->   `Console.log(ia.length);`
+>   `console.log(ia.length);`
 >   die Anzahl der Einträge aus.
 > - Ändert die Anzahl der Einträge und überprüft die Ausgabe.
 
@@ -249,7 +239,7 @@ Zeichenvorrats. Software muss an vielen Stellen mit Zeichenketten umgehen, beisp
 - Kommunikation mit anderen Prozessen, Rechnern, Cloud-Diensten
 - ...
 
-In TypeScript heißt der dazu verwendete Datentyp `string`.  Zunächst mal kann man sich einen
+In TypeScript heißt der dazu verwendete Datentyp `string`. Zunächst mal kann man sich einen
 String als einen Array des Grund-Typ `char`(vgl. andere Programmiersprachen) vorstellen: Unter einem Variablennamen
 ist eine geordnete Folge von `char`-Werten hinterlegt. Zusätzlich dazu bietet der 
 Datentyp `string` noch eine ganze Reihe an Funktionalität, z.B.
@@ -324,7 +314,7 @@ Nach dem bekannten Schema zur Variablendeklaration (`typ identifizierer`) könne
 wir nun eine Variable vom Typ `Person` anlegen. Der Variablenname ist hier `jemand`:
 
 ```TypeScript
-  Person jemand;
+  let jemand: Person;
 ```
 
 ### Variablen von zusammengesetzten Typen initialisieren
@@ -352,7 +342,7 @@ so genannten _Objektinitialisierer_ können die oben stehenden drei Zeilen zu fo
 zusammen gefasst werden:
 
 ```TypeScript
-  let jemand: Person = new Person (Name="Horst", Personalnummer=42);
+  let jemand: Person = new Person ("Horst", 42);
 ```
 
 Beachtenswert bei obiger Schreibweise ist die Verwendung der geschweiften Klammern im Unterschied

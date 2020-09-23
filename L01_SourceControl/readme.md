@@ -237,7 +237,7 @@ Entwickler **A** legt ein Projekt an und Entwickler **B** "holt" sich das Projek
 > - **A**: legt auf eurem Rechner einen neuen Ordner an und gebt in der Directory `git init` ein
 > - **A**: fügt dem Projekt eine simple HTML-Datei (Mit einem Titel im Header und einer Textzeile im Body) zu.
 > - **A**: speichert die Änderung (mit `git add .`).
-> - **A**: überträgt die Änderung ins lokale Repository (mit `git commit -m 'NameDesCommits'` oder mit dem Commit Button in 
+> - **A**: überträgt die Änderung ins lokale Repository (mit `git commit -m 'initial commit'` oder mit dem Commit Button in 
 >   GitHub Desktop).
 > - **A**: sucht die URL für das repository (grüner clone-button -> HTTPS Link kopieren).
 > - **A**: gebt euer GitHub Repo als Ziel an und ladet die Änderungen hoch (`git push –set-upstream kopierterLink`).
