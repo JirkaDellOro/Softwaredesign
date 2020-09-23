@@ -288,6 +288,8 @@ ein paar Unschönheiten:
    eine automatische Auffindbarkeit der Tests, die in einem großen Software-Projekt über viele Module
    und Code-Dateien verstreut sein können.
 
+-->
+
 ## Unit Test Frameworks
 
 Antworten auf die oben genannten "Unschönheiten" (und vieles mehr) liefern so 
@@ -296,14 +298,15 @@ Programmiersprachen / Entwicklungsumgebungen / Plattformen mit variierendem Funk
 [in unübersichtlicher Anzahl](https://en.wikipedia.org/wiki/List_of_unit_testing_frameworks). 
 Im Folgenden ein paar Namen nach Programmiersprachen geordnet.
 
-- In der _Java_-Welt ist **JUNIT** das bekannteste Unit Test Framework.
-- Für _JavaScript_ gibt es unter anderem: **Mocha**, **Jest**.
- **AVA** und **Jasmine**. Mocha ist auch in _TypeScript_ verwendbar.
-- In _C++_ steht mit **Google Test** ein umfangreiches Framework zur Verfügung. 
-- In dieser Veranstaltung arbeiten wir mit TypeScript / .NET. Hier gibt unter anderem
-  **NUnit** und [**xUnit.net**](https://xunit.github.io/), mit dem die folgenden
-  Beispiele und Übungen implementiert werden.
+## Alternativen zu JUnit
 
+### Mockito
+[https://github.com/NagRock/ts-mockito]
+
+## Selenium
+[https://github.com/goenning/typescript-selenium-example]
+
+<!--
 ## Tests mit xUnit .net
 
 Es sollen nun die bereits angelegten Tests mit xUnit .net implementiert werden. 
@@ -594,6 +597,6 @@ allen mit `[Fact]` dekorierten Methoden erscheinen im Code Editor die Optionen `
 
  - Test-Driven Development
    - Entwicklungsprozess(e) erklären & vergleichen
-   - Einbettung in agile Methoden / Abgrenzung zu agilen Methoden -->
+   - Einbettung in agile Methoden / Abgrenzung zu agilen Methoden
 
  
