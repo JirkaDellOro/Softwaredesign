@@ -46,7 +46,7 @@ console.log(i);
 
 Zudem gibt es mehrere Möglichkeiten, Variableninhalte in Ausgabe-Strings einzusetzen. Zum einen
 mit `+` als 
-[String-Verkettungs-Operator](https://docs.microsoft.com/de-de/dotnet/csharp/programming-guide/strings/how-to-concatenate-multiple-strings), 
+[String-Verkettungs-Operator](https://www.typescriptlang.org/docs/handbook/2/basic-types.html#Downleveling), 
 oder mit einem sogenannten 
 [*interpolierten* String](https://www.typescriptlang.org/docs/handbook/2/basic-types.html#explicit-types),
 erkennbar am `$`-Zeichen.
