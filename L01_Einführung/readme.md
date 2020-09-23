@@ -1,6 +1,45 @@
-# Source Control
+# Einführung in die Softwareentwicklung
 
-## Source Control Grundsätzliches
+## Phasen der Softwareentwicklung
+
+Je nach Quelle lässt sich der Entwicklungsprozess von Software in 5-6 Phasen unterteilen:
+
+1. Anforderungsanalyse
+2. Design/Entwurf
+3. Umsetzung/Implementation
+4. Test
+5. Veröffentlichung
+6. Instandhaltung
+
+Phase 4 und 5 werden öfters zusammengefasst.
+
+### 1. Anforderungsanalyse
+
+In dieser Phase geht es darum, die Anforderungen an das zu entstehende Softwareprodukt gemeinsam mit dem Auftraggeber zu erarbeiten. Die gesammelten Anforderungen werden strukturiert und geprüft (bezüglich Umsetzbarkeit, Nutzen etc.). Dabei entsteht meistens ein Lastenheft.
+
+### 2. Design/Entwurf
+
+Die Komplexität des Softwareprodukts soll in mehrere einzelne Stücke unterteilt und somit handhabbar gemacht werden. Es werden die nötigen Programmstrukturen, Programmiertechniken und Algorithmen erarbeitet. Dabei kommen verschiedene Techniken wie beispielswese UML (vgl. L02_UML), Struktugramme und Pseudocode zum Einsatz. abei entsteht meistens ein Pflichtenheft.
+
+
+### 3. Umsetzung/Implementation
+
+Die Entworfene Struktur wird in Programmiercode umgesetzt. Dabei ist das jeweilige Betriebssystem zu beachten.
+
+### 4. Test
+
+Anhand der in Schritt 1 ermittelten Anforderungen wird die Qualität des Softwareprodukts gemessen. Hier kommen unter Anderem JUnit Tests (vgl. L09_UnitTesting) zum Einsatz. Diese Phase ist ein durchlaufender Prozess. Schon während der Entwicklung wird die Software immer wieder auf Funktionalität überprüft. Wichtig zu erwähnen ist, dass diese Phase nicht das Ziel hat die Fehlerfreiheit der Software zu garantieren. Sie kann lediglich die Existenz von Fehlern aufzeigen, aber nicht deren Nichtvorhandensein.
+
+### 5. Veröffentlichung
+
+Das fertige Softwareprodukt wird an den Kunden übergeben. Dieser wird eingewiesen und bestimmt, ob das Produkt seinen Anforderungen genügt
+
+### 6. Instandhaltung
+
+Wie in Phase 4 schon beschrieben, kann keine Fehlerfreiheit garantiert werden. Mit der Zeit wird der Kunde Fehler entdecken, die dann von den Entwicklern angepasst werden. Es gilt der Grundsatz: "Das Projekt reift beim Kunden".
+Hinzu kommt, dass das Produkt immer wieder an Erweiterungen der genutzten Technik angepasst werden muss.
+
+## Source Control
 
 ### Software besteht aus Dateien, die zusammen passen müssen
 
@@ -114,12 +153,12 @@ Dateien und dem gemeinsamen Projekt auf dem Server zu steuern.
 > Googelt nach "Source Control", "Version Control" oder "Versionsverwaltung". Welche Software-Namen 
 > tauchen häufig auf?  Von welchen Namen habt ihr schon mal gehört?
 
-## Git
+### Git
 
 Im Folgenden wird gezeigt, wie die oben angesprochenen Aufgaben, die beim Umgang mit Software-(Source-)Dateien
 anfallen, mit Hilfe des zurzeit sehr beliebten Source Control System ***Git*** gelöst werden.
 
-### Ein bisschen Geschichte
+#### Ein bisschen Geschichte
 
 In der relativ jungen Geschichte der Software-Entwicklung wurden schon früh Source-Control-Systeme
 eingesetzt. Dementsprechend gab und gibt es viele unterschiedliche Produkte mit unterschiedlichen
@@ -135,7 +174,7 @@ SVN      | Subversion                 | 2000
 Git      | "Depp"                     | 2005
 
 
-### Begriffe und Fakten
+#### Begriffe und Fakten
 
 ***Git*** ist der Name der Software, mit deren Hilfe eigene lokale oder server-basierte ***Repositories*** angelegt 
 und verwaltet werden können. Die ursprüngliche Version von Git wurde von Linus Torvalds, dem 
@@ -162,7 +201,7 @@ Es existieren aber zahlreiche weitere oder zusätzliche Clients mit grafischer O
 Editoren direkt auf Git Repositories zugegriffen werden, z.B. mit Visual Studio, Visual Studio Code, Eclipse
 und vielen anderen.
 
-> #### TODO
+> ##### TODO
 >
 > Registriert euch (kostenlos) bei 
 > [GitHub](https://github.io) und installiert 
@@ -173,7 +212,7 @@ Die folgenden Szenarien und Beispiele spiegeln den häufigen Anwendungsfall wied
 zentrales Git-Repository bei einem Git-Anbieter wie GitHub angelegt ist und ein oder mehrere
 Entwickler über ihre lokalen Rechner darauf zugreifen.
 
-### Git Terminologie
+#### Git Terminologie
 
 Beim lokalen Bearbeiten eines zentral gehaltenen Git-Repository, sollten ein paar Grundbegriffe
 und Prinzipien verstanden werden. Diese sind hier kurz beschrieben.
@@ -183,13 +222,13 @@ und Prinzipien verstanden werden. Diese sind hier kurz beschrieben.
 Oben stehendes Bild zeigt ein Git-Repository, das auf einem Server liegt (rechte Säule) und
 auf einem lokalen Entwicklerrechner bearbeitet wird (linker, breiter Balken). 
 
-#### Lokales Dateisystem
+##### Lokales Dateisystem
 Der ganz linke, dunkle Balken (***File System***) symbolisiert die lokalen Source-Dateien in ihrem aktuellen 
 Bearbeitungszustand. Hier arbeitet ein Entwickler an den Source-Code (Text-)Dateien, 
 bearbeitet ggf. Grafiken mit einem Bildbearbeitungsprogramm oder 3D-Modelle mit einer Modelling
 Software. 
 
-#### Lokales Repository
+##### Lokales Repository
 Der dritte dunkle Balken von links symbolisiert das lokale Repository. Mit Git wird _immer_ 
 das gesamte Repository inklusive aller historischen Stände auf allen lokalen Rechnern gehalten.
 Physisch liegt dieses Repository unterhalb des `.git` benannten Ordners in einem Git-Projekt
@@ -198,7 +237,7 @@ werden. Im lokalen Dateisystem geänderte Dateien können vom Benutzer mit entsp
 des Clients aktiv in das lokale Repository
 übernommen werden, und von dort aus ins zentrale Repository auf dem Server weiter transportiert werden.
 
-#### Index/Stage
+##### Index/Stage
 Eine Eigenart von Git ist es, dass Änderungen an den Source-Dateien über einen ***Index*** genannten
 Mechanismus (zweiter dunkler Balken von links) ins Repository gelangen. Geänderte Dateien müssen
 hier erst aktiv vom Benutzer als geändert markiert werden, ansonsten werden Sie nicht
@@ -207,7 +246,7 @@ für Benutzer, andererseits entsteht hierdurch auch ein Mehr an Komplexität fü
 Daher kann dieser Schritt auch automatisiert erfolgen. Manche grafischen Git-Clients 
 bieten diesen Schritt nicht an, sondern führen ihn automatisch im Hintergrund durch.
 
-#### Pfeile
+##### Pfeile
 Die hellen Pfeile zeigen ein paar Möglichkeiten, wie eigene lokale Änderungen eines Entwicklers
 in das gemeinsame zentrale Repository gelangen können (Pfeile nach rechts), bzw. wie
 Änderungen, die von anderen Entwicklern bereits ins gemeinsame zentrale Repository 
@@ -215,7 +254,7 @@ eingepflegt wurden, in die eigenen lokalen Dateien einfließen können (Pfeile n
 Die in den Pfeilen stehenden Texte sind Git-Kommandozeilen-Befehle, die weiter unten
 besprochen werden.
 
-## Szenarien durchspielen
+### Szenarien durchspielen
 
 Im Folgenden sind eine Reihe von Szenarien, die das gemeinsame Arbeiten an einem Projekt simulieren.
 Dazu sollen zweiergruppen gebildet werden und die **TODO**s abgearbeitet werden. 
@@ -225,11 +264,11 @@ Aktionen lassen sich in GitHub Desktop auslösen. Soll der `git`-Kommandozeilenb
 entweder die mit GitHub Desktop mitinstallierte App "Git Shell" gestartet werden, oder eine
 Kommandozeile über den Menübefehl ""Repository > Open in PowerShell" eine Kommandozeile geöffnet werden.
 
-### Ein neues GitHub Projekt
+#### Ein neues GitHub Projekt
 
 Entwickler **A** legt ein Projekt an und Entwickler **B** "holt" sich das Projekt auf seinen Rechner.
 
-> #### TODO
+> ##### TODO
 > 
 > - Bildet Zweiergruppen.
 > - **A**: legt ein neues Git-Projekt auf Github (Navbar der Website -> new repository, ohne readme.md und .gitignore)
@@ -247,11 +286,11 @@ Entwickler **A** legt ein Projekt an und Entwickler **B** "holt" sich das Projek
 >
 
 
-### Änderungen synchronisieren
+#### Änderungen synchronisieren
 
 Entwickler **B** ändert etwas und Entwickler A "holt" sich den neuesten Stand auf seinen Rechner.
 
-> #### TODO
+> ##### TODO
 >
 > 1. **B**: legt eine neue Bilddatei in den Ordner und fügt das Bild per `<img>`-Tag der HTML-Datei hinzu,
 >   und fügt einen beschreibenden Text in die HTML-Datei ein.
@@ -260,11 +299,11 @@ Entwickler **B** ändert etwas und Entwickler A "holt" sich den neuesten Stand a
 > 1. **B**: Lädt die Änderung ins Repository auf dem GitHub-Server (mit `push`).
 > 1. **A**: Holt sich die Änderungen von B mit `pull`.
 
-### Zusammenhängende Änderungen einpflegen
+#### Zusammenhängende Änderungen einpflegen
 
 Entwickler **A** ändert das Bild und passt den beschreibenden Text an. Beides wird gleichzeitig eingepflegt.
 
-> #### TODO
+> ##### TODO
 >
 > 1. **A**: Ändert den Inhalt der Bild-Datei.
 > 1. **A**: Ändert den beschreibenden Text in der HTML-Datei.
@@ -273,7 +312,7 @@ Entwickler **A** ändert das Bild und passt den beschreibenden Text an. Beides w
 > 1. **A**: Lädt die Änderung ins Repository auf dem GitHub-Server (mit `push`).
 > 1. **B**: Holt sich die Änderungen von B mit `pull`.
 
-### Historischen Verlauf betrachten und alte Zustände wiederherstellen
+#### Historischen Verlauf betrachten und alte Zustände wiederherstellen
 
 Sämtliche bisher vorgenommenen Änderungen sind von Git gespeichert worden. Mit Änderungen sind gemeint:
 
@@ -293,7 +332,7 @@ kopiert werden. SHA-Werte sind zu lang, um sie abzutippen oder im Kopf zu behalt
 wenn sie nicht über die Zwischenablage kopiert werden können. Daher gibt es die SHA-Werte jeweils auch in 
 einer Kurzversion.
 
-> #### TODO
+> ##### TODO
 >
 > Um einen alten Zustand ***temporär*** herzustellen:
 > - Betrachtet den bisherigen Verlauf der Commits in GitHub Desktop oder in 
@@ -315,7 +354,7 @@ Neben dieser Prozedur können auch einzelne commits rückgängig gemacht werden.
 eine Änderung darstellt, wird dieser Schritt ebenfalls gleich in die History eingetragen. Hier sollte
 man wissen, was man tut, wenn man Commits NICHT in umgekehrter Reihenfolge rückgängig macht!
 
-> #### TODO
+> ##### TODO
 >
 > Um einen einzelnen Commit rückgängig zu machen:
 >
@@ -330,13 +369,13 @@ man wissen, was man tut, wenn man Commits NICHT in umgekehrter Reihenfolge rück
 Schließlich können alte Zustände auch dauerhaft wieder hergestellt werden, d.h. alle später 
 hinzugekommenen commits werden gelöscht. Das geschie
 
- > #### TODO
+ > ##### TODO
  > 
  > Um einen alten Commit ***dauerhaft*** als letzten Stand festzulegen, 
  > - in der Kommandozeile `git reset <SHA>` eingeben.
 
 
-### Gleichzeitig in einer Datei ändern
+#### Gleichzeitig in einer Datei ändern
 
 Viele Dateien in Software-Projekten sind Text-Dateien. Git (wie auch andere Source-Control-Systeme)
 ist in der Lage, nach einer Änderung festzustellen, welche Zeilen von Änderungen betroffen sind.
@@ -345,7 +384,7 @@ in unterschiedlichen Zeilen, führt Git die Änderungen *automatisch* zusammen.
 
 Ein solches Zusammenführen von Änderungen, ob automatisch oder Manuell, nennt man ***Merge***
 
-> #### TODO
+> ##### TODO
 >
 > 1. **A** ändert die Titelzeile der HTML-Datei und speichert die Datei lokal
 > 2. **B** ändert den Text im Body der HTML-Datei uns speichert die Datei lokal
@@ -379,13 +418,13 @@ Daher sollte folgende Regel selbstverständlich sein: Wurden nach einem `pull` o
 expliziten `merge` Änderungen zusammen geführt, muss vor dem `commit` der zusammen geführten
 Änderungen die Lauffähigkeit geprüft werden.
 
-### Gleichzeitig in einer Datei an der selben Stelle ändern
+#### Gleichzeitig in einer Datei an der selben Stelle ändern
 
 Wenn Git bei einem Commit feststellt, dass zwei Entwickler gleichzeitig in der selben Zeile
 einer Datei Änderungen vorgenommen haben, kann Git keine automatische Lösung anbieten. 
 In diesem Fall meldet Git einen Konflikt (***conflict***). 
 
-> #### TODO
+> ##### TODO
 >
 > Provoziert einen Konflikt
 > 
@@ -400,7 +439,7 @@ Beim Auftreten eines Konflikts speichert Git die Datei, in der der Konflikt auft
 speziellen Format. Die beiden Versionen der betroffenen Zeile(n) werden mit Folgen von 
 `<<<<<<<< HEAD`, `==========` und `>>>>>>>>` (*conflict marker*) voneinander getrennt. 
 
-> #### TODO
+> ##### TODO
 >
 > Löst den Konflikt
 > 
@@ -429,13 +468,13 @@ Jedem Git-Anwender wird ***dringend*** empfohlen, sich ein brauchbares Merge Too
 zu installieren. [Hier](https://www.slant.co/topics/1324/~diff-tools-for-git) sind eine
 Reihe derartiger Tools aufgelistet, davon ist z.B. P4Merge kostenlos.
 
-> #### TODO
+> ##### TODO
 >
 > - Installiert ein Merge Tool.
 > - Provoziert weitere Konflikte (z.B. mehrere in mehreren Dateien gleichzeitig) und löst diese 
 >   mit dem Merge-Tool.
 
-## Branches und Clones
+### Branches und Clones
 
 Mit dem bis jetzt Gelernten haben wir einen Werkzeugkasten, mit dem wir 
 die Synchronisierung der Änderungen der an einem Projekt beteiligten Entwickler sehr
@@ -451,7 +490,7 @@ mit Updates wie z.B. Bugfixes beliefert werden. Wurde ein Bug im alten Stand der
 gefixt, sollen die dazu notwendigen Änderungen auch gleich in die neue Version eingepflegt
 werden. 
 
-### Branches
+#### Branches
 
 Für derartige Szenarien gibt es in Git (wie in vielen anderen Source-Control-Systemen auch)
 so genannte ***Branches*** (Verzweigungen). Wenn man sich eine Folge von Commits als
@@ -468,7 +507,7 @@ Grundsätzlich gilt:
   übernommen werden. Da oft gleichzeitig an mehreren Branches gearbeitet wird, ist
   oft ein manueller oder automatischer Merge (s.o.) notwendig.
 
-> #### TODO
+> ##### TODO
 >
 > - Schafft euch pro Entwickler einen eigenen Branch auf dem ihr arbeitet.
 >   Mit GitHub for Desktop:
@@ -486,7 +525,7 @@ Auf diese Weise sind die Änderungen zunächst vollkommen losgelöst voneinander
 keine Merges notwendig und es gibt keine Konflikte. Allerdings werden auch die Änderungen
 nirgendwo in einem gemeinsamen Stand zusammen geführt. 
 
-> #### TODO
+> ##### TODO
 >
 > Überzeugt Euch davon, dass es zwei unterschiedliche Branches gibt.
 >
@@ -498,7 +537,7 @@ nirgendwo in einem gemeinsamen Stand zusammen geführt.
 Änderungen können nun explizit mit `merge` von einem Branch in den anderen übertragen 
 werden.
 
-> #### TODO
+> ##### TODO
 >
 > - Klappt in GitHub for Desktop das Feld "Current Branch" auf
 > - Wechseln in den Branch, der die Änderungen eines anderen Branches ***empfangen*** soll.
@@ -507,12 +546,12 @@ werden.
 > - Ggf. erfolgt ein Merge mit Konflikten. Löst die Konflikte mit dem Merge Tool.
 > - Überzeugt euch, dass die Änderungen im aktuellen Branch angekommen sind.
 
-#### Branching Strategien
+##### Branching Strategien
 
 Es gibt eine ganze Reihe von Szenarien, in denen Branches sinnvoll sein können. Für alle
 Szenarien gibt es _best practices_, wie Branches eingesetzt werden können. 
 
-> #### TODO
+> ##### TODO
 >
 > - Googlet nach "Branching Strategies" und versucht, ein paar der angezeigten Links
 >   zu verstehen.
@@ -538,7 +577,7 @@ zum Einsatz kommen, die von vielen und häufig durchgeführten Branches und Merg
 
 Es ist nicht ungewöhnlich, dass erfahrene Entwickler gleichzeitig mehrere eigene Branches betreiben.
 
-### Forks
+#### Forks
 
 In Projekten, bei denen das Entwicklerteam nicht fest definiert ist, ist es oft schwierig, 
 verteiltes Arbeiten nur mit Hilfe von Branches zu ermöglichen. Jeder Entwickler, der in einem 
