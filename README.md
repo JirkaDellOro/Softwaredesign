@@ -7,4 +7,3 @@ Softwaredesign: Vorlesung und Übungsaufgaben
 ## Definition 
 
 Softwaredesign (auch Softwareentwurf) ist der Entwurfsprozess zur Planung einer Software-Lösung und Teil des gesamten Softwareentwicklungsprozesses. Softwaredesign ist in aller Regel erforderlich um die Komplexität, welche die meisten Computerprogramme aufweisen, für die Programmierer handhabbar zu machen und das Risiko von Fehlentwicklungen zu verringern.
-

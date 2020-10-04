@@ -20,7 +20,7 @@ Inhaltlich besteht der Softwareentwicklungsprozess immer aus den nachfolgenden P
 Während der Anforderungsanalyse sollen die Intention und Probleme, welche der Kunde hat, verstanden und herausgearbeitet werden. Für die weiteren Phasen ist es essentiell die Vorstellungen des Auftraggebers zu erkennen und diese nach und nach zu verfeinern und abzuklären. Aus diesen intensiven Gesprächen ergibt sich dann ebenso, welche Anforderungen essentiell für die Software-Lösung sind und welche eine niedrigere Priorität genießen. Die entstandenen Anforderungen an das Software-Produkt werden dann strukturiert und geprüft, bspw. auf Umsetzbarkeit oder auf Nutzen.
 Meist können aus der Anforderungsanalyse ganze Berge aus Anforderungsdokumenten, ein Lastenheft, entstehen, dadurch kann eine Bewertung der Umsetzbarkeit äußerst kompliziert sein. Um hierbei dennoch eine grobe Abschätzung abgeben zu können werden meist die Phase 2: Design und die Phase 3: Entwicklung in einem kurzen Zyklus durchlaufen und es entsteht ein Prototyp (Klick-Dummy oder ähnliches). Anhand von diesem können weitere Anforderungen mit dem Kunden besprochen und somit die Einschätzung über Aufwand, Kosten, Nutzen und weiteres erleichtert werden.
 
-[-> Mehr Infos zu Prototyping: ](https://www.dev-insider.de/was-ist-software-prototyping-a-794959/)  
+[-> Mehr Infos zu Prototyping](https://www.dev-insider.de/was-ist-software-prototyping-a-794959/)  
 
 > **Wichtig:** 
 >
@@ -47,7 +47,7 @@ Die skizzierten Lösungen zu den Anforderungen aus Phase 1 und Phase 2 werden vo
 Innerhalb des Test Phase werden die Anforderungen in Schritt 1 auf die korrekte Umsetzung geprüft, dafür gibt es meist eigene Software Tester. Anhand der Anforderungen werden Testszenarien mit entsprechenden Kriterien definiert, was eine Software können soll und was nicht. 
 An dieser Stelle sei gesagt, die Software Developer sind bereits in der Phase 3 in der Pflicht die Implementierung auf Lauffähigkeit und Korrektheit zu überprüfen. Hierfür gibt es den Ansatz des "Test Driven Developments", bei die Software Developer zu erst die Testszenarien, Unit Tests, erstellen und darauf aufbauend, die Software-Lösung der entsprechenden Anforderung umsetzen.
 
-[-> Mehr Infos zu Test Driven Development: ](http://www.evocomp.de/softwareentwicklung/unit-tests/unittests.html)
+[-> Mehr Infos zu Test Driven Development](http://www.evocomp.de/softwareentwicklung/unit-tests/unittests.html)
 
 Abgesehen von manuellen Tests durch Software Testern und Unit Tests, welche von Software Developern erstellt werden, gibt es weitere Testverfahren für Software-Lösungen, bspw. Service- und Komponententests, Oberflächentests, Integrationstests, Systemtests, etc...
 
@@ -84,18 +84,18 @@ Ein Vorgehensmodell zur Softwareentwicklung ist ein für die Softwareentwicklung
 
 Die bekanntesten Vorgehensmodelle:
 
-- ![Scrum](https://www.scrumguides.org/docs/scrumguide/v2017/2017-Scrum-Guide-US.pdf#zoom=100)
-- ![Kanban](https://www.projektmagazin.de/artikel/software-kanban-eine-einfuehrung_996703)
-- ![Wasserfall](http://cartoon.iguw.tuwien.ac.at/fit/fit01/wasserfall/welcome.html)
-- ![V-Modell XT](https://www.cio.bund.de/Web/DE/Architekturen-und-Standards/V-Modell-XT/Haeufig-gestellte-Fragen/haeufig_gestellte_fragen_node.html#doc2157266bodyText3)
-- ![https://cmmiinstitute.com/cmmi](https://cmmiinstitute.com/cmmi)
+- [Scrum](https://www.scrumguides.org/docs/scrumguide/v2017/2017-Scrum-Guide-US.pdf#zoom=100)
+- [Kanban](https://www.projektmagazin.de/artikel/software-kanban-eine-einfuehrung_996703)
+- [Wasserfall](http://cartoon.iguw.tuwien.ac.at/fit/fit01/wasserfall/welcome.html)
+- [V-Modell XT](https://www.cio.bund.de/Web/DE/Architekturen-und-Standards/V-Modell-XT/Haeufig-gestellte-Fragen/haeufig_gestellte_fragen_node.html#doc2157266bodyText3)
+- [Capability Maturity Model Integration: https://cmmiinstitute.com/cmmi](https://cmmiinstitute.com/cmmi)
 
 ### Scrum
 
 ![Scrum](img/scrum.jpg)
-![Quelle: ](https://www.konversionskraft.de/conversion-frameworks/strukturiertes-projektmanagement-fuer-optimierer-mit-scrum.html)
+[Quelle: https://www.konversionskraft.de/conversion-frameworks/strukturiertes-projektmanagement-fuer-optimierer-mit-scrum.html](https://www.konversionskraft.de/conversion-frameworks/strukturiertes-projektmanagement-fuer-optimierer-mit-scrum.html)
 
-![Lektüre zu Scrum: Roman Pichler, Scrum: Agiles Projektmanagement erfolgreich umsetzen, 2007: ](https://www.romanpichler.com/romans-books/scrum/)
+[Lektüre zu Scrum: Roman Pichler, Scrum: Agiles Projektmanagement erfolgreich umsetzen, 2007: https://www.romanpichler.com/romans-books/scrum/](https://www.romanpichler.com/romans-books/scrum/)
 
 ## Source Control
 
