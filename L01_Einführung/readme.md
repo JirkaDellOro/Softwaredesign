@@ -2,42 +2,100 @@
 
 ## Phasen der Softwareentwicklung
 
-Je nach Quelle lässt sich der Entwicklungsprozess von Software in 5-6 Phasen unterteilen:
+Im Groben lassen sich 5 Phasen für dem Softwareentwicklungsprozess ausmachen:
 
-1. Anforderungsanalyse
-2. Design/Entwurf
-3. Umsetzung/Implementation
-4. Test
-5. Veröffentlichung
-6. Instandhaltung
+1. Anforderungen: Anforderungsanalyse / Requirements Engineering
+2. Entwurf: Design und Konzeption 
+3. Entwicklung: Umsetzung und Implementation
+4. Test: Testen der Software
+5. Betrieb: Inbetriebnahme und Wartung beim Kunden
 
-Phase 4 und 5 werden öfters zusammengefasst.
+![SoftwareDevelopmentLifecycleWaterfall](img/softwareentwicklungsprozess_allgemein.jpg)
 
-### 1. Anforderungsanalyse
+Je nach Quelle können diese Phasen variieren, abweichen, anderst benannt oder zusammengefasst sein.
+Inhaltlich besteht der Softwareentwicklungsprozess immer aus den nachfolgenden Punkten:
 
-In dieser Phase geht es darum, die Anforderungen an das zu entstehende Softwareprodukt gemeinsam mit dem Auftraggeber zu erarbeiten. Die gesammelten Anforderungen werden strukturiert und geprüft (bezüglich Umsetzbarkeit, Nutzen etc.). Dabei entsteht meistens ein Lastenheft.
+### 1. Anforderungen
 
-### 2. Design/Entwurf
+Während der Anforderungsanalyse sollen die Intention und Probleme, welche der Kunde hat, verstanden und herausgearbeitet werden. Für die weiteren Phasen ist es essentiell die Vorstellungen des Auftraggebers zu erkennen und diese nach und nach zu verfeinern und abzuklären. Aus diesen intensiven Gesprächen ergibt sich dann ebenso, welche Anforderungen essentiell für die Software-Lösung sind und welche eine niedrigere Priorität genießen. Die entstandenen Anforderungen an das Software-Produkt werden dann strukturiert und geprüft, bspw. auf Umsetzbarkeit oder auf Nutzen.
+Meist können aus der Anforderungsanalyse ganze Berge aus Anforderungsdokumenten, ein Lastenheft, entstehen, dadurch kann eine Bewertung der Umsetzbarkeit äußerst kompliziert sein. Um hierbei dennoch eine grobe Abschätzung abgeben zu können werden meist die Phase 2: Design und die Phase 3: Entwicklung in einem kurzen Zyklus durchlaufen und es entsteht ein Prototyp (Klick-Dummy oder ähnliches). Anhand von diesem können weitere Anforderungen mit dem Kunden besprochen und somit die Einschätzung über Aufwand, Kosten, Nutzen und weiteres erleichtert werden.
 
-Die Komplexität des Softwareprodukts soll in mehrere einzelne Stücke unterteilt und somit handhabbar gemacht werden. Es werden die nötigen Programmstrukturen, Programmiertechniken und Algorithmen erarbeitet. Dabei kommen verschiedene Techniken wie beispielswese UML (vgl. L02_UML), Struktugramme und Pseudocode zum Einsatz. abei entsteht meistens ein Pflichtenheft.
+[-> Mehr Infos zu Prototyping: ](https://www.dev-insider.de/was-ist-software-prototyping-a-794959/)  
 
+> **Wichtig:** 
+>
+> Der Kunde bzw. Auftraggeber hat meist schon eine sehr konkrete Vorstellung seiner Software-Lösung im Kopf und möchte diese soweit es irgendwie möglich ist umsetzen. Das Problem dabei ist, die meisten Auftraggeber kommen nicht aus der Software Branche und können daher nur bedingt wissen, wie die Software-Lösung konkret konzipiert und umgesetzt wird, damit diese die kompletten Erwartungen erfüllt, vielleicht sogar übertrifft. Daher ist es in dieser Phase wichtiger nicht die, bereits gedankliche existierende, Lösung des Kunden zu verstehen, sondern die Intention und das Problem, welche dahinter steckt, dass die Software-Lösung überhaupt notwendig ist. 
 
-### 3. Umsetzung/Implementation
+### 2. Entwurf
 
-Die Entworfene Struktur wird in Programmiercode umgesetzt. Dabei ist das jeweilige Betriebssystem zu beachten.
+Beim Design der Software-Lösung geht es in allererster Linie um die Gesamtarchitektur der Software und wird dann nach und nach immer weiter unterteilt, um somit für die Software Developer handhabbarer zu werden. Das Softwareprodukt wird in mehrere einzelne Stücke unterteilt, wodurch die Gesamtkomplexität verringert. Es werden die nötigen Programmstrukturen, Programmiertechniken und Algorithmen erarbeitet. Dabei kommen verschiedene Techniken wie beispielswese UML (vgl. L02_UML), Struktogramme, Prototypen und Pseudocode zum Einsatz. Mit diesen Objekten lassen sich die Machbarkeit der Software-Lösung feststellen, woraus dann meinst skizzierte Lösungen zu den Anforderungen aus Phase 1 entstehen.
+
+> **Wichtig:** 
+>
+> Während der Entwurfs- bzw. Design-Phase werden keine konrekten Lösungen im Programmcode festgelegt, sondern es werden Abläufe, Strukturen, Gegebenheiten, Architektur, etc. festgelegt, welche zum einen als Diskussionsobjekte dienen, um die Richtigkeit der erfassten Anforderungen zu überprüfen. Zum anderen als Vorlage bzw. skizzierten Entwurf wie die Software-Lösung in Phase 3 implementiert wird.
+
+### 3. Entwicklung
+
+Die skizzierten Lösungen zu den Anforderungen aus Phase 1 und Phase 2 werden von Software Developern in tatsächlichen Programmcode umgesetzt. Hierbei können verschiedene Praktikten und Techniken, wie bspw. Code-Conventions, Design-Patterns oder Pair Programmierung, etc. zum Einsatz kommen. Auf diese werden im Laufe des Semesters kennenlernen und näher eingehen.
+
+> **Wichtig:** 
+>
+> Bei der Implementierung der Anforderungen in Programmcode ist die schnellste Umsetzung nicht immer die beste Umsetzung. Umso mehr Anforderungen für die Software-Lösung es gibt, umso größer wird das endgültige Produkt. Deshalb ist es von sehr hoher Priorität, dass so viel wie möglich vom bestehenden Programmcode wiederverwendet werden kann, um unnötige Redunanzen von Programmcode zu vermeiden.
 
 ### 4. Test
 
-Anhand der in Schritt 1 ermittelten Anforderungen wird die Qualität des Softwareprodukts gemessen. Hier kommen unter Anderem JUnit Tests (vgl. L09_UnitTesting) zum Einsatz. Diese Phase ist ein durchlaufender Prozess. Schon während der Entwicklung wird die Software immer wieder auf Funktionalität überprüft. Wichtig zu erwähnen ist, dass diese Phase nicht das Ziel hat die Fehlerfreiheit der Software zu garantieren. Sie kann lediglich die Existenz von Fehlern aufzeigen, aber nicht deren Nichtvorhandensein.
+Innerhalb des Test Phase werden die Anforderungen in Schritt 1 auf die korrekte Umsetzung geprüft, dafür gibt es meist eigene Software Tester. Anhand der Anforderungen werden Testszenarien mit entsprechenden Kriterien definiert, was eine Software können soll und was nicht. 
+An dieser Stelle sei gesagt, die Software Developer sind bereits in der Phase 3 in der Pflicht die Implementierung auf Lauffähigkeit und Korrektheit zu überprüfen. Hierfür gibt es den Ansatz des "Test Driven Developments", bei die Software Developer zu erst die Testszenarien, Unit Tests, erstellen und darauf aufbauend, die Software-Lösung der entsprechenden Anforderung umsetzen.
 
-### 5. Veröffentlichung
+[-> Mehr Infos zu Test Driven Development: ](http://www.evocomp.de/softwareentwicklung/unit-tests/unittests.html)
 
-Das fertige Softwareprodukt wird an den Kunden übergeben. Dieser wird eingewiesen und bestimmt, ob das Produkt seinen Anforderungen genügt
+Abgesehen von manuellen Tests durch Software Testern und Unit Tests, welche von Software Developern erstellt werden, gibt es weitere Testverfahren für Software-Lösungen, bspw. Service- und Komponententests, Oberflächentests, Integrationstests, Systemtests, etc...
 
-### 6. Instandhaltung
+> **Wichtig:** 
+>
+> Zu erwähnen ist, dass diese Phase nicht das Ziel hat die Fehlerfreiheit der Software zu garantieren. Sie kann lediglich die Existenz von Fehlern aufzeigen, aber nicht deren Nichtvorhandensein. Bei der Konzeption der Testszenarien, Unit-, Service-, Komponententests und weitere, ist es essentiell eine hohe Automatisierung der Testverfahren zu erhalten. Das manuelle Durchführen von Tests durch Personen ist sehr kostenintensiv und muss bei jeder neuen Version einer Software wieder und wieder erfolgen. Deshalb macht es an dieser Stelle sind gewisse Schnittstellen und Funktionen automatisiert durch eine Maschine testen zu lassen.
 
-Wie in Phase 4 schon beschrieben, kann keine Fehlerfreiheit garantiert werden. Mit der Zeit wird der Kunde Fehler entdecken, die dann von den Entwicklern angepasst werden. Es gilt der Grundsatz: "Das Projekt reift beim Kunden".
-Hinzu kommt, dass das Produkt immer wieder an Erweiterungen der genutzten Technik angepasst werden muss.
+### 5. Betrieb
+
+Zur Inbetriebnahme beim Kunden gehört ebenso die Veröffentlichung des fertigen Softwareprodukt. Die entstandene und getestete Software bekommt dabei eine Versionsnummer (Tag), wenn nicht sogar einen eigenen Branch in der Versionverwaltung und wird dem Kunden als ausführbare Software übergeben bzw. bei diesem installiert.
+Der Kunde testet die Software und überprüft die Erfüllung der festgelegten Anforderungen aus Phase 1: Anforderungen und Phase 2: Entwurf. 
+Dadurch können dann Mängel, bspw. Fehler bzw. Fehlverhalten, und / oder neue Anfordunderungen an die Software entstehen.
+Diese können dann in einem weiteren Softwareentwicklungsprozess behoben bzw. umgesetzt werden.
+
+> **Wichtig:** 
+>
+> Wie in Phase 4 schon beschrieben, kann keine Fehlerfreiheit garantiert werden. Mit der Zeit wird der Kunde Fehler entdecken, die dann von den Entwicklern angepasst werden. Es gilt der Grundsatz: "Das Projekt reift beim Kunden". Hinzu kommt, dass das Produkt immer wieder an Erweiterungen der genutzten Technik angepasst werden muss.
+
+---
+
+> **Frage:**
+>
+> Was denkt Ihr was kann bei so einem Software-Projekt alles schief gehen, wo können Fehler auftreten und wie können diese umgangen oder behoben werden?
+
+> **TODO**
+>
+> Googelt bitte nach "Vorgehensmodelle Softwareentwicklung" geht auf "Bilder", wählt ein Bild aus und lest euch 5 Minuten ein zu einem Vorgehensmodell und schaut, welche der obigen Phasen Ihr dort wiederfindet.
+
+## Vorgehensmodelle
+
+![SoftwareDevelopmentLifecycleIterative](img/softwareentwicklungsprozess_iterativ_inkrementell.jpg)
+
+Ein Vorgehensmodell zur Softwareentwicklung ist ein für die Softwareentwicklung angepasstes Vorgehensmodell bei der professionellen „ingenieursmäßigen“ Anwendungsentwicklung. Es dient dazu, die Softwareentwicklung übersichtlicher zu gestalten und in der Komplexität beherrschbar zu machen.
+
+Die bekanntesten Vorgehensmodelle:
+
+- ![Scrum](https://www.scrumguides.org/docs/scrumguide/v2017/2017-Scrum-Guide-US.pdf#zoom=100)
+- ![Kanban](https://www.projektmagazin.de/artikel/software-kanban-eine-einfuehrung_996703)
+- ![Wasserfall](http://cartoon.iguw.tuwien.ac.at/fit/fit01/wasserfall/welcome.html)
+- ![V-Modell XT](https://www.cio.bund.de/Web/DE/Architekturen-und-Standards/V-Modell-XT/Haeufig-gestellte-Fragen/haeufig_gestellte_fragen_node.html#doc2157266bodyText3)
+- ![https://cmmiinstitute.com/cmmi](https://cmmiinstitute.com/cmmi)
+
+### Scrum
+
+![Scrum](img/scrum.jpg)
+![Quelle: ](https://www.konversionskraft.de/conversion-frameworks/strukturiertes-projektmanagement-fuer-optimierer-mit-scrum.html)
+
+![Lektüre zu Scrum: Roman Pichler, Scrum: Agiles Projektmanagement erfolgreich umsetzen, 2007: ](https://www.romanpichler.com/romans-books/scrum/)
 
 ## Source Control
 
@@ -132,7 +190,6 @@ Abläufe oder Kommunikation unter den Entwicklern lösen.
 > als Synchronisations-Technik für die Source-Dateien nur Dropbox & Co. zur Verfügung 
 > stehen.
 
-
 Die Komplexität hier wächst aber 
 exponentiell mit der Anzahl der beteiligten Entwickler und der Anzahl der zu verwaltenden
 Dateien an. Ab einer bestimmten Teamgröße und einem bestimmten Dateiumfang ist das nicht mehr
@@ -146,7 +203,6 @@ die die lokalen Dateien der gemeinsam an einem Projekt arbeitenden Personen unau
 Hintergrund synchronisieren, haben Entwickler bei Source-Control-Systemen selbst die
 Kontrolle, aber auch die Verantwortung und den Aufwand, den Datenaustausch zwischen lokalen
 Dateien und dem gemeinsamen Projekt auf dem Server zu steuern. 
-
 
 > #### TODO
 >
@@ -553,8 +609,7 @@ Szenarien gibt es _best practices_, wie Branches eingesetzt werden können.
 
 > ##### TODO
 >
-> - Googlet nach "Branching Strategies" und versucht, ein paar der angezeigten Links
->   zu verstehen.
+> - Googelt nach "Branching Strategies" und versucht, ein paar der angezeigten Links zu verstehen.
 
 Folgende Szenarien kommen häufig zum Einsatz, die manchmal auch miteinander kombiniert werden.
 
@@ -602,22 +657,3 @@ ursprünglichen Projektes gestellt werden. Dieser kann sich die (zunächst vorge
 ausprobieren und ggf. übernehmen, überarbeiten, kommentieren oder zurückweisen. 
 
 Git / GitHub unterstützt das Auslösen und das Bearbeiten von Pull-Requests. 
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
