@@ -534,7 +534,7 @@ Reihe derartiger Tools aufgelistet, davon ist z.B. P4Merge kostenlos.
 
 ### Branches und Clones
 
-![VersionControlGraph](img/version_control_graph.svg)
+![VersionControlGraph](img/version_control_graph.jpg)
 
 Mit dem bis jetzt Gelernten haben wir einen Werkzeugkasten, mit dem wir 
 die Synchronisierung der Änderungen der an einem Projekt beteiligten Entwickler sehr
