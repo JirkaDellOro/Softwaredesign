@@ -1,5 +1,4 @@
-# UML: Aktivitäts- und Klassendiagramme
-
+# UML: Unified Modeling Language
 
 ## Über UML
 
@@ -9,7 +8,7 @@ Source-Code ist nur bedingt geeignet, um Software zu entwerfen:
   Software-Entwurfs vorzustellen, ist Source-Code oft zu unhandlich. 
 
 - Source-Code ist aufwändig zu schreiben. Es ist wünschenswert, eine Idee für einen 
-  Entwurf _einmal kurz_ hinschreiben oder hinmalen zu können.
+  Entwurf _einmal kurz_ skizzieren zu können.
 
 - Source-Code ist zu komplex, um -ggf. noch unvollständige- Ideen festzuhalten, um 
   in diesem Entwurf z.B. Fehler erkennen zu können, Alternativen aufzuzeigen, etc.
@@ -18,18 +17,17 @@ Source-Code ist nur bedingt geeignet, um Software zu entwerfen:
   Sachverhalt zu lenken, und andere, für diesen Sachverhalt unwichtige, Bestandteile
   wegzulassen.
 
-Ähnlich wie ein Architekt oder ein Produkt-Designer zunächst eine grobe Skizzen anfertigt, 
-um damit den Design-Prozess zu unterstützen, ist eine einfache Notation wünschenswert, 
-die es erlaubt, Software-Entwürfe skizzenhaft festzuhalten, dabei nach Belieben Details
-herauszuarbeiten oder wegzulassen oder auch iterativ einen Entwurf zu verfeinern, bevor
-dieser _ins Reine gezeichnet_ - also in lauffähigen Code umgewandelt - wird.
+Ähnlich wie beim Hausbau, wenn ein Architekt eine grobe Skizze anfertigt, 
+um damit Verständnis zu schaffen, ist es ebenfalls in der Softwareentwicklung der Wunsch, solche Werkzeuge zu besitzen.
+Solch eine Notation sollte es erlauben, Software-Entwürfe vage darzustellen und festzuhalten. Die Modellierung nach der Notation
+ermöglicht dann, Designs (Entwürfe, Skizzen, Abläufe, etc.) zu erarbeiten und diese iterativ zu verfeinern.
+Diese Ergebnisse dienen dann dem Software Developer als Grundlage, um diese dann _ins Reine_ - also in lauffähigen Code umzusetzen.
 
 Jeder Software-Entwickler, der schon mal an einer komplexeren Aufgabe saß, hat höchstwahrscheinlich
 auch schon mal Ideen, Konzepte, Entwürfe in einer intuitiven, selbst ausgedachten Notation
-auf Papier gescribbelt. Spätestens, wenn der Software-Entwurfsprozess arbeitsteilig gestaltet
+auf Papier gezeichnet. Spätestens, wenn der Software-Entwurfsprozess arbeitsteilig gestaltet
 werden soll, ist es sinnvoll, sich auf eine einheitliche Notation zu einigen, um 
-Entwürfe untereinander im Team austauschen zu können. Hier setzt die 
-**Unified Modeling Language (UML)** an.
+Entwürfe untereinander im Team austauschen zu können. Hier setzt die **Unified Modeling Language (UML)** an.
 
 Die Entwicklung der UML begann Mitte der 1990er Jahre, vorangetrieben vor allem
 von den "drei Amigos": Grady Booch, James Rumbaugh und Ivar Jacobson. Alle drei arbeiteten bereits zuvor an
@@ -45,13 +43,38 @@ und Klassendiagramme*** betrachtet werden.
 > - Schaut Euch die Übersicht über die 14 Diagrammtypen auf folgender Web-Seite an:
 >   https://creately.com/blog/diagrams/uml-diagram-types-examples/
 >
-> - Identifiziert die hier besprochenen Diagrammtypen (Aktivität und Klassen). Zu 
+> - Identifiziert die hier besprochenen Diagrammtypen (Use Case, Aktivität und Klassen). Zu 
 >   welchen Haupt-Kategorien zählen diese jeweils?
 >
 > - Schaut Euch die Beschreibung weiterer, hier nicht besprochener Diagrammtypen
->   an.  Diskutiert untereinder, unter welchen Typen könnt ihr euch eine Anwendung
+>   an. Diskutiert untereinander, unter welchen Typen könnt ihr euch eine Anwendung
 >   vorstellen könnt. Welche Diagrammtypen sagen euch überhaupt nichts?
 
+## Use Case Diagramm / Anwendungsfalldiagramm
+
+Das Use Case Diagramm besteht im Wesentlichen aus drei unterschiedlichen Elementen. Den Akteuren, die Rolle bzw. Person im System, den Anwendungsfällen, die Funktionen bzw. Aufgaben des Systems, und deren Beziehungen untereinander.
+Also klärt ein Use Case Diagramm über folgende Fragen auf:
+
+  - Welche Rollen bzw. Personen gibt es in einem System?
+  - Welche Aufgaben bzw. Funktionen soll das System erfüllen?
+  - Welche Rolle darf welche Aufgabe innerhalb des Systems verwalten bzw. ausführen?
+  - Wie sind die Rollen miteinander verknüpft?
+  - Welche Aufgaben bzw. Funktionen baut auf einer anderen Aufgabe bzw. Funktion auf?
+
+Damit beschreiben Use Case Diagramme also kein Verhalten und keine Abläufe eines Systems.
+Sondern nur die Anwendungsfälle, welche ein System abdecken soll und wie die Zusammenhänge untereinander und mit den Akteuren sind.
+
+> #### FRAGEN
+> Für was brauch ich ein solches Use Case Diagramm?
+> Was denkt Ihr was ist der Nutzen des Use Case Diagramms?
+> In welcher Phase des Softwareentwicklungsprozess kommt dieser Diagrammtyp zum Einsatz?
+
+Use Case Diagramme dienen hauptsächlich zur Kommunikation zwischen Requirements Engineer (in Scrum: Product Owner) und den Stakeholder bzw. den tatsächlichen Anwendern des Systems. Die Anwendungsfälle beschreiben das Angebot des Systems und die Interaktion der Außenstehenden mit dem System. 
+> #### Fazit:
+> _Use Case Diagramme stellen damit eine grobe Leistungsbeschreibung des Systems als Skizze dar._
+
+#### Beispiel:
+![UseCase Beispiel](img/usecase_example.jpg)
 
 ## Aktivitätsdiagramme
 Mit Aktivitätsdiagrammen lassen sich ganz unterschiedliche Abläufe auf verschiedenen Abstraktionsebenen
