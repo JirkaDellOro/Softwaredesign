@@ -65,9 +65,9 @@ Damit beschreiben Use Case Diagramme also kein Verhalten und keine Abläufe eine
 Sondern nur die Anwendungsfälle, welche ein System abdecken soll und wie die Zusammenhänge untereinander und mit den Akteuren sind.
 
 > #### FRAGEN
-> Für was brauch ich ein solches Use Case Diagramm?
-> Was denkt Ihr was ist der Nutzen des Use Case Diagramms?
-> In welcher Phase des Softwareentwicklungsprozess kommt dieser Diagrammtyp zum Einsatz?
+> - Für was brauch ich ein solches Use Case Diagramm?
+> - Was denkt Ihr was ist der Nutzen des Use Case Diagramms?
+> - In welcher Phase des Softwareentwicklungsprozess kommt dieser Diagrammtyp zum Einsatz?
 
 Use Case Diagramme dienen hauptsächlich zur Kommunikation zwischen Requirements Engineer (in Scrum: Product Owner) und den Stakeholder bzw. den tatsächlichen Anwendern des Systems. Die Anwendungsfälle beschreiben das Angebot des Systems und die Interaktion der Außenstehenden mit dem System. 
 > #### Fazit:
