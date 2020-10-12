@@ -1,0 +1,21 @@
+Guten Morgen lieber Software Developer,
+
+Ich habe eine super Idee für eine "neue" App, welche es ermöglichen soll Aktien zu kaufen bzw. zu verkaufen. Die App sollte dabei mit der Registrierung des Users starten, wenn dieser noch keinen Account hat. 
+Zur Verifizierung, dass es sich beim User um eine reale Person handelt, habe Ich eine externe Firma "verifythisperson.com" beauftragt, die diesen Schritt übernimmt.
+
+Sobald der User einen Account besitzt, sieht er eine Übersicht an potentiellen Aktien und deren Kurse, welche interessant für Ihn sein könnten. In einem zweiten Schritt soll das System auch ähnliche bzw. vergleichbare Aktien vorschlagen, zu denen die der User bereits gekauft hat.
+
+Der User soll ebenfalls die Möglichkeit besitzen bei Aktien, welche er bereits gekauft hat, eine Stop-Loss-Order hinterlegen und diese überarbeiten zu können. https://boerse.ard.de/boersenwissen/boersenwissen-fuer-fortgeschrittene/die-stop-loss-order-gewusst-wie-100.html 
+
+Zu dem möchte Ich, dass meine App von möglichst vielen Usern benutzt wird, deswegen möchte Ich dass jeder User die App über Social Media Kanäle bzw. Messenger teilen / empfehlen kann.
+
+Ich würde mich an dieser Stelle sehr freuen, wenn Sie für unser erstes Meeting eine Übersicht meiner Anforderung präsentieren könnten.
+
+Oh, an dieser Stelle habe Ich fast noch das Wichtigste vergessen, der User soll natürlich sein eigenes Depot verwalten können, damit er eine Übersicht über seine bereits gekauften Aktien hat und was sein aktueller Depot Wert ist.
+
+Danke vielmals für Ihre Mühen im Voraus.
+
+Mit freundlichen Grüßen
+
+Christina Häcker
+CEO Trading Republik
