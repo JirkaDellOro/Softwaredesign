@@ -1,0 +1,10 @@
+Setzen Sie das Aktivitätsdiagramm ihres Tauschpartners in Pseudo-Code um, welches unter folgender Namensgebung abgespeichtert sein sollte:
+
+aktivitätsdiagramm_L02_name_des_tauschpartners.[Dateiendung]
+
+Mögliche Programmiersprachen:
+
+- Java
+- C#
+- Python
+- JavaScript / TypeScript
