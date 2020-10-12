@@ -78,7 +78,7 @@ Use Case Diagramme dienen hauptsächlich zur Kommunikation zwischen Requirements
 
 #### Aufgabe
 
-> Im FELIX Kurs bzw. hier im GitHub Repository, unter [Task01](L02_UML/tasks/usecase_task_L02.txt), liegt eine Mail einer potentiellen Kundin, welche eine App beauftragen möchte. Bitte die Lösungen über FELIX hochladen, alle weiteren Infos zur Abgabe findet Ihr im FELIX Kurs.
+> Im FELIX Kurs bzw. hier im GitHub Repository, unter [Task01](tasks/usecase_task_L02.txt), liegt eine Mail einer potentiellen Kundin, welche eine App beauftragen möchte. Bitte die Lösungen über FELIX hochladen, alle weiteren Infos zur Abgabe findet Ihr im FELIX Kurs.
 
 Hinweis: Die Lösungen für UML könnt Ihr entweder auf Blatt Papier skizzieren, dann fotografieren oder einscannen. Oder Ihr erstellt die Diagramme über [DrawIO](https://app.diagrams.net/), ein Online Tool um jegliches Diagramm zu zeichnen.
 
