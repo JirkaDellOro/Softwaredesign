@@ -50,6 +50,9 @@ und Klassendiagramme*** betrachtet werden.
 >   an. Diskutiert untereinander, unter welchen Typen könnt ihr euch eine Anwendung
 >   vorstellen könnt. Welche Diagrammtypen sagen euch überhaupt nichts?
 
+## Literatur
+[Oesterreich, Bernd: Die UML-Kurzreferenz 2.5 für die Praxis: kurz, bündig, ballastfrei; 2014](https://www.amazon.de/Die-UML-Kurzreferenz-2-5-f%C3%BCr-Praxis/dp/3486749099)
+
 ## Use Case Diagramm / Anwendungsfalldiagramm
 
 Das Use Case Diagramm besteht im Wesentlichen aus drei unterschiedlichen Elementen. Den Akteuren, die Rolle bzw. Person im System, den Anwendungsfällen, die Funktionen bzw. Aufgaben des Systems, und deren Beziehungen untereinander.
@@ -64,14 +67,14 @@ Also klärt ein Use Case Diagramm über folgende Fragen auf:
 Damit beschreiben Use Case Diagramme also kein Verhalten und keine Abläufe eines Systems.
 Sondern nur die Anwendungsfälle, welche ein System abdecken soll und wie die Zusammenhänge untereinander und mit den Akteuren sind.
 
-> #### FRAGEN
-> - Für was brauch ich ein solches Use Case Diagramm?
-> - Was denkt Ihr was ist der Nutzen des Use Case Diagramms?
-> - In welcher Phase des Softwareentwicklungsprozess kommt dieser Diagrammtyp zum Einsatz?
+#### FRAGEN
+ - Für was brauch ich ein solches Use Case Diagramm?
+ - Was denkt Ihr was ist der Nutzen des Use Case Diagramms?
+ - In welcher Phase des Softwareentwicklungsprozess kommt dieser Diagrammtyp zum Einsatz?
 
 Use Case Diagramme dienen hauptsächlich zur Kommunikation zwischen Requirements Engineer (in Scrum: Product Owner) und den Stakeholder bzw. den tatsächlichen Anwendern des Systems. Die Anwendungsfälle beschreiben das Angebot des Systems und die Interaktion der Außenstehenden mit dem System. 
-> #### Fazit:
-> _Use Case Diagramme stellen damit eine grobe Leistungsbeschreibung des Systems als Skizze dar._
+
+### Fazit: _Use Case Diagramme stellen damit eine grobe Leistungsbeschreibung des Systems als Skizze dar._
 
 #### Beispiel:
 ![UseCase Beispiel](img/usecase_example.jpg)
