@@ -93,7 +93,7 @@ Wiederholungen noch übersichtlich darzustellen, was in natürlicher Sprache nic
 wesentlichsten Elemente sind dabei recht einfach zu erlernen.
 
 ### Einfachste Elemente
-![Elemente 1](img/Elements1.png)
+![Elemente 1](img/activitydiagram_elements.jpg)
 
 ### Beispiel
 Grundsätzlich wird der Ablauf durch Pfeile dargestellt, welche als Kontroll- bzw. Objektfluss bezeichnet 
