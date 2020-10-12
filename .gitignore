@@ -66,3 +66,8 @@ bld/
 [Ll]og/
 *.dll
 Exams
+
+# dependencies
+L99_ExampleTSProject/app/
+package-lock.json
+node_modules
