@@ -6,6 +6,12 @@
 
 [Quelle: Stack Overflow Developer Survey 2020](https://insights.stackoverflow.com/survey/2020)
 
+### FRAGEN
+
+1. Wieso sollte man in unserer heutigen Zeit Programmieren lernen?
+2. Wieso habt ihr euch dazu entschlossen, euer Studium in diesem Bereich zu absolvieren?
+3. Was denkt ihr was erwartet euch in Zukunft noch?
+
 ## Programmierparadigmen
 
 Ein Programmierparadigma beschreibt den grundlegenden Stil, in dem ein Programm entworfen wird. Es gibt vor, welche Prinzipien angewandt und welche Herangehensweisen genutzt werden.
@@ -16,7 +22,7 @@ Die Programmierparadigmen unterscheiden sich durch Ihre Konzepte für die Reprä
 
 Es ist möglich, dass eine Programmiersprache mehrere Paradigmen gleichzeitig unterstützt. Das bedeutet mit einer Programmiersprache kann ein Developer in mehreren Programmierparadigmen arbeiten und muss so nicht im gesamten Source Code am immer gleichen Paradigmen festhalten. Sondern kann im Einzelfall entscheiden, welche Vorgehensweise die beste Option ist.
 
-### FRAGEN
+### FRAGE
 
 _Welche Programmierparadigmen kennt ihr?_
 
@@ -107,3 +113,7 @@ Eine weitere Konsequenz ist, dass es in funktionaler Programmierung besonders ei
 5. Funktionsdefinitionen können ohne explizite Namensgebung literal in der Stellung eines Funktionssymbols verwendet werden. Solche Funktionen heißen anonym und werden oft salopp „Lambdas“ genannt.
 
 ## Objektorientierte Programmierung
+
+### AUFGABE
+
+**_Schließt euch in kleinere Gruppen maximal 4 Personen zusammen und erörtert gemeinsam, die Grundstrukturen und Eigenschaften der Objektorientierten Programmierung_**
