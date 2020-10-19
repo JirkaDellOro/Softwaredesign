@@ -116,4 +116,4 @@ Eine weitere Konsequenz ist, dass es in funktionaler Programmierung besonders ei
 
 ### AUFGABE
 
-**_Schließt euch in kleinere Gruppen maximal 4 Personen zusammen und erörtert gemeinsam, die Grundstrukturen und Eigenschaften der Objektorientierten Programmierung_**
+**_Schließt euch in kleinere Gruppen maximal 4 Personen zusammen und erörtert gemeinsam, die Grundstrukturen und Eigenschaften der Objektorientierten Programmierung (20 Minuten), Ergebnisse gerne als MindMap oder ähnliches visuelles Diagramm_**
