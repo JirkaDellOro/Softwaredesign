@@ -1,0 +1,52 @@
+Hallo zusammen,
+
+anbei findet Ihr die E-Mail von einem guten Freund von euch, der eure Hilfe braucht bei einem Projekt, was ein Freund und er zusammen verfolgen.
+
+Bitte helft den beiden doch mit einem Klassendiagramm.
+
+VG Chris
+
+________________________________________________________________
+
+Hey,
+
+ein Kumpel und Ich arbeiten doch an dieser neuen coolen Video Plattform, haben leider noch keinen Namen, aber sowas wäre doch nice: YourClips.com.
+
+Wir haben schon richtig gute Ideen für die Plattform und wollen die Struktur und Architektur mal visualisieren.
+Haben aber leider keine Ahnung von UML und Klassendiagrammen.
+
+Vielleicht kannst du uns dabei helfen und mal ein vorläufiges Klassendiagramm erstellen.
+
+Also auf der Plattform gibt es drei Arten von Nutzern, zu einen Mal den normalen Nutzer, welcher sich nur Videos anschauen möchte.
+Auf der Plattform ist über diesen nichts bekannt außer, dass dieser Videos anschauen kann.
+
+Als nächstes haben wir den registrierten Nutzer, welcher einen Benutzernamen, ein Geburtsdatum und ein Benutzerfoto hat.
+Das Foto sollte dabei eigene Eigenschaften mit sich bringen, wie beispielsweise Dateigröße, Dateiname und Dimensionen in Pixel, Länge und Breite.
+Dieser kann natürlich ebenso Videos anschauen, zusätzlich ist es für diesen möglich Videos zu speichern bzw. zu merken, dass diese später angeschaut werden können.
+
+Zu guter letzt haben wir noch den Uploader, welcher Videos anschauen kann und sich auch Videos merken kann.
+Dieser kann zusätzlich auch noch Videos auf die Plattform hochladen, damit diese von anderen Nutzern angeschaut werden können.
+Achja, der Uploader soll natürlich auch die Möglichkeit haben genau einen eigenen Kanal zu erstellen, um dort gezielt Videos hochladen zu können.
+Bedienung für einen Kanal ist es, dass mindestens ein Video auf diesem verfügbar ist, sonst kann dieser nicht existieren.
+
+Ein Kanal besteht als mindestens aus einem Video und hat selbstverständlich einen Titel und ein Kanalfoto.
+Als registrierter Nutzer habe Ich natürlich die Möglichkeit einen Kanal zu abonnieren.
+Das bedeutet auch im Umkehrschluss mehrere registrierte Nutzer können mehrere Kanäle abonnieren.
+Wir haben hierbei eine n:m Beziehung, ich weiß nicht, ob das für das Klassendiagramm von Bedeutung ist.
+
+Wichtig ist, dass der registrierte Nutzer Kanäle abonnieren und deabonnieren kann.
+
+Oh die Videos hab ich ja total vergessen, ein hochgeladenes Video ist natürlich immer genau einem Uploader zugeordnet.
+Ohne den Uploader kann ein Video sowieso nicht existieren :-P 
+Das Video hat natürlich einen Titel, eine Länge in Sekunden, eine Dateigröße und eine aspect ratio. Zudem kann ein Video abgespielt und pausiert werden.
+
+Könntest du bitte mal die entsprechenden Klassen mit den Eigenschaften und sinnvollen Methoden dafür in einem Klassendiagramm abbilden?
+Die Abhängigkeiten zwischen den einzelnen Objekten wäre natürlich auch interessant.
+
+Danke vielmals für deine Hilfe.
+
+Viele Grüße 
+Steve Hurley und Chad Chen
+
+Ach was mir gerade, an der Stelle, noch einfällt vielleicht wäre es ja auch ganz cool, wenn der registrierte Benutzer eigene Playlist von Videos erstellen könnte.
+Mach dir einfach mal Gedanken dazu ;-)

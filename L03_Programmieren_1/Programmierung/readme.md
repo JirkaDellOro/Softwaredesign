@@ -18,7 +18,7 @@ Ein Programmierparadigma beschreibt den grundlegenden Stil, in dem ein Programm 
 
 Einer Programmierung liegen je nach Struktur und Grundlage der einzelnen Programmiersprache verschiedene Prinzipien zugrunde. Diese unterstützen den Developer bei der Erstellung von "gutem Code", in wenigen Fällen wird damit sogar bestimmt in welcher Herangehensweise Probleme zu lösen sind.
 
-Die Programmierparadigmen unterscheiden sich durch Ihre Konzepte für die Repräsentation von statischen (bspw. Konstanten, Variablen, Methoden, Objekten) und dynamischen (wie beispielsweise Zuweisungen, Kontrollfluss, Datenfluss)
+Die Programmierparadigmen unterscheiden sich durch Ihre Konzepte für die Repräsentation von statischen (bspw. Konstanten, Variablen, Methoden, Objekten) und dynamischen (wie beispielsweise Zuweisungen, Kontrollfluss, Datenfluss) Elementen.
 
 Es ist möglich, dass eine Programmiersprache mehrere Paradigmen gleichzeitig unterstützt. Das bedeutet mit einer Programmiersprache kann ein Developer in mehreren Programmierparadigmen arbeiten und muss so nicht im gesamten Source Code am immer gleichen Paradigmen festhalten. Sondern kann im Einzelfall entscheiden, welche Vorgehensweise die beste Option ist.
 
@@ -29,7 +29,7 @@ _Welche Programmierparadigmen kennt ihr?_
 ### Programmierparadigmen
 
 - Imperative Programmierung
-  - Struktierte Programmierung
+  - Strukturierte Programmierung
   - Prozedurale Programmierung
   - Modulare Programmierung
   - Programmierung mit abstrakten Datentypen
@@ -37,7 +37,7 @@ _Welche Programmierparadigmen kennt ihr?_
   - Funktionale Programmierung
   - Logische Programmierung
   - Constraintprogrammierung
-- Objektorientierte Programmierparadigmen
+- Objektorientierte Programmierung
 
 
 ## Imperative Programmierung / Prozedurale Programmierung
@@ -76,7 +76,7 @@ Die Objektorientierte Programmierung baut auf der strukturierten Programmierung 
 
 ## Deklarative Programmierung / Funktionale Programmierung
 
-Die deklarative Programmierung behandelt nicht wie bei der funktionalen Programmierung das _WIE_ sondern das _WAS_, was soll später als Ergebnis erscheinen. Es wird also nicht mehr der Lösungsweg programmiert, sondern nur noch angegeben, welches Ergebnis gewünscht ist. Zu diesem Zweck beruhen deklarative Paradigmen auf mathematischen, rechnerunabhängigen Theorien.
+Die deklarative Programmierung behandelt nicht wie bei der imperativen Programmierung das _WIE_ sondern das _WAS_, was soll später als Ergebnis erscheinen. Es wird also nicht mehr der Lösungsweg programmiert, sondern nur noch angegeben, welches Ergebnis gewünscht ist. Zu diesem Zweck beruhen deklarative Paradigmen auf mathematischen, rechnerunabhängigen Theorien.
 
 Die deklarative Programmiersprachen erfreuen sich nicht sehr großer Akzeptanz, da es sich hierbei meist im Akademikersprachen handelt und Ihre Strukturen sehr komplex aufgebaut sind:
 
@@ -117,3 +117,17 @@ Eine weitere Konsequenz ist, dass es in funktionaler Programmierung besonders ei
 ### AUFGABE
 
 **_Schließt euch in kleinere Gruppen maximal 4 Personen zusammen und erörtert gemeinsam, die Grundstrukturen und Eigenschaften der Objektorientierten Programmierung (20 Minuten), Ergebnisse gerne als MindMap oder ähnliches visuelles Diagramm_**
+
+### Einführung
+
+Die Grundidee der objektorientierten Programmierung ist die Abstraktion der Realität in Programmcode, als Entwickler möchte Ich die realen äußeren Bedingungen in meine Software einbeziehen und diese umsetzen. 
+
+Für die Einbeziehung der realen Bedingungen erfordert die Denkweise weitere Konzepte, Klassen, Vererbung, Polymorphie und Assoziationen. Dafür gibt es innerhalb der Entwurfsphase ein Diagramm, welches verwendet werden kann, das Klassendiagramm. Hierbei wird versucht die auftretenden Objekte und Abstraktionen darzustellen und so ein Bild über das reale Verhältnis herzustellen.
+
+### Konzepte der OOP
+
+- **Die Abstraktion:** Jedes beteiligte Teil in einem System kann als Abstraktion verstanden werden, dieses Objekt kann über Methoden aufrufen, Zustände weitergeben und ändern, mit anderen Objekten kommunizieren.
+  - **Klasse:** Ein Klasse stellt über seine Attribute eine Datenstruktur dar, welche in der Realität ebenso vorzufinden ist. _Beispiel:_ Eine Person (Klasse) hat mindestens einen Namen und ein Geburtsdatum (Attribute). Das Verhalten einer Klasse wird dann über Funktionen / Methoden dargestellt. _Beispiel:_ Eine Person kann seinen Namen sagen (Funktion).
+
+- **Datenkapselung:** Unter der Datenkapselung versteht sich das Veröffentlichen bzw. das Verbergen bestimmter Implementierungsdetails. Es steuert, ob Attribute bzw. Funktionen für alle außerhalb des instanzierten Objekts sichtbar sind.
+
