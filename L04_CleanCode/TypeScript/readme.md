@@ -77,7 +77,7 @@ Warum 799? Wenn dies die Breite einer Zeichenfläche sein soll, muss dies im Cod
 
 ```TypeScript
   let canvasWidth: number = 800;
-  let offset: number = -30;  
+  let leftOffset: number = -30;  
   if (x >= canvasWidth)
     x = leftOffset;
 ```
@@ -211,7 +211,7 @@ Programmiersprachen bringen zwei Techniken mit, mit denen sich dieses Prinzip er
 
 #### Liskov substitution principle
 
-Instanzen von Subklassen sollen sich so verhalten wie Instanzen der Superklasse. Dies wird grundsätzlich schon durch den Compiler sichergestellt (Polymorphie und Type-Casting). Eine Subklasse darf ein Superklasse nur erweitern, nicht verändern.
+Instanzen von Subklassen sollen sich so verhalten wie Instanzen der Superklasse. Dies wird grundsätzlich schon durch den Compiler sichergestellt (Polymorphie und Type-Casting). Eine Subklasse darf eine Superklasse nur erweitern, nicht verändern.
 
 #### Interface segregation principle
 
