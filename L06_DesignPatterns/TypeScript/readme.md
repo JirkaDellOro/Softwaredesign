@@ -275,3 +275,10 @@ Beispiel übersetzt wird. -->
 - Wandelt die Methode `GetInstance` im Singleton-Pattern in ein TypeScript-Property um.
   Nennt das Property `Instance` und implementiert _nur_ die `get` Methode des
   Property (kein `set`).  
+
+
+### Wichtige Programmieraspekte der OOP
+
+- **Interfaces:** Ein Interface / Eine Schnittstelle gibt an, welche Methoden und Attribute von einer Klasse zu implementieren sind, wenn diese die Schnittstelle verwenden. Dies dient der Vereinfachung und der Vereinheitlichung von Klassendeklarationen, insbesondere bei verschachtelten Vererbungen.
+
+- **DAO (Data Access Object):** 
