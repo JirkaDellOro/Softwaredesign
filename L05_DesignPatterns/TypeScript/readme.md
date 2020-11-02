@@ -34,7 +34,7 @@ aus die Entwicklung von _Visual Studio Code_ unterstützt.
 ### Kategorisierung 
 
 > #### TODO
-> - Lest Euch auf der Wikipedia-Seite zu Entwurfmsustern den Abschnitt zu den "Arten von Entwurfsmustern"
+> - Lest Euch auf der Wikipedia-Seite zu Entwurfmustern den Abschnitt zu den "Arten von Entwurfsmustern"
 >   durch. 
 >   - Wieviele Kategorien gab es ursprünglich?
 >   - Welche Design Patterns gibt es?
