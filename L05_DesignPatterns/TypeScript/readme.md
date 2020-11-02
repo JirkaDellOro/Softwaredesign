@@ -37,6 +37,9 @@ aus die Entwicklung von _Visual Studio Code_ unterstützt.
 > - Lest Euch auf der Wikipedia-Seite zu Entwurfmsustern den Abschnitt zu den "Arten von Entwurfsmustern"
 >   durch. 
 >   - Wieviele Kategorien gab es ursprünglich?
+>   - Welche Design Patterns gibt es?
+>     - Für was werden Sie verwendet?
+>   - Was denkt Ihr, welche Design Patterns werden häufig verwendet?
 
 
 ## Umgang mit Design Patterns
@@ -274,11 +277,4 @@ Beispiel übersetzt wird. -->
 
 - Wandelt die Methode `GetInstance` im Singleton-Pattern in ein TypeScript-Property um.
   Nennt das Property `Instance` und implementiert _nur_ die `get` Methode des
-  Property (kein `set`).  
-
-
-### Wichtige Programmieraspekte der OOP
-
-- **Interfaces:** Ein Interface / Eine Schnittstelle gibt an, welche Methoden und Attribute von einer Klasse zu implementieren sind, wenn diese die Schnittstelle verwenden. Dies dient der Vereinfachung und der Vereinheitlichung von Klassendeklarationen, insbesondere bei verschachtelten Vererbungen.
-
-- **DAO (Data Access Object):** 
+  Property (kein `set`). 
