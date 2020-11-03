@@ -5,10 +5,10 @@ anbei findet Ihr die E-Mail von einem guten Freund von euch, der eure Hilfe brau
 Als Grundlage dient das Klassendiagramm von letzter Übung:
 
 Bild:
-![Assoziation](img/classdiagramm_solution_chapter03.png)
+![Assoziation](../../L04_CleanCode/tasks/img/classdiagramm_solution_chapter03.png)
 
 DrawIO-Datei:
-![Assoziation](img/classdiagramm_solution_chapter03.drawio)
+![Assoziation](../../L04_CleanCode/tasks/img/classdiagramm_solution_chapter03.drawio)
 
 Es soll jetzt zusätzlich noch ein VideoPlayer mit eingebaut werden, der VideoPlayer hat lediglich eine Instanz. Das bedeutet der VideoPlayer existiert ein einziges Mal und in diesem werden dann die Videos abgespielt mit PlayVideo().
 Hierbei wird euch das SingletonPattern helfen:
