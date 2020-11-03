@@ -8,7 +8,7 @@ Bild:
 ![Assoziation](../../L04_CleanCode/tasks/img/classdiagramm_solution_chapter03.png)
 
 DrawIO-Datei:
-![Assoziation](../../L04_CleanCode/tasks/img/classdiagramm_solution_chapter03.drawio)
+[DrawIO-Datei](../../L04_CleanCode/tasks/img/classdiagramm_solution_chapter03.drawio)
 
 Es soll jetzt zusätzlich noch ein VideoPlayer mit eingebaut werden, der VideoPlayer hat lediglich eine Instanz. Das bedeutet der VideoPlayer existiert ein einziges Mal und in diesem werden dann die Videos abgespielt mit PlayVideo().
 Hierbei wird euch das SingletonPattern helfen:

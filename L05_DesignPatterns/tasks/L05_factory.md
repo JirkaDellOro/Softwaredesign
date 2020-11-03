@@ -5,10 +5,10 @@ anbei findet Ihr die E-Mail von einem guten Freund von euch, der eure Hilfe brau
 Als Grundlage dient das Klassendiagramm von letzter Übung:
 
 Bild:
-![Assoziation](img/classdiagramm_solution_chapter03.png)
+![Assoziation](../../L04_CleanCode/tasks/img/classdiagramm_solution_chapter03.png)
 
 DrawIO-Datei:
-![Assoziation](img/classdiagramm_solution_chapter03.drawio)
+[DrawIO-Datei](../../L04_CleanCode/tasks/img/classdiagramm_solution_chapter03.drawio)
 
 Die Klassen User, RegisteredUser und Uploader sollen nun nicht mehr voneinander erben, sondern durch eine UserFactory erzeugt.
 Dazu dient euch folgender Link als Unterstützung:

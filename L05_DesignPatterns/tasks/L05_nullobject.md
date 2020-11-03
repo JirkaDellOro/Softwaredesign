@@ -5,10 +5,10 @@ anbei findet Ihr die E-Mail von einem guten Freund von euch, der eure Hilfe brau
 Als Grundlage dient das Klassendiagramm von letzter Übung:
 
 Bild:
-![Assoziation](img/classdiagramm_solution_chapter03.png)
+![Assoziation](../../L04_CleanCode/tasks/img/classdiagramm_solution_chapter03.png)
 
 DrawIO-Datei:
-![Assoziation](img/classdiagramm_solution_chapter03.drawio)
+[DrawIO-Datei](../../L04_CleanCode/tasks/img/classdiagramm_solution_chapter03.drawio)
 
 Wenn ein Benutzer kein Bild hinterlegt hat, dann wird momentan offensichtlich ein Fehler geworfen, dass kein Bild gefunden wurde.
 Solche Fehler lassen sich meist mit dem DesignPattern Null Object beheben, in dem einfach ein Default zurückgegeben wird.
