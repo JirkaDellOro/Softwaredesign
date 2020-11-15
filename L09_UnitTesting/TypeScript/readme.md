@@ -1,6 +1,6 @@
-# Unit Tests
+# Unit-Tests
 
-## Software Tests
+## Software-Tests
 
 Jedem ist schon mal ein Software-Fehler bei der Bedienung irgendeines Programms aufgefallen. 
 Von unkritischem unerwartetem Verhalten bis hin zu Abstürzen und Datenverlust können die
@@ -8,13 +8,13 @@ Konsequenzen unterschiedlich ausfallen. Fakt ist: Beim Erstellen von Software pa
 Fehler. Je komplexer die Aufgabenstellung bei der Softwareentwicklung, je mehr Entwickler 
 beteiligt sind, je größer der Zeitdruck für die Fertigstellung, umso mehr Fehler entstehen.
 Die einzige Möglichkeit, Fehler zu beseitigen, ist, diese zunächst zu finden. Das geht  
-mit _Software Tests_. 
+mit _Software-Tests_. 
 
 Während bei Programmieraufgaben von der Komplexität einer Übungsaufgabe Entwicklung und
 Test von ein- und der selben Person zeitgleich mit der eigentlichen Entwicklung einhergeht,
 reicht schon bei vergleichsweise kleinen Software-Projekten, an deren Entwicklung mehr als 
-eine Person beteiligt ist, ein reiner _Entwickler Test_ nicht mehr aus. Es gibt unterschiedliche
-Test-Arten mit unterschiedlichen Testkriterien und -Zielen. Auf der 
+eine Person beteiligt ist, ein reiner _Entwickler-Test_ nicht mehr aus. Es gibt unterschiedliche
+Test-Arten mit unterschiedlichen Testkriterien und -zielen. Auf der 
 Wikipedia-Seite zu Software Tests gibt es eine Kategorisierung in unterschiedliche 
 [Teststufen](https://de.wikipedia.org/wiki/Softwaretest#Teststufen)
 mit kurzen Definitionen zu jeder Stufe. Hier werden die unterschiedlichen Ziele der verschiedenen
