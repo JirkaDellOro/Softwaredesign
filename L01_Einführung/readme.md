@@ -44,7 +44,7 @@ Die skizzierten Lösungen zu den Anforderungen aus Phase 1 und Phase 2 werden vo
 
 ### 4. Test
 
-In der Testphase werden die Anforderungen in Schritt 1 auf die korrekte Umsetzung geprüft, dafür gibt es meist eigene Software-Tester. Anhand der Anforderungen werden Testszenarien mit entsprechenden Kriterien definiert, was eine Software können soll und was nicht. 
+In der Testphase werden die Anforderungen in Schritt 1 auf die korrekte Umsetzung geprüft, dafür gibt es meist eigene Software-Tester. Anhand der Anforderungen werden Testszenarien mit klaren Kriterien definiert, was eine Funktion, ein gewisser Programmteil können soll und was nicht. Bedeutet es werden Akzeptanzkriterien definiert, wann ein Test einer Funktion fehlschlägt bzw. erfolgreich ist.
 An dieser Stelle sei gesagt, die Software Developer sind bereits in der Phase 3 in der Pflicht die Implementierung auf Lauffähigkeit und Korrektheit zu überprüfen. Hierfür gibt es den Ansatz des "Test Driven Developments", bei die Software Developer zuerst die Testszenarien (Unit Tests) erstellen und darauf aufbauend die Software-Lösung der entsprechenden Anforderung umsetzen.
 
 [-> Mehr Infos zu Test Driven Development](http://www.evocomp.de/softwareentwicklung/unit-tests/unittests.html)
@@ -53,7 +53,7 @@ Abgesehen von manuellen Tests durch Software-Tester und Unit Tests, welche von S
 
 > **Wichtig:** 
 >
-> Zu erwähnen ist, dass diese Phase nicht das Ziel hat die Fehlerfreiheit der Software zu garantieren. Sie kann lediglich die Existenz von Fehlern aufzeigen, aber nicht deren Nichtvorhandensein. Bei der Konzeption der Testszenarien, Unit-, Service-, Komponententests und weiteren, ist es essentiell eine hohe Automatisierung der Testverfahren zu erhalten. Die manuelle Durchführung von Tests durch Personen ist sehr kostenintensiv und muss bei jeder neuen Version einer Software wieder und wieder erfolgen. Deshalb macht es an dieser Stelle sind gewisse Schnittstellen und Funktionen automatisiert durch eine Maschine testen zu lassen.
+> Zu erwähnen ist, dass diese Phase nicht das Ziel hat die Fehlerfreiheit der Software zu garantieren. Sie kann lediglich die Existenz von Fehlern aufzeigen, aber nicht deren Nichtvorhandensein. Bei der Konzeption der Testszenarien, Unit-, Service-, Komponententests und weiteren, ist es essentiell eine hohe Automatisierung der Testverfahren zu erhalten. Die manuelle Durchführung von Tests durch Personen ist sehr kostenintensiv und muss bei jeder neuen Version einer Software wieder und wieder erfolgen. Deshalb macht es an dieser Stelle Sinn gewisse Schnittstellen und Funktionen automatisiert durch eine Maschine testen zu lassen.
 
 ### 5. Betrieb
 
