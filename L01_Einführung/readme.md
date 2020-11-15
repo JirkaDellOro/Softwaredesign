@@ -94,6 +94,8 @@ Die bekanntesten Vorgehensmodelle:
 
 ### Scrum
 
+Mittlerweile hat sich in der Softwareentwicklung das Vorgehensmodell Scrum als "state of the art" herauskristallisiert und wird hauptsächlich im professionellen Umfeld eingesetzt. Nachfolgend zeigt das Schaubild eine kurze Erklärung des Vorgehensmodell und dessen Akteure, Aktivitäten und Artefakte. Für weitere Informationen, dienen die nachfolgenden Links: 
+
 ![Scrum](img/scrum.jpg)
 [Quelle: https://www.konversionskraft.de/conversion-frameworks/strukturiertes-projektmanagement-fuer-optimierer-mit-scrum.html](https://www.konversionskraft.de/conversion-frameworks/strukturiertes-projektmanagement-fuer-optimierer-mit-scrum.html)
 
