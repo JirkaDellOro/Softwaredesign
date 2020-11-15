@@ -44,20 +44,20 @@ Die skizzierten Lösungen zu den Anforderungen aus Phase 1 und Phase 2 werden vo
 
 ### 4. Test
 
-Innerhalb des Test Phase werden die Anforderungen in Schritt 1 auf die korrekte Umsetzung geprüft, dafür gibt es meist eigene Software Tester. Anhand der Anforderungen werden Testszenarien mit entsprechenden Kriterien definiert, was eine Software können soll und was nicht. 
-An dieser Stelle sei gesagt, die Software Developer sind bereits in der Phase 3 in der Pflicht die Implementierung auf Lauffähigkeit und Korrektheit zu überprüfen. Hierfür gibt es den Ansatz des "Test Driven Developments", bei die Software Developer zu erst die Testszenarien, Unit Tests, erstellen und darauf aufbauend, die Software-Lösung der entsprechenden Anforderung umsetzen.
+In der Testphase werden die Anforderungen in Schritt 1 auf die korrekte Umsetzung geprüft, dafür gibt es meist eigene Software-Tester. Anhand der Anforderungen werden Testszenarien mit entsprechenden Kriterien definiert, was eine Software können soll und was nicht. 
+An dieser Stelle sei gesagt, die Software Developer sind bereits in der Phase 3 in der Pflicht die Implementierung auf Lauffähigkeit und Korrektheit zu überprüfen. Hierfür gibt es den Ansatz des "Test Driven Developments", bei die Software Developer zuerst die Testszenarien (Unit Tests) erstellen und darauf aufbauend die Software-Lösung der entsprechenden Anforderung umsetzen.
 
 [-> Mehr Infos zu Test Driven Development](http://www.evocomp.de/softwareentwicklung/unit-tests/unittests.html)
 
-Abgesehen von manuellen Tests durch Software Testern und Unit Tests, welche von Software Developern erstellt werden, gibt es weitere Testverfahren für Software-Lösungen, bspw. Service- und Komponententests, Oberflächentests, Integrationstests, Systemtests, etc...
+Abgesehen von manuellen Tests durch Software-Tester und Unit Tests, welche von Software-Developern erstellt werden, gibt es weitere Testverfahren für Software-Lösungen, bspw. Service- und Komponententests, Oberflächentests, Integrationstests, Systemtests, etc...
 
 > **Wichtig:** 
 >
-> Zu erwähnen ist, dass diese Phase nicht das Ziel hat die Fehlerfreiheit der Software zu garantieren. Sie kann lediglich die Existenz von Fehlern aufzeigen, aber nicht deren Nichtvorhandensein. Bei der Konzeption der Testszenarien, Unit-, Service-, Komponententests und weitere, ist es essentiell eine hohe Automatisierung der Testverfahren zu erhalten. Das manuelle Durchführen von Tests durch Personen ist sehr kostenintensiv und muss bei jeder neuen Version einer Software wieder und wieder erfolgen. Deshalb macht es an dieser Stelle sind gewisse Schnittstellen und Funktionen automatisiert durch eine Maschine testen zu lassen.
+> Zu erwähnen ist, dass diese Phase nicht das Ziel hat die Fehlerfreiheit der Software zu garantieren. Sie kann lediglich die Existenz von Fehlern aufzeigen, aber nicht deren Nichtvorhandensein. Bei der Konzeption der Testszenarien, Unit-, Service-, Komponententests und weiteren, ist es essentiell eine hohe Automatisierung der Testverfahren zu erhalten. Die manuelle Durchführung von Tests durch Personen ist sehr kostenintensiv und muss bei jeder neuen Version einer Software wieder und wieder erfolgen. Deshalb macht es an dieser Stelle sind gewisse Schnittstellen und Funktionen automatisiert durch eine Maschine testen zu lassen.
 
 ### 5. Betrieb
 
-Zur Inbetriebnahme beim Kunden gehört ebenso die Veröffentlichung des fertigen Softwareprodukt. Die entstandene und getestete Software bekommt dabei eine Versionsnummer (Tag), wenn nicht sogar einen eigenen Branch in der Versionverwaltung und wird dem Kunden als ausführbare Software übergeben bzw. bei diesem installiert.
+Zur Inbetriebnahme beim Kunden gehört ebenso die Veröffentlichung des fertigen Softwareprodukts. Die entstandene und getestete Software bekommt dabei eine Versionsnummer (Tag), wenn nicht sogar einen eigenen Branch in der Versionverwaltung und wird dem Kunden als ausführbare Software übergeben bzw. bei diesem installiert.
 Der Kunde testet die Software und überprüft die Erfüllung der festgelegten Anforderungen aus Phase 1: Anforderungen und Phase 2: Entwurf. 
 Dadurch können dann Mängel, bspw. Fehler bzw. Fehlverhalten, und / oder neue Anfordunderungen an die Software entstehen.
 Diese können dann in einem weiteren Softwareentwicklungsprozess behoben bzw. umgesetzt werden.
@@ -70,11 +70,11 @@ Diese können dann in einem weiteren Softwareentwicklungsprozess behoben bzw. um
 
 > **Frage:**
 >
-> Was denkt Ihr was kann bei so einem Software-Projekt alles schief gehen, wo können Fehler auftreten und wie können diese umgangen oder behoben werden?
+> Was denkt ihr: was kann bei so einem Software-Projekt alles schief gehen, wo können Fehler auftreten und wie können diese umgangen oder behoben werden?
 
 > **TODO**
 >
-> Googelt bitte nach "Vorgehensmodelle Softwareentwicklung" geht auf "Bilder", wählt ein Bild aus und lest euch 5 Minuten ein zu einem Vorgehensmodell und schaut, welche der obigen Phasen Ihr dort wiederfindet.
+> Googelt bitte nach "Vorgehensmodelle Softwareentwicklung", geht auf "Bilder" und wählt ein Bild aus zu einem Vorgehensmodell. Lest euch 5 Minuten ein und schaut, welche der obigen Phasen ihr dort wiederfindet.
 
 ## Vorgehensmodelle
 
@@ -188,7 +188,7 @@ Abläufe oder Kommunikation unter den Entwicklern lösen.
 
 > #### TODO
 >
-> Überlegt Euch, ggf. gemeinsam, wie man oben genannte Probleme lösen könnte, wenn
+> Überlegt euch, ggf. gemeinsam, wie man oben genannte Probleme lösen könnte, wenn
 > als Synchronisations-Technik für die Source-Dateien nur Dropbox & Co. zur Verfügung 
 > stehen.
 
@@ -196,7 +196,7 @@ Die Komplexität hier wächst aber
 exponentiell mit der Anzahl der beteiligten Entwickler und der Anzahl der zu verwaltenden
 Dateien an. Ab einer bestimmten Teamgröße und einem bestimmten Dateiumfang ist das nicht mehr
 handhabbar, da zuviel Absprachen getroffen werden müssen und im Falle eines Fehlers dann
-zu viele Entwickler für zu lange arbeitsunfähig sind. 
+zu viele Entwickler für zu lange Zeit arbeitsunfähig sind. 
 
 Abhilfe schaffen hier ***Source Control Systeme*** oder ***Version Control Systeme***, die, neben 
 der Möglichkeit, Dateien über mehrere Rechner hinweg zu synchronisieren, für die o.g., 
