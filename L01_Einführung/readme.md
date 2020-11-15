@@ -36,7 +36,7 @@ Beim Design der Software-Lösung geht es in allererster Linie um die Gesamtarchi
 
 ### 3. Entwicklung
 
-Die skizzierten Lösungen zu den Anforderungen aus Phase 1 und Phase 2 werden von Software Developern in tatsächlichen Programmcode umgesetzt. Hierbei können verschiedene Praktikten und Techniken, wie bspw. Code-Conventions, Design-Patterns oder Pair Programmierung, etc. zum Einsatz kommen. Auf diese werden im Laufe des Semesters kennenlernen und näher eingehen.
+Die skizzierten Lösungen zu den Anforderungen aus Phase 1 und Phase 2 werden von Software Developern in tatsächlichen Programmcode umgesetzt. Hierbei können verschiedene Praktikten und Techniken, wie bspw. Code-Conventions, Design-Patterns oder Pair Programmierung, etc. zum Einsatz kommen. Diese werden wir im Laufe des Semesters kennenlernen und darauf näher eingehen.
 
 > **Wichtig:** 
 >
