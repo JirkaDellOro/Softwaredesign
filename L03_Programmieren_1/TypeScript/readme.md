@@ -4,7 +4,7 @@
 
 ### Ein wenig Geschichte
 
-**TypeScript** wurde von Microsoft entwickelt und 2012 veröffentlicht. Es basiert auf dem ECMAScript-6 Standard und erweitert die JavaScript-Syntax um viele Funktionen wie z.B spezifischere Typisierung und erweiterte Funktionsimplementierung, die sich mehr an gängigen Programmiersprachen orientiert. Der TypeScript-Compiler kompiliert den TS-Code in JavaScript-Code, da Browser lediglich JS interpretieren und ausführen kann.
+**TypeScript** wurde von Microsoft entwickelt und 2012 veröffentlicht. Es basiert auf dem ECMAScript-6 Standard und erweitert die JavaScript-Syntax um viele Funktionen wie z.B spezifischere Typisierung und erweiterte Funktionsimplementierung, die sich mehr an gängigen Programmiersprachen orientiert. Der TypeScript-Compiler kompiliert den TS-Code in JavaScript-Code, da Browser lediglich JS interpretieren und ausführen können.
 
 Anfangs war die Softwareentwicklung mit dieser Programmiersprache nur mit der Microsoft Entwicklungsumgebung Visual Studio möglich und somit exklusiv für Windows. Dies ist mittlerweile nicht mehr so. Alle gängigen Entwicklungsumgebungen (In dieser Veranstaltung VS Code) bieten Support für TS.
 
@@ -105,7 +105,7 @@ Da sämtlicher TypeScript-Code zu JS-Code kompiliert wird, ist die spezifischere
 
 ## Arrays
 
-Wie in anderen Programmiersprachen auch, gibt es auch in TypeScript die Möglichkeit, über nur _einen_ Variablennamen
+Wie in anderen Programmiersprachen, gibt es auch in TypeScript die Möglichkeit, über nur _einen_ Variablennamen
 auf _viele_ Werte gleichen Typs zuzugreifen, indem mit Hilfe eines _index_, also einer Zahl, bestimmt wird,
 auf welchen der vielen möglichen Speicherplätze, die sich hinter dem einen Variablennamen verstecken,
 zugegriffen wird. Wie in anderen Programmiersprachen auch, heißen solche Konstrukte ***Arrays***.
@@ -282,8 +282,8 @@ Ein mächtiges Werkzeug vieler Programmiersprachen ist die Möglichkeit, sich ei
 Datentypen zu schaffen, indem diese aus bereits vorhandenen Datentypen zusammen gesetzt
 (_aggregiert_) werden. Als Grundlage dienen die eingebauten Datentypen. Diese können zu 
 komplexeren Datentypen zusammen gesetzt werden, die dann direkt verwendet werden 
-(indem Variablen von diesen Typen erzeugt werden) oder diese wiederum als Bausteine für
-das Aggregieren noch komplexerer Typen verwendet werden. 
+(indem Variablen von diesen Typen erzeugt werden) oder wiederum als Bausteine für
+die Aggregation noch komplexerer Typen verwendet werden. 
 
 In TypeScript können, wie in vielen anderen Programmiersprachen auch, mit dem Schlüsselwort
 `class` neue Datentypen erzeugt werden. Hier ein Beispiel
@@ -319,7 +319,7 @@ wir nun eine Variable vom Typ `Person` anlegen. Der Variablenname ist hier `jema
 
 ### Variablen von zusammengesetzten Typen initialisieren
 
-Wie schon bei Arrays muss bei zusammengesetzten Typen die Initialisierung in zwei Schritte
+Wie schon bei Arrays muss bei zusammengesetzten Typen die Initialisierung in zwei Schritten
 unterschieden werden:
 
 1. Initialisierung der eigentlichen Variablen, damit Speicherplatz dafür angelegt wird.
@@ -354,14 +354,13 @@ sollen nun die rudimentären Kontrollstrukturen beschrieben werden
 ## Verzweigungen
 
 Um in Abhängigkeit eines errechneten Wertes, der Eingabe eines Benutzers, einer von einem anderen
-Rechner empfangenen Nachricht oder Ähnlichem Codezweige ausführen zu können, gibt in allen 
+Rechner empfangenen Nachricht oder Ähnlichem Codezweige ausführen zu können, gibt es in allen 
 Programmiersprachen das Konstrukt der Verzweigung. 
 
 ### `if` / `else`
 
-Wie in vielen anderen Sprachen auch, gibt es in TypeScript die if/else Anweisung, die auf Grund eines
-Wahrheitswertes (vom Typ `boolean` - kann wahr oder falsch sein), einen von zwei möglichen
-Code-Blöcken ausführt. Die allgemeine Syntax ist wie folgt:
+Die if/else Anweisung, führt auf Grund eines Wahrheitswertes (vom Typ `boolean` - kann wahr oder falsch sein), einen von zwei möglichen
+Code-Blöcken aus. Die allgemeine Syntax ist wie folgt:
 
 ```TypeScript
   if (<BEDINGUNG>)
@@ -380,7 +379,7 @@ ausgeführt.
 #### Bedingungen der `if`-Anweisung
 
 Die `<BEDINGUNG>` ist dabei ein Ausdruck, der einen Wert vom Typ `boolean` ergibt. Im einfachsten
-Fall kann das einfach eine `boolean`'sche Variable sein. Sehr oft wird aber ein Vergleichsoperator
+Fall kann das einfach eine bool'sche Variable sein. Sehr oft wird aber ein Vergleichsoperator
 verwendet. Im Folgenden eine Liste der in TypeScript vorhandenen Vergleichsoperatoren. Für die Beispiele
 seien
 
@@ -455,7 +454,7 @@ switch (i)
 > #### TODO
 >
 > - Verwendet o.a. Code in einem lauffähigen TypeScript-Programm und probiert es aus.
-> - Erweitert den Code um einen weiteren Switch für eine Zahl Eurer Wahl.
+> - Erweitert den Code um einen weiteren Switch für eine Zahl eurer Wahl.
 > - Ändert den Typ der Variablen `i` von `number` nach `string` und ändert die `case`-Labels, so dass
 >   diese aus Strings bestehen.
 > - Was passiert, wenn man an einer Stelle das `break` vergisst? Denkt euch Fälle aus, bei denen
