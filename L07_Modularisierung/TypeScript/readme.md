@@ -99,21 +99,23 @@ Wie auch JavaScript ermöglicht TypeScript die Modularisierung des Codes.
 
 Folgende Orderstruktur bietet sich an:
 
+<pre style="line-height: 1.2em;">
   rootDirectory
-  |
-  |--/public
-  |
-  |--/src
-  |  |
-  |  |--/modules
-  |  |  |
-  |  |  |--Person.ts
-  |  |
-  |  |--app.ts
-  |
-  |--index.html
-  |
-  |--tsconfig.json
+  │
+  ├ /public
+  │
+  ├ /src
+  │  │
+  │  ├ /modules
+  │  │  │
+  │  │  └ Person.ts
+  │  │
+  │  └ app.ts
+  │
+  ├ index.html
+  │
+  └ tsconfig.json
+</pre>
 
 Zusätzlich sind ein paar Anpassungen in der `tsconfig.json` nötig:
 
