@@ -28,7 +28,7 @@ Meist können aus der Anforderungsanalyse ganze Berge aus Anforderungsdokumenten
 
 ### 2. Entwurf
 
-Beim Design der Software-Lösung geht es in allererster Linie um die Gesamtarchitektur der Software und wird dann nach und nach immer weiter unterteilt, um somit für die Software Developer handhabbarer zu werden. Das Softwareprodukt wird in mehrere einzelne Stücke unterteilt, wodurch die Gesamtkomplexität verringert. Es werden die nötigen Programmstrukturen, Programmiertechniken und Algorithmen erarbeitet. Dabei kommen verschiedene Techniken wie beispielswese UML (vgl. L02_UML), Struktogramme, Prototypen und Pseudocode zum Einsatz. Mit diesen Objekten lassen sich die Machbarkeit der Software-Lösung feststellen, woraus dann meinst skizzierte Lösungen zu den Anforderungen aus Phase 1 entstehen.
+Beim Design der Software-Lösung geht es in allererster Linie um die Gesamtarchitektur der Software und wird dann nach und nach immer weiter unterteilt, um somit für die Software Developer handhabbarer zu werden. Das Softwareprodukt wird in mehrere einzelne Stücke unterteilt, wodurch sich die Gesamtkomplexität verringert. Es werden die nötigen Programmstrukturen, Programmiertechniken und Algorithmen erarbeitet. Dabei kommen verschiedene Techniken wie beispielswese UML (vgl. L02_UML), Struktogramme, Prototypen und Pseudocode zum Einsatz. Mit diesen Objekten lassen sich die Machbarkeit der Software-Lösung feststellen, woraus dann meist skizzierte Lösungen zu den Anforderungen aus Phase 1 entstehen.
 
 > **Wichtig:** 
 >
