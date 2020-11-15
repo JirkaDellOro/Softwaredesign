@@ -35,9 +35,8 @@ Schemata zur Planung von Software mit grafischen Hilfsmitteln und begannen schli
 Firma Rational Software mit der Entwicklung einer gemeinsamen grafischen Sprache.
 Die Version 2.5 der UML wurde im Mai 2015 veröffentlicht 
 ([siehe Website der Object Management Group](http://www.omg.org/spec/UML/2.5)).
-Dort ist auch die umfangreiche [Spezifikation](http://www.omg.org/spec/UML/2.5/PDF) zur finden. Es sind
-einige Arten von Diagrammen für unterschiedliche Zwecke definiert. In der Folge sollen nur ***Aktivitäts-
-und Klassendiagramme*** betrachtet werden.
+Dort ist auch die umfangreiche [Spezifikation](http://www.omg.org/spec/UML/2.5/PDF) zur finden. Es sind einige Arten von Diagrammen für unterschiedliche Zwecke definiert. In der Folge sollen nur **Anwendungsfall, Aktivitäts-
+und Klassendiagramme** betrachtet werden.
 
 > #### TODO
 > - Schaut Euch die Übersicht über die 14 Diagrammtypen auf folgender Web-Seite an:
@@ -68,8 +67,8 @@ Damit beschreiben Use Case Diagramme also kein Verhalten und keine Abläufe eine
 Sondern nur die Anwendungsfälle, welche ein System abdecken soll und wie die Zusammenhänge untereinander und mit den Akteuren sind.
 
 #### FRAGEN
- - Für was brauch ich ein solches Use Case Diagramm?
- - Was denkt Ihr was ist der Nutzen des Use Case Diagramms?
+ - Für was brauche ich ein solches Use Case Diagramm?
+ - Was denkt ihr: was ist der Nutzen des Use Case Diagramms?
  - In welcher Phase des Softwareentwicklungsprozess kommt dieser Diagrammtyp zum Einsatz?
 
 Use Case Diagramme dienen hauptsächlich zur Kommunikation zwischen Requirements Engineer (in Scrum: Product Owner) und den Stakeholder bzw. den tatsächlichen Anwendern des Systems. Die Anwendungsfälle beschreiben das Angebot des Systems und die Interaktion der Außenstehenden mit dem System. 
@@ -221,7 +220,7 @@ In Klassendiagrammen wird bei Vererbungsbeziehungen die Superklasse oft _oberhal
 gezeichnet, so dass die _erbt-von_-Pfeile nach oben zeigen.
 
 #### Implementierung
-Implementiert eine Klasse ein Interface, so wird dies durch wie bei der Spezialisierung mit einem Pfeil mit 
+Implementiert eine Klasse ein Interface, so wird dies wie bei der Spezialisierung mit einem Pfeil mit 
 leerer Spitze angezeigt. Dieser ist auf das Interface gerichtet. Allerdings ist die Linie gestrichelt. 
 Alternativ wird ein "Lolly" an die Klasse gezeichnet, der mit dem Namen des entsprechenden Interfaces 
 versehen ist. Dies soll wie ein Stecker wirken.

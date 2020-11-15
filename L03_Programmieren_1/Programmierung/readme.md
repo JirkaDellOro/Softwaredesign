@@ -20,7 +20,7 @@ Einer Programmierung liegen je nach Struktur und Grundlage der einzelnen Program
 
 Die Programmierparadigmen unterscheiden sich durch Ihre Konzepte für die Repräsentation von statischen (bspw. Konstanten, Variablen, Methoden, Objekten) und dynamischen (wie beispielsweise Zuweisungen, Kontrollfluss, Datenfluss) Elementen.
 
-Es ist möglich, dass eine Programmiersprache mehrere Paradigmen gleichzeitig unterstützt. Das bedeutet mit einer Programmiersprache kann ein Developer in mehreren Programmierparadigmen arbeiten und muss so nicht im gesamten Source Code am immer gleichen Paradigmen festhalten. Sondern kann im Einzelfall entscheiden, welche Vorgehensweise die beste Option ist.
+Es ist möglich, dass eine Programmiersprache mehrere Paradigmen gleichzeitig unterstützt. Das bedeutet mit einer Programmiersprache kann ein Developer in mehreren Programmierparadigmen arbeiten und muss so nicht im gesamten Source Code am immer gleichen Paradigma festhalten. Sondern kann im Einzelfall entscheiden, welche Vorgehensweise die beste Option ist.
 
 ### FRAGE
 
@@ -76,16 +76,16 @@ Die Objektorientierte Programmierung baut auf der strukturierten Programmierung 
 
 ## Deklarative Programmierung / Funktionale Programmierung
 
-Die deklarative Programmierung behandelt nicht wie bei der imperativen Programmierung das _WIE_ sondern das _WAS_, was soll später als Ergebnis erscheinen. Es wird also nicht mehr der Lösungsweg programmiert, sondern nur noch angegeben, welches Ergebnis gewünscht ist. Zu diesem Zweck beruhen deklarative Paradigmen auf mathematischen, rechnerunabhängigen Theorien.
+Die deklarative Programmierung behandelt nicht wie bei der imperativen Programmierung das _WIE_ sondern das _WAS_; was soll später als Ergebnis erscheinen? Es wird also nicht mehr der Lösungsweg programmiert, sondern nur noch angegeben, welches Ergebnis gewünscht ist. Zu diesem Zweck beruhen deklarative Paradigmen auf mathematischen, rechnerunabhängigen Theorien.
 
-Die deklarative Programmiersprachen erfreuen sich nicht sehr großer Akzeptanz, da es sich hierbei meist im Akademikersprachen handelt und Ihre Strukturen sehr komplex aufgebaut sind:
+Die deklarativen Programmiersprachen erfreuen sich nicht sehr großer Akzeptanz, da es sich hierbei meist im Akademikersprachen handelt und ihre Strukturen sehr komplex aufgebaut sind:
 
 ```Haskell
 quicksort [] = []
 quicksort (x:xs) = quicksort [n | n<-xs, n<x] ++ [x] ++ quicksort [n | n<-xs, n>=x]
 ```
 
-**Obiges Beispiel:** Haskell ist eine typische deklarative Programmiersprache. Der Programmierer beschreibt, was das Programm mit einer Eingabe macht, also wie mit welcher Eingabe umzugehen ist, wobei der Berechnungsablauf nicht von Interesse ist. Die Berechnungen erfolgen dann durch Wertemanipulation. Hauptkontrollstruktur bildet die Rekursion, insbesondere aus Effizienzgründen die Endrekursion.
+**Obiges Beispiel:** Haskell ist eine typische deklarative Programmiersprache. Der Programmierer beschreibt, was das Programm mit einer Eingabe macht, also wie mit welcher Eingabe umzugehen ist, wobei der Berechnungsablauf nicht von Interesse ist. Die Berechnungen erfolgen dann durch Wertemanipulation. Hauptkontrollstruktur bildet die Rekursion, insbesondere - aus Effizienzgründen - die Endrekursion.
 
 Zu den deklarativen Programmiersprachen gehören:
 
@@ -96,7 +96,7 @@ Zu den deklarativen Programmiersprachen gehören:
 
 ### Funktionale Programmierung
 
-Bei der funktionalen Programmierung stehen "Funktionen" / "Methoden" im Vordergrund, hierbei werden diese nicht nur definiert und angewendet, sondern sie bestimmen auch wie Daten miteinander verknüpft, als Parameter verwendet und als Funktionsergebnisse auftreten können.
+Bei der funktionalen Programmierung stehen "Funktionen" bzw. "Methoden" im Vordergrund, hierbei werden diese nicht nur definiert und angewendet, sondern sie bestimmen auch wie Daten miteinander verknüpft, als Parameter verwendet und als Funktionsergebnisse auftreten können.
 
 Die funktionale Programmierung entspringt der mathematischen Grundlagenforschung. In den 1930er Jahren entwickelte Alonzo Church den Lambda-Kalkül als Instrument, um das Entscheidungsproblem zu bearbeiten und dazu den Begriff der berechenbaren Funktion zu definieren. Der Lambda-Kalkül selbst beschäftigt sich nicht mit bestimmten Funktionen, sondern ist nur ein Regelwerk dafür, wie die Anwendung von Funktionen auf ihre Argumente erfolgt und wie dabei mit freien und gebundenen Variablen verfahren wird.
 
@@ -120,19 +120,19 @@ Eine weitere Konsequenz ist, dass es in funktionaler Programmierung besonders ei
 
 ### Einführung
 
-Die Grundidee der objektorientierten Programmierung ist die Abstraktion der Realität in Programmcode, als Entwickler möchte Ich die realen äußeren Bedingungen in meine Software einbeziehen und diese umsetzen. 
+Die Grundidee der objektorientierten Programmierung ist die Abstraktion der Realität in Programmcode, als Entwickler möchte ich die realen äußeren Bedingungen in meine Software einbeziehen und diese umsetzen. 
 
 Für die Einbeziehung der realen Bedingungen erfordert die Denkweise weitere Konzepte, Klassen, Vererbung, Polymorphie und Assoziationen. Dafür gibt es innerhalb der Entwurfsphase ein Diagramm, welches verwendet werden kann, das Klassendiagramm. Hierbei wird versucht die auftretenden Objekte und Abstraktionen darzustellen und so ein Bild über das reale Verhältnis herzustellen.
 
 ### Konzepte der OOP
 
 - **Die Abstraktion:** Jedes beteiligte Teil in einem System kann als Abstraktion verstanden werden, dieses Objekt kann über Methoden aufrufen, Zustände weitergeben und ändern, mit anderen Objekten kommunizieren.
-  - **Klasse:** Ein Klasse stellt über seine Attribute eine Datenstruktur dar, welche in der Realität ebenso vorzufinden ist. _Beispiel:_ Eine Person (Klasse) hat mindestens einen Namen und ein Geburtsdatum (Attribute). Das Verhalten einer Klasse wird dann über Funktionen / Methoden dargestellt. _Beispiel:_ Eine Person kann seinen Namen sagen (Funktion).
+  - **Klasse:** Ein Klasse stellt über seine Attribute eine Datenstruktur dar, welche in der Realität ebenso vorzufinden ist. _Beispiel:_ Eine Person (Klasse) hat mindestens einen Namen und ein Geburtsdatum (Attribute). Das Verhalten einer Klasse wird dann über Funktionen / Methoden dargestellt. _Beispiel:_ Eine Person kann ihren Namen sagen (Funktion).
 
 - **Datenkapselung:** Unter der Datenkapselung versteht sich das Veröffentlichen bzw. das Verbergen bestimmter Implementierungsdetails. Es steuert, ob Attribute bzw. Funktionen für alle außerhalb des instanzierten Objekts sichtbar sind. Stichworte an dieser Stelle: _private, public, protected, package_
 
-- **Persistenz:** Die Persistenz beschreibt in der Informatik, die Fähigkeit Daten oder deren Verbindungen über einen längeren Zeitraum zu speichern, wofür ein nichtflüchtiges Speichermedium benötigt wird. In der Objektorientierung beschreibt die Persistenz, die Verfügbarkeit eines Objekts zur Laufzeit des Softwareprogramms. Das bedeutet Objekte und deren Variablen sind solange verfügbar wie das Programm läuft oder der Destruktor der instanzierten Klasse aufgerufen wird für das Objekt.
+- **Persistenz:** Die Persistenz beschreibt in der Informatik die Fähigkeit, Daten oder deren Verbindungen über einen längeren Zeitraum zu speichern, wofür ein nichtflüchtiges Speichermedium benötigt wird. In der Objektorientierung beschreibt die Persistenz, die Verfügbarkeit eines Objekts zur Laufzeit des Softwareprogramms. Das bedeutet Objekte und deren Variablen sind solange verfügbar wie das Programm läuft oder für das Objekt der Destruktor der instanzierten Klasse aufgerufen wird.
 
 - **Vererbung:** Die Vererbung dient dazu, aufbauend auf existierenden Klassen neue zu schaffen, wobei die Beziehung zwischen ursprünglicher und neuer Klasse dauerhaft ist. Eine neue Klasse kann dabei eine Erweiterung oder eine Einschränkung der ursprünglichen Klasse sein. Neben diesem konstruktiven Aspekt dient Vererbung auch der Dokumentation von Ähnlichkeiten zwischen Klassen, was insbesondere in den frühen Phasen des Softwareentwurfs von Bedeutung ist. Auf der Vererbung basierende Klassenhierarchien spiegeln strukturelle und verhaltensbezogene Ähnlichkeiten der Klassen wider.
 
-- **Polymorphie:** Mit der Polymorphie ist die Fähigkeit der Veränderung von abgeleiteten Eigenschaften einer Klasse gemeint. Erbt eine Klasse bzw. Objekt, Methoden oder Attribute von anderen Klassen bzw. Objekten, gibt es die Möglichkeit, diese nach Belieben zu modifizieren. So kann jede Klasse bzw. Objekt Methoden bzw. Attributen, welche vererbt wurden, auf den entsprechenden Anwendungsfall spezifizieren. Hierbei ist die Rede vom sogenannten Overriding, welches eine Ad-hoc-Polymorphie darstellt.
+- **Polymorphie:** Mit der Polymorphie ist die Fähigkeit der Veränderung von abgeleiteten Eigenschaften einer Klasse gemeint. Erbt eine Klasse bzw. Objekt, Methoden oder Attribute von anderen Klassen bzw. Objekten, gibt es die Möglichkeit, diese nach Belieben zu modifizieren. So kann jede Klasse bzw. Objekt Methoden bzw. Attribute, welche vererbt wurden, auf den entsprechenden Anwendungsfall spezifizieren. Hierbei ist die Rede vom sogenannten Overriding, welches eine Ad-hoc-Polymorphie darstellt.
