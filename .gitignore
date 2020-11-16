@@ -68,7 +68,7 @@ bld/
 Exams
 
 # dependencies
-L99_ExampleTSProject/app/
+L66_ExampleTSProject/app/
 package-lock.json
 node_modules
 S20/PrüfungsanmeldungListe.ods

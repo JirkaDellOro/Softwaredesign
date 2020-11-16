@@ -1,6 +1,10 @@
 
 # Modularisierung
 
+## Was ist Modularisierung?
+
+Modularität oder Modularisierung ist die Zerteilung einer ganzheitlichen Software in einzelne, kleinere Teile, die auch als Module, Komponenten, Elemente, Gruppen oder Bausteine bezeichnet werden. Bei diesem modularisierten Aufbau wird Software bzw. Softwaresysteme aus einzelnen Teilen entlang von definierten Schnittstellen zusammengefügt, diese gegenteilige Zusammensetzung wird oft auch integralen Aufbau bzw. monolithische Bauweise bezeichnet.
+
 ## Was sind Module?
 
 In der Softwareentwicklung beschreibt der Begriff ***Modul*** eine Einheit, in der ausführbarer Programmcode
@@ -80,16 +84,9 @@ können folgende Ziele verfolgt werden:
   Funktionalität selbst zu entwickeln.
 
 > #### TODO
-> - (Er-)findet eigene Beispiele für die oben genannten Modularisierungsziele und erläutert Euch
->   diese gegenseitig.
-> - Erklärt euch gegenseitig für jedes der oben genannten Modularisierungsziele, warum es von Vorteil
->   sein kann, dieses Ziel zu haben.
-> - Durchsucht die auf euren Rechnern installierten Applikationen (In Windows meist unter "C:\Program Files" und "C:\Program Files (x86)").
->   Größere Programme bestehen meist aus einem Hauptprogramm (unter Windows .exe) und mehreren Unter-Modulen (Windows: .dll, MAC: .dylib oder .so).
->   Kann man anhand der Dateinamen schon erklären, wozu ein Modul gut ist? Welchen der o.g. Modularisierungsziele lassen sich erkennen?
+> - (Er-)findet eigene Beispiele für die oben genannten Modularisierungsziele und erläutert Euch diese gegenseitig.
+> - Erklärt euch gegenseitig für jedes der oben genannten Modularisierungsziele, warum es von Vorteil sein kann, dieses Ziel zu haben.
 > - Lest den Wikipedia-Artikel zu [n-Tier-Architecture](https://en.wikipedia.org/wiki/Multitier_architecture) und formuliert Fragen.
-
-
 
 ## Techniken der Modularisierung in TypeScript
 
@@ -123,7 +120,7 @@ In der `tsconfig.json` müssen folgende Attribute geändert werden:
 Person.ts:
 > ```TypeScript
 > export class Person {
->     public static fullName: string =  "Hans Peter";
+>     public static fullName: string =  "Hans-Peter";
 > }
 > ``` 
 
@@ -138,8 +135,6 @@ Wichtig!!! es muss die nach der Kompilierung entstandene `Person.js` aus der `pu
 > - Einbinden in die HTML-Datei:
 
 <script type="module" src="public/app.js"></script>
-
-
 
 ### System.js
 
