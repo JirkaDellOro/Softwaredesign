@@ -4,14 +4,21 @@
   "description": "example project for ts programming in softwaredesign course",
   "main": "main.js",
   "scripts": {
-    "start": "tsc && node ./app/main.js"
+    "start": "ts-node-dev --respawn --transpile-only ./src/main.ts",
+    "build:prod": "webpack --mode=production --progress"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/lodash": "^4.14.165",
     "@types/node": "^14.11.8",
-    "systemjs": "^6.7.1",
+    "@types/webpack": "^4.41.25",
+    "lodash": "^4.17.20",
+    "ts-loader": "^8.0.11",
     "ts-node": "^9.0.0",
-    "typescript": "^4.0.3"
+    "ts-node-dev": "^1.0.0",
+    "typescript": "^4.0.3",
+    "webpack": "^5.5.1",
+    "webpack-cli": "^4.2.0"
   }
 }

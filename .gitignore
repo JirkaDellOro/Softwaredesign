@@ -68,6 +68,7 @@ bld/
 Exams
 
 # dependencies
+dist
 package-lock.json
 node_modules
 S20/PrüfungsanmeldungListe.ods

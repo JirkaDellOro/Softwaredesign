@@ -5,7 +5,7 @@ class ConsoleHandling {
 
   // logger object with syslog levels as specified loglevels
   // logs into build_service.log in directory log and onto console of running node.js process
-  private consoleLine : readline.Interface = readline.createInterface({
+  private consoleLine : readline.ReadLine = readline.createInterface({
     input: process.stdin,
     output: process.stdout
   });
