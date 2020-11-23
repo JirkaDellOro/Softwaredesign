@@ -17,4 +17,5 @@ Aufgaben:
 
 1. Zeichnet das Use-Case-Diagramm für die Charakteristiken des obigen Beispiels.
 2. Zeichnet ein Klassendiagramm für die Charakteristiken des obigen Beispiels.
+2.1 Denkt euch mögliche Attribute und Funktionen für die Klassen aus, welche ihr für sinnvoll erachtet.
 3. Zeichnet ein Aktivitätsdiagramm für die Direktaufnahme eines Bildes als Nachricht.
