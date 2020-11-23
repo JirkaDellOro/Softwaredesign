@@ -9,8 +9,8 @@ Heutige Aufgabe ist es einen Messenger grob nach zu bilden, dabei hat der Messen
 6. Bei einem Bild oder einer Datei sind folgende Dinge bekannt:
   * Größe der Datei oder des Bildes 
   * Name der Datei oder des Bildes.
-    ** Falls es sich um eine Direktaufnahme bei einem Bild handelt, soll der Name des Bildes automatisch generiert werden.
-    ** Falls das Bild nicht optimal aufgenommen wurde, soll es die Möglichkeit geben, das Bild nochmals zu schießen.
+    * Falls es sich um eine Direktaufnahme bei einem Bild handelt, soll der Name des Bildes automatisch generiert werden.
+    * Falls das Bild nicht optimal aufgenommen wurde, soll es die Möglichkeit geben, das Bild nochmals zu schießen.
 7. Es gibt eine Spezialisierung des Chats mit einer Person nämlich den Gruppenchat, dort kann mit mehreren Chatpartnern kommuniziert werden.
 
 Aufgaben:
