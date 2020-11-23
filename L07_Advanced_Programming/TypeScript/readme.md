@@ -197,6 +197,7 @@ oben _polymorph_ implemetiert:
     {
         return "Sehr geehrte Frau " + Name;
     }
+  }
 
   class Male extends Person
   {
