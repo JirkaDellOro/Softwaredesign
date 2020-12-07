@@ -10,3 +10,5 @@ Eine kleine Filmdatenbank als Konsolen Programm aufbauen:
   - Alle Filme mit Erscheinungsjahr und Box-Office anzeigen
   - Alle Filme anzeigen in dem ein Akteur mitgespielt hat
   - Einen gezielten Film suchen und das Erscheinungsjahr und Box-Office anzeigen
+
+Tipp: Die JSON Files müssen ins Programm am Anfang eingelesen werden.
