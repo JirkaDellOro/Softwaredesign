@@ -472,8 +472,14 @@ Es handelt sich um Zeichenketten, mit denen nach bestimmten syntaktischen Regeln
 
 Im Kapitel L11_RegularExpressions gehen wir noch einmal genauer darauf ein.
 
+## Higher Order Functions
 
+- Filter
+- Map
+- Reduce
+- Sort
+- FindIndex
 
+## Promises
 
-
-
+## FileSystem

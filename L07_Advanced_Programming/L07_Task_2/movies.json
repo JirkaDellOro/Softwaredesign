@@ -1,0 +1,30 @@
+[
+  {
+    "movie_name": "The Godfather",
+    "release_year": 1972,
+    "box_office": 136800000,
+    "director": "Francis Ford Coppola",
+    "actors": ["Marlon Brando", "Al Pacino", "Robert Duvall"]
+  },
+  {
+    "movie_name": "The Dark Knight",
+    "release_year": 2008,
+    "box_office": 1005000000,
+    "director": "Christopher Nolan",
+    "actors": ["Christian Bale", "Heath Ledger", "Michael Caine", "Gary Oldman", "Morgan Freeman"]
+  },
+  {
+    "movie_name": "Se7en",
+    "release_year": 1995,
+    "box_office": 327300000,
+    "director": "David Fincher",
+    "actors": ["Brad Pitt", "Morgan Freeman", "Kevin Spacey"]
+  },
+  {
+    "movie_name": "The Departed",
+    "release_year": 2006,
+    "box_office": 2915000000,
+    "director": "Martin Scorsese",
+    "actors": ["Leonardo DiCaprio", "Matt Damon", "Jack Nicholson", "Mark Wahlberg"]
+  }
+]
