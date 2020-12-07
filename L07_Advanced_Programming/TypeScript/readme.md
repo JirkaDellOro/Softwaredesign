@@ -103,10 +103,10 @@ Beispiel
 
     public GetTitleAdress(): string
     {
-      if (Age < 18)
-        return "Hey " + Name;
+      if (this.Age < 18)
+        return "Hey " + this.Name;
       else
-        return "Sehr geehrte(r) " + Name;
+        return "Sehr geehrte(r) " + this.Name;
     }
   }
 ```
@@ -472,7 +472,7 @@ Es handelt sich um Zeichenketten, mit denen nach bestimmten syntaktischen Regeln
 
 [Regular Expression Cheatsheet](https://cheatography.com/davechild/cheat-sheets/regular-expressions/)
 
-## Import vs Require
+### Import vs Require
 
 Die Statements _import_ und _require_ werden dafür verwendet um externe sowie lokale Module zu laden. 
 Die Idee der beiden Statements ist dabei die Gleiche, es geht darum das Programm in separate Dateien zu trennen anstatt alles in einer Datei zu haben. Das Konzept findet sich beispielsweise so auch in _Python_ mit _import_ oder in _C_ mit _include_.
@@ -484,9 +484,9 @@ Prinzipiell erfüllen die Statements den gleichen Zweck, sie laden Module jeglic
 2. NPM Module, welche im node_modules Ordner zu finden sind wie _lodash_, _express_ oder _request_
 3. Lokale Module, welche selbst programmiert wurden, um etwas abzubilden, bspw. eine immer währende Konstante wie Pi oder ähnliches.
 
-## Higher Order Functions
+### Higher Order Functions
 
-**Aufgabe: ** Schaut, was diese Funktionen in JavaScript bzw. TypeScript mit Daten bzw. Arrays machen bzw. was damit erreicht wird:
+**Aufgabe:** Schaut, was diese Funktionen in JavaScript bzw. TypeScript mit Daten bzw. Arrays machen bzw. was damit erreicht wird:
 
 - Filter
 - Map
@@ -494,7 +494,7 @@ Prinzipiell erfüllen die Statements den gleichen Zweck, sie laden Module jeglic
 - Sort
 - FindIndex
 
-## FileSystem
+### FileSystem
 
 Es gibt in TypeScript bzw. JavaScript mehrere Möglichkeiten das Dateisystem anzusteuern bzw. Dateien aus dem Dateisystem zu lesen:
 
