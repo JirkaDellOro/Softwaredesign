@@ -470,6 +470,8 @@ hinterlegen, der ausgeführt werden soll, sobald ein _Event_, ein Ereignis, eint
 
 Es handelt sich um Zeichenketten, mit denen nach bestimmten syntaktischen Regeln Mengen definieren lassen. Somit kann man Texte nach bestimmte Kriterien durchsuchen und sich zum Beispiel die Menge an Wörtern zurückgeben lassen, die die gesetzten Kriterien erfüllen.
 
+[Regular Expression Cheatsheet](https://cheatography.com/davechild/cheat-sheets/regular-expressions/)
+
 ## Import vs Require
 
 Die Statements _import_ und _require_ werden dafür verwendet um externe sowie lokale Module zu laden. 
@@ -484,7 +486,7 @@ Prinzipiell erfüllen die Statements den gleichen Zweck, sie laden Module jeglic
 
 ## Higher Order Functions
 
-**Aufgabe: ** Schaut, was diese Funktionen in JavaScript bzw. TypeScript mit Daten bzw. Arrays machen.
+**Aufgabe: ** Schaut, was diese Funktionen in JavaScript bzw. TypeScript mit Daten bzw. Arrays machen bzw. was damit erreicht wird:
 
 - Filter
 - Map
@@ -496,7 +498,7 @@ Prinzipiell erfüllen die Statements den gleichen Zweck, sie laden Module jeglic
 
 Es gibt in TypeScript bzw. JavaScript mehrere Möglichkeiten das Dateisystem anzusteuern bzw. Dateien aus dem Dateisystem zu lesen:
 
-1. import: Generell wird das import Statement dazu verwendet um Funktionen, Objekte und Primitives von anderen Modulen, Skripten, etc. zu importieren.
+1. _import_ oder _require_: Generell wird das _import_ bzw. das _require_ Statement dazu verwendet um Funktionen, Objekte und Primitives von anderen Modulen, Skripten, etc. zu importieren.
 Allerdings lassen sich damit auch Dateien aus dem Dateisystem lesen:
 
 **Beispiel:**
