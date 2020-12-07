@@ -470,9 +470,21 @@ hinterlegen, der ausgeführt werden soll, sobald ein _Event_, ein Ereignis, eint
 
 Es handelt sich um Zeichenketten, mit denen nach bestimmten syntaktischen Regeln Mengen definieren lassen. Somit kann man Texte nach bestimmte Kriterien durchsuchen und sich zum Beispiel die Menge an Wörtern zurückgeben lassen, die die gesetzten Kriterien erfüllen.
 
-Im Kapitel L11_RegularExpressions gehen wir noch einmal genauer darauf ein.
+## Import vs Require
+
+Die Statements _import_ und _require_ werden dafür verwendet um externe sowie lokale Module zu laden. 
+Die Idee der beiden Statements ist dabei die Gleiche, es geht darum das Programm in separate Dateien zu trennen anstatt alles in einer Datei zu haben. Das Konzept findet sich beispielsweise so auch in _Python_ mit _import_ oder in _C_ mit _include_.
+Während allerdings _import_ zum JavaScript Standard gehört und dieser ebenso von Browsern unterstützt wird ist _require_ nur in Verbindung mit Node.js möglich, bei dem es eine Built-in Funktionalität ist.
+
+Prinzipiell erfüllen die Statements den gleichen Zweck, sie laden Module jeglicher Art in eine Applikation, hierbei kann man drei Module Arten unterscheiden:
+
+1. Built-in Core Node.js Module wie _readline_ oder _fs_
+2. NPM Module, welche im node_modules Ordner zu finden sind wie _lodash_, _express_ oder _request_
+3. Lokale Module, welche selbst programmiert wurden, um etwas abzubilden, bspw. eine immer währende Konstante wie Pi oder ähnliches.
 
 ## Higher Order Functions
+
+**Aufgabe: ** Schaut, was diese Funktionen in JavaScript bzw. TypeScript mit Daten bzw. Arrays machen.
 
 - Filter
 - Map
@@ -480,6 +492,27 @@ Im Kapitel L11_RegularExpressions gehen wir noch einmal genauer darauf ein.
 - Sort
 - FindIndex
 
-## Promises
-
 ## FileSystem
+
+Es gibt in TypeScript bzw. JavaScript mehrere Möglichkeiten das Dateisystem anzusteuern bzw. Dateien aus dem Dateisystem zu lesen:
+
+1. import: Generell wird das import Statement dazu verwendet um Funktionen, Objekte und Primitives von anderen Modulen, Skripten, etc. zu importieren.
+Allerdings lassen sich damit auch Dateien aus dem Dateisystem lesen:
+
+**Beispiel:**
+```TypeScript
+  import Movies from "./movies.json"
+```
+
+[import Dokumentation](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Statements/import)
+
+2. Nodejs Filesystem (fs): Das fs Modul erlaubt es mit dem Dateisystem in modernen JavaScript Applikationen zu interagieren. Dabei bittet das Modul alle Operationen um mit dem Dateisystem zu interagieren synchron, per Callback oder per Promises an:
+
+**Beispiel:**
+```JavaScript
+  const fs = require('fs');
+  const rawdata = fs.readFileSync("./movies.json");
+  const jsondata = JSON.parse(rawdata);
+```
+
+[Nodejs Filesystem Dokumentation](https://nodejs.org/api/fs.html#fs_file_system)
