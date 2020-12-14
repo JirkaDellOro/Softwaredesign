@@ -21,6 +21,7 @@ class ConsoleHandling {
   }
 
   public question(question: string, answers?: string[]) {
+    console.log("Ich bin hier!");
     this.consoleLine.question('Is this example useful? [y/n] ', (answer: string) => {
       switch(answer.toLowerCase()) {
         case 'y':

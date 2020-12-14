@@ -1,12 +1,10 @@
-import { v4 } from 'uuid';
-
 export class Person {
-  private Uuid: string = v4();
   private Name: string;
   private Age: number;
   private Gender?: string;
 
   constructor(name: string, age: number) {
+    debugger;
     this.Name = name;
     this.Age = age;
   }

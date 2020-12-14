@@ -5,6 +5,7 @@
   "main": "main.js",
   "scripts": {
     "start": "ts-node-dev --respawn --transpile-only ./src/main.ts",
+    "debug": "tsc",
     "build:prod": "webpack --mode=production --progress"
   },
   "author": "",
