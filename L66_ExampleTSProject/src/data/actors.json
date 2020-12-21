@@ -1,0 +1,17 @@
+[
+  {
+    "actors_name": "Michael Caine",
+    "birthday": "14-03-1933",
+    "nationality": "Briton"
+  },
+  {
+    "actors_name": "Morgan Freeman",
+    "birthday": "01-06-1937",
+    "nationality": "American"
+  },
+  {
+    "actors_name": "Marlon Brando",  
+    "birthday": "03-04-1924",
+    "nationality": "American"
+  }
+]

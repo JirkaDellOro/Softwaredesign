@@ -1,3 +1,4 @@
+import { resolve } from 'path';
 import * as readline from 'readline';
 
 class ConsoleHandling {
@@ -20,24 +21,32 @@ class ConsoleHandling {
     return ConsoleHandling.instance
   }
 
-  public question(question: string, answers?: string[]) {
-    console.log("Ich bin hier!");
-    this.consoleLine.question('Is this example useful? [y/n] ', (answer: string) => {
-      switch(answer.toLowerCase()) {
-        case 'y':
-          console.log('Super!');
-          break;
-        case 'n':
-          console.log('Sorry! :(');
-          break;
-        default:
-          console.log('Invalid answer!');
-      }
-    });
+  public question(question: String) : Promise<String> {
+    let answer : String = "";
+    return new Promise(resolve => this.consoleLine.question(question.toString(), (_answer: string) => {
+      answer = _answer;
+      resolve(answer);
+    }));
+  }
+
+  public showPossibilities(showPossibilities : String[], question: String) : Promise<String> {
+    this.consoleLine.write("\n")
+    this.consoleLine.write("Functions you can use: ");
+    this.consoleLine.write("\n\n");
+    for(let possibility of showPossibilities) {
+      this.consoleLine.write(possibility.toString());
+      this.consoleLine.write("\n")
+    }
+    this.consoleLine.write("\n");
+
+    return new Promise(resolve => this.consoleLine.question(question.toString(), (answer: string) => {
+      resolve(answer);
+    }));
   }
 
   public printInput(input: string) {
     this.consoleLine.write(input);
+    this.consoleLine.write("\n");
   }
 
   public closeConsole() {

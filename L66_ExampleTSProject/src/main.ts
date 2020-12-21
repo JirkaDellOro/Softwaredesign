@@ -1,10 +1,6 @@
-import ConsoleHandling from "./classes/ConsoleHandling"
-import { Person } from "./classes/Person";
-import { Pi } from "./const/Pi";
+import { MovieDatabase } from "./MovieDatabase";
 
-// ConsoleHandling.question("ABC");
-let myself : any;
+let moviedb : MovieDatabase = new MovieDatabase();
 
-myself = new Person("Chris", 29);
 
-ConsoleHandling.printInput(myself.sayMyNameAndAge());
+moviedb.showFunctionalities();
