@@ -1,3 +1,9 @@
+## Requirements
+
+- Node.js
+- Node Package Manager (npm)
+- Visual Studio Code or other IDE
+
 ## To get this to work:
 
 1. Download all files in this folder
