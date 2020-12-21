@@ -1,4 +1,13 @@
-# Unit-Tests
+# Software-Testing
+
+Das Software-Testing prüft und bewertet eine Applikation / Software auf Erfüllung der für ihren Einsatz definierten Anforderungen und misst die resultierende Qualität. Hierbei spielen funktionale und nicht-funktionale Anforderungen eine Rolle. Aus Software-Tests gehen Erkenntnisse heraus, ob eine Applikation / Software die bestimmten Anforderungen erfüllt, ob Fehler erkannt wurden, ob die Abnahme erfolgen kann und ob eine Software in Betrieb genommen werden kann.
+
+Den tatsächlichen Nachweis, dass eine Applikation fehlerfrei ist kann das Software-Testing nicht erbringen. Es kann lediglich überprüfen, ob die definierten Anforderungen in der Software umgesetzt wurden und die Applikation die Erwartungen erfüllt. So beschreibt auch der niederländische Informatiker Edsger W. Dijkstra folgerichtig: "Program testing can be used to show the presence of bugs, but never show their absence!". Weil es ebenso Fehlverhalten geben kann, welche nicht mit spezifischen Software-Tests zu überprüfen sind.
+
+#### TODO
+
+> - Rechieriert was funktionale und nicht-funktionale Anforderungen von Software sind.
+> - Wie würdet Ihr nicht-funktionale Anforderungen am Besten testen?
 
 ## Software-Tests
 
@@ -14,21 +23,19 @@ Während bei Programmieraufgaben von der Komplexität einer Übungsaufgabe Entwi
 Test von ein- und der selben Person zeitgleich mit der eigentlichen Entwicklung einhergeht,
 reicht schon bei vergleichsweise kleinen Software-Projekten, an deren Entwicklung mehr als 
 eine Person beteiligt ist, ein reiner _Entwickler-Test_ nicht mehr aus. Es gibt unterschiedliche
-Test-Arten mit unterschiedlichen Testkriterien und -zielen. Auf der 
-Wikipedia-Seite zu Software Tests gibt es eine Kategorisierung in unterschiedliche 
-[Teststufen](https://de.wikipedia.org/wiki/Softwaretest#Teststufen)
-mit kurzen Definitionen zu jeder Stufe. Hier werden die unterschiedlichen Ziele der verschiedenen
-Spielarten von Software-Tests klar. Bei unterschiedlichen Software-Projekten gibt es zudem 
-unterschiedliche Ausprägungen der einzelnen Stufen. Tests für die Steuerungssoftware eines
-Atomreaktors sehen anders aus als Tests für ein MMORPG. Eine Reihe dieser Teststufen 
-kann nur mit hohem Personalaufwand (_Tester_) betrieben werden.
+Teststufen mit unterschiedlichen Kriterien und Zielen.
+Bei unterschiedlichen Software-Projekten gibt es unterschiedliche Ausprägungen der einzelnen Stufen. Tests für die Steuerungssoftware eines Atomreaktors sehen anders aus als Tests für ein MMORPG. Dabei spielen auch umweltliche Gegebenenheiten, wie Zertifizierungen, Gesetze, usw. eine Rolle. Eine Reihe dieser Teststufen kann nur mit hohem Personalaufwand (_Tester_) betrieben werden.
 
 > #### TODO
 >
-> - Lest euch die Definitionen der [Teststufen](https://de.wikipedia.org/wiki/Softwaretest#Teststufen)
->   durch. 
-> - Wählt eine euch bekannte Software aus und erläutert euch gegenseitig mit Beispielen, wie Ihr 
->   euch die jeweiligen Teststufen während der Entwicklung vorstellt.
+> - Recheriert die einzelnen Teststufen, die während eines kompletten Software-Tests aufkommen können.
+> - Sammelt Beispiele von bekannten Softwareprogammen und erläutert anhand dieser wie die einzelnen Teststufen aussehen können.
+
+## Teststufen
+
+![Testing Pyramide](../img/ct_pyramid.png)
+
+![V-Modell](../img/vmodell.png)
 
 Das Augenmerk dieser Lektion liegt auf ***automatisierbaren Tests***, die von Software-Entwicklern
 während des Entwicklungsprozess' -quasi nebenher- erstellt werden. Mit dieser Art von 
@@ -38,15 +45,20 @@ die Funktionsfähigkeit auf Methoden-/Funktions-/Klassen- oder Modulebene erreic
 Diese Art von automatisierten Tests, die von Entwicklern erstellt werden und die 
 Richtigkeit einer abgeschlossenen _Software-Einheit_ testen, heißen ***Unit Tests***.
 
+## Unit Tests
+
+Ein Unit Test testet lediglich einen kleinen Teil des Source Codes auf Korrektheit, bspw. eine Klasse oder eine Funktion.
+In der Regel erstellen hierbei die Entwickler die Tests und legen die Testkriterien der Softwareeinheit fest. Dabei sind Unit Tests immer darauf ausgerichtet die funktionalen Anforderungen der Einzelteile auf Korrektheit zu überprüfen. Nicht-funktionale Anforderungen lassen sich durch Unit Tests nicht abdecken, da an dieser Stelle das Hauptaugenmerk nur auf einen bestimmten Teil des Programms gelegt wird und nicht auf das große Ganze. So sind die nicht-funktionalen Anforderungen nur mit groß anglegten Testverfahren für die Gesamt-Applikation auf Erfüllung zu kontrollieren.
+
 ## Hello Unit Test
 
 ### Jest
 
-Jest ist ein Testing Framework für JavaScript, dass aber auch TypeScript-Unterstützung anbietet. Es kann via npm installiert werden
+Jest ist ein Testing Framework für JavaScript, dass aber auch TypeScript-Unterstützung anbietet. Es kann via npm installiert werden.
 
 > #### TODO
 >
-> - Legt einen neuen Unterordner mit dem Namen `L09_UnitTesting` an 
+> - Legt einen neuen Unterordner mit dem Namen `L09_SoftwareTesting` an 
 > - Wechselt per cd auf der Konsole in diesen Ordner und initalisiert npm `npm init`
 > - Installiert folgende Module `npm install -D typescript jest ts-jest @types/jest`
 > - Legt eine neue `tsconfig.json` mit allen nötigen Einstellungen an: `npx tsc --init`
