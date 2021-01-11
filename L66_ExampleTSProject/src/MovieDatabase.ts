@@ -78,11 +78,8 @@ export class MovieDatabase {
 
     ConsoleHandling.printInput("\n")
     movie = movie !== undefined ? movie : new NullMovie();
-    if(movie.getMovieName() === "") 
-      ConsoleHandling.printInput("No movie found with this title!");
-    else 
-      ConsoleHandling.printInput(`${movie.getMovieName()} is released in ${movie.getReleaseYear()} and directed by ${movie.getDirector()}`);
-    ConsoleHandling.printInput("\n")
+  
+    ConsoleHandling.printInput(movie.getMovieName().toString());
   }
 
   public async goNext(): Promise<void> {

@@ -1,9 +1,11 @@
+import { ActorDAO } from "../types/actordao.type";
+
 export class Actor {
   private _actorsName: String;
   private _birthday: String;
   private _nationality: String;
 
-  constructor(actor: any) {
+  constructor(actor: ActorDAO) {
     this._actorsName = actor.actors_name;
     this._birthday = actor.birthday;
     this._nationality = actor.nationality;
