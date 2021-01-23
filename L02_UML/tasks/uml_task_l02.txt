@@ -1,0 +1,12 @@
+Konzipieren Sie ein Quiz-Spiel.
+
+Der Nutzer kann wählen, ob er eine Quizfrage beantworten, oder ein neues Quizelement einpflegen möchte. 
+Quizelemente bestehen aus einer Frage und einer Anzahl von 2 bis 6 Antwortmöglichkeiten, 
+von denen eine die richtige Antwort darstellt. Je nach Frage kann die Anzahl der Antwortoptionen variieren. 
+Nach jeder bearbeiteten Frage wird der Nutzer wieder vor die anfängliche Wahl gestellt und kann auch das Programm verlassen.
+
+Es wird ein Punktekonto geführt, beim Beantworten der Fragen erhält der Nutzer für jede richtige Antwort Punkte. 
+Sein Punktestand, sowie die Anzahl der bislang erschienenen Fragen, werden ihm bei der Aktionsauswahl dargestellt.
+
+Damit zu Beginn bereits ein Pool von Fragen vorhanden ist, sind einige direkt im Code bereits angelegt. 
+Vom Nutzer hinzugefügte Quizelemente werden derzeit nicht gespeichert und gehen nach Beendigung des Programms verloren.
