@@ -1,11 +1,13 @@
 import { ActorDAO } from "../types/actordao.type";
 
 export class Actor {
+  public id : Number;
   private _actorsName: String;
   private _birthday: String;
   private _nationality: String;
 
   constructor(actor: ActorDAO) {
+    this.id = Math.random();
     this._actorsName = actor.actors_name;
     this._birthday = actor.birthday;
     this._nationality = actor.nationality;

@@ -2,8 +2,7 @@ import ConsoleHandling from "./classes/ConsoleHandling";
 import { Movie } from "./classes/Movie";
 import { NullMovie } from "./classes/NullMovie";
 import { Actor } from "./classes/Actor";
-import fs from "fs";
-import path from "path";
+import { FileHandler } from "./classes/FileHandler";
 import { MovieDAO } from "./types/moviedao.type";
 import { ActorDAO } from "./types/actordao.type";
 import { AbstractMovie } from "./classes/abstracts/AbstractMovie";
@@ -13,11 +12,14 @@ export class MovieDatabase {
   private _actors: Actor[] = [];
 
   constructor() {
-    let moviesRaw = fs.readFileSync(path.resolve(__dirname, 'F:/Dozent/02_SoftwareDesign/git/Softwaredesign/L66_ExampleTSProject/src/data/movies.json'));
-    let moviesJson : MovieDAO[] = JSON.parse(moviesRaw.toString());
+    let fileHandler = new FileHandler();
+    let moviesJson : MovieDAO[] = fileHandler.readArrayFile('../data/movies.json');
+    let actorsJson : ActorDAO[] = fileHandler.readArrayFile('../data/actors.json');
+    // let specificActorJson : ActorDAO = fileHandler.readObjectFile('../data/actor.json');
 
-    let actorsRaw = fs.readFileSync(path.resolve(__dirname, 'F:/Dozent/02_SoftwareDesign/git/Softwaredesign/L66_ExampleTSProject/src/data/actors.json'));
-    let actorsJson : ActorDAO[] = JSON.parse(actorsRaw.toString());
+    // let specificActor : Actor = new Actor(specificActorJson);
+
+    // fileHandler.writeFile(`../data/${specificActor.id}.json`, specificActor);
     
     for(let movie of moviesJson) {
       this._movies.push(new Movie(movie));

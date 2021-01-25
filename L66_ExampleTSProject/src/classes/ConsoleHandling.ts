@@ -23,10 +23,12 @@ class ConsoleHandling {
 
   public question(question: String) : Promise<String> {
     let answer : String = "";
-    return new Promise(resolve => this.consoleLine.question(question.toString(), (_answer: string) => {
-      answer = _answer;
-      resolve(answer);
-    }));
+    return new Promise((resolve) => {
+      this.consoleLine.question(question.toString(), (_answer: string) => {
+        answer = _answer;
+        resolve(answer);
+      })
+    });
   }
 
   public showPossibilities(showPossibilities : String[], question: String) : Promise<String> {
@@ -39,7 +41,7 @@ class ConsoleHandling {
     }
     this.consoleLine.write("\n");
 
-    return new Promise(resolve => this.consoleLine.question(question.toString(), (answer: string) => {
+    return new Promise((resolve) => this.consoleLine.question(question.toString(), (answer: string) => {
       resolve(answer);
     }));
   }
