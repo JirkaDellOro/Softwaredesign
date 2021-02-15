@@ -54,10 +54,10 @@ und Klassendiagramme** betrachtet werden.
 
 ## Use Case Diagramm / Anwendungsfalldiagramm
 
-Das Use Case Diagramm besteht im Wesentlichen aus drei unterschiedlichen Elementen. Den Akteuren, die Rolle bzw. Person im System, den Anwendungsfällen, die Funktionen bzw. Aufgaben des Systems, und deren Beziehungen untereinander.
+Das Use Case Diagramm besteht im Wesentlichen aus drei unterschiedlichen Elementen. Den Akteuren, die Rolle bzw. Person im System, den Anwendungsfällen, die Funktionen bzw. Aufgaben des Systems, und deren Beziehungen untereinander. Ein Akteur ist dabei nicht unbedingt eine Person, sondern es kann sich auch um ein anderes System handeln.
 Also klärt ein Use Case Diagramm über folgende Fragen auf:
 
-  - Welche Rollen bzw. Personen gibt es in einem System?
+  - Welche Rollen bzw. Akteure gibt es in einem System?
   - Welche Aufgaben bzw. Funktionen soll das System erfüllen?
   - Welche Rolle darf welche Aufgabe innerhalb des Systems verwalten bzw. ausführen?
   - Wie sind die Rollen miteinander verknüpft?
@@ -200,6 +200,10 @@ gilt folgende Symbolik:
 `#` protected  
 `~` package (entspricht `internal` in C#)  
 Weiterhin können bei Bedarf Parameterlisten, Standardwerte oder Zusicherungen usw. angegeben werden.
+
+Für sowohl die Anzahl der Properties als auch die Anzahl der Methoden gilt: So wenig wie möglich. Im Zweifelsfall
+sollte man die Klasse lieber in zwei Klassen aufteilen, um die Komplexität so gering wie möglich zu halten.
+Es gilt das Prinzip: Eine Klasse soll nur so schlau wie nötig und so dumm wie möglich sein.
 
 
 ### Interface
