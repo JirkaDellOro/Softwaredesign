@@ -16,13 +16,13 @@ kostenlos, OpenSource und plattformübergreifend (Windows, MacOS, Linux) sind.
 
 - Visual Studio Code (Integrierte Entwicklungsumgebung / Editor)
 
-## Eingebaute Datentypen von JavaScript
+## Variablenbezeichner in JavaScript
 
 TypeScript erweitert JavaScript um eine spezifischere Typisierung. Allerdings müssen immer noch die gängigen Variablendeklarationen von JS benutzt werden. Diese lauten wie folgt:
 
-- `let` der Gültigkeitsbereich erstreckt sich lediglich über den lokalen Block. Der Begriff leitet sich von dem englischen Verb 'to let' ab. Beispiel (let x = 5, etwa: 'lassen wir x 5 sein'). Die Werte der Variable lassen sich nach der Initialisierung noch ändern.
-- `const` der Gültigkeitsbereich erstreckt sich lediglich über den lokalen Block. Der Wert einer solchen Variablen kann nicht mehr geändert werden. Attributwerte eines Objekts, das mit const deklariert wurde lassen sich jedoch ändern.
-- `var` der Gültigkeitsbereich erstreckt sich über die jeweilige Funktion. Das heißt eine Variable die mit var in einer Schleife deklariert wurde, ist auch außerhalb der Schleife bekannt. solange man sich in der selben Funktion befindet.
+- `let` der Gültigkeitsbereich erstreckt sich lediglich über den lokalen Block (block scoped). Der Begriff leitet sich von dem englischen Verb 'to let' ab. Beispiel (let x = 5, etwa: 'lassen wir x 5 sein'). Die Werte der Variable lassen sich nach der Initialisierung noch ändern.
+- `const` der Gültigkeitsbereich erstreckt sich lediglich über den lokalen Block (block scoped). Der Wert einer solchen Variablen kann nicht mehr geändert werden. Attributwerte eines Objekts, das mit const deklariert wurde lassen sich jedoch ändern.
+- `var` der Gültigkeitsbereich erstreckt sich über die jeweilige Funktion (function scoped). Das heißt eine Variable die mit var in einer Schleife deklariert wurde, ist auch außerhalb der Schleife bekannt, solange man sich in der selben Funktion befindet. `let` ist `var` vorzuziehen. Dieser Ausdruck kamen mit dem ES6-Standard.
 
 ## Eingebaute Datentypen von TypeScript
 
@@ -35,6 +35,12 @@ TypeScript erweitert JavaScript um eine spezifischere Typisierung. Allerdings m�
 
 - `string` zum Speichern beliebig langer Zeichenketten.
 
+- `unknown` zum Speichern von Werten, deren Typ noch nicht bekannt ist (z.B Benutzereingaben)
+
+- `any` zum Speichern von Werten von externen Quellen, die nicht in TypeScript geschrieben sind
+
+- `void` ist nur im Zusammenhang mit Methoden die keinen Rückgabewert haben interessant
+
 Anmerkung: `char` gibt es in TypeScript nicht
 
 [Referenzdokumentation](https://www.typescriptlang.org/docs/handbook/basic-types.html)
@@ -44,10 +50,10 @@ Anmerkung: `char` gibt es in TypeScript nicht
 In TypeScript können Variablen im Programmcode mit folgender Syntax deklariert werden:
 
 ```TypeScript
-jsTyp identifizierer: tsTyp;
+jsBezeichner identifizierer: tsTyp;
 ```
 
-Dabei gibt `jsTyp` den Datentyp an, also z.B. einen der o.g. eingebauten Datentypen. `identifizierer` ist dabei der
+Dabei gibt `jsBezeichner` an, ob der Wert einer Variablen endgültig, oder noch änderbar ist. `identifizierer` ist dabei der
 frei wählbare Variablenname. In TypeScript gilt:
 
 - Jede verwendete Variable ***muss*** zuvor deklariert worden sein.
@@ -122,6 +128,7 @@ Grund-Typ      | Array-Typ
 ...            | ...
 
 Anmerkung: Wie in JS sind TS-Arrays dynamisch. Das heißt sie sind komplexe Objekte, über die sich Methoden ausführen lassen, die sie manipulieren. Z.B kann man einen Wert entfernen, was den Array um einen Index schrumpfen lässt. Das ist vergleichbar mit Vektoren und ArrayLists.
+
 
 ### Deklaration von Array-Variablen
 
