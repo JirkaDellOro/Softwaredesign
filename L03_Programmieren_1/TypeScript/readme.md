@@ -132,10 +132,11 @@ Anmerkung: Wie in JS sind TS-Arrays dynamisch. Das heißt sie sind komplexe Obje
 
 ### Deklaration von Array-Variablen
 
-Bei der Deklaration von Array-Variablen muss, nach o.a. Schema `typ identifizierer;` zusätzlich auch noch
-angegeben werden, wieviel Speicherplätze des Grund-Typs durch den Variablennamen (den `identifizierer`)
-verwendbar sein sollen. Dies geschieht durch eine Initialisierung, bei der der die gewünschte Anzahl angegeben
-wird. Betrachtet folgenden Code:
+In TypeScript ist grundsätzlich zu beachten, dass Arrays nicht wie in den meisten Programmiersprachen eine feste Länge haben, sondern
+dynamisch sind. Das heißt die Länge ändert sich je nachdem ob man ein neues Element hinzufügt oder entfernt.
+Das kann man über verschiedene Array Methoden erreichen.
+
+Eine Möglichkeit einen Array zu definieren ist, im eine Ausgangslänge zuzuweisen:
 
 ```TypeScript
     let ia: number[] = new Array(10);
@@ -185,7 +186,7 @@ Wie man sieht, beginnen die _Indizes_, mit denen die einzelnen Speicherplätze i
 wie in vielen anderen Programmiersprachen auch, immer bei **0**. Daher werden die zehn Array-Speicherplätze 
 mit den Indizes von 0 bis 9 angesprochen. Der Zugriff erfolgt dabei mit eckigen Klammern, in die der
 Index geschrieben wird, hinter dem Array-Variablennamen. Oben sieht man _schreibenden_ Zugriff auf 
-einzelne Array-Speicherplätze: Die Ausdrücke `ia[<index>]` stehen _links_ des Zuweisungsoperators (`=`).
+einzelne Array-Speicherplätze: Die Ausdrücke `ia[xindexx]` stehen _links_ des Zuweisungsoperators (`=`).
 Genausogut kann auch _lesend_ auf einzelne Array-Speicherplätze zugegriffen werden, indem gleichartige
 Ausdrücke auf der rechten Seite einer Zuweisung oder in anderen zusammen gesetzten Ausdrücken verwendet
 werden.
@@ -234,6 +235,65 @@ wieviel Einträge der Array enthält.
 >   `console.log(ia.length);`
 >   die Anzahl der Einträge aus.
 > - Ändert die Anzahl der Einträge und überprüft die Ausgabe.
+
+
+### Homo- und heterogene Arrays
+
+Grundsätzlich sind Arrays in Java-script und Typescript heterogen. Das bedeutet, dass sie unterschiedliche Typen
+von Werten enthalten können:
+
+```TypeScript
+    let ia: any[] = ['Es kann eine String sein', true, 1];
+```
+
+TypeScript gibt uns die Möglichkeit die Typen zu beschränken:
+
+```TypeScript
+    let ia: number[] | string[] = ['Jetzt kann man keinen Boolean mehr hinzufügen', 1];
+```
+Mit dieser Beschränkung ist es nicht mehr möglich, dem Array einen bool'schen Wert hinzuzufügen. 
+Durch `|` erstellen wir hier einen so genannten `Union Type`.
+
+Will man wie in anderen Programmiersprachen einen homogenen Array erzeugen, geht das folgendermaßen:
+
+```TypeScript
+    let ia: string[] = ['Jetzt kann der Array...', '...wirklich nur noch Strings enthalten'];
+```
+
+In diesen Array kann man nur noch Strings einfügen.
+
+### Assoziative Arrays
+
+In einem einfachen Array kann man über die Indizes auf bestimmte Werte dieses Arrays zugreifen.
+Will man jedoch über einen String auf einzelne Werte zugreifen, kann man das über einen
+assoziativen Array machen:
+
+```TypeScript
+var myArr: any = {
+  "ersterWert": true,
+  "zweiterWert": "Zweiter Wert"
+}
+
+console.log(myArr.ersterWert);
+```
+
+Auch hier ist es möglich eine Typenbeschränkung zu defineren. Allerdings ist dafür der Zwischenschritt über
+ein Interface nötig
+
+
+```TypeScript
+interface MyType {
+    [key: string]: string | boolean | number;
+}
+
+var obj: MyType = {
+    key1: "apple",
+    key2: true,
+    key3: 123
+};
+
+console.log(obj.key1)
+```
 
 ## Strings
 
@@ -300,15 +360,20 @@ In TypeScript können, wie in vielen anderen Programmiersprachen auch, mit dem S
 ```TypeScript
   public class Person
   {
-      public Name: string;
-      public Personalnummer: number;  
+      public name: string;
+      public personalnummer: number;  
+
+      constructor(_name: string, _age: number) {
+        this.name = _name;
+        this.age = _age;
+      }
   }
 ```
 
 Oben stehender Code erzeugt einen neuen Datentyp namens `Person`, indem dieser aus den 
 bestehenden Datentypen `string` und `number` zusammen gesetzt wird. Jeder Wert vom Typ
 `Person` besteht demnach aus einer Komponente `Name` vom Typ `string` und einer
-Komponente `Personalnummer` vom Typ `number`. Derart selbst definierte Datentypen
+Komponente `personalnummer` vom Typ `number`. Derart selbst definierte Datentypen
 heißen auch ***zusammengesetzte Datentypen***.
 
 Dieser Typ kann nun überall dort verwendet
@@ -340,8 +405,8 @@ Objekt-Zugriffs-Operator (`.`) verwendet.
 
 ```TypeScript
   let jemand: Person = new Person();
-  jemand.Name = "Horst";
-  jemand.Personalnummer = 42;
+  jemand.name = "Horst";
+  jemand.personalnummer = 42;
 ```
 
 In TypeScript gibt es eine abkürzende Schreibweise für diese beiden Initialisierungsschritte. Mit einem
@@ -370,13 +435,13 @@ Die if/else Anweisung, führt auf Grund eines Wahrheitswertes (vom Typ `boolean`
 Code-Blöcken aus. Die allgemeine Syntax ist wie folgt:
 
 ```TypeScript
-  if (<BEDINGUNG>)
+  if (xBEDINGUNGx)
   {
-      // Anweisungsblock, der ausgeführt, falls <BEDINGUNG> true ist
+      // Anweisungsblock, der ausgeführt, falls xBEDINGUNGx true ist
   }
   else
   {
-      // Anweisungsblock, der ausgeführt, falls <BEDINGUNG> false ist
+      // Anweisungsblock, der ausgeführt, falls xBEDINGUNGx false ist
   }
 ```
 
@@ -385,7 +450,7 @@ ausgeführt.
 
 #### Bedingungen der `if`-Anweisung
 
-Die `<BEDINGUNG>` ist dabei ein Ausdruck, der einen Wert vom Typ `boolean` ergibt. Im einfachsten
+Die `xBEDINGUNGx` ist dabei ein Ausdruck, der einen Wert vom Typ `boolean` ergibt. Im einfachsten
 Fall kann das einfach eine bool'sche Variable sein. Sehr oft wird aber ein Vergleichsoperator
 verwendet. Im Folgenden eine Liste der in TypeScript vorhandenen Vergleichsoperatoren. Für die Beispiele
 seien
@@ -399,11 +464,11 @@ seien
 Vergleichsoperator   |  Bedeutung                    | Beispiel
 ---------------------|-------------------------------|--------------
 `===`                | ist gleich (Typkonvertierung) | `boolean erg = (a === b); // erg ist true`
-`==`                 | ist gleich                    | `boolean erg = (a == b); // erg ist true`
-`<`                  | kleiner                       | `boolean erg = (a < c);  // erg ist true`
-`<=`                 | kleiner oder gleich           | `boolean erg = (a <= b); // erg ist true`
-`>`                  | größer                        | `boolean erg = (a < c);  // erg ist true`
-`>=`                 | größer oder gleich            | `boolean erg = (a <= b); // erg ist true`
+`==`                 | ist gleich                    | `boolean erg = (a == b);  // erg ist true`
+`>`                  | größer                        | `boolean erg = (c > a);   // erg ist true`
+`>=`                 | größer oder gleich            | `boolean erg = (a >= b);  // erg ist true`
+`<`                  | kleiner                       | `boolean erg = (a < c);   // erg ist true`
+`<=`                 | kleiner oder gleich           | `boolean erg = (a <= b);  // erg ist true`
 
 > #### TODO
 >
@@ -479,48 +544,48 @@ Programmfluss zu beeinflussen. TypeScript kennt eine Reihe unterschiedlicher  Sc
 Schleifen mit `while` haben folgenden Aufbau
 
 ```TypeScript
-  while (<BEDINGUNG>)
+  while (xBEDINGUNGx)
   {
     // Schleifenrumpf
   }
 ```
 
-Zu ***Beginn*** jedes Schleifendurchlaufs wird die Bedingung evaluiert. `<Bedingung>` muss dabei ein
+Zu ***Beginn*** jedes Schleifendurchlaufs wird die Bedingung evaluiert. `xBedingungx` muss dabei ein
 Ausdruck sein, der einen `bool`'schen Wert ergibt, also wie bei `if` beispielsweise ein Vergleich
 mit einem der Vergleichsoperatoren oder eine Kombination mehrerer `bool`'scher Werte, die mit logischen
 Operatoren miteinander verknüpft sind.
 
-Ergibt `<Bedingung>` den Wert `true`, wird der Schleifenrumpf (also alle Anweisungen, die zwischen
+Ergibt `xBedingungx` den Wert `true`, wird der Schleifenrumpf (also alle Anweisungen, die zwischen
 `{` und `}` stehen) einmal ausgeführt und dann wird erneut zum Beginn der `while`-Schleife verzweigt
-und die Bedingung erneut überprüft. Das geschieht so lange, bis `<Bedingung>` den Wert `false`
+und die Bedingung erneut überprüft. Das geschieht so lange, bis `xBedingungx` den Wert `false`
 ergibt: Dann wird der Schleifenrumpf nicht ausgeführt und der Programmfluss fährt mit der nächsten
 Anweisung _nach_  dem Schleifenrumpf fort.
 
 Insbesondere kann es passieren, dass der Rumpf einer `while`-Schleife  _gar nicht_ ausgeführt
-wird, wenn gleich die erste Evaluierung von `<Bedingung>` den Wert `false` ergibt.
+wird, wenn gleich die erste Evaluierung von `xBedingungx` den Wert `false` ergibt.
 
 Viele `while`-Schleifen sind nach folgendem Muster aufgebaut:
 
 ```TypeScript
-  <INITIALISIERUNG>;
-  while (<BEDINGUNG>)
+  xINITIALISIERUNGx;
+  while (xBEDINGUNGx)
   {
     // Schleifenrumpf
-    <INKREMENT>;
+    xINKREMENTx;
   }
 ```
 
-_Vor_ der eigentlichen Schleife befindet sich eine Anweisung (hier `<INITIALISIERUNG>` genannt), in 
-der die Voraussetzung für die allererste Überprüfung der `<BEDINGUNG>` geschaffen wird.
+_Vor_ der eigentlichen Schleife befindet sich eine Anweisung (hier `xINITIALISIERUNGx` genannt), in 
+der die Voraussetzung für die allererste Überprüfung der `xBEDINGUNGx` geschaffen wird.
 
 Als letzter Schritt im Schleifenrumpf befindet sich eine Anweisung, die einen Teil der zu überprüfenden
-Bedingung verändert, dieser Schritt wird `<INKREMENT>` genannt.
+Bedingung verändert, dieser Schritt wird `xINKREMENTx` genannt.
 
 > #### TODO
 >
 > - Erzeugt ein TypeScript Programm, das in einer `while`-Schleife die Zahlen von 1 bis 10 auf der Konsole
 >   ausgibt. 
-> - Wie lauten hier die Teile `<INITIALISIERUNG>`, `<BEDINGUNG>` und `<INKREMENT>`?
+> - Wie lauten hier die Teile `xINITIALISIERUNGx`, `xBEDINGUNGx` und `xINKREMENTx`?
 
 ### `for` 
 
@@ -529,7 +594,7 @@ einer `while`-Schleife mit vorangehendem Initialsierungsteil und Inkrement-Teil 
 Schleifenrumpfes bietet das Schleifenkonstrukt mit `for`, das folgendermaßen aussieht:
 
 ```TypeScript
-  for (<INITIALISIERUNG>; <BEDINGUNG>; <INKREMENT>)
+  for (xINITIALISIERUNGx; xBEDINGUNGx; xINKREMENTx)
   {
     // Schleifenrumpf
   }
@@ -593,7 +658,7 @@ mit `break` die Schleife zu verlassen.
     console.log(someStrings[i]);
     i++;
   }
-  while (i < 5);
+  while (i <> 5);
 ```
 
 #### Schleife mit `break`
@@ -628,7 +693,7 @@ In Arrays kann das, wie im Beispiel oben, über einen Index (meistens `i` genann
 dem dann innerhalb des Schleifenrumpfes auf den jeweiligen Array-Eintrag zugegriffen wird. Die
 hierzu notwendige _Index-Arithmetik_ (Initialisieren mit 0, Inkrementieren am Ende) ist zwar nicht
 sehr aufwändig, bedeutet aber dennoch einerseits einen gewissen Aufwand und andererseits Kenntnisse über den internen Aufbau eines Arrays (Zugriff auf einzelne Elemente über `[]`). Eine abkürzende Schreibweise für
-das Iterieren über die Inhalte von _Kollektionen_ wie Arrays kann mit der `foreach`-Anweisung
+das Iterieren über die Inhalte von _Kollektionen_ wie Arrays kann mit der `foreach`-Anweisung, genauer gesagt mit mit `foreach of`-Anweisung
 implementiert werden:
 
 ```TypeScript
@@ -638,6 +703,16 @@ implementiert werden:
   }
 ```
 
+Um über die Keys, also im Falle eines Arrays über die Indizes zu iterieren ist die `foreach in`-Anweisung nötig:
+
+```TypeScript
+  for (let s: string in someStrings)
+  {
+    console.log(s);
+  }
+```
+
+
 > #### TODO
 >
 > - Diskutiert Vor- und Nachteile der Schleifenkonstruktion mit `for` aus dem Beispiel oben
@@ -646,15 +721,6 @@ implementiert werden:
 >   - Schreibaufwand
 >   - Flexibilität (was ist mit Zugriffen in umgekehrter Reihenfolge, Zugriff nur auf die ersten
 >     paar Einträge, ...)
-
-### Ausblick
-
-Neben Arrays werden wir bald noch weitere Datentypen kennen lernen, die es erlauben, eine Menge von 
-Werten gleichen Typs abzuspeichern. Bei manchen dieser so genannten _Kollektionen_ kann nicht über
-einen Index auf die Inhalte zugegriffen werden - daher funktioniert dort _ausschließlich_ der Zugriff
-über `foreach`. Es gibt sogar die Möglichkeit, eigene Datentypen zu definieren, auf deren Inhalte dann
-mit `foreach` zugegriffen wird - Stichwort ***Enumeratoren***.
-
 
 
 
