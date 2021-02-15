@@ -50,8 +50,6 @@ Richtigkeit einer abgeschlossenen _Software-Einheit_ testen, heißen ***Unit Tes
 Ein Unit Test testet lediglich einen kleinen Teil des Source Codes auf Korrektheit, bspw. eine Klasse oder eine Funktion.
 In der Regel erstellen hierbei die Entwickler die Tests und legen die Testkriterien der Softwareeinheit fest. Dabei sind Unit Tests immer darauf ausgerichtet die funktionalen Anforderungen der Einzelteile auf Korrektheit zu überprüfen. Nicht-funktionale Anforderungen lassen sich durch Unit Tests nicht abdecken, da an dieser Stelle das Hauptaugenmerk nur auf einen bestimmten Teil des Programms gelegt wird und nicht auf das große Ganze. So sind die nicht-funktionalen Anforderungen nur mit groß anglegten Testverfahren für die Gesamt-Applikation auf Erfüllung zu kontrollieren.
 
-## Hello Unit Test
-
 ### Jest
 
 Jest ist ein Testing Framework für JavaScript, dass aber auch TypeScript-Unterstützung anbietet. Es kann via npm installiert werden.
