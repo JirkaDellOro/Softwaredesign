@@ -156,6 +156,8 @@ Wird bei gestopptem Debugger die Maus über einen Ausdruck im Source-Code gehalt
 evaluierbaren Wert im aktuellen Kontext erzeugt, wird dieser in einem kleinen Pop-Up-Fenster 
 neben der Maus angezeigt.
 
+![Ad-Hoc-Watch im Debugger](img/debugger2.jpg)
+
 > #### TODO
 >
 > - Stoppt den Debugger nach dem Anlegen mehrerer Personen und haltet die Maus über verschiedene
@@ -178,7 +180,7 @@ Im Folgenden Screencast sieht man, neben der Verwendung des Mouse-Over-Watch und
 des Watch-Fensters für einfache Variablen-Inhalte, wie überprüft wird, ob für den Inhalt
 einer Variablen vom Typ `Person` gilt, ob die Person nach dem 1. Januar 1980 geboren wurde.
 
-<!-- ![Watch Fenster](img/WatchWindow.gif) -->
+![Watchfenster im Debugger](img/debugger3.jpg)
 
 Wenn ihr die Debugger-Watch-Funktionalität mit eurem eigenen Code aus dem ersten **TODO** ausprobiert,
 seht ihr, wie die Variableninhalte von Objekten gleich mit dem, was eure `ToString()`-Methode 

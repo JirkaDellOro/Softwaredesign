@@ -44,7 +44,7 @@ Die skizzierten Lösungen zu den Anforderungen aus Phase 1 und Phase 2 werden vo
 
 ### 4. Test
 
-In der Testphase werden die Anforderungen in Schritt 1 auf die korrekte Umsetzung geprüft, dafür gibt es meist eigene Software-Tester. Anhand der Anforderungen werden Testszenarien mit klaren Kriterien definiert, was eine Funktion, ein gewisser Programmteil können soll und was nicht. Bedeutet es werden Akzeptanzkriterien definiert, wann ein Test einer Funktion fehlschlägt bzw. erfolgreich ist.
+In der Testphase werden die Anforderungen in Schritt 1 auf die korrekte Umsetzung geprüft, dafür gibt es meist eigene Software-Tester. Anhand der in Schritt 1 ermittelten Anforderungen werden Testszenarien erstellt, die bestimmte Teile des Codes auf die eben definierten Anforderungen testen. Bedeutet es werden Akzeptanzkriterien definiert, wann ein Test einer Funktion fehlschlägt bzw. erfolgreich ist.
 An dieser Stelle sei gesagt, die Software Developer sind bereits in der Phase 3 in der Pflicht die Implementierung auf Lauffähigkeit und Korrektheit zu überprüfen. Hierfür gibt es den Ansatz des "Test Driven Developments", bei die Software Developer zuerst die Testszenarien (Unit Tests) erstellen und darauf aufbauend die Software-Lösung der entsprechenden Anforderung umsetzen.
 
 [-> Mehr Infos zu Test Driven Development](http://www.evocomp.de/softwareentwicklung/unit-tests/unittests.html)
@@ -53,7 +53,7 @@ Abgesehen von manuellen Tests durch Software-Tester und Unit Tests, welche von S
 
 > **Wichtig:** 
 >
-> Zu erwähnen ist, dass diese Phase nicht das Ziel hat die Fehlerfreiheit der Software zu garantieren. Sie kann lediglich die Existenz von Fehlern aufzeigen, aber nicht deren Nichtvorhandensein. Bei der Konzeption der Testszenarien, Unit-, Service-, Komponententests und weiteren, ist es essentiell eine hohe Automatisierung der Testverfahren zu erhalten. Die manuelle Durchführung von Tests durch Personen ist sehr kostenintensiv und muss bei jeder neuen Version einer Software wieder und wieder erfolgen. Deshalb macht es an dieser Stelle Sinn gewisse Schnittstellen und Funktionen automatisiert durch eine Maschine testen zu lassen.
+> Zu erwähnen ist, dass diese Phase nicht das Ziel hat die Fehlerfreiheit der Software zu garantieren. Sie kann lediglich die Existenz von Fehlern aufzeigen, aber nicht deren Nichtvorhandensein. Bei der Konzeption der Testszenarien, Unit-, Service-, Komponententests und weiteren, ist es essentiell eine hohe Automatisierung der Testverfahren zu erhalten. Die manuelle Durchführung von Tests durch Personen ist sehr kostenintensiv und muss bei jeder neuen Version einer Software wieder und wieder erfolgen. Daher ist es sinnvoll, bestimmte Funktionen automatisiert und standardisiert durch eine Prozedur testen zu lassen.
 
 ### 5. Betrieb
 
@@ -140,7 +140,7 @@ Dort meistens an einer lokalen Kopie des gemeinsamen Projektes.
 Cloud-basierte Speicher wie z.B. Dropbox, Google-Drive oder OneDrive werden oft verwendet, 
 wenn Gruppen von Menschen gemeinsam an digitalen Inhalten arbeiten. Warum also bei einem
 Software-Projekt nicht einfach irgendwo ein Cloud-Verzeichnis anlegen, so dass alle
-Beteiligten gemeinsam dort Ihre Dateien und -Änderungen ablegen können.
+Beteiligten gemeinsam dort ihre Dateien und -Änderungen ablegen können.
 
 Damit ist zumindest mal das Problem gelöst, wie Änderungen an einzelnen Dateien unter den
 Beteiligten kommuniziert werden, nämlich vollautomatisch über die Synchronisierungsfunktion
@@ -397,7 +397,7 @@ einer Kurzversion.
 > Um einen alten Zustand ***temporär*** herzustellen:
 > - Betrachtet den bisherigen Verlauf der Commits in GitHub Desktop oder in 
 >   der Kommandozeile (mit `git reflog` (Kurzversion) oder `git log` (Langversion)).
-> - Sucht einen Stand aus, den Ihr wiederherstellen wollt und merkt/speichert dessen SHA-Wert
+> - Sucht einen Stand aus, den ihr wiederherstellen wollt und merkt/speichert dessen SHA-Wert
 > - Öffnet das Repository in der Kommandozeile (falls noch nicht geschehn)
 > - Stellt den gewünschten alten Zustand mit folgenden Kommando her: `git checkout <SHA>`
 > 
