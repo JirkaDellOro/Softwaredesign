@@ -54,8 +54,8 @@ erkennbar am `$`-Zeichen.
 ```TypeScript
 ...
 let f: number = 3.1415; 
-WriteLine("Der Inhalt von f ist: " + f + "."); // String-Verkettung mit + 
-WriteLine("Der Inhalt von f ist: ${f}");      // String-Interpolation mit $ und {}
+Console.log("Der Inhalt von f ist: " + f + "."); // String-Verkettung mit + 
+Console.log("Der Inhalt von f ist: ${f}");      // String-Interpolation mit $ und {}
 ```
 
 In allen oben angegebenen Fällen wird der Variableninhalt vom jeweiligen Datentyp in einen String umgewandelt. Dazu wird die 

@@ -10,8 +10,13 @@ Datentypen, erzeugt werden. In Java und C/C++ gibt es hierzu das Schlüsselwort
 ```TypeScript
   class Person
   {
-    public Name: string;
-    public Age: number;
+    public name: string;
+    public age: number;
+
+    constructor(_name: string, _age: number) {
+      this.name = _name;
+      this.age = _age;
+    }
   }
 ```
 
@@ -27,47 +32,23 @@ Datentypen geht. Z.B. können Variablen, und Methodenparameter von diesem Typ an
 ```
 
 Bei der Deklaration von Variablen derart selbst definierter Datentypen wird noch _keine_
-Instanz erzeugt. Dies muss explizit mit dem `new`-Operator erfolgen:
+Instanz erzeugt. Dies muss explizit mit dem `new`-Operator erfolgen. Dem Konstruktor übergibt man
+dabei die gewünschten Parameterwerte, welche in die jeweiligen Attribute gespeichert werden sollen.
+Die Reihenfolge der Parameter ist entscheidend.
 
 ```TypeScript
-  let myself: Person = new Person();
-```
-
-Damit wird eine Variable `myself` vom Typ `Person` erzeugt, die eine Instanz vom Typ
-`Person` referenziert, d.h. nun existiert auch im Speicher des Rechners irgendwo Platz
-für alles, woraus eine Person besteht, nämlich dem Namen und das Alter.
-
-Somit kann dann auch über den Variablennamen `myself` auf die Felder dieser Instanz
-zugegriffen werden.
-
-```TypeScript
-  let myself: Person = new Person();
-  myself.Name = "Müller";
-  myself.Age = 50;
-```
-
-Eine solche Folge von Anweisungen, also 
-
-- der Variablendeklaration
-- dem Erzeugen einer Instanz
-- dem Verknüpfen von Variablennamen und Instanz
-- der Initialisierung öffentlicher Felder mit Werten
-
-kann in TypeScript auch verkürzt geschrieben werden:
-
-```TypeScript
-  let myself: Person = new Person ("Müller", 50);
+  let myself: Person = new Person("Müller", 50);
 ```
 
 Darüberhinaus gibt es, wie in anderen Programmiersprachen auch, die Möglichkeit, 
-einen Initalisierungskonstruktor zu implementieren, der initiale Werte für `Name` und 
-`Age` entgegen nimmt.
+einen Initalisierungskonstruktor zu implementieren, der initiale Werte für `name` und 
+`age` entgegen nimmt.
 
 Über den _Objektzugriffsoperator_ (`.`) kann nicht nur schreibend sondern auch lesend
 auf Inhalte von `myself` zugegriffen werden:
 
 ```TypeScript 
-  console.log(myself.Name + " ist " + myself.Age + " Jahre alt!");
+  console.log(myself.name + " ist " + myself.age + " Jahre alt!");
 ```
 
 ## Methoden
@@ -77,17 +58,17 @@ also das, was passiert, wenn ein Programm zur Ausführung kommt. Methoden sind n
 Struktur aufgebaut:
 
 ```TypeScript
-  MethodenName(<PARAMETERLISTE>): <RÜCKGABEWERT> 
+  MethodenName(%PARAMETERLISTE%): %RÜCKGABEWERT% 
   {
-    <METHODENRUMPF>
+    %METHODENRUMPF%
   }
 ```
 
-Der `<RÜCKGABEWERT>` bezeichnet dabei den Datentyp des Rückgabewertes. Die 
-`<PARAMETERLISTE>` enthält eine mit Komma getrennte Liste von Parameterdeklarationen, die, 
-wie Variablendeklarationen, nach dem Schema `identifizierer: <TYP>` aufgebaut sind.
+Der `%RÜCKGABEWERT%` bezeichnet dabei den Datentyp des Rückgabewertes. Die 
+`%PARAMETERLISTE%` enthält eine mit Komma getrennte Liste von Parameterdeklarationen, die, 
+wie Variablendeklarationen, nach dem Schema `identifizierer: %TYP%` aufgebaut sind.
 
-Der `<METHDODENRUMPF>` enthält Code, der ausgeführt wird, sobald die Methode aufgerufen 
+Der `%METHDODENRUMPF%` enthält Code, der ausgeführt wird, sobald die Methode aufgerufen 
 wird. Dieser Code kann auf Parameter aus der Parameterliste, sowie auf innerhalb der Klasse
 deklarierte Felder und andere Klassenbestandeile zugreifen, z.B. andere Methoden der selben
 Klasse aufrufen. Mit der `return`-Anweisung 
@@ -98,15 +79,15 @@ Beispiel
 ```TypeScript
   class Person
   {
-    public Name: string;
-    public Age: number;
+    public name: string;
+    public age: number;
 
-    public GetTitleAdress(): string
+    public getTitleAdress(): string
     {
-      if (this.Age < 18)
-        return "Hey " + this.Name;
+      if (this.age < 18)
+        return "Hey " + this.name;
       else
-        return "Sehr geehrte(r) " + this.Name;
+        return "Sehr geehrte(r) " + this.name;
     }
   }
 ```
@@ -154,7 +135,7 @@ ein Beispiel:
 ```
 
 Hier ist ein `Employee` ein Spezialfall von `Person`. Zusätzlich zu den von `Person` geerbten 
-Eigenschaften (`Name` und `Age`), hat ein `Employee` nun auch noch eine `idNumber`.
+Eigenschaften (`name` und `age`), hat ein `Employee` nun auch noch eine `idNumber`.
 Instanzen von `Employee` können überall dort verwendet werden, wo  Instanzen von `Person` 
 erwartet werden. **Jeder `Employee` ist auch eine `Person`**. 
 
@@ -164,7 +145,7 @@ erwartet werden. **Jeder `Employee` ist auch eine `Person`**.
 > - Ersetzt einige der `Person` Instanzen durch `Employee` Instanzen.
 
 In TypeScript erben alle Klassen automatisch vom eingebauten Datentyp `object`. Somit können Variablen 
-vom Typ `object` beliebige Instanzen, sogar von eingebauten Typen wie `int` oder `string`
+vom Typ `object` beliebige Instanzen, sogar von eingebauten Typen wie `number` oder `string`
 enthalten.
 
 ### Vererbung zur Polymorphie
@@ -173,37 +154,37 @@ Vererbung kann auch dazu verwendet werden, um in unterschiedliche Ausprägungen 
 Basisfunktionalität in verschiedenen vererbten Klassen auf unterschiedliche Art implementieren
 zu können. Man spricht hier von _Polymorphie_  (Vielgestaltigkeit).
 
-Beispiel: Die traditionellen Betrachtungsweise erkennt zwei Geschlechter beim Menschen, Männer und Frauen. Beides sind Personen. Allerdings soll die Anrede einer Frau anders aussehen als die Anrede eines Mannes. Daher wird die Methode `GetTitleAdress()` aus dem Beispiel
+Beispiel: Die traditionellen Betrachtungsweise erkennt zwei Geschlechter beim Menschen, Männer und Frauen. Beides sind Personen. Allerdings soll die Anrede einer Frau anders aussehen als die Anrede eines Mannes. Daher wird die Methode `getTitleAdress()` aus dem Beispiel
 oben _polymorph_ implemetiert:
 
 ```TypeScript
   class Person
   {
-    public Name: string;
-    public Age: string;
+    public name: string;
+    public age: string;
 
-    public  GetTitleAdress(): string
+    public getTitleAdress(): string
     {
-      if (Age < 18)
-        return "Hey " + Name;
+      if (age < 18)
+        return "Hey " + name;
       else
-        return "Sehr geehrte(r) " + Name;
+        return "Sehr geehrte(r) " + name;
     }
   }
   
   class Female extends Person
   {
-    public GetTitleAdress(): string
+    public getTitleAdress(): string
     {
-        return "Sehr geehrte Frau " + Name;
+        return "Sehr geehrte Frau " + name;
     }
   }
 
   class Male extends Person
   {
-    public GetTitleAdress(): string
+    public getTitleAdress(): string
     {
-        return "Sehr geehrter Herr " + Name;
+        return "Sehr geehrter Herr " + name;
     }
   }
 ```
@@ -382,36 +363,9 @@ Objekte sind. Hier ein Beispiel für einen Container, der `int`-Werte enthält:
 Man kann sich vorstellen, dass nun der Platzhalter `T` nun durch den Typ `int` ersetzt wird. In 
 C++ funktionierten die ersten "Template"-Implementierungen tatsächlich durch einen Text-Ersatz im Source-Code.
 
-In TypeScript passiert unter der Haube mehr: Der generische Typ `MyContainer<T>` ist als solches Konstrukt auch 
+In TypeScript passiert unter der Haube mehr: Der generische Typ `MyContainer%T%` ist als solches Konstrukt auch 
 im compilierten .NET-Code abgebildet. Zur Laufzeit wird dann durch die Spezialisierung auf `int` bei
-der Verwendung der konkrete Typ `MyContainer<int>` erzeugt.
-
-## Structs vs. Klassen
-
-In TypeScript gibt es neben den Klassen noch eine weitere Möglichkeit, neue Datentypen aus bestehenden
-Datentypen aufzubauen, und zwar mit dem Schlüsselwort `struct`. Der Hauptunterschied zwischen mit `class`
-und `struct` aufgebauten Typen ist, dass Klassen immer _Referenz-Typen_ und Structs immer 
-_Value-Typen_ sind. Das bedeutet eine Variable vom Typ einer Klasse kann ein Objekt dieses Typs, das 
-irgendwo im Speicher liegt,  _referenzieren_ - oder auch nicht, dann ist der Inhalt `null`.
-Variablen von Structs sind immer untrennbar mit dem Objekt verbunden - sie können auch nicht `null` 
-sein. Der für Anwender größte Unterschied liegt in der Bedeutung von Zuweisungen `=` und Vergleichen 
-`==`: Bei Structs wird mit `=` der Objekt-Inhalt kopiert und mit `==` die Objektinhalte verglichen.
-Bei Klassen hingegen wird mit `=` nur die Referenz kopiert und mit `==` festgestellt, ob beide Variablen
-das _selbe_  Objekt referenzieren.
-
-> #### TODO
-> - Lest den Artikel 
->   [Choosing between Class and Struct](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/choosing-between-class-and-struct)
->   (angegebene Lesedauer: 2 Minuten).
-> - Findet weitere Unterschiede zwischen `class` und `struct` heraus im Bezug auf Vererbung, virtuelle Methoden, ggf. Interfaces
-> - Erzeugt jeweils eine Zuweisung und einen Vergleich zwischen Instanzen eines mit
->   `class` und eines mit `struct` erzugten eigenen Datentyp heraus.
-
-## Weitere mögliche Bestandteile von Klassen und Structs
-
-Wie wir bereits gesehen haben, können Klassen (und auch Structs) Methoden und Felder enthalten.
-Zusätzlich gibt es in TypeScript mit _Properties_ und _Events_ zwei weitere Kategorien von Bestandteilen, die 
-hier nur kurz erwähnt werden sollen.
+der Verwendung der konkrete Typ `MyContainer%int%` erzeugt.
 
 ### Properties (Eigenschaften)
 
@@ -420,7 +374,7 @@ Beispiel. Beim Setzen von Werten und beim Auslesen von Werten soll aber oft weit
 (so genannte Seiteneffekte) ausgelöst werden. Z.B. kann es beim Auslesen eines Wertes sein, dass
 der Wert erst noch aktualisiert werden muss. Oder beim Schreiben eines Wertes sollen andere Werte
 ebenfalls neu berechnet werden. Klassischerweise würde man in diesem Fall der Klasse Methoden wie
-`get <METHODENNAME>(): <RÜCKGABEWERT> ` und `set <METHODENNAME>(wert: <TYP>)` hinzufügen. In TypeScript wurden für diesen Fall _accessors_ 
+`get %METHODENNAME%(): %RÜCKGABEWERT% ` und `set %METHODENNAME%(wert: %TYP%)` hinzufügen. In TypeScript wurden für diesen Fall _accessors_ 
 hinzugefügt. Hier ein Beispiel:
 
 ```TypeScript
@@ -452,7 +406,7 @@ auslösen.
 
 ### Events
 
-Zu bestimmten Zeitpunkten in der Lebenszeit einer Instanz einer Klasse oder eines Structs kann 
+Zu bestimmten Zeitpunkten in der Lebenszeit einer Instanz einer Klasse kann 
 es notwendig werden, dass andere Code-Stücke aufgerufen werden sollen. Zum Zeitpunkt der Erstellung
 der Klasse, also als ein Programmierer den Code für die Klasse hingeschrieben hat, ist aber vielleicht
 noch nicht klar, welcher Code aufgerufen werden soll.
