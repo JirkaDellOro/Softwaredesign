@@ -723,6 +723,63 @@ Um über die Keys, also im Falle eines Arrays über die Indizes zu iterieren ist
 >     paar Einträge, ...)
 
 
+### Funktionen und Methoden
+
+#### Funktionen
+
+Code, der wiederverwendet werden oder zwecks Leserlichkeit ausgelagert werden soll, kann in so genannten Funktionen ausgelagert werden. 
+Das Schlüsselwort `function` bezeichnet einen solchen Code-Abschnitt. Wie auch Variablen gibt man Funktionen einen `BEZEICHNER`, also einen sprechenden
+Namen, der die Tätigkeit dieser Funktion beschreibt. Funktionen können durch die so genannten `Parameter` bzw. Übergabewerte dynamischer gemacht werden. Das heißt, der Ablauf und
+das Ergebnis ihrer Arbeit hängt von diesen Parametern ab. Sie werden durch Kommata getrennt in Klammern angegeben `xPARAMETER1x, xPARAMETER2x`. Falls man keine `Parameter`
+übergeben will, werden die Klammern leer gelassen.
+
+```TypeScript
+
+  function xBEZEICHNERx(xPARAMETERx) {
+    //...
+  }
+
+  // z.B
+  function add(x, y) {
+    x + y;
+  }
+```
+
+Funktionen können Werte zurückgeben. Beispielsweise das Ergebnis einer Addition. Das Ergebnis einer solchen Funktion kann dann von anderen Programmstücken bzw. anderen Funktionen
+weiterverarbeitet/genutzt werden. Einen solchen Rückgabewert kennzeichnet man mit dem Schlüsselwort `return`. In den meißten Programmierprachen gibt man in der Funktionssignatur mit an, welchen Typ der Rückgabewert hat. In TypeScript ist das nicht nötig. Lediglich bestimmte Linter fordern das.
+
+```TypeScript
+  // z.B
+  function add(x, y): number {
+    let z: number = 0;
+    z = x + y;
+    return z;
+  }
+```
+
+#### Methoden
+
+Methoden sind eine Unterkategorie der Funktionen. Auf den Ablauf bezogen machen sie das selbe, es handelt sich nur um eine Bezeichnung für Funktionen, die über Instanzen einer Klasse
+aufgerufen werden und somit immer einen Objektbezug haben.
+
+```TypeScript
+  public class Person
+  {
+      public name: string;
+      public personalnummer: number;  
+
+      constructor(_name: string, _age: number) {
+        this.name = _name;
+        this.age = _age;
+      }
+
+      public rename(_newName: string) {
+        this.name = _newName;
+      }
+  }
+```
+
+
 
 
 

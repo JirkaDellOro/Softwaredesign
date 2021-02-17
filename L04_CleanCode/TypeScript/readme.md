@@ -1,5 +1,6 @@
 # Clean Code
-Im Jahr 2008 verfasst Robert C. Martin, auch bekannt als "Uncle Bob", zusammen mit anderen Autoren das viel beachtete Buch "Clean Code". Im Text geht es vordringlich darum, wie Code gestaltet werden sollte, damit er für Menschen verständlich und wartbar ist. Es steht weniger im Vordergrund, dass der Code funktioniert, das ist ohnehin eine Voraussetzung. Stattdessen sollte sich der Code lesen lassen wie eine Geschichte. Begriffe wie "Eleganz" und "Schönheit" fallen, Programmieren wird als Kunst im wahrsten Sinne, wie Malerei oder Lyrik, dargestellt.
+Im Jahr 2008 verfasst Robert C. Martin, auch bekannt als "Uncle Bob", zusammen mit anderen Autoren das viel beachtete Buch "Clean Code". Im Text geht es vordringlich darum, wie Code gestaltet werden sollte, damit er für Menschen verständlich und wartbar ist. Grund dafür ist, dass Code häufiger gelesen als geschrieben wird.
+Es steht weniger im Vordergrund, dass der Code funktioniert, das ist ohnehin eine Voraussetzung. Stattdessen sollte sich der Code lesen lassen wie eine Geschichte. Begriffe wie "Eleganz" und "Schönheit" fallen, Programmieren wird als Kunst im wahrsten Sinne, wie Malerei oder Lyrik, dargestellt.
 
 Desweiteren prägte "Uncle Bob" die 5 Prinzipien des objektorientierten Designs (SOLID-Principles).
 
@@ -73,7 +74,7 @@ Häufig findet man in Code Zahlenkonstanten (engl. _literal_), ohne deren Bedeut
     x = -30;
 ```
 
-Warum 799? Wenn dies die Breite einer Zeichenfläche sein soll, muss dies im Code auch zum Ausdruck kommen. Und was sollen die -30 bedeuten?
+Warum 800? Wenn dies die Breite einer Zeichenfläche sein soll, muss dies im Code auch zum Ausdruck kommen. Und was sollen die -30 bedeuten?
 
 ```TypeScript
   let canvasWidth: number = 800;
@@ -199,11 +200,11 @@ Dieses Akronym steht für:
 
 #### Single-responsibility-principle
 
-Eine Klasse sollte nur eine Verantwortlichkeit haben. Das eine Änderung in dieser Klasse soll keine andere Klasse betreffen. Maximale Kohäsion und minimale Kopplung sind hier die Stichwörter. Ein Nichteinhalten dieses Prinzips führt zu vielen Abhängigkeiten und einer hohen Vernetzung. Dies führt zwangsläufig zu einer hohen Anzahl verschiedener Klassen. Dies bedeutet jedoch keineswegs, dass der Code umfangreicher ist. Lediglich die Organisation ist anders.
+Eine Klasse sollte nur eine Verantwortlichkeit haben. Das heißt: Eine Änderung in dieser Klasse soll keine andere Klasse betreffen. Maximale Kohäsion und minimale Kopplung sind hier die Stichwörter. Ein Nichteinhalten dieses Prinzips führt zu vielen Abhängigkeiten und einer hohen Vernetzung. Dies führt zwangsläufig zu einer hohen Anzahl verschiedener Klassen. Dies bedeutet jedoch keineswegs, dass der Code umfangreicher ist. Lediglich die Organisation ist anders.
 
 #### Open-closed-principle
 
-Klassen sollen offen für Ertweiterungen, aber geschlossen gegenüber Modifikationen sein. Das heißt die Funktionaltität einer Klasse darf erweitert, aber nicht verändert werden. Schon fertig implementierte Funktionen können neue Fehler bekommen, wenn die Erweiterung der Klasse nur durch Änderungen innerhalb dieser möglich ist. 
+Klassen sollen offen für Erweiterungen, aber geschlossen gegenüber Modifikationen sein. Das heißt die Funktionaltität einer Klasse darf erweitert, aber nicht verändert werden. Schon fertig implementierte Funktionen können neue Fehler bekommen, wenn die Erweiterung der Klasse nur durch Änderungen innerhalb dieser möglich ist. 
 
 Programmiersprachen bringen zwei Techniken mit, mit denen sich dieses Prinzip erfüllen lässt:
 > - Vererbung (Superklassen)
@@ -215,7 +216,7 @@ Instanzen von Subklassen sollen sich so verhalten wie Instanzen der Superklasse.
 
 #### Interface segregation principle
 
-Interfaces sollen nur Funktionen enthalten, die eng zusammen gehören (Kohäsion). Klassen die dieses Interface implementieren, müssen auch alle dessen Funktionen ausdefinieren. Auch wenn eine Methode unnötig für die Klasse ist. Darum sollten alle Funktionen der implementierenden Klasse nutzen.
+Interfaces sollen nur Funktionen enthalten, die eng zusammen gehören (Kohäsion). Klassen die dieses Interface implementieren, müssen auch alle dessen Funktionen ausdefinieren. Auch wenn eine Methode unnötig für die Klasse ist. Darum sollten alle Funktionen der implementierenden Klasse genutzt werden.
 
 #### Dependency inversion principle
 
