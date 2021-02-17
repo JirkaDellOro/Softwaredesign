@@ -138,7 +138,6 @@ Da wir die Source-Maps haben, können wir unseren TS-Code in der Konsole des Bro
 
 1. In einer Code-Zeile wird ein so genannter ***Breakpoint*** gesetzt (blau umrahmte Zeilennummer). Dort hält 
    der Debugger nach dem Starten des Programms die Ausführung an.
-   ![Setzen eines Breakpoints](img/debugger1.JPG)
 2. Über ein Neuladen des Browsers Befehl (Strg + F5) Pausiert der Code beim gesetzten Breakpoint.
 3. Das Programm startet und hält am Breakpoint an (blau umrahmte Code-Zeile). **Wichtig**: Das Programm
    stoppt *vor* dem Breakpoint. Die Codezeile, in der der Breakpoint steht, wurde *noch nicht* ausgeführt.
