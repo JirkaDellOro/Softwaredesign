@@ -138,7 +138,7 @@ Da wir die Source-Maps haben, können wir unseren TS-Code in der Konsole des Bro
 
 1. In einer Code-Zeile wird ein so genannter ***Breakpoint*** gesetzt (blau umrahmte Zeilennummer). Dort hält 
    der Debugger nach dem Starten des Programms die Ausführung an.
-   ![Setzen eines Breakpoints](img/debugger1.jpg)
+   ![Setzen eines Breakpoints](img/debugger1.JPG)
 2. Über ein Neuladen des Browsers Befehl (Strg + F5) Pausiert der Code beim gesetzten Breakpoint.
 3. Das Programm startet und hält am Breakpoint an (blau umrahmte Code-Zeile). **Wichtig**: Das Programm
    stoppt *vor* dem Breakpoint. Die Codezeile, in der der Breakpoint steht, wurde *noch nicht* ausgeführt.
@@ -171,7 +171,7 @@ Wird bei gestopptem Debugger die Maus über einen Ausdruck im Source-Code gehalt
 evaluierbaren Wert im aktuellen Kontext erzeugt, wird dieser in einem kleinen Pop-Up-Fenster 
 neben der Maus angezeigt.
 
-![Ad-Hoc-Watch im Debugger](./img/debugger2.jpg)
+![Ad-Hoc-Watch im Debugger](./img/debugger2.JPG)
 
 > #### TODO
 >
@@ -195,7 +195,7 @@ Im Folgenden Screencast sieht man, neben der Verwendung des Mouse-Over-Watch und
 des Watch-Fensters für einfache Variablen-Inhalte, wie überprüft wird, ob für den Inhalt
 einer Variablen vom Typ `Person` gilt, ob die Person nach dem 1. Januar 1980 geboren wurde.
 
-![Watchfenster im Debugger](img/debugger3.jpg)
+![Watchfenster im Debugger](img/debugger3.JPG)
 
 Wenn ihr die Debugger-Watch-Funktionalität mit eurem eigenen Code aus dem ersten **TODO** ausprobiert,
 seht ihr, wie die Variableninhalte von Objekten gleich mit dem, was eure `toString()`-Methode 
