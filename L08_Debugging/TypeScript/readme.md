@@ -171,7 +171,7 @@ Wird bei gestopptem Debugger die Maus über einen Ausdruck im Source-Code gehalt
 evaluierbaren Wert im aktuellen Kontext erzeugt, wird dieser in einem kleinen Pop-Up-Fenster 
 neben der Maus angezeigt.
 
-![Ad-Hoc-Watch im Debugger](img/debugger2.jpg)
+![Ad-Hoc-Watch im Debugger](./img/debugger2.jpg)
 
 > #### TODO
 >
