@@ -54,39 +54,54 @@ erkennbar am `$`-Zeichen.
 ```TypeScript
 ...
 let f: number = 3.1415; 
-Console.log("Der Inhalt von f ist: " + f + "."); // String-Verkettung mit + 
-Console.log("Der Inhalt von f ist: ${f}");      // String-Interpolation mit $ und {}
+console.log("Der Inhalt von f ist: " + f + "."); // String-Verkettung mit + 
+console.log(`Der Inhalt von f ist: ${f}`);      // String-Interpolation mit $ und {}
 ```
 
 In allen oben angegebenen Fällen wird der Variableninhalt vom jeweiligen Datentyp in einen String umgewandelt. Dazu wird die 
-Methode `ToString()` aufgerufen, die in TypeScript für ALLE Datentypen implementiert ist.
+Methode `toString()` aufgerufen, die in TypeScript für ALLE Datentypen implementiert ist.
 
 > #### TODO
 >
-> Findet heraus, was die Methode `ToString()` bei Arrays, Listen und selbst definierten 
+> Findet heraus, was die Methode `toString()` bei Arrays, Listen und selbst definierten 
 > Datentypen (wie z.B. Klassen) macht.
 
-Wie o.s. **TODO** zeigt, ist die automatisch eingebaute Variante von `ToString()` bei selbst
+Wie o.s. **TODO** zeigt, ist die automatisch eingebaute Variante von `toString()` bei selbst
 implementierten Klassen nicht besonders aussagekräftig. Daher ist es möglich, für jede 
-selbst implementierte Klasse auch eine eigene Version von `ToString()` beizulegen, die 
+selbst implementierte Klasse auch eine eigene Version von `toString()` beizulegen, die 
 für Instanzen dieser Klasse dann eine aussagekräftige Ausgabe erzeugt. 
 
 > #### TODO
 >
-> - Erzeugt für folgende Klasse `Person` eine eigene `ToString()` Methode. Erzeugt eine Test-Routine,
+> - Erzeugt für folgende Klasse `Person` eine eigene `toString()` Methode. Erzeugt eine Test-Routine,
 >   in einem Array fünf Instanzen von `Person` erzeugt und in einer Schleife 
 >   alle Personen auf der Konsole ausgibt, die älter als 20 sind.
 >
 > ```TypeScript
 > public class Person
 > {
->    public FirstName: string;
->    public LastName: string;
->    public Age: Date;
+>    public firstName: string;
+>    public lastName: string;
+>    public age: Date;
 >
->    public ToString(): string { /* TODO */ }
+>    public toString(): string { /* TODO */ }
 > }
 > ```
+
+### Methoden der Konsole
+
+Neben der einfachen Konsolenausgabe, bietet die Konsole in TypeScript auch noch andere Möglichkeiten.
+[*Konsolenmethoden*](https://developer.mozilla.org/de/docs/Web/API/Console)
+
+Hier ein paar Beispiele:
+
+```TypeScript
+   console.time("myTimer") //Startet einen Timer mit dem Namen: myTimer
+   console.error("Das ist ein Fehler und er wird rot hinterlegt");
+   console.warn("Das ist eine Warnung und sie wird gelb hinterlegt");
+   console.timeEnd("myTimer") //Beendet den Timer und protokolliert die abgelaufene Zeit seit dem Start
+```
+
 
 ### Kontrollfluss
 
@@ -183,9 +198,9 @@ einer Variablen vom Typ `Person` gilt, ob die Person nach dem 1. Januar 1980 geb
 ![Watchfenster im Debugger](img/debugger3.jpg)
 
 Wenn ihr die Debugger-Watch-Funktionalität mit eurem eigenen Code aus dem ersten **TODO** ausprobiert,
-seht ihr, wie die Variableninhalte von Objekten gleich mit dem, was eure `ToString()`-Methode 
+seht ihr, wie die Variableninhalte von Objekten gleich mit dem, was eure `toString()`-Methode 
 liefert, angezeigt werden. Es lohnt sich also nicht nur für das console.log-Debugging, eigenen
-Datentypen eine eigene `ToString()`-Methode zu verpassen.
+Datentypen eine eigene `toString()`-Methode zu verpassen.
 
 ### Der Call-Stack
 
