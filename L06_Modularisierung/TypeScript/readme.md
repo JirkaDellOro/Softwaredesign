@@ -195,7 +195,7 @@ Der Unterschied zu System.js ist, dass die Module nicht über den ES6-Standard e
 > ``` 
 exportiert und über:
 > ```TypeScript
-> var myVariable = require("/.nameOfTheFile");
+> var myVariable = require("./nameOfTheFile");
 > ``` 
 importiert werden
 
@@ -212,7 +212,7 @@ Doku: https://webpack.js.org/concepts/
 > ```TypeScript
 >while (true) {
 >
->   let userCommand: String | null = prompt("Welcome to the Calculator. Start entering calculations!", "+");
+>   let userCommand: string | null = prompt("Welcome to the Calculator. Start entering calculations!", "+");
 >
 >    
 >    if (userCommand == null)
