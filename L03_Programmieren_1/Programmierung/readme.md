@@ -61,7 +61,7 @@ Programmiersprachen, welches dieses Paradigmen unterstützen:
 
 ### Strukturierte Programmierung
 
-Dieses Paradigma behinhaltet zum einen die baumartige Zerlegung eines Programms in Teilprogramme, welches in der Prozeduralen Programmierung angewendet wird. Hierbei werden die Programme in kleinere Teilaufgaben aufgespalten, Prozeduren genannt.
+Dieses Paradigma beschreibt die Zerlegung des Programms in Teilprogramme welche auch Prozeduren genannt werden. Jedes Teilprogramm bearbeitet eine bestimmte Teilaufgabe.
 Zum zweiten beschränkt der Ansatz auf unterster Ebene die Programmierung auf drei Kontrollstrukturen:
 
 - Sequenz (Methoden / Funktionen, welche hintereinander ausgeführt werden)
