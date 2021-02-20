@@ -13,16 +13,16 @@ Einer der wichtigsten Aspekte beim Clean Coding ist die Namensgebung. Beim Progr
 Namen sollten also den Zweck beschreiben. Hier ein einfaches Beispiel für eine Variable, welche eine Anzahl von Tagen darstellen soll.
 
 <details>
-    <summary>Click to expand!</summary>
+    <summary>TypeScript</summary>
     ```TypeScript
         let d: number;
     ```
 </details>
 
 <details>
-    <summary>Click to expand!</summary>
-    ```C#
-        int d;
+    <summary>C#</summary>
+    ```python
+        print("hello world!")
     ```
 </details>
 
