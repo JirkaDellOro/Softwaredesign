@@ -14,17 +14,21 @@ Namen sollten also den Zweck beschreiben. Hier ein einfaches Beispiel für eine 
 
 <details><summary>TypeScript</summary>
     <p>
+
     ```TypeScript
     let d: number;
     ```
+
     </p>
 </details>
 
 <details><summary>C#</summary>
     <p>
+
     ```C#
     int d;
     ```
+    
     </p>
 </details>
 
