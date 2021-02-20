@@ -58,17 +58,17 @@ also das, was passiert, wenn ein Programm zur Ausführung kommt. Methoden sind n
 Struktur aufgebaut:
 
 ```TypeScript
-  MethodenName(%PARAMETERLISTE%): %RÜCKGABEWERT% 
+  methodenName(xPARAMETERLISTEx): xRÜCKGABEWERTx 
   {
-    %METHODENRUMPF%
+    xMETHODENRUMPFx
   }
 ```
 
-Der `%RÜCKGABEWERT%` bezeichnet dabei den Datentyp des Rückgabewertes. Die 
-`%PARAMETERLISTE%` enthält eine mit Komma getrennte Liste von Parameterdeklarationen, die, 
-wie Variablendeklarationen, nach dem Schema `identifizierer: %TYP%` aufgebaut sind.
+Der `xRÜCKGABEWERTx` bezeichnet dabei den Datentyp des Rückgabewertes. Die 
+`xPARAMETERLISTEx` enthält eine mit Komma getrennte Liste von Parameterdeklarationen, die, 
+wie Variablendeklarationen, nach dem Schema `identifizierer: xTYPx` aufgebaut sind.
 
-Der `%METHDODENRUMPF%` enthält Code, der ausgeführt wird, sobald die Methode aufgerufen 
+Der `xMETHDODENRUMPFx` enthält Code, der ausgeführt wird, sobald die Methode aufgerufen 
 wird. Dieser Code kann auf Parameter aus der Parameterliste, sowie auf innerhalb der Klasse
 deklarierte Felder und andere Klassenbestandeile zugreifen, z.B. andere Methoden der selben
 Klasse aufrufen. Mit der `return`-Anweisung 
@@ -363,9 +363,9 @@ Objekte sind. Hier ein Beispiel für einen Container, der `int`-Werte enthält:
 Man kann sich vorstellen, dass nun der Platzhalter `T` nun durch den Typ `int` ersetzt wird. In 
 C++ funktionierten die ersten "Template"-Implementierungen tatsächlich durch einen Text-Ersatz im Source-Code.
 
-In TypeScript passiert unter der Haube mehr: Der generische Typ `MyContainer%T%` ist als solches Konstrukt auch 
+In TypeScript passiert unter der Haube mehr: Der generische Typ `MyContainerxTx` ist als solches Konstrukt auch 
 im compilierten .NET-Code abgebildet. Zur Laufzeit wird dann durch die Spezialisierung auf `int` bei
-der Verwendung der konkrete Typ `MyContainer%int%` erzeugt.
+der Verwendung der konkrete Typ `MyContainerxintx` erzeugt.
 
 ### Properties (Eigenschaften)
 
@@ -374,7 +374,7 @@ Beispiel. Beim Setzen von Werten und beim Auslesen von Werten soll aber oft weit
 (so genannte Seiteneffekte) ausgelöst werden. Z.B. kann es beim Auslesen eines Wertes sein, dass
 der Wert erst noch aktualisiert werden muss. Oder beim Schreiben eines Wertes sollen andere Werte
 ebenfalls neu berechnet werden. Klassischerweise würde man in diesem Fall der Klasse Methoden wie
-`get %METHODENNAME%(): %RÜCKGABEWERT% ` und `set %METHODENNAME%(wert: %TYP%)` hinzufügen. In TypeScript wurden für diesen Fall _accessors_ 
+`get xMETHODENNAMEx(): xRÜCKGABEWERTx ` und `set xMETHODENNAMEx(wert: xTYPx)` hinzufügen. In TypeScript wurden für diesen Fall _accessors_ 
 hinzugefügt. Hier ein Beispiel:
 
 ```TypeScript
