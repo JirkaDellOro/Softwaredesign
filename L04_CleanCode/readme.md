@@ -12,18 +12,20 @@ Einer der wichtigsten Aspekte beim Clean Coding ist die Namensgebung. Beim Progr
 ### Beschreibende Namen
 Namen sollten also den Zweck beschreiben. Hier ein einfaches Beispiel für eine Variable, welche eine Anzahl von Tagen darstellen soll.
 
-<details>
-    <summary>TypeScript</summary>
+<details><summary>TypeScript</summary>
+    <p>
     ```TypeScript
-        let d: number;
+    let d: number;
     ```
+    </p>
 </details>
 
-<details>
-    <summary>C#</summary>
-    ```python
-        print("hello world!")
+<details><summary>C#</summary>
+    <p>
+    ```C#
+    int d;
     ```
+    </p>
 </details>
 
 Dieser Name ruft keinerlei Assoziation mit dem Zweck der Variablen hervor. Besser sind Benennungen wie
