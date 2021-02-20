@@ -34,11 +34,29 @@ int d;
 
 Dieser Name ruft keinerlei Assoziation mit dem Zweck der Variablen hervor. Besser sind Benennungen wie
 
+<details><summary>TypeScript</summary>
+<p>
+
 ```TypeScript
-    let elapsedTimeInDays: number;
-    let daysSinceCreation: number;
-    let fileAgeInDays: number;
+let elapsedTimeInDays: number;
+let daysSinceCreation: number;
+let fileAgeInDays: number;
 ```
+
+</p>
+</details>
+
+<details><summary>C#</summary>
+<p>
+
+```C#
+int elapsedTimeInDays;
+int daysSinceCreation;
+int fileAgeInDays;
+```
+
+</p>
+</details>
 
 je nachdem auf was sich die Anzahl der Tage genau bezieht. Ein solcher Name ist beschreibend und es lässt sich sofort ein Zweck erkennen. Da die Entwicklungsumgebungen in der Regel über eine Autovervollständigung verfügen, spielt die Länge von Namen gegenüber der Aussagekraft eine untergeordnete Rolle.
 
@@ -46,9 +64,9 @@ je nachdem auf was sich die Anzahl der Tage genau bezieht. Ein solcher Name ist 
 Verwechslungen zwischen Namen sollte vermieden werden, da dadurch Irritationen auftreten können. Ein bekanntes Beispiel stammt aus dem HTML-Dokument-Modell. Hier werden mehrere Methoden zur Verfügung gestellt, um ein HTML-Element im DOM zu finden. Beispielsweise
 
 ``` 
-GetElementsByTagName("h1");
+getElementsByTagName("h1");
 
-GetElementById("headline");
+getElementById("headline");
 ```
 
 Hier fällt sofort auf, dass einmal nach dem Tag-Name, das andere mal nach einer Id gesucht wird. Häufig wird aber übersehen, dass die erste Methode eine Collection von Elementen liefert, die zweite aber ein einzelnes Element. Im Namen sichtbar wird dies lediglich durch das zusätzliche "s". Eine alternative Namensgebung wäre beispielsweise gewesen
@@ -59,16 +77,52 @@ GetElementCollectionByTagName("h1");
 
 ### Kurze Namen
 Kurze Namen sind erlaubt in sehr kleinen Kontexten, wie beispielsweise als Schleifenzähler
+
+<details><summary>TypeScript</summary>
+<p>
+
 ``` TypeScript
 for (let i: number = 0; i < 10; i++)
     console.log(i);
 ```
+
+</p>
+</details>
+
+<details><summary>C#</summary>
+<p>
+
+``` C#
+for (int i = 0; i < 10; i++)
+    Console.WriteLine(i);
+```
+
+</p>
+</details>
+
 Ebenso, wenn ihre Bedeutung als Einzelbuchstabe sehr üblich ist und ein längerer Name eher eine Verschleierung bedeuten würde. Ein Beispiel stellen kartesische Koordinaten dar.
+
+<details><summary>TypeScript</summary>
+<p>
 
 ``` TypeScript
 let x: number; // horizontale Position
 let y: number; // vertikale Position
 ```
+
+</p>
+</details>
+
+<details><summary>C#</summary>
+<p>
+
+``` C#
+double x; // horizontale Position
+double y; // vertikale Position
+```
+
+</p>
+</details>
 
 ### Konzepte
 Ein Namenskonzept sollte sich durch eine Anwendung konistent wiederfinden lassen. So ist beispielweise die Addition von Werten etwas sehr anderes, als das Hinzufügen von Elementen an eine Collection. Der Name add(...) sollte also nicht für beide Konzepte verwendet werden. Für das Hinzufügen an eine Collection eignet sich eher append(...) oder insert(...)
@@ -85,12 +139,32 @@ In unterschiedlichen Kontexten können Namen unterschiedliche Bedeutungen haben.
 ### Magic Numbers
 Häufig findet man in Code Zahlenkonstanten (engl. _literal_), ohne deren Bedeutung entschlüsseln zu können. Das sind magische Zahlen, die das Programm auf unerklärliche Weise zum Laufen bringen. Beispielsweise:
 
+<details><summary>TypeScript</summary>
+<p>
+
 ```TypeScript
   if (x >= 800)
     x = -30;
 ```
 
+</p>
+</details>
+
+<details><summary>C#</summary>
+<p>
+
+```C#
+  if (x >= 800)
+    x = -30;
+```
+
+</p>
+</details>
+
 Warum 800? Wenn dies die Breite einer Zeichenfläche sein soll, muss dies im Code auch zum Ausdruck kommen. Und was sollen die -30 bedeuten?
+
+<details><summary>TypeScript</summary>
+<p>
 
 ```TypeScript
   let canvasWidth: number = 800;
@@ -99,8 +173,27 @@ Warum 800? Wenn dies die Breite einer Zeichenfläche sein soll, muss dies im Cod
     x = leftOffset;
 ```
 
+</p>
+</details>
+
+<details><summary>C#</summary>
+<p>
+
+```C#
+  float canvasWidth = 800;
+  float offset = -30;  
+  if (x >= canvasWidth)
+    x = leftOffset;
+```
+
+</p>
+</details>
+
 Damit wird das Ganze deutlich klarer.  
 Wahrscheinlich ist die Breite aber ohnehin von anderer Stelle dynamisch ermittelbar, möglicherweise mit Hilfe eines Objektes, welches die Zeichenfläche beschreibt. Nennen wir es "canvas". Dann würde der Code sinnvollerweise etwa so aussehen:
+
+<details><summary>TypeScript</summary>
+<p>
 
 ```TypeScript
   let offset: number = -30;  
@@ -108,14 +201,47 @@ Wahrscheinlich ist die Breite aber ohnehin von anderer Stelle dynamisch ermittel
     x = leftOffset;
 ```
 
+</p>
+</details>
+
+<details><summary>C#</summary>
+<p>
+
+```C#
+  float offset = -30;  
+  if (x >= canvas.width)
+    x = leftOffset;
+```
+
+</p>
+</details>
+
 ## Kommentare
 Kommentare sind keine Abhilfe für schlechten Code. Wo immer möglich, sollte der Code so umgeschrieben werden, dass er sich selbst erklärt, anstatt ihn mit Hilfe von Kommentaren zu erklären. Ein sehr großes Problem ergibt sich aus der Tatsache, dass bei einer Überarbeitung des Code auch die Kommentare überarbeitet werden müssen. Dies geschieht häufig nicht, so dass alte, irritierende oder gar schlicht falsche Kommentare übrig bleiben. Somit wird ein Kommentar schädlich und ist deutlich schlimmer als kein Kommentar.
+
+<details><summary>TypeScript</summary>
+<p>
 
 ```TypeScript
 /**
 *Bitte den Code überarbeiten, so dass er sich selbst erklärt, statt Kommentare zu verteilen!
 **/
 ```
+
+</p>
+</details>
+
+<details><summary>C#</summary>
+<p>
+
+```C#
+/*
+Bitte den Code überarbeiten, so dass er sich selbst erklärt, statt Kommentare zu verteilen!
+*/
+```
+
+</p>
+</details>
 
 Natürlich gibt es auch sinnvolle Kommentare, insbesondere juristisch relevante, TODOs oder Kommentare die der automatischen Erstellung einer Dokumentation (z.B. Javadocs) dienen.
 
@@ -138,47 +264,98 @@ Eine Funktion soll nur genau eine Aufgabe erfüllen. Der Name der Funktion soll 
 ### Top Down
 Code sollte wie eine Erzählung von oben nach unten gelesen werden. Damit das bei der Organisation von Funktionen und Methoden klappt, sollten wenn möglich den aufrufenden Funktionen die aufgerufenen folgen. Somit weist der Code von oben nach unten eine zunehmende Abstraktionstiefe auf. Das Programm lässt sich dann im Idealfall als eine Folge von UM-ZU-Absätzen lesen. Hier ein schematisches Beispiel.
 
+<details><summary>TypeScript</summary>
+<p>
+
 ```TypeScript
-ChooseHighLevelOption(decide: number): void
-{
+function chooseHighLevelOption(decide: number): void {
     if (decide < 0)
-        DoHighLevelFirstOption();
+        doHighLevelFirstOption();
     else
-        DoHighLevelSecondOption();
+        doHighLevelSecondOption();
 }
 
-DoHighLevelFirstOption(): void
-{
+function doHighLevelFirstOption(): void {
     ...
 }
 
-DoHighLevelSecondOption(): void
-{
+function doHighLevelSecondOption(): void {
     ...
-    DoLowLevel();
+    doLowLevel();
     ...
 }
 
-DoLowLevel(): void
-{
+function doLowLevel(): void {
     ...
 }
 ```
+
+</p>
+</details>
+
+<details><summary>C#</summary>
+<p>
+
+```C#
+void chooseHighLevelOption(float decide) {
+    if (decide < 0)
+        doHighLevelFirstOption();
+    else
+        doHighLevelSecondOption();
+}
+
+void doHighLevelFirstOption() {
+    ...
+}
+
+void doHighLevelSecondOption() {
+    ...
+    doLowLevel();
+    ...
+}
+
+void doLowLevel() {
+    ...
+}
+```
+
+</p>
+</details>
 Die erste Funktion ChooseHighLevelOption tut nichts anderes, als aufgrund des Parameters decide zu entscheiden, welche der beiden HighLevelOption-Funktionen aufgerufen werden soll. Die sind weiter unten definiert, wobei DoHighLevelSecondOption die Funktion DoLowLevel aufruft. Jene ist wieder darunter definiert. Auf jeder Abstraktionsstufe sollen die Funktionen in sich verständlich sein. Um sich zu weiteren Details bzw. niedrigere Stufen der Abstraktion zu informieren, kann man nun die entsprechende Funktion lesen. So entsteht eine Hierarchie der Abstraktion und der Aufgaben.  
 
 ### Parameter
 Nach der Anzahl der Parameter kann man bei Funktionen zwischen Niladen (0), Monaden (1), Dyaden (2), Triaden (3) und Polyaden (>3) unterscheiden. Grundsätzlich sollte man bestrebt sein die Anzahl der Parameter zu minimieren. Bei Polyaden sollte geprüft werden, ob einige der Parameter nicht besser als separate Struktur oder Klasse zusammengefasst werden sollten.
 Im Idealfall ergeben der Name der Funktion und die Namen der formalen Parameter eine gut lesbare und sinnvolle Verb-Substantiv-Kombination, wie z.B.
 
+<details><summary>TypeScript</summary>
+<p>
+
 ```TypeScript
-SetTime(hour: number, minutes: number): void
-{
+function setTime(hour: number, minutes: number): void {
     ....
 }
 ```
 
+</p>
+</details>
+
+<details><summary>C#</summary>
+<p>
+
+```C#
+void setTime(int hour, int minutes) {
+    ....
+}
+```
+
+</p>
+</details>
+
 ### Don't Repeat Yourself (DRY)
 Wenn man gleiche oder ähliche Codezeilen zum zweiten Mal schreibt, sollte umstrukturiert werden und ggf. eine neue Funktion anlegt werden. Wiederholungen sind zu vermeiden, der Code sollte "DRY" sein. Hier ein sehr simples Beispiel
+
+<details><summary>TypeScript</summary>
+<p>
 
 ```TypeScript
 if (returnPositive)
@@ -186,19 +363,56 @@ if (returnPositive)
 else
     return - a * b / c;
 ```
+
+</p>
+</details>
+
+<details><summary>C#</summary>
+<p>
+
+```C#
+if (returnPositive)
+    return a * b / c;
+else
+    return - a * b / c;
+```
+
+</p>
+</details>
+
 Die gleiche Berechnung wird hier an zwei verschiedenen Stellen im Code durchgeführt. Muss die Berechnung später geändert werden, muss dies also mehrfach geschehen. 
 
 ```TypeScript
 if (returnPositive)
-    return CalculateResult();
+    return calculateResult();
 else
-    return -1 * CalculateResult();
+    return -1 * calculateResult();
 
-CalculateResult(): number
-{
+function calculateResult(): number {
     return a * b / c;
 }
 ```
+
+</p>
+</details>
+
+<details><summary>C#</summary>
+<p>
+
+```C#
+if (returnPositive)
+    return calculateResult();
+else
+    return -1 * calculateResult();
+
+calculateResult() {
+    return a * b / c;
+}
+```
+
+</p>
+</details>
+
 In diesem Beispiel hätte man natürlich auch die Berechnung vor der if-Abfrage durchführen und das Ergebnis einer lokalen Variablen zuweisen können, deren Wert man dann ggf. zur Rückgabe mit -1 multipliziert. Bei mehreren duplizierten Codezeilen wird die Auslagerung in eine Funktion noch besser intuitiv begreifbar.
 
 ### Vorgehensweise

@@ -71,7 +71,7 @@ Häufig findet man in Code Zahlenkonstanten (engl. _literal_), ohne deren Bedeut
     x = -30;
 ```
 
-Warum 799? Wenn dies die Breite einer Zeichenfläche sein soll, muss dies im Code auch zum Ausdruck kommen. Und was sollen die -30 bedeuten?
+Warum 800? Wenn dies die Breite einer Zeichenfläche sein soll, muss dies im Code auch zum Ausdruck kommen. Und was sollen die -30 bedeuten?
 
 ```C#
   float canvasWidth = 800;
