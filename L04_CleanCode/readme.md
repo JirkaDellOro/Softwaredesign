@@ -72,7 +72,7 @@ getElementById("headline");
 Hier fällt sofort auf, dass einmal nach dem Tag-Name, das andere mal nach einer Id gesucht wird. Häufig wird aber übersehen, dass die erste Methode eine Collection von Elementen liefert, die zweite aber ein einzelnes Element. Im Namen sichtbar wird dies lediglich durch das zusätzliche "s". Eine alternative Namensgebung wäre beispielsweise gewesen
 
 ```
-GetElementCollectionByTagName("h1");
+getElementCollectionByTagName("h1");
 ```
 
 ### Kurze Namen
@@ -381,6 +381,9 @@ else
 </details>
 
 Die gleiche Berechnung wird hier an zwei verschiedenen Stellen im Code durchgeführt. Muss die Berechnung später geändert werden, muss dies also mehrfach geschehen. 
+
+<details><summary>TypeScript</summary>
+<p>
 
 ```TypeScript
 if (returnPositive)
