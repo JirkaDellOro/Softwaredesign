@@ -1,5 +1,6 @@
 <details>
     <summary>TypeScript</summary>
+
     # Clean Code
     Im Jahr 2008 verfasst Robert C. Martin, auch bekannt als "Uncle Bob", zusammen mit anderen Autoren das viel beachtete Buch "Clean Code". Im Text geht es vordringlich darum, wie Code gestaltet werden sollte, damit er für Menschen verständlich und wartbar ist. Grund dafür ist, dass Code häufiger gelesen als geschrieben wird.
     Es steht weniger im Vordergrund, dass der Code funktioniert, das ist ohnehin eine Voraussetzung. Stattdessen sollte sich der Code lesen lassen wie eine Geschichte. Begriffe wie "Eleganz" und "Schönheit" fallen, Programmieren wird als Kunst im wahrsten Sinne, wie Malerei oder Lyrik, dargestellt.
