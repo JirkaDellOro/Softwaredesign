@@ -1,4 +1,7 @@
+import { v4 as uuidv4 } from "uuid";
+
 export class AbstractMovie {
+  private _uuid : String;
   private _movieName: String;
   private _releaseYear: Number;
   private _boxOffice: Number;
@@ -6,11 +9,16 @@ export class AbstractMovie {
   private _actors: String[];
 
   constructor() {
+    this._uuid = uuidv4();
     this._movieName = "";
     this._releaseYear = 0;
     this._boxOffice = 0;
     this._director = "";
     this._actors = [];
+  }
+
+  public getUuid(): String {
+    return this._uuid;
   }
 
   public getMovieName(): String {
