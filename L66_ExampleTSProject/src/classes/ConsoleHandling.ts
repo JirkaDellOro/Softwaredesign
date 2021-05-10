@@ -1,8 +1,7 @@
-import { resolve } from 'path';
 import * as readline from 'readline';
 
 class ConsoleHandling {
-  private static instance : ConsoleHandling = new ConsoleHandling()
+  private static _instance : ConsoleHandling = new ConsoleHandling()
 
   // logger object with syslog levels as specified loglevels
   // logs into build_service.log in directory log and onto console of running node.js process
@@ -12,21 +11,19 @@ class ConsoleHandling {
   });
 
   constructor() {
-    if(ConsoleHandling.instance)
-      throw new Error("Use ConsoleHandling.Instance() instead new ConsoleHandling()")
-    ConsoleHandling.instance = this
+    if(ConsoleHandling._instance)
+      throw new Error("Use ConsoleHandling.getInstance() instead new ConsoleHandling()")
+    ConsoleHandling._instance = this
   }
 
   public static getInstance() : ConsoleHandling {
-    return ConsoleHandling.instance
+    return ConsoleHandling._instance
   }
 
   public question(question: String) : Promise<String> {
-    let answer : String = "";
     return new Promise((resolve) => {
       this.consoleLine.question(question.toString(), (_answer: string) => {
-        answer = _answer;
-        resolve(answer);
+        resolve(_answer);
       })
     });
   }

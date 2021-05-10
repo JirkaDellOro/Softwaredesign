@@ -2,8 +2,16 @@ import fs from "fs";
 import path from "path";
 
 export class FileHandler {
-  constructor() {
+  private static _instance : FileHandler = new FileHandler();
 
+  private constructor() {
+    if(FileHandler._instance)
+      throw new Error("Use FileHandler.getInstance() instead new FileHandler()")
+    FileHandler._instance = this
+  }
+
+  public static getInstance() : FileHandler {
+    return FileHandler._instance;
   }
 
   private readFile(pathToFile: string) : any {
@@ -24,3 +32,5 @@ export class FileHandler {
     fs.writeFileSync(path.resolve(__dirname, "../" + pathToFile), JSON.stringify(dataToWrite));
   }
 }
+
+export default FileHandler.getInstance();

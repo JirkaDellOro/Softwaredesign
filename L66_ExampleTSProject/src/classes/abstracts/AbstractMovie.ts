@@ -1,7 +1,7 @@
 import { v4 as uuidv4 } from "uuid";
 
 export class AbstractMovie {
-  private _uuid : String;
+  private _uuid: String;
   private _movieName: String;
   private _releaseYear: Number;
   private _boxOffice: Number;
