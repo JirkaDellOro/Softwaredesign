@@ -24,6 +24,7 @@ export class Actor {
   public get birthday(): String {
     return this._birthday;
   }
+  
   public set birthday(value: String) {
     this._birthday = value;
   }

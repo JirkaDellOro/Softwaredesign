@@ -2,8 +2,6 @@ import { MovieDAO } from "../types/moviedao.type";
 import { AbstractMovie } from "./abstracts/AbstractMovie";
 
 export class Movie extends AbstractMovie {
-  
-
   constructor(movie: MovieDAO) {
     super();
     this.setMovieName(movie.movie_name);
