@@ -45,6 +45,18 @@ die Funktionsfähigkeit auf Methoden-/Funktions-/Klassen- oder Modulebene erreic
 Diese Art von automatisierten Tests, die von Entwicklern erstellt werden und die 
 Richtigkeit einer abgeschlossenen _Software-Einheit_ testen, heißen ***Unit Tests***.
 
+## Test driven development (TDD)
+
+![TestDrivenDevelopment](../img/TDD.jpeg)
+
+Ursprünglich ist das test driven development sehr stark auf die Unit Tests ausgelegt.
+Hierbei werden die Unit-Tests und die zu testenden Units / Komponenten parallel nach obigem Muster entwickelt.
+Es gibt an der Stelle die Phasen "Rot", "Grün" und "Refactoring / Improvement".
+
+1. Rot: Schreibe einen Test, der ein neues zu programmierendes Verhalten (Funktionalität) prüfen soll. Dabei fängt man mit dem einfachsten Beispiel an. Ist die Funktion schon älter, kann dies auch ein bekannter Fehler oder eine neu zu implementierende Funktionalität sein. Dieser Test wird vom vorhandenen Programmcode erst einmal nicht erfüllt, muss also fehlschlagen.
+2. Grün: Ändere den Programmcode mit möglichst wenig Aufwand ab und ergänze ihn, bis er nach dem anschließend angestoßenen Testdurchlauf alle Tests besteht.
+3. Refactoring: Entferne Wiederholungen (Code-Duplizierung), abstrahiere wo nötig, richte ihn nach den verbindlichen Code-Konventionen aus etc. In dieser Phase darf kein neues Verhalten – das ja dann nicht durch Tests schon abgedeckt wäre – eingeführt werden. Nach jeder Änderung werden die Tests ausgeführt, ihr Fehlschlag verbietet es, die offenbar fehlerhafte Änderung schon in den genutzten Code zu übernehmen. Ziel des Aufräumens ist es, den Code schlicht und verständlich zu machen.
+
 ## Unit Tests
 
 Ein Unit Test testet lediglich einen kleinen Teil des Source Codes auf Korrektheit, bspw. eine Klasse oder eine Funktion.
