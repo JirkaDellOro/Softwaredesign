@@ -2,9 +2,11 @@
 
 ## Einführung
 
+Programmiersprachen in 2020:
 ![Programmiersprachen](imgs/programming_languages.png)
 
-[Quelle: Stack Overflow Developer Survey 2020](https://insights.stackoverflow.com/survey/2020)
+Akutelle Version
+[Quelle: Stack Overflow Developer Survey 2021](https://insights.stackoverflow.com/survey/2021)
 
 ### FRAGEN
 
